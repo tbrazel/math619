@@ -1,0 +1,416 @@
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathrsfs}
+\usepackage{bm,bbm}
+\usepackage{color}
+\usepackage[rgb,dvipsnames]{xcolor}
+\usepackage{mathtools}
+
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{0.8\textwidth}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{cd}
+\tikzstyle{var} = [rectangle, minimum width=1cm, minimum height=0.5cm, text centered, draw=black, fill=white!30]
+\tikzstyle{output} = [rectangle, text centered, draw=black, fill=gray!20]
+\tikzstyle{input} = [rectangle, text centered, draw=black, fill=green!20]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzset{
+  closed/.style = {decoration = {markings, mark = at position 0.5 with { \node[transform shape, xscale = .8, yscale=.4] {/}; } }, postaction = {decorate} },
+  open/.style = {decoration = {markings, mark = at position 0.5 with { \node[transform shape, scale = .7] {$\circ$}; } }, postaction = {decorate} }
+}
+
+\setlength{\parindent}{0pt}
+
+%\theoremstyle{definition}
+%\newtheorem{theorem}{Theorem}[subsection]
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{definition}[theorem]{Definition}
+%%\newtheorem{example}[theorem]{Example}
+%\newtheorem{examples}[theorem]{Examples}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{exercise}[theorem]{Exercise}
+%\newtheorem{remark}[theorem]{Remark}
+%\newtheorem{warning}[theorem]{Warning}
+%\newtheorem{note}[theorem]{Note}
+%\newtheorem{upshot}[theorem]{Upshot}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newcommand{\thistheoremname}{}
+%\newtheorem{genericthm}[theorem]{\thistheoremname}
+\newenvironment{customenvironment}[1]
+%  {\renewcommand{\thistheoremname}{#1}%
+%   \begin{genericthm}}
+%  {\end{genericthm}}
+  
+  
+  
+      \let\fullref\autoref
+%
+%  \autoref is very crude.  It uses counters to distinguish environments
+%  so that if say {lemma} uses the {theorem} counter, then autrorefs
+%  which should come out Lemma X.Y in fact come out Theorem X.Y.  To
+%  correct this give each its own counter eg:
+%                 \newtheorem{theorem}{Theorem}[section]
+%                 \newtheorem{lemma}{Lemma}[section]
+%  and then equate the counters by commands like:
+%                 \makeatletter
+%                   \let\c@lemma\c@theorem
+%                  \makeatother
+%
+%  To work correctly the environment name must have a corrresponding 
+%  \XXXautorefname defined.  The following command does the job:
+%
+\def\makeautorefname#1#2{\expandafter\def\csname#1autorefname\endcsname{#2}}
+%
+%  Some standard autorefnames.  If the environment name for an autoref 
+%  you need is not listed below, add a similar line to your TeX file:
+%  
+\makeautorefname{equation}{Equation}%
+\makeautorefname{footnote}{footnote}%
+\makeautorefname{item}{item}%
+\makeautorefname{figure}{Figure}%
+\makeautorefname{table}{Table}%
+\makeautorefname{part}{Part}%
+\makeautorefname{appendix}{Appendix}%
+\makeautorefname{chapter}{Chapter}%
+\makeautorefname{section}{Section}%
+\makeautorefname{subsection}{Section}%
+\makeautorefname{subsubsection}{Section}%
+\makeautorefname{paragraph}{Paragraph}%
+\makeautorefname{subparagraph}{Paragraph}%
+\makeautorefname{theorem}{Theorem}%
+\makeautorefname{thm}{Theorem}%
+\makeautorefname{addm}{Addendum}%
+\makeautorefname{mainthm}{Main theorem}%
+\makeautorefname{corollary}{Corollary}%
+\makeautorefname{cor}{Corollary}%
+\makeautorefname{lemma}{Lemma}%
+\makeautorefname{lem}{Lemma}%
+\makeautorefname{sublemma}{Sublemma}%
+\makeautorefname{sublem}{Sublemma}%
+\makeautorefname{subl}{Sublemma}%
+\makeautorefname{prop}{Proposition}%
+\makeautorefname{property}{Property}
+\makeautorefname{pro}{Property}
+\makeautorefname{sch}{Scholium}%
+\makeautorefname{step}{Step}%
+\makeautorefname{conject}{Conjecture}%
+\makeautorefname{conjecture}{Conjecture}%
+\makeautorefname{questn}{Question}
+\makeautorefname{quest}{Question}
+\makeautorefname{qn}{Question}
+\makeautorefname{definition}{Definition}%
+\makeautorefname{defn}{Definition}%
+\makeautorefname{defi}{Definition}%
+\makeautorefname{def}{Definition}%
+\makeautorefname{dfn}{Definition}%
+\makeautorefname{df}{Definition}%
+\makeautorefname{notation}{Notation}
+\makeautorefname{notn}{Notation}
+\makeautorefname{rem}{Remark}%
+\makeautorefname{rems}{Remarks}%
+\makeautorefname{rmk}{Remark}%
+\makeautorefname{rk}{Remark}%
+\makeautorefname{remarks}{Remarks}%
+\makeautorefname{rems}{Remarks}%
+\makeautorefname{rmks}{Remarks}%
+\makeautorefname{rks}{Remarks}%
+\makeautorefname{example}{Example}%
+\makeautorefname{examp}{Example}%
+\makeautorefname{exmp}{Example}%
+\makeautorefname{exam}{Example}%
+\makeautorefname{exa}{Example}%
+\makeautorefname{axiom}{Axiom}%
+\makeautorefname{axi}{Axiom}%
+\makeautorefname{ax}{Axiom}%
+\makeautorefname{case}{Case}%
+\makeautorefname{claim}{Claim}%
+\makeautorefname{clm}{Claim}%
+\makeautorefname{assumpt}{Assumption}%
+\makeautorefname{asses}{Assumptions}%
+\makeautorefname{conclusion}{Conclusion}%
+\makeautorefname{concl}{Conclusion}%
+\makeautorefname{conc}{Conclusion}%
+\makeautorefname{cond}{Condition}%
+\makeautorefname{const}{Construction}%
+\makeautorefname{con}{Construction}%
+\makeautorefname{criterion}{Criterion}%
+\makeautorefname{criter}{Criterion}%
+\makeautorefname{crit}{Criterion}%
+\makeautorefname{exercise}{Exercise}%
+\makeautorefname{exer}{Exercise}%
+\makeautorefname{exe}{Exercise}%
+\makeautorefname{problem}{Problem}%
+\makeautorefname{problm}{Problem}%
+\makeautorefname{prob}{Problem}%
+\makeautorefname{prob}{Problem}%
+\makeautorefname{soln}{Solution}%
+\makeautorefname{sol}{Solution}%
+\makeautorefname{sum}{Summary}%
+\makeautorefname{oper}{Operation}%
+\makeautorefname{obs}{Observation}%
+\makeautorefname{ob}{Observation}%
+\makeautorefname{conv}{Convention}%
+\makeautorefname{cvn}{Convention}%
+\makeautorefname{warn}{Warning}%
+\makeautorefname{note}{Note}%
+\makeautorefname{fact}{Fact}%
+\makeautorefname{ouch0}{Counterexample}%
+%
+%                  *** End of hyperref stuff ***
+
+
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{counterexample}[theorem]{Counterexample}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{digression}[theorem]{Digression}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{intuition}[theorem]{Intuition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{note}[theorem]{Note}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{terminology}[theorem]{Terminology}
+\newtheorem{upshot}[theorem]{Upshot}
+\newtheorem*{mainthm}{Main Theorem}
+\newtheorem{introthm}{Theorem}
+\newtheorem*{introcor}{Corollary}
+\newtheorem*{introconj}{Conjecture}
+\renewcommand*{\theintrothm}{\Alph{introthm}}
+
+%%%% hack to get fullref working correctly
+\makeatletter
+\let\c@cor=\c@thm
+\let\c@prop=\c@thm
+\let\c@lem=\c@thm
+\let\c@conjecture=\c@thm
+\let\c@defn=\c@thm
+\let\c@df=\c@thm
+\let\c@exmp=\c@thm
+\let\c@rem=\c@thm
+\let\c@sch=\c@thm
+\let\c@con=\c@thm
+\let\c@notn=\c@thm
+\let\c@example=\c@thm
+\let\c@equation\c@thm
+\makeatother
+
+  
+
+
+\newenvironment{proofsketch}{%
+ \renewcommand{\proofname}{{Proof Sketch}\proof}{\endproof}}
+
+\newcommand{\ab}{\text{ab}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\BGL}{\text{BGL}}
+\newcommand{\BO}{\text{BO}}
+\newcommand{\BU}{\text{BU}}
+\renewcommand{\char}{\text{char}}
+\newcommand{\cl}{\text{cl}}
+\newcommand{\coeq}{\text{coeq}}
+\newcommand{\cof}{\text{cof}}
+\DeclareMathOperator*{\mycolim}{colim}
+\newcommand{\colim}{\mathop{\mycolim}}
+\newcommand{\conj}{\text{conj}}
+\newcommand{\const}{\text{const}}
+\newcommand{\DM}{\text{DM}}
+\newcommand{\End}{\text{End}}
+\newcommand{\ev}{\text{ev}}
+\newcommand{\Ext}{\text{Ext}}
+\newcommand{\Frac}{\text{Frac}}
+\newcommand{\Frob}{\text{Frob}}
+\newcommand{\Fun}{\text{Fun}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Gr}{\text{Gr}}
+\newcommand{\GW}{\text{GW}}
+\newcommand{\Ho}{\text{Ho}}
+\newcommand{\hocof}{\text{hocof}}
+\DeclareMathOperator*{\myhocolim}{hocolim}
+\newcommand{\hocolim}{\mathop{\myhocolim}}
+\newcommand{\hofib}{\text{hofib}}
+\DeclareMathOperator*{\myholim}{holim}
+\newcommand{\holim}{\mathop{\myholim}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\hyp}{\text{hyp}}
+\newcommand{\id}{\text{id}}
+\newcommand{\incl}{\text{incl}}
+\newcommand{\Ind}{\text{Ind}}
+\newcommand{\Inn}{\text{Inn}}
+\newcommand{\im}{\text{im}}
+\newcommand{\KO}{\text{KO}}
+\newcommand{\KU}{\text{KU}}
+\newcommand{\Map}{\text{Map}}
+\newcommand{\MGL}{\text{MGL}}
+\newcommand{\MO}{\text{MO}}
+\newcommand{\mor}{\text{mor}}
+\newcommand{\MSO}{\text{MSO}}
+\newcommand{\MU}{\text{MU}}
+\newcommand{\Nis}{\text{Nis}}
+\newcommand{\ob}{\text{ob}}
+\newcommand{\obj}{\text{obj}}
+\newcommand{\op}{\text{op}}
+\newcommand{\Orb}{\text{Orb}}
+\newcommand{\Out}{\text{Out}}
+\newcommand{\Perm}{\text{Perm}}
+\newcommand{\pr}{\text{pr}}
+\newcommand{\pre}{\text{pre}}
+\newcommand{\Proj}{\text{Proj}}
+\newcommand{\PSh}{\textit{PSh}}
+\newcommand{\PShv}{\textit{PShv}}
+\newcommand{\Rep}{\text{Rep}}
+\newcommand{\Res}{\text{Res}}
+\newcommand{\s}{\text{s}}
+\newcommand{\Sch}{\text{Sch}}
+\newcommand{\SH}{\mathcal{SH}}
+\newcommand{\Sh}{\textit{Sh}}
+\newcommand{\Shv}{\textit{Shv}}
+\newcommand{\Sing}{\text{Sing}}
+\newcommand{\Sm}{\text{Sm}}
+\newcommand{\spn}{\text{span}}
+\newcommand{\Spc}{\textit{Spc}}
+\newcommand{\Spec}{\text{Spec}}
+\newcommand{\SO}{\text{SO}}
+\newcommand{\SP}{\text{Sp}}
+\newcommand{\Stab}{\text{Stab}}
+\newcommand{\SU}{\text{SU}}
+\newcommand{\supp}{\text{supp}}
+\newcommand{\Sym}{\text{Sym}}
+\newcommand{\Th}{\text{Th}}
+\newcommand{\Wr}{\text{Wr}}
+\newcommand{\Zar}{\text{Zar}}
+\newcommand{\sAb}{\text{sAb}}
+
+
+% Categories
+\newcommand{\1}{\mathbbm{1}}
+\newcommand{\2}{\mathbbm{2}}
+\newcommand{\Ab}{\textbf{Ab}}
+\newcommand{\CG}{\texttt{CG}}
+\newcommand{\Ch}{\texttt{Ch}}
+\newcommand{\CGWH}{\texttt{CGWH}}
+\newcommand{\CW}{\texttt{CW}}
+\newcommand{\DDelta}{\bm{\Delta}}
+\newcommand{\FinSet}{\texttt{FinSet}}
+\newcommand{\Grp}{\texttt{Grp}}
+\newcommand{\Grpd}{\texttt{Grpd}}
+\newcommand{\Kan}{\texttt{Kan}}
+\newcommand{\Poset}{\texttt{Poset}}
+\newcommand{\Set}{\texttt{Set}}
+\newcommand{\Sp}{\texttt{Sp}}
+\newcommand{\Spectra}{\texttt{Spectra}}
+\newcommand{\sSet}{\texttt{sSet}}
+\newcommand{\Top}{\texttt{Top}}
+\newcommand{\Ring}{\texttt{Ring}}
+\newcommand{\Vect}{\texttt{Vect}}
+
+
+\newcommand{\CP}{\mathbb{C}\text{P}}
+\newcommand{\HP}{\mathbb{H}\text{P}}
+\newcommand{\RP}{\mathbb{R}\text{P}}
+\newcommand{\C}{\mathscr{C}}
+\newcommand{\D}{\mathscr{D}}
+\newcommand{\E}{\mathscr{E}}
+
+% Arrows
+\newcommand{\po}{\arrow[ul,phantom,"\ulcorner" very near start]}
+\newcommand{\pb}{\arrow[dr,phantom,"\lrcorner" very near start]}
+\newcommand{\xto}[1]{\xrightarrow{#1}}
+\newcommand{\from}{\leftarrow}
+\newcommand{\xfrom}[1]{\overset{#1}{\leftarrow}}
+
+\newcommand{\mapsfrom}{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
+\newcommand{\longmapsfrom}{\mathrel{\reflectbox{\ensuremath{\longmapsto}}}}
+
+\newcommand{\hookto}{\xhookrightarrow{}}
+\newcommand{\xhookto}[1]{\overset{#1}{\hookrightarrow}}
+
+\newcommand{\hookfrom}{\xhookleftarrow{}}
+\newcommand{\xhookfrom}[1]{\xhookleftarrow{#1}}
+
+\newcommand{\tto}{\twoheadrightarrow}
+\newcommand{\xtto}[1]{\overset{#1}{\twoheadrightarrow}}
+\newcommand{\ffrom}{\twoheadleftarrow}
+\newcommand{\xffrom}[1]{\overset{#1}{\ffrom}}
+
+\newcommand{\ladjoint}[2]{ #1\rightleftarrows #2 }
+\makeatletter
+\newcommand{\superimpose}[2]{%
+  {\ooalign{$#1\@firstoftwo#2$\cr\hfil$#1\@secondoftwo#2$\hfil\cr}}}
+\makeatother
+\newcommand{\smallslash}{\mbox{\tiny/}}
+
+\newcommand{\clhook}{\mathrel{\raisebox{0.1em}{$\mathrel{\mathpalette\superimpose{{\hspace{0.1cm}\vspace{0.1em}\smallslash}{\hookrightarrow}}}$}}}
+\newcommand{\xclhook}[1]{\overset{#1}{\clhook}}
+
+\newcommand{\clhookfrom}{\mathrel{\raisebox{0.1em}{$\mathrel{\mathpalette\superimpose{{\hspace{0.1cm}\vspace{0.1em}\smallslash}{\hookleftarrow}}}$}}}
+
+\newcommand{\ohook}{\mathrel{\raisebox{0.03em}{$\mathrel{\mathpalette\superimpose{{\hspace{0.1cm}\vspace{0.03em}\mbox{\small$\circ$}}{\hookrightarrow}}}$}}}
+
+\newcommand{\ohookfrom}{\mathrel{\raisebox{0.03em}{$\mathrel{\mathpalette\superimpose{{\hspace{0.1cm}\vspace{0.03em}\mbox{\small$\circ$}}{\hookleftarrow}}}$}}}
+
+\newcommand{\cofto}{\rightarrowtail}
+\newcommand{\coffrom}{\leftarrowtail}
+\newcommand{\xcofto}[1]{\overset{#1}{\cofto}}
+\newcommand{\xcoffrom}[1]{\overset{#1}{\coffrom}}
+
+% Colors
+\definecolor{custompurple}{RGB}{62, 34, 127}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\purple}[1]{\textcolor{purple}{#1}}
+\newcommand{\gray}[1]{\textcolor{gray}{#1} \textcolor{black}{}}
+
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\lrangle}[1]{\langle #1 \rangle}
+\newcommand{\und}[1]{\underline{#1}}
+
+
+\newcommand{\A}{\mathbb{A}}
+%\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\S}{\mathbb{S}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\Z}{\mathbb{Z}}
+
+
+
+\newcommand{\M}{\mathcal{M}}
+\renewcommand{\O}{\mathcal{O}}
+
+\newcommand{\Cech}{\check{C}}
+
+
+
+\let\til\widetilde
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+\newcommand{\es}{\emptyset}
+\let\sec\S
+\let\phi\varphi
+\let\adj\dashv
+\let\del\partial
+
+%\renewcommand{\smash}{\wedge}
+\renewcommand{\setminus}{\smallsetminus}
+\newcommand{\minus}{\smallsetminus}
+\renewcommand{\dot}{\bullet}
+\newcommand{\iso}{\simeq}
