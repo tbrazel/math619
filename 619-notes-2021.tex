@@ -521,7 +521,7 @@ Note that in \autoref{equivcats} of equivalence of categories we only required t
 
 \epigraph{For many years, algebraic topologists have been laboring under the handicap of not knowing in which category of spaces they should work. Our need is to be able to make a variety of constructions and to know that the results have good properties without the tedious spelling out at each step of lengthy hypotheses such as countably paracompact, normal, completely regular, first axiom of countability, metrizable, and so forth. It may be good research technique and an enjoyable exercise to analyse the precise circumstances for which an argument works; but if a developing theory is to be handy for research workers and attractive to students, then the simplicity of the fundamentals must be the goal.}{\cite{Steenrod-convenient-cat}}
 
-The main references for this section are \cite{Steenrod-convenient-cat} and \cite{Strickland-cgwh}, and we refer the reader to those papers for all of the proofs of point set topology propositions. 
+The main references for this section are \cite{Steenrod-convenient-cat} and \cite{Strickland-cgwh}, and we refer the reader to those papers for all of the proofs of point set topology propositions. An excellent set of notes on this topic is also \cite{martincgwh}.
 
 Recall that in $\Set$ we have an adjuction between the product and the hom functor given by 
 $$\Hom_\Set(A\times B, C)\cong \Hom_\Set (A, \Hom_\Set(B,C)).$$ Of course, the bijection follows from comparing cardinalities, but the point is that these bijections are natural, so they are compatible along morphisms in the category. We want a similar adjunction in the category of spaces. 
@@ -594,7 +594,7 @@ The category $\CG$ is good enough for most applications, but to make things a li
 
 Some examples of weak Hausdorff spaces are again CW complexes, metric spaces, etc. One of the reasons why we work with weak Hausdorff spaces as opposed to Hausdorff spaces is for example, for any closed inclusion $A\hookrightarrow X$ where $X$ is weak Hausdorff, the quotient is also weak Hausdorff, though this would not necessarily be true in Hausdorff spaces.  For example, the quotient of the $C_2$-action on a pair of real lines $\R$ which swaps the points between the lines outside of 0, and fixes $0$ on both lines is the ``line with two origins," which is not Haurdorff. Another example is the quotient of the action of the additive subgroup $\Q$ on $\R$, which is $\R/\Q$, which has the trivial topology so it is not Hausdorff.
 
-\begin{proposition} For a weak Hausdorff space $X$, any larger topology on $X$ will also be weak Hausdorff.
+\begin{proposition} For a weak Hausdorff space $X$, any larger topology on $X$ (i.e. a topology containing the original topology on $X$) will also be weak Hausdorff.
 \end{proposition}
 
 Another reason why we like weak Hausdorff spaces is because they interact nicely with compactly generated spaces. For example, by \cite[Lemma 1.4. and Proposition 2.14]{Strickland-cgwh}
