@@ -5,6 +5,8 @@
 \usepackage[rgb,dvipsnames]{xcolor}
 \usepackage{mathtools}
 
+\usepackage{url}
+
 \usepackage{epigraph}
 \setlength{\epigraphwidth}{0.8\textwidth}
 
@@ -109,6 +111,7 @@
 \makeautorefname{notation}{Notation}
 \makeautorefname{notn}{Notation}
 \makeautorefname{rem}{Remark}%
+\makeautorefname{remark}{Remark}%
 \makeautorefname{rems}{Remarks}%
 \makeautorefname{rmk}{Remark}%
 \makeautorefname{rk}{Remark}%
@@ -162,26 +165,43 @@
 
 
 
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{quest}{Question}[section]
+\newtheorem{prob}{Problem}[section]
 \theoremstyle{definition}
-\newtheorem{theorem}{Theorem}[subsection]
-\newtheorem{claim}[theorem]{Claim}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{counterexample}[theorem]{Counterexample}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{digression}[theorem]{Digression}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{examples}[theorem]{Examples}
-\newtheorem{exercise}[theorem]{Exercise}
-\newtheorem{fact}[theorem]{Fact}
-\newtheorem{intuition}[theorem]{Intuition}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{notation}[theorem]{Notation}
-\newtheorem{note}[theorem]{Note}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{terminology}[theorem]{Terminology}
-\newtheorem{upshot}[theorem]{Upshot}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{df}{Definition}[section]
+\newtheorem{con}{Construction}[section]
+\newtheorem{ouch0}{Counterexample}[section]
+\newtheorem{exmp}{Example}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{examples}{Examples}[section]
+\newtheorem{notn}{Notation}[section]
+\newtheorem{addm}{Addendum}[section]
+\newtheorem{exer}{Exercise}[section]
+\newtheorem{exercise}{Exercise}[section]
+\newtheorem{asses}{Assumptions}[section]
+\newtheorem{obs}{Observation}[section]
+\newtheorem{rem}{Remark}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{rems}{Remarks}[section]
+\newtheorem{warn}{Warning}[section]
+\newtheorem{sch}{Scholium}[section]
+\newtheorem{ax}{Axiom}[section]
+\newtheorem{pro}{Property}[section]
+\newtheorem{warning}{Warning}[section]
+\newtheorem{note}{Note}[section]
+
 \newtheorem*{mainthm}{Main Theorem}
 \newtheorem{introthm}{Theorem}
 \newtheorem*{introcor}{Corollary}
@@ -202,6 +222,7 @@
 \let\c@con=\c@thm
 \let\c@notn=\c@thm
 \let\c@example=\c@thm
+\let\c@remark=\c@thm
 \let\c@equation\c@thm
 \makeatother
 
@@ -241,7 +262,7 @@
 \newcommand{\hofib}{\text{hofib}}
 \DeclareMathOperator*{\myholim}{holim}
 \newcommand{\holim}{\mathop{\myholim}}
-\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Hom}{\textup{Hom}}
 \newcommand{\hyp}{\text{hyp}}
 \newcommand{\id}{\text{id}}
 \newcommand{\incl}{\text{incl}}
@@ -250,7 +271,7 @@
 \newcommand{\im}{\text{im}}
 \newcommand{\KO}{\text{KO}}
 \newcommand{\KU}{\text{KU}}
-\newcommand{\Map}{\text{Map}}
+\newcommand{\Map}{\textup{Map}}
 \newcommand{\MGL}{\text{MGL}}
 \newcommand{\MO}{\text{MO}}
 \newcommand{\mor}{\text{mor}}
@@ -296,23 +317,24 @@
 \newcommand{\1}{\mathbbm{1}}
 \newcommand{\2}{\mathbbm{2}}
 \newcommand{\Ab}{\textbf{Ab}}
-\newcommand{\CG}{\texttt{CG}}
-\newcommand{\Ch}{\texttt{Ch}}
-\newcommand{\CGWH}{\texttt{CGWH}}
-\newcommand{\CW}{\texttt{CW}}
+\newcommand{\CG}{\textbf{CG}}
+\newcommand{\Ch}{\textbf{Ch}}
+\newcommand{\CGWH}{\textbf{CGWH}}
+\newcommand{\CW}{\textbf{CW}}
 \newcommand{\DDelta}{\bm{\Delta}}
-\newcommand{\FinSet}{\texttt{FinSet}}
-\newcommand{\Grp}{\texttt{Grp}}
-\newcommand{\Grpd}{\texttt{Grpd}}
-\newcommand{\Kan}{\texttt{Kan}}
-\newcommand{\Poset}{\texttt{Poset}}
-\newcommand{\Set}{\texttt{Set}}
-\newcommand{\Sp}{\texttt{Sp}}
-\newcommand{\Spectra}{\texttt{Spectra}}
-\newcommand{\sSet}{\texttt{sSet}}
-\newcommand{\Top}{\texttt{Top}}
-\newcommand{\Ring}{\texttt{Ring}}
-\newcommand{\Vect}{\texttt{Vect}}
+\newcommand{\FinSet}{\textbf{FinSet}}
+\newcommand{\Grp}{\textbf{Grp}}
+\newcommand{\Grpd}{\textbf{Grpd}}
+\newcommand{\Kan}{\textbf{Kan}}
+\newcommand{\Poset}{\textbf{Poset}}
+\newcommand{\Set}{\textbf{Set}}
+\newcommand{\Sp}{\textbf{Sp}}
+\newcommand{\Spectra}{\textbf{Spectra}}
+\newcommand{\sSet}{\textbf{sSet}}
+\newcommand{\Top}{\textbf{Top}}
+\newcommand{\Ring}{\textbf{Ring}}
+\newcommand{\Vect}{\textbf{Vect}}
+\newcommand{\Cat}{\textbf{Cat}}
 
 
 \newcommand{\CP}{\mathbb{C}\text{P}}
@@ -398,6 +420,7 @@
 
 \newcommand{\Cech}{\check{C}}
 
+\renewcommand{\H}{\textbf{H}}
 
 
 \let\til\widetilde
