@@ -23,31 +23,10 @@
   open/.style = {decoration = {markings, mark = at position 0.5 with { \node[transform shape, scale = .7] {$\circ$}; } }, postaction = {decorate} }
 }
 
-\setlength{\parindent}{0pt}
-
-%\theoremstyle{definition}
-%\newtheorem{theorem}{Theorem}[subsection]
-%\newtheorem{corollary}[theorem]{Corollary}
-%\newtheorem{definition}[theorem]{Definition}
-%%\newtheorem{example}[theorem]{Example}
-%\newtheorem{examples}[theorem]{Examples}
-%\newtheorem{lemma}[theorem]{Lemma}
-%\newtheorem{exercise}[theorem]{Exercise}
-%\newtheorem{remark}[theorem]{Remark}
-%\newtheorem{warning}[theorem]{Warning}
-%\newtheorem{note}[theorem]{Note}
-%\newtheorem{upshot}[theorem]{Upshot}
-%\newtheorem{proposition}[theorem]{Proposition}
-%\newcommand{\thistheoremname}{}
-%\newtheorem{genericthm}[theorem]{\thistheoremname}
-\newenvironment{customenvironment}[1]
-%  {\renewcommand{\thistheoremname}{#1}%
-%   \begin{genericthm}}
-%  {\end{genericthm}}
+\setlength{\parindent}{0pt} 
   
   
-  
-      \let\fullref\autoref
+\let\fullref\autoref
 %
 %  \autoref is very crude.  It uses counters to distinguish environments
 %  so that if say {lemma} uses the {theorem} counter, then autrorefs
@@ -165,42 +144,53 @@
 
 
 
-%theoremstyle{plain} --- default
+\theoremstyle{definition}
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{cor}{Corollary}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{prop}{Proposition}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{lem}{Lemma}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{quest}{Question}[section]
-\newtheorem{prob}{Problem}[section]
-\theoremstyle{definition}
-\newtheorem{defn}{Definition}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{df}{Definition}[section]
-\newtheorem{con}{Construction}[section]
-\newtheorem{ouch0}{Counterexample}[section]
-\newtheorem{exmp}{Example}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{examples}{Examples}[section]
-\newtheorem{notn}{Notation}[section]
-\newtheorem{addm}{Addendum}[section]
-\newtheorem{exer}{Exercise}[section]
-\newtheorem{exercise}{Exercise}[section]
-\newtheorem{asses}{Assumptions}[section]
-\newtheorem{obs}{Observation}[section]
-\newtheorem{rem}{Remark}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{rems}{Remarks}[section]
-\newtheorem{warn}{Warning}[section]
-\newtheorem{sch}{Scholium}[section]
-\newtheorem{ax}{Axiom}[section]
-\newtheorem{pro}{Property}[section]
-\newtheorem{warning}{Warning}[section]
-\newtheorem{note}{Note}[section]
+
+\newtheorem{addm}[theorem]{Addendum}
+\newtheorem{assumptions}[theorem]{Assumptions}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{counterexample}[theorem]{Counterexample}
+\newtheorem{ouch0}[theorem]{Counterexample}
+\newtheorem{df}[theorem]{Definition}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{digression}[theorem]{Digression}
+\newtheorem{exmp}[theorem]{Example}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{exer}[theorem]{Exercise}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{intuition}[theorem]{Intuition}
+\newtheorem{lem}[theorem]{Lemma}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notn}[theorem]{Notation}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{note}[theorem]{Note}
+\newtheorem{obs}[theorem]{Observation}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{prob}[theorem]{Problem}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{property}[theorem]{Property}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{quest}[theorem]{Question}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{rem}[theorem]{Remark}
+\newtheorem{rmk}[theorem]{Remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{rems}[theorem]{Remarks}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{scholium}[theorem]{Scholium}
+\newtheorem{terminology}[theorem]{Terminology}
+\newtheorem{upshot}[theorem]{Upshot}
+\newtheorem{warn}[theorem]{Warning}
+\newtheorem{warning}[theorem]{Warning}
 
 \newtheorem*{mainthm}{Main Theorem}
 \newtheorem{introthm}{Theorem}
