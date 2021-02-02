@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 FEB 2021 15:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 FEB 2021 15:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1126,12 +1126,8 @@ ut line 236.
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.237 \end{exercise}
-                    ] [4]
-
-LaTeX Warning: Citation `HHR' on page 5 undefined on input line 296.
-
-[5pdfTeX warning (ext4): destination with the same identifier (name{example.1.8
-}) has been already used, duplicate ignored
+                    ] [4] [5pdfTeX warning (ext4): destination with the same id
+entifier (name{example.1.8}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
@@ -1158,25 +1154,8 @@ red
                                                   
 l.307 \subsection
                  {Category theory review}]
-
-LaTeX Warning: Citation `WOMP' on page 6 undefined on input line 309.
-
-
-LaTeX Warning: Citation `Torres-cat' on page 6 undefined on input line 309.
-
-
-LaTeX Warning: Citation `mehrle' on page 6 undefined on input line 309.
-
-
-LaTeX Warning: Citation `leinster' on page 6 undefined on input line 309.
-
-
-LaTeX Warning: Citation `Riehl-context' on page 6 undefined on input line 309.
-
-
-LaTeX Warning: Citation `maclane' on page 6 undefined on input line 309.
-
 LaTeX Font Info:    Try loading font information for U+bbm on input line 327.
+
 (/usr/local/texlive/2018/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
@@ -1185,141 +1164,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--329
  []
 
 [6]
-
-LaTeX Warning: Citation `top-op-mathse' on page 7 undefined on input line 368.
-
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 402.
-[7
+ [7
 \pgfsyspdfmark {pgfid5}{23002051}{11151952}
 \pgfsyspdfmark {pgfid8}{37054042}{11164240}
 \pgfsyspdfmark {pgfid9}{39167578}{10940326}
 ]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
 line 414.
-
-
-LaTeX Warning: Citation `mehrle' on page 8 undefined on input line 424.
-
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
 input line 437.
-
-LaTeX Warning: Citation `WOMP' on page 8 undefined on input line 447.
-
-[8]
-
-LaTeX Warning: Citation `leinster' on page 9 undefined on input line 494.
-
-
-LaTeX Warning: Citation `mehrle' on page 9 undefined on input line 494.
-
-
-LaTeX Warning: Citation `henderson' on page 9 undefined on input line 494.
-
-
-LaTeX Warning: Citation `leinster' on page 9 undefined on input line 494.
-
-[9]
+ [8] [9]
 Package hyperref Info: bookmark level for unknown examples defaults to 0 on inp
 ut line 499.
-
-
-LaTeX Warning: Citation `mehrle' on page 10 undefined on input line 530.
-
-
-LaTeX Warning: Citation `Steenrod-convenient-cat' on page 10 undefined on input
- line 535.
-
-
-LaTeX Warning: Citation `Steenrod-convenient-cat' on page 10 undefined on input
- line 537.
-
-
-LaTeX Warning: Citation `Strickland-cgwh' on page 10 undefined on input line 53
-7.
-
-
-LaTeX Warning: Citation `martincgwh' on page 10 undefined on input line 537.
-
-[10]
-
-LaTeX Warning: Citation `munkres' on page 11 undefined on input line 550.
-
-
-LaTeX Warning: Citation `Strickland-cgwh' on page 11 undefined on input line 56
-9.
-
+ [10]
 Package hyperref Info: bookmark level for unknown upshot defaults to 0 on input
  line 574.
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input l
 ine 584.
-[11]
-
-LaTeX Warning: Citation `Strickland-cgwh' on page 12 undefined on input line 59
-8.
-
-
-LaTeX Warning: Citation `Strickland-cgwh' on page 12 undefined on input line 61
-4.
-
-
-LaTeX Warning: Citation `Strickland-cgwh' on page 12 undefined on input line 62
-4.
-
-
-LaTeX Warning: Citation `Strickland-cgwh' on page 12 undefined on input line 62
-4.
-
-[12]
-
-LaTeX Warning: Citation `Strickland-cgwh' on page 13 undefined on input line 63
-6.
-
-[13] [14] [15]
-
-LaTeX Warning: Citation `Hatcher' on page 16 undefined on input line 845.
-
+ [11] [12] [13] [14] [15] [16]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 847.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 847.
-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 847.
 
-[16
-\pgfsyspdfmark {pgfid26}{11623038}{14891245}
-\pgfsyspdfmark {pgfid29}{37054042}{14903533}
-\pgfsyspdfmark {pgfid30}{39167578}{14679619}
-] [17]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 847.
+
+[17
+\pgfsyspdfmark {pgfid26}{11623038}{44617025}
+\pgfsyspdfmark {pgfid29}{37054042}{44629313}
+\pgfsyspdfmark {pgfid30}{39167578}{44405399}
+]
 Package hyperref Info: bookmark level for unknown notation defaults to 0 on inp
 ut line 920.
-
-
-LaTeX Warning: Citation `Strickland-cgwh' on page 18 undefined on input line 93
-9.
-
-[18] [19] Excluding 'comment' comment. [20]
+ [18] [19] [20] Excluding 'comment' comment.
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
 ut line 3748.
- [21] [22] [23]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ [21] [22] [23] [24]
 Package hyperref Info: bookmark level for unknown counterexample defaults to 0 
 on input line 3932.
-[24
-\pgfsyspdfmark {pgfid39}{29358298}{11388363}
-\pgfsyspdfmark {pgfid42}{37054042}{11400651}
-\pgfsyspdfmark {pgfid43}{39167578}{11176737}
-]
-No file 619-notes-2021.bbl.
-[25]
+
+(./619-notes-2021.bbl [25
+\pgfsyspdfmark {pgfid39}{29358298}{34917695}
+\pgfsyspdfmark {pgfid42}{37054042}{34929983}
+\pgfsyspdfmark {pgfid43}{39167578}{34706069}
+]) [26]
 runsystem(makeindex ind.idx)...executed safely (allowed).
 
- (./ind.ind [26
+ (./ind.ind [27
 
 
 
@@ -1334,55 +1231,54 @@ Package rerunfilecheck Info: File `619-notes-2021.out' has not changed.
 (rerunfilecheck)             Checksum: EF9D2006B8704CC6ADE979E315554316;1242.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3971.
  ) 
 Here is how much of TeX's memory you used:
- 26462 strings out of 492649
- 504444 string characters out of 6129622
- 630164 words of memory out of 5000000
- 29476 multiletter control sequences out of 15000+600000
+ 26497 strings out of 492649
+ 504881 string characters out of 6129622
+ 627282 words of memory out of 5000000
+ 29493 multiletter control sequences out of 15000+600000
  26350 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,20n,84p,3225b,1162s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/mmerling/Library/texlive/2018/texmf-var/fonts/pk/ljfour/public/bbm/b
 bm10.600pk></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-x9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
-0.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
-mex7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmi
-tt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/
-2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
-18/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/201
-8/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2018/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/201
-8/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/
-2018/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2018/tex
-mf-dist/fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2018/texmf-dist/f
-onts/type1/public/rsfs/rsfs7.pfb>
-Output written on 619-notes-2021.pdf (26 pages, 551378 bytes).
+bx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cme
+x10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra
+/cmex7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mitt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2018/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2018/t
+exmf-dist/fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2018/texmf-dist
+/fonts/type1/public/rsfs/rsfs7.pfb>
+Output written on 619-notes-2021.pdf (27 pages, 550629 bytes).
 PDF statistics:
- 698 PDF objects out of 1000 (max. 8388607)
- 628 compressed objects within 7 object streams
- 295 named destinations out of 1000 (max. 500000)
+ 754 PDF objects out of 1000 (max. 8388607)
+ 684 compressed objects within 7 object streams
+ 311 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

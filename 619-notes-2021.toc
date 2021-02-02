@@ -8,8 +8,8 @@
 \contentsline {subsection}{\numberline {2.4}Limits and colimits in categories}{13}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Existence of limits and colimits in $\texttt {Top}$}{17}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}The category of based topological spaces}{18}{subsection.2.6}
-\contentsline {section}{\numberline {3}Higher homotopy groups}{19}{section.3}
-\contentsline {subsection}{\numberline {3.1}Homotopies}{19}{subsection.3.1}
+\contentsline {section}{\numberline {3}Higher homotopy groups}{20}{section.3}
+\contentsline {subsection}{\numberline {3.1}Homotopies}{20}{subsection.3.1}
 \contentsline {section}{\numberline {A}More category theory: properties of morphisms}{21}{appendix.A}
 \contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{21}{subsection.A.1}
 \contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{23}{subsection.A.2}
