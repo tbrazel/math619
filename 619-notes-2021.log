@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 FEB 2021 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 FEB 2021 15:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1229,10 +1229,6 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3971.
 
 Package rerunfilecheck Info: File `619-notes-2021.out' has not changed.
 (rerunfilecheck)             Checksum: EF9D2006B8704CC6ADE979E315554316;1242.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3971.
  ) 
 Here is how much of TeX's memory you used:
@@ -1275,7 +1271,7 @@ texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
 e/2018/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2018/t
 exmf-dist/fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2018/texmf-dist
 /fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on 619-notes-2021.pdf (27 pages, 550629 bytes).
+Output written on 619-notes-2021.pdf (27 pages, 550632 bytes).
 PDF statistics:
  754 PDF objects out of 1000 (max. 8388607)
  684 compressed objects within 7 object streams
