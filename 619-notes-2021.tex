@@ -4,7 +4,6 @@
 \usepackage{float}
 \usepackage[original]{imakeidx}
 %\makeindex[name=sym,title=Common Notation,columns=1]
-\usepackage{todonotes}
 \makeindex[name=ind,title=Index]
 \usepackage[all,cmtip]{xy}
 
@@ -18,6 +17,7 @@
 
 \setlength{\parskip}{.8em}% Set \parskip
 
+\definecolor{lightblue}{RGB}{179, 230, 255}
 
 
 \usepackage[
@@ -35,6 +35,8 @@
 
 \usepackage{tabularx}
 \usepackage{booktabs}
+\usepackage[color=lightblue,textsize=tiny]{todonotes}
+
 
 \title{Math 619 Notes}
 \author{Thomas Brazelton and Mona Merling}
@@ -291,7 +293,7 @@ Here are some questions and applications where spectra are key.
 \begin{example} Consider the question: \emph{How many linearly independent everywhere nonzero vector fields can there be on $S^{n-1}$?} This question was answered by Adams using $K$-theory, an extraordinary cohomology theory. The answer is that $S^{n-1}$ admits exactly $\rho(n)-1$ linearly independent everywhere nonzero vector fields, where $\rho(n)$ is the Radon-Hurwitz number equal to $2^c+8d$, where $n=(2a+1)2^b$ and $b=c+4d$ with $0\leq c<4$.
 \end{example}
 
-\begin{example} A very old question in differential topology dating back to the 1960s was: \emph{For which $n$ does there exist a stably framed $n$-manifold with the Kervaire invariant one?} This is known as the \emph{Kervaire invariant one problem}. The Kervaire invariant of a smooth stably framed manifold is the so-called Arf-invariant of an associated quadratic form $H^{\frac{n}{2}}(M, \Z/2)\to\Z/2$. The answer to the Kervaire invariant 1 problem is yes in dimensions $n=2,6,14,62$ and possibly $126$, but it was ruled out in all other dimensions in 2009 by a recent breakthrough result of Hill, Hopkins and Ravenel. This question can again be translated into the survival of certain elements in the Adams spectral sequence for the stable homotopy groups of spheres, and it was further translated by the authors into a question in equivariant stable homotopy theory and solved in that setting.
+\begin{example} A very old question in differential topology dating back to the 1960s was: \emph{For which $n$ does there exist a stably framed $n$-manifold with the Kervaire invariant one?} This is known as the \emph{Kervaire invariant one problem}. The Kervaire invariant of a smooth stably framed manifold is the so-called Arf-invariant of an associated quadratic form $H^{\frac{n}{2}}(M, \Z/2)\to\Z/2$. The answer to the Kervaire invariant 1 problem is yes in dimensions $n=2,6,14,62$ and possibly $126$, but it was ruled out in all other dimensions in 2009 by a recent breakthrough result of Hill, Hopkins and Ravenel \cite{HHR}. This question can again be translated into the survival of certain elements in the Adams spectral sequence for the stable homotopy groups of spheres, and it was further translated by the authors into a question in equivariant stable homotopy theory and solved in that setting.
 \end{example}
 
 
@@ -402,7 +404,7 @@ For any two categories $\C$ and $\D$, we can define the product category $\C\tim
 \begin{remark} For every $V$, there also exists an isomorphism $V\cong V^\ast$, however there is no natural isomorphism $\id \Rightarrow (-)^\ast$.
 \end{remark}
 
-\begin{definition} We define $\D^\C$ or $\Fun(\C,\D)$ as the \textit{functor category} whose objects are functors $\C\to \D$ and whose morphisms are natural transformations.
+\begin{definition} We define $\D^\C$ or $\Fun(\C,\D)$ as the \textit{functor category} whose objects are functors $\C\to \D$ and whose morphisms are natural transformations.\todo{Thomas: is this an okay convention though? I feel like in general, $\mathscr{D}^{\mathscr{C}}$ denotes $\mathscr{D}$-valued presheaves on $\mathscr{C}$, so functors $\mathscr{C}^\op \to \mathscr{D}$}
 \end{definition}
 
 Let $\C$ be a \textit{locally small} category, meaning that $\Hom_\C(a,b)$ is a set for each pair of objects in $\C$. For each $c\in \C$, we obtain functors
@@ -519,6 +521,17 @@ That is, the functors $-\otimes B$ and $\Hom_\Ab (B, -)$ are adjoint.
 \begin{proposition} Adjoints compose.
 \end{proposition}
 
+\begin{exercise}\label{exer:left-adjoint-fully-faithful-iff-unit-natural-iso}
+Let $F : \mathscr{C} \rightleftarrows \mathscr{D} : G$ be an adjunction. Then
+\begin{enumerate}
+    \item $F$ is fully faithful if and only if the unit $\eta: \id_\mathscr{C} \to GF$ is a natural isomorphism.
+    \item $G$ is fully faithful if and only if the counit $\epsilon : FG \to \id_\mathscr{D}$ is a natural isomorphism.
+\end{enumerate}
+
+\end{exercise}
+
+
+
 Note that in \autoref{equivcats} of equivalence of categories we only required that $GF\cong\id $ and $FG\cong \id$ were natural isomorphisms, but not necessarily that $F$ and $G$ are adjoint (namely, the triangle identities were not imposed). It turns out that every equivalence of categories can be modified to an adjoint equivalence by possible changing the unit or counit. For a proof, see \cite[Lemma 3.10]{mehrle}.
 
 
@@ -587,10 +600,8 @@ so $i$ is left adjoint to $k$.
 \begin{align*}
 	\Map(X\times_k Y, Z) \cong \Map_k (X, \Map_k (Y,Z)),
 \end{align*}
-so $\CG$ is Cartesian closed.
+so $\CG$ is Cartesian closed. For a proof of this theorem, read \cite[Proposition 2.11]{Strickland-cgwh}.
 \end{theorem}
-
-For a proof of this theorem, read \cite[Proposition 2.11]{Strickland-cgwh}.
 
 The category $\CG$ is good enough for most applications, but to make things a little better, we impose an additional separation axiom.
 
@@ -651,20 +662,20 @@ for each $X\to Y$.
 
 The \textit{limit} of a diagram $F: I \to \C$ is dual to this definition, meaning that a limit is a colimit in the opposite category $\C^\op$, i.e. the colimit of the composite functor $I\xto{F} \C \to \C^\op$.\index[ind]{limit}
 
-\begin{proposition} Limits and colimits, when they exist, are unique up to isomorphism.
+\begin{proposition}\label{prop:limits-unique-up-to-iso} Limits and colimits, when they exist, are unique up to isomorphism.
 \end{proposition}
 
 \begin{exercise}
-Prove the proposition.
+Prove \autoref{prop:limits-unique-up-to-iso}.
 \end{exercise}
 
 Before moving on to many examples, we state a proposition whose usefulness is hard to overestimate. It says that left adjoints preserve colimits and right adjoints preserve limits.
 
-\begin{proposition}\label{LAPC} Let $F\adj G$ be adjoint functors. Then $F$ preserves colimits and $G$ preserves limits.
+\begin{proposition}\label{prop:LAPC} (\textit{LAPC}\footnote{Left adjoints preserve colimits.}) Let $F\adj G$ be adjoint functors. Then $F$ preserves colimits and $G$ preserves limits.
 \end{proposition}
 
 \begin{exercise}
-Prove the proposition.
+Prove \autoref{prop:LAPC}.
 \end{exercise}
 
 
@@ -947,7 +958,7 @@ We remark that the associativity isomorphism does not hold in the category of al
 
 
 
-\begin{definition} A \textit{symmetric monoidal category}\index[ind]{symmetric monoidal category} is a category $(\C,\otimes,\mathbbm{1})$ is a category equipped with a functor
+\begin{definition} A \textit{symmetric monoidal category}\index[ind]{symmetric monoidal category} is a triple $(\C,\otimes,\mathbbm{1})$, where $\mathscr{C}$ is a category, $\mathbbm{1}\in \mathscr{C}$ is an object, and $\otimes$ is a bifunctor
 \begin{align*}
 	- \otimes - : \C \times \C \to \C,
 \end{align*}
@@ -965,6 +976,13 @@ for any objects in $\C$, such that all possible diagrams involving these commute
 
 \begin{proposition} $(\Top_\ast, \smashprod, S^0)$ is a closed symmetric monoidal category.
 \end{proposition}
+
+
+
+
+
+
+
 
 
 
@@ -991,13 +1009,13 @@ such that $h(x,0) = f(x)$, and $h(x,1) = g(x)$ for all $x\in X$. We write $f\sim
 so a homotopy $f\simeq g$ corresponds to a path between $f$ and $g$ in the mapping space $\Map(X,Y)$.
 \end{proof}
 
-\begin{definition} A \textit{based homotopy}\index[ind]{homotopy!based} from $f$ to $g$, where $f,g : (X,x_0) \to (Y,y_0)$ is a homotopy $h:f\simeq g$ with the extra condition that each $h(-,t) : (X,x_0) \to (Y,y_0)$ is based.
+\begin{definition}\label{def:based-homotopy} A \textit{based homotopy}\index[ind]{homotopy!based} from $f$ to $g$, where $f,g : (X,x_0) \to (Y,y_0)$ is a homotopy $h:f\simeq g$ with the extra condition that each $h(-,t) : (X,x_0) \to (Y,y_0)$ is based.
 
-\textbf{Check}: This is equivalent to a based map $h : X \smashprod I_+ \to Y$.
+We should check that this is equivalent to a based map $h : X \smashprod I_+ \to Y$.
 \end{definition}
 
-\begin{definition} The set of based homotopy equivalence classes of maps is denoted $[X,Y]_\ast$. For example, $[S^1, (X,x_0)]_\ast = \pi_1(X,x_0)$.
-\end{definition}
+\begin{notation} The set of based homotopy equivalence classes of maps is denoted $[X,Y]_\ast$. For example, $[S^1, (X,x_0)]_\ast = \pi_1(X,x_0)$.
+\end{notation}
 
 \begin{definition} We say that two spaces are \textit{homotopy equivalent} if there exist maps $f: X \to Y$ and $g : Y \to X$ such that $f\circ g\simeq \id_Y$ and $g\circ f \simeq \id_X$.
 \end{definition}
@@ -3400,7 +3418,7 @@ This is subject to the following identifications:
 and
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-    $0$ & $t_0$ & $t_1$ & $\cdots & $t_{n-1}$ \\
+    $0$ & $t_0$ & $t_1$ & $\cdots$ & $t_{n-1}$ \\
     \hline
     $g_0$ & $g_1$ & $g_2$ & $\cdots$ & $g_n$
 \end{tabular} $\ \sim\ $
@@ -3700,15 +3718,247 @@ Therefore $K(G,n) = B^n G$.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 \newpage
 \listoftodos
 \newpage
 \end{comment}
 
+
+
+
+
+
+
+
+
+%%%%%%%
+
+\appendix
+% Thomas, 2/2 -- feel free to delete this
+\section{Categorical interlude: properties of morphisms}
+
+As we have seen, limits and colimits allow us ways to construct new objects, morphisms, and universal properties, over indexing diagrams. In particular we might be interested in relating certain properties of morphisms in a category to induced morphisms produced out of a colimit. As a motivating example, consider the following question.
+
+\begin{question} Let $I$ be a small indexing diagram, and let $\alpha,\beta: I \to \Set$ denote two functors, and let $A_i := \alpha(i)$ and $B_i = \beta(i)$ denote the sets at each object $i\in I$. Suppose we have a natural transformation between these functors, consisting of functions $f_i : A_i \to B_i$ for each $i$. \textit{If each $f_i$ is injective, is it true that the induced map $f: \colim \alpha \to \colim \beta$ is injective as well?}
+\end{question}
+
+It turns out the answer to this diagram depends on the shape of $I$. It is true if the colimits are \textit{filtered}, which is a condition on the indexing diagram which tells us that it interacts well with finite limits. This motivates the more broad question of what properties of morphisms are preserved under limits and colimits. In general this is a hard question, but it will be important when we investigate fibrations and cofibrations in the category of topological spaces.
+
+
+\subsection{Stability and closure definitions}
+
+
+
+Let $\mathscr{C}$ be a category, not necessarily assumed to be locally small. We start with an easy definition.
+
+\begin{definition}\label{def:closed-under-pullback} Let \textbf{P} be a property of morphisms in $\mathscr{C}$. We say that \textbf{P} is \textit{closed under composition} if, anytime we have two composable morphisms $f: x \to y$ and $g: y \to z$, if both $f$ and $g$ have property \textbf{P}, then the composite $g\circ f$ does as well.
+\end{definition}
+
+
+\begin{definition}\label{def:2-out-of-3} Let \textbf{P} be a property of morphisms in $\mathscr{C}$. We say that \textbf{P} \textit{satisfies 2-out-of-3} if for every commutative diagram of the form
+\[ \begin{tikzcd}
+    A\rar["f" above]\ar[dr,"g\circ f" below left] & B\dar["g" right]\\
+     & C,\\
+\end{tikzcd} \]
+if any two of $f$, $g$, or $g\circ f$ have property \textbf{P}, then the third does as well.
+\end{definition}
+
+\begin{exercise} $\ $
+\begin{enumerate}
+    \item Prove that isomorphisms satisfy 2-out-of-3.
+    \item In the category $\Set$, prove that injections and surjections do not satisfy 2-out-of-3.
+\end{enumerate}
+\end{exercise}
+
+\begin{definition} Let \textbf{P} be a property of morphisms. Then we say that \textbf{P} is \textit{stable under pullback} (often also called \textit{stable under base change}) if for any pullback diagram of the form
+\[ \begin{tikzcd}
+    C\rar["j" above]\dar["k" left]\pb & D\dar["f" right]\\
+    A\rar["g" below] & B,\\
+\end{tikzcd} \]
+if $f$ has property \textbf{P}, then $k$ has property \textbf{P} as well. Dually, we say that \textbf{P} is \textit{stable under pushout} if for any pushout diagram of the form
+\[ \begin{tikzcd}
+    C\rar["j" above]\dar["k" left] & D\dar["f" right]\\
+    A\rar["g" below] & B\po,\\
+\end{tikzcd} \]
+if $k$ has property \textbf{P}, then $f$ has property \textbf{P} as well.
+\end{definition}
+
+\begin{exercise}\label{exer:injective-stable-under-pullback} $\ $
+\begin{enumerate}
+    \item Prove that isomorphisms are always stable under pullback.
+    \item Prove in the category $\Set$ that injective functions are stable under pullback, and surjective functions are stable under pushout.
+\end{enumerate}
+\end{exercise}
+
+
+Thus far we have discussed closure properties internal to a category. We might wonder how properties translate across functors.
+
+\begin{definition}\label{def:labelname} Let $F: \mathscr{C} \to \mathscr{D}$ be a functor, and let \textbf{P} be a property of morphisms.
+\begin{enumerate}
+    \item We say that $F$ \textit{preserves property} \textbf{P} if any time $f: x \to y$ is a morphisms in $\mathscr{C}$ with property \textbf{P}, we have that $Ff: Fx \to Fy$ has property \textbf{P} as well.
+
+    \item We say that $F$ \textit{reflects property} \textbf{P} if any tie $f:x \to y$ is a morphism in $\mathscr{C}$, if $Ff: Fx \to Fy$ has property \textbf{P}, then $f$ must necessarily have property \textbf{P} as well.
+\end{enumerate}
+\end{definition}
+
+\begin{remark} We have that $F$ always preserves isomorphisms (this is part of the property of being a functor). It is \textit{not true} that $F$ needs to reflect isomorphisms. For example if $X$ is a topological space with a non-trivial topology, then the map $\id : X \to X_{\text{disc}}$ from $X$ to itself with the discrete topology is not a homeomorphism, however its underlying set map is a bijection. (That is, the forgetful functor $\Top \to \Set$ does not reflect isomorphisms).
+\end{remark}
+
+\begin{exercise} If $F$ is full and faithful, it reflects isomorphisms.
+\end{exercise}
+
+
+
+
+\subsection{Monomorphisms and epimorphisms}
+
+\autoref{exer:injective-stable-under-pullback} generalizes, as the notions of being injective and surjective in $\Set$ are equivalent to more abstract categorical conditions. We begin by generalizing injections.
+
+\begin{definition}\label{def:monomorphism} Let $\mathscr{C}$ be a category. Then a morphism $f: x \to y$ is a \textit{monomorphism} if any of the following equivalent conditions hold:
+\begin{enumerate}
+    \item For any pair of morphisms $g,h : z \to x$ so that $f\circ g = f\circ h$, that is:
+    \begin{align*}
+        z \rightrightarrows x \to y,
+    \end{align*}
+    we have that $g = h$. (Another way of phrasing this is that $f$ is \textit{left cancellable}).
+
+    \item The following diagram is a pullback:
+\[ \begin{tikzcd}
+    x\rar["\id_x" above]\dar["\id_x" left]\pb & x\dar["f" right]\\
+    x\rar["f" below] & y.
+\end{tikzcd} \]
+
+If $\mathscr{C}$ is locally small, there is another equivalent condition:
+\end{enumerate}
+
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+    \item The induced functor $\Hom_\mathscr{C}(-,x) \xto{f\circ -} \Hom_\mathscr{C}(-,y)$ is a natural injection, meaning that $\Hom_\mathscr{C}(z,x) \xto{f\circ -} \Hom_\mathscr{C}(z,y)$ is an injective function for any $z\in \mathscr{C}$.
+\end{enumerate}
+\end{definition}
+
+\begin{exercise} Prove that the definitions in \autoref{def:monomorphism} are equivalent.
+\end{exercise}
+
+\begin{example} We have that isomorphisms and equalizers are always monomorphisms. Any morphism from a terminal object is a monomorphism.
+\end{example}
+
+\begin{exercise} \textit{(Closure properties of monomorphisms)}
+\begin{enumerate}
+    \item Monomorphisms are closed under composition
+    \item Monomorphisms are stable under pullback
+    \item Any time $f\circ g$ is a monomorphism, then $g$ is a monomorphism.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}\label{exer:left-adjoints-preserve-monomorphisms} \textit{(Left adjoints preserve monomorphisms)} Let $F: \mathscr{C} \rightleftarrows \mathscr{D} : G$ be an adjunction betweem locally small categories. Then if $f: x\to y$ is a monomorphism in $\mathscr{C}$, we have that $Ff : Fx \to Fy$ is a monomorphism in $\mathscr{D}$. (Hint: use the natural bijection associated to the adjunction, together with \autoref{def:monomorphism}, Definition (iii)).
+\end{exercise}
+
+There is a dual notion, called an \textit{epimorphism}.
+
+\begin{definition}\label{def:epimorphism} Let $\mathscr{C}$ be a category. Then a morphism $f: x \to y$ is a \textit{epimorphism} if any of the following equivalent conditions hold:
+\begin{enumerate}
+    \item For any pair of morphisms $g,h : y \to z$ so that $g\circ f = h\circ f$, that is:
+    \begin{align*}
+         x \to y \rightrightarrows z,
+    \end{align*}
+    we have that $g = h$. (Another way of phrasing this is that $f$ is \textit{right cancellable}).
+
+    \item The following diagram is a pushout:
+\[ \begin{tikzcd}
+    x\rar["f" above]\dar["f" left]\pb & y\dar["\id_y" right]\\
+    y\rar["\id_y" below] & y.
+\end{tikzcd} \]
+
+If $\mathscr{C}$ is locally small, there is another equivalent condition:
+\end{enumerate}
+
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+    \item The induced functor $\Hom_\mathscr{C}(y,-) \xto{-\circ f} \Hom_\mathscr{C}(x,-)$ is a natural injection, meaning that $\Hom_\mathscr{C}(y,z) \xto{-\circ f} \Hom_\mathscr{C}(x,z)$ is an injective function for any $z\in \mathscr{C}$.
+\end{enumerate}
+\end{definition}
+
+Epimorphisms satisfy all the dual properties to monomorphisms.
+
+\begin{exercise}\label{exer:properties-of-epimorphisms} \textit{(Properties of epimorphisms)}
+\begin{enumerate}
+    \item Every isomorphism is an epimorphism, as is every coequalizer.
+    \item Any morphism to an initial object is an epimorphism.
+    \item Epimorphisms are closed under composition.
+    \item Epimorphisms are stable under pushout.
+    \item If $f\circ g$ is an epimorphism, then $f$ is an epimorphism.
+    \item Right adjoints preserve epimorphisms.
+\end{enumerate}
+\end{exercise}
+
+As we have hinted at, monomorphisms and epimorphisms generalize the notions of injectivity and surjectivity in $\Set$. We can ask then whether categories which we think of as ``sets with extra data'' have the property that their monomorphisms are just those underlain by injections. Phrased differently, does the forgetful functor $U: \mathscr{C} \to \Set$ reflect mono and epimorphisms? This turns out to be true in some generality, but we must first make rigorous what it means to be a ``set with extra structure.''
+
+\begin{definition}\label{def:concrete-category} A \textit{concrete category} is a locally small category $\mathscr{C}$, together with faithful functor to sets $U : \mathscr{C} \to \Set$. We think of this functor as ``forgetting'' the data.
+\end{definition}
+
+\begin{examples}\label{exs:concrete-categories} The following categories are concrete: $\Grp$, $\Poset$, $\Vect$, $\Top$, \todo{add more}.
+\end{examples}
+
+
+\begin{proposition} Any faithful functor reflects monomorphisms and epimorphisms.
+\end{proposition}
+
+Thus we see that all the categories in \autoref{exs:concrete-categories} have the property that their monomorphisms are underlying injections, and epimorphisms are underlying surjections. We summarize this in the following table.
+
+\begin{table}[h]
+    \centering
+    \caption{Examples of monomorphisms and epimorphisms}
+    \begin{tabular}{ p{2cm} l  p{5cm}  p{8cm} }
+        \toprule
+\textbf{Category}      
+& \textbf{Monomorphisms}   
+& \textbf{Epimorphisms} \\\midrule
+$\Set$ & injections & surjections \\\hline
+
+$\Grp$ & underlying injections & underlying surjections  \\\hline	 \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\begin{counterexample} We have that the inclusion $\Z \hookto \mathbb{Q}$ is an epimorphism in the category $\Ring$ of unital rings. This tells us that the forgetful functor $U: \Ring \to \Set$ is \textit{not} faithful.
+\end{counterexample}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%
+
+
+
+
+
+
 %\printbibliography
 
 \bibliographystyle{amsalpha}
 \bibliography{619.bib}
+
+
+
 
 
 
