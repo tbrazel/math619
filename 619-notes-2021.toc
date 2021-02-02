@@ -5,7 +5,7 @@
 \contentsline {subsection}{\numberline {2.1}Category theory review}{6}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Adjoint pairs of functors}{8}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}A convenient category of spaces}{10}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Limits and colimits in categories}{13}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Limits aQmits in categories}{13}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Existence of limits and colimits in $\textbf {Top}$}{17}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}The category of based topological spaces}{18}{subsection.2.6}
 \contentsline {section}{\numberline {3}Higher homotopy groups}{20}{section.3}
