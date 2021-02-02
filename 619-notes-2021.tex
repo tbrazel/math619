@@ -307,6 +307,7 @@ We start with some recollections about basic category theory and we construct th
 We refer the reader to the following excellent sources for the basics of category theory. The sets of notes \cite{WOMP},\cite{Torres-cat} and \cite{mehrle} are great introductions and so are the textbooks \cite{leinster} and \cite{Riehl-context}. The standard reference for category, which was the first book on the subject is still \cite{maclane}. We skip the definition of category but recall a list of standard examples of categories that you have certainly encountered  before. 
 
 \begin{table}[h]
+    \centering
     \caption{Examples of categories}
     \begin{tabular}{ p{2cm} l  p{5cm}  p{8cm} }
         \toprule
@@ -327,13 +328,14 @@ $\Grp$ & groups &group homomorphisms \\\hline
     \end{tabular}
 \end{table}
 
+
 Also, here are some examples of functors between some of these categories, which we have probably encountered before:
 \begin{itemize}\itemsep0em 
 	\item the {forgetful functor}\index[ind]{functor!forgetful}  $U: \Grp \to \Set$ which forgets the group structure
-	\item  the {free functor}\index[ind]{functor!free}$F:\Set \to \Grp$  which takes the free group on a set
+	\item  the {free functor}\index[ind]{functor!free} $F:\Set \to \Grp$  which takes the free group on a set
 	\item  homology $H_i \colon \Top_\ast \to \Grp$ 
 	\item  homotopy groups $\pi_i \colon \Top_\ast \to \Grp$ 
-	\item cohomology $H^i : \Top^\ast \to \Grp$, which is a \textit{contravariant} functor
+	\item cohomology $H^i : \Top^\ast \to \Grp$, which is a \textit{contravariant} functor.
 \end{itemize}
 
 
@@ -469,7 +471,7 @@ for each $a\in \C$, $b\in \D$.
 We will give three more definitions of an adjunction, which we claim are all equivalent to each other. We can define an adjunction in terms of just the unit or the counit together with a universal property.
 
 \begin{definition}\label{def2}
-Given a pair of functors $F\colon \C \leftrightarrows \D:\!\! G$, we say they are \textit{adjoint} if there exists a natural transformations $\eta \colon \id_\C \Rightarrow GF$ (called the \textit{unit}) such that for any object $C$ of $\C$ and $D$ of $\D$ and any map $f\colon C\to G(D)$ there exists a unique map $g \colon F(C) \to D$ so that the following diagram commutes:
+Given a pair of functors $F\colon \C \leftrightarrows \D\colon G$, we say they are \textit{adjoint} if there exists a natural transformations $\eta \colon \id_\C \Rightarrow GF$ (called the \textit{unit}) such that for any object $C$ of $\C$ and $D$ of $\D$ and any map $f\colon C\to G(D)$ there exists a unique map $g \colon F(C) \to D$ so that the following diagram commutes:
 
 \[\begin{tikzcd}
 C \arrow{d}{f} \arrow{r}{\eta_C} &GF(C) \arrow[dotted]{dl}{Ug}\\
@@ -497,7 +499,7 @@ which is natural in both $a$ and $b$.
 %\warning The second definition only makes sense in a setting where we are allowed to compare $\Hom_\D(F(a),b)$ and $\Hom_\C(a,G(b))$, for example when $\C$ and $\D$ are both locally small.
 
 
-Here are some examples of adjunctions:
+\begin{examples}\label{exs:adjunctions} Here are some examples of adjunctions:
 \begin{itemize}
 	\item Fix an abelian group $B$. Then for any abelian groups $A$ and $C$, we have a natural isomorphism of sets
 \begin{align*}
@@ -510,6 +512,9 @@ That is, the functors $-\otimes B$ and $\Hom_\Ab (B, -)$ are adjoint.
 		\Top(X,UY) \cong \Top_\ast (X_+, Y).
 	\end{align*}
 \end{itemize}
+\end{examples}
+
+
 
 \begin{proposition} Adjoints compose.
 \end{proposition}
@@ -676,7 +681,7 @@ Prove the proposition.
 	\item In $\Set$, a functor determines two sets $F(0) = A$ and $F(1) = B$, and their colimit $A\amalg B$ satisfies the universal property that, for any other set $X$ equipped with morphisms $A\to X$ and $B\to X$, there is a unique map $A \amalg B \to X$ such that
 \[
 	\begin{tikzcd}
-	A\ar[dr]\ar[ddr,bend right=10] \ar[rr] & & B\ar[dl]\ar[ddl,bend left=10] \\
+	A\ar[dr]\ar[ddr,bend right=10] & & B\ar[dl]\ar[ddl,bend left=10] \\
 	 & A \amalg B\dar[dashed] & \\
 	 & X &
 	\end{tikzcd}
@@ -686,7 +691,7 @@ commutes. This is exactly the coproduct of sets that we are familiar with. Duall
 	\begin{tikzcd}
 	& X\ar[ddr,bend left=10]\ar[ddl,bend right=10]\dar[dashed] & \\
 	& A \prod B\ar[dl]\ar[dr] & \\
-	 A\ar[rr] & & B. \\
+	 A & & B. \\
 	\end{tikzcd}
 \]
 Thus the product in $\Set$ is just the cartesian product.
@@ -726,11 +731,7 @@ Thus the product in $\Set$ is just the cartesian product.
 \]
 \end{definition}
 
-\begin{definition}
-If $I=\dot \rightrightarrows \dot$, then colimit over $I$ is called the \emph{coequalizer} and the limit is called the \emph{equalizer}. 
-\end{definition}
-
-Here are some examples:
+\begin{examples} Here are some examples of pushouts:
 \begin{itemize}\itemsep0em
     \item In $\Set$, the pushout
 	\[
@@ -790,6 +791,9 @@ Here are some examples:
 		\end{tikzcd}
 	\]
 \end{itemize}
+\end{examples}
+
+
 
 
 \begin{example} Recall that a CW complex $X$ has a discrete set $X_0$ and has skeleta $X_{n+1}$ which is built from $X_n$ via a pushout diagram
@@ -825,7 +829,7 @@ The issue is that the product of two CW complexes $X\times Y$ is only a CW compl
 There were some partial results known before the introduction of CGWH spaces.
 \vspace{-1em}
 \begin{enumerate}\itemsep0em
-	\item Whitehead '49 showed that if $X$ and $Y$ are CW complexes, and one is locally finite, then $X\times Y$ is CW
+	\item Whitehead '49 showed that if $X$ and $Y$ are CW complexes, and one is locally finite, then $X\times Y$ is CW\todo{citation sneeded}
 	\item Milnor '56 showed that if both are locally countable, then $X\times Y$ is CW
 	\item Tanaka '82 counterexample: if $X$ and $Y$ are CW and neither are locally countable, then $X\times Y$ is \textit{not} CW.
 \end{enumerate}
