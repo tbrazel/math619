@@ -558,11 +558,14 @@ Some examples of CG spaces are metric spaces and all locally compact spaces, so 
 
 Note that immediately from the definitions, if $X$ is a compactly generated space, and $Y$ is any space, then $f: X \to Y$ is continuous if and only if $f: X \to kY$ is continuous. 
 
-\textbf{Upshot:} For the functors $i:\CG \leftrightarrows \Top:k$, we have that
+\begin{upshot} For the functors $i:\CG \leftrightarrows \Top:k$, we have that
 \[
 	\Hom_\Top (iX,Y) \cong \Hom_\CG (X, kY),
 \]
 so $i$ is left adjoint to $k$.
+
+\end{upshot}
+
 
 
 \begin{note} We have that $k^2 X = kX$.
@@ -667,7 +670,7 @@ Prove the proposition.
 \end{align*}
 \end{definition}
 
-\textbf{Examples of products and coproducts:}
+\begin{examples} What follows are some examples of products and coproducts:
  \vspace{-1em}
 \begin{itemize}\itemsep0em
 	\item In $\Set$, a functor determines two sets $F(0) = A$ and $F(1) = B$, and their colimit $A\amalg B$ satisfies the universal property that, for any other set $X$ equipped with morphisms $A\to X$ and $B\to X$, there is a unique map $A \amalg B \to X$ such that
@@ -698,7 +701,7 @@ Thus the product in $\Set$ is just the cartesian product.
 
 %	\item In $\CG$, the product is $\times_k$.
 \end{itemize}
-
+\end{examples}
 
 
 \begin{definition} If $I = \dot \rightrightarrows \dot$, then the colimit over $I$ is called the \textit{coequalizer} and the limit over $I$ is called the \textit{equalizer}.\index[ind]{equalizer}\index[ind]{coequalizer}
