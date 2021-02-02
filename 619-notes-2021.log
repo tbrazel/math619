@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  28 JAN 2021 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  1 FEB 2021 22:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1083,7 +1083,7 @@ Package hyperref Info: Option `pageanchor' set `true' on input line 66.
 
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<pics/s1_smash_s1.png, id=58, 1787.67876pt x 384.43625pt>
+<pics/s1_smash_s1.png, id=78, 1787.67876pt x 384.43625pt>
 File: pics/s1_smash_s1.png Graphic file (type png)
 <use pics/s1_smash_s1.png>
 Package pdftex.def Info: pics/s1_smash_s1.png  used on input line 111.
@@ -1109,11 +1109,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 332.
-[6] [7] [8] [9] [10] [11] [12] [13] [14] [15] Excluding 'comment' comment.
-(./619-notes-2021.bbl [16]) [17]
+[6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16]
+
+LaTeX Warning: Citation `Hatcher' on page 17 undefined on input line 832.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 834.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 834.
+
+[17] [18] [19] [20] Excluding 'comment' comment. (./619-notes-2021.bbl)
+[21]
 runsystem(makeindex ind.idx)...executed safely (allowed).
 
- (./ind.ind [18
+ (./ind.ind [22
 
 
 
@@ -1125,47 +1137,55 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3717.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3717.
 
 Package rerunfilecheck Info: File `619-notes-2021.out' has not changed.
-(rerunfilecheck)             Checksum: 375B2A0C3669EA9594C06F2AE1C2A158;599.
+(rerunfilecheck)             Checksum: F3D7D7650FD58A18E9FDB3552B09D4C3;895.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3717.
  ) 
 Here is how much of TeX's memory you used:
- 24962 strings out of 492649
- 473726 string characters out of 6129622
- 598152 words of memory out of 5000000
- 28210 multiletter control sequences out of 15000+600000
- 25299 words of font info for 100 fonts, out of 8000000 for 9000
+ 25124 strings out of 492649
+ 477012 string characters out of 6129622
+ 599182 words of memory out of 5000000
+ 28328 multiletter control sequences out of 15000+600000
+ 26981 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,19n,84p,3225b,1023s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,20n,84p,3225b,1123s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/mmerling/Library/texlive/2018/texmf-var/fonts/pk/ljfour/public/bbm/b
 bm10.600pk></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 bx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
 x7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxt
 i10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
-10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.
-pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
-b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/l
+10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/
+cmex7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/l
 ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
-e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2
-018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texliv
-e/2018/texmf-dist/fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2018/te
-xmf-dist/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on 619-notes-2021.pdf (18 pages, 463259 bytes).
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
+/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2018/texmf-d
+ist/fonts/type1/public/rsfs/rsfs7.pfb>
+Output written on 619-notes-2021.pdf (22 pages, 519768 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 346 compressed objects within 4 object streams
- 105 named destinations out of 1000 (max. 500000)
- 82 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 505 PDF objects out of 1000 (max. 8388607)
+ 444 compressed objects within 5 object streams
+ 146 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -810,235 +810,235 @@ with the \textit{weak topology}, meaning that $A\subseteq X$ is closed if and on
 \begin{proposition} CW complexes are in $\CGWH$.
 \end{proposition}
 
-%\begin{note} The product of CW complexes $X\times Y$ gets a cell structure with $n$-cells of $X\times Y$ corresponding to a $p$-cell of $X$ and a $q$-cell of $Y$ where $p+q=n$. The idea behind this is that
-%\[
-%    D^{p+q} \cong I^{p+q} \cong I^p \times I^q \cong D^p \times D^q.
-%\]
-%\end{note}
-%
-%The issue is that the product of two CW complexes $X\times Y$ is only a CW complex if the product topology is the same as the weak topology. We also note that the product topology is generally not as fine as the weak topology.
-%
-%
-%There were some partial results known before the introduction of CGWH spaces.
-%\vspace{-1em}
-%\begin{enumerate}\itemsep0em
-%	\item Whitehead '49 showed that if $X$ and $Y$ are CW complexes, and one is locally finite, then $X\times Y$ is CW
-%	\item Milnor '56 showed that if both are locally countable, then $X\times Y$ is CW
-%	\item Tanaka '82 counterexample: if $X$ and $Y$ are CW and neither are locally countable, then $X\times Y$ is \textit{not} CW.
-%\end{enumerate}
-%
-%
-%
-%But the good news is that in $\CGWH$ we have that $X\times_k Y$ is always a CW complex (for a proof see \cite{Hatcher}).
-%
-%\subsection{Existence of limits and colimits in $\Top$}
-%
-%\begin{definition} A category with all limits is called \textit{complete}, and a category with all colimits is called \textit{cocomplete}.\index[ind]{category!(co)complete}
-%\end{definition}
-%
-%We start with a remark about a way to describe limits when they exist. 
-%
-%\begin{remark}\label{diagonallimit} We may check that, in any $\C$ which has $J$-shaped limits,
-%	\begin{align*}
-%		\Hom_\C (Z, \lim_J F) \cong \Hom_{\C^J} (\Delta  Z, F)
-%	\end{align*}
-%	where $\Delta : \C \to \C^J$ is the diagonal functor which sends $c$ to the constant diagram at $c$.
-%\end{remark}
-%
-%\begin{proposition} If $\C$ has arbitrary coproducts and coequalizers, then it is cocomplete. Dually, if $\C$ has arbitrary products and equalizers, then it is complete.
-%\end{proposition}
-%
-%\begin{proposition} $\Top$ is complete and cocomplete.
-%\end{proposition}
-%\begin{proof}[Proof idea] Note that we have coproducts given by disjoint union, and coequalizers are given by quotients
-%\begin{align*}
-%	\coeq \left( X \overset{f}{\underset{g}{\rightrightarrows}} Y \right) := X\Big/f(x) \sim g(x).
-%\end{align*}
-%Products are given by products, and we may check that equalizers are a subspace given by equality of two functions.
-%
-%\end{proof}
-%
-%\begin{proposition} The category $\CGWH$ is  complete and cocomplete.
-%\end{proposition}
-%
-%\begin{proof}
-%
-%Recall that we had adjunctions
-%\begin{align*}
-%	\Top \overset{k}{\underset{i}{\rightleftarrows}} \CG \overset{j}{\underset{h}{\rightleftarrows}} \CGWH.
-%\end{align*}
-%
-%\begin{enumerate}
-%	\item We have that $i$ preserves colimits, so colimits of CG spaces are computed in $\Top$ when they exist. So we must check that coequalizers and coproducts of CG spaces are CG (exercise).
-%
-%	For limits, we claim that $\lim_J G$ for $J\to \CG$ is $k\lim_J (i\circ G)$ in $\CG$.
-%First note that
-%	\begin{align*}
-%		\Hom_\CG (X, k\lim_J (i\circ G)) \cong \Hom_\Top (iX, \lim_J i \circ G).
-%	\end{align*}
-%	
-%	Using \autoref{diagonallimit}, we have that
-%	\begin{align*}
-%		\Hom_\Top (iX, \lim_J i \circ G) &\cong \Hom_{\Top^J} (\Delta \circ iX, iG) \\
-%		&\cong \Hom_{\Top^J} (i\circ \Delta X, iG) \\
-%		&\cong \Hom_{\CG^J} (\Delta X, k\circ iG) \\
-%		&\cong \Hom_{\CG^J}(\Delta X, G),
-%	\end{align*}
-%	where this last isomorphism is since $G$ already takes values in $\CG$. Finally, we see that
-%	\begin{align*}
-%		\Hom_{\CG^J}(\Delta X, G) &\cong \Hom_\CG (X, \lim_J G).
-%	\end{align*}
-%
-%	Since this is true for all objects $X$, we may check that $k\lim_J (i\circ G) = \lim_J G$.
-%
-%
-%	\textbf{Upshot}: We have that $\CG$ is complete and cocomplete and we know how to compute limits and colimits:
-%	\begin{itemize}
-%		\item colimits: do nothing except compute them in $\Top$
-%		\item limits: just apply $k(-)$ to it.
-%	\end{itemize}
-%
-%	\item Since $j$ preserves limits, we have that $\CGWH$ is complete if all limits of $\CG$ spaces exist in $\CGWH$. We must check this on products and equalizers (exercise). For colimits, we need to apply $h$ to the colimit in $\CG$, similarly to as we did above.
-%\end{enumerate}
-%
-%So we have that $\CGWH$ is complete, cocomplete, and cartesian closed.
-%\end{proof}
-%
-%\begin{customenvironment}{Notation} From here on we redefine the category of topological spaces to be $\Top := \CGWH$, and redefine $\times := \times_k$, $\Map := k\Map$. 
-%\end{customenvironment}
-%
-%\subsection{The category of based topological spaces}
-%Let $\Top_\ast$ be the category of based (CGWH) spaces and based maps. Let $\Map_\ast (X, Y)$ be the space of based maps, and  note that we may base this mapping space at the constant map sending every $x\in X$ to the basepoint $y_0$ of $Y$.
-%
-%The functor $\Map_\ast (X, -)$ has an adjoint, but it is not given by the product! Instead, the functor $X\smashprod -$ is an adjoint. We can verify that, for any other based spaces $Y$ and $Z$ we have a natural isomorphism
-%\begin{align*}
-%	\Hom_{\Top_\ast} (Y\smashprod X, Z) \cong \Hom_{\Top_\ast} (Y, \Map_\ast (X,Z)).
-%\end{align*}
-%
-%\begin{lemma} There exist natural isomorphisms
-%\begin{enumerate}
-%	\item $(X\smashprod Y) \smashprod Z \cong X\smashprod (Y\smashprod Z)$
-%	\item $X\smashprod Y \cong Y\smashprod X$
-%	\item $X\smashprod S^0 \cong X \cong S^0 \smashprod X$.
-%\end{enumerate}
-%\end{lemma}
-%
-%\begin{proof}[Proof idea] For (1), it is important that we are in $\CGWH$. By \cite[Proposition 2.20]{Strickland-cgwh}, products preserve quotients, so that 
-%\begin{align*}
-%	X\times Y \times Z \to (X\smashprod Y)\times Z \to (X\smashprod Y)\smashprod Z.
-%\end{align*}
-%is a composite of quotient maps, and may be identified with the quotient
-%\begin{align*}
-%	X\times Y \times Z \to \frac{X\times Y\times Z}{X\vee Y\vee Z}.
-%\end{align*}
-%Thus it does not depend on the order.
-%
-%\end{proof}
-%
-%We remark that the associativity isomorphism does not hold in the category of all topological spaces. A counterexample is given by $(\N\smashprod \Q)\smashprod \Q)$ which is not homeomorphic to $\N\smashprod (\Q \smashprod \Q)$. For a discussion see this \href{https://mathoverflow.net/questions/196084/counterexample-for-associativity-of-smash-product}{mathoverflow post}.
-%
-%
-%
-%
-%\begin{definition} A \textit{symmetric monoidal category}\index[ind]{symmetric monoidal category} is a category $(\C,\otimes,\mathbbm{1})$ is a category equipped with a functor
-%\begin{align*}
-%	- \otimes - : \C \times \C \to \C,
-%\end{align*}
-%such that there are natural isomorphisms
-%\begin{align*}
-%	(c\otimes d)\otimes e &\cong c\otimes (d\otimes e) \\
-%	c\otimes d & \cong d\otimes c \\
-%	\mathbbm{1} \otimes c &\cong c \cong c\otimes \mathbbm{1},
-%\end{align*}
-%for any objects in $\C$, such that all possible diagrams involving these commute (infinite data, really hard to check). However by MacLane's coherence theorem, we only need to check a few diagrams (in particular, the pentagon), and all higher diagrams commute.
-%\end{definition}
-%
-%\begin{definition} A symmetric monoidal category is \textit{closed}\index[ind]{symmetric monoidal category!closed} if $-\otimes X$ has an adjoint for all $X$.
-%\end{definition}
-%
-%\begin{proposition} $(\Top_\ast, \smashprod, S^0)$ is a closed symmetric monoidal category.
-%\end{proposition}
-%
-%
-%
-%\section{Higher homotopy groups}
-%\subsection{Homotopies}
-%Recall for $f,g : X \to Y$, a \textit{homotopy}\index[ind]{homotopy} $h$ from $f$ to $g$ is a map
-%\begin{align*}
-%	h : X\times I \to Y
-%\end{align*}
-%such that $h(x,0) = f(x)$, and $h(x,1) = g(x)$ for all $x\in X$. We write $f\simeq g$ to denote the homotopy.
-%
-%\begin{definition} Let $[X,Y]$ be the set of homotopy equivalence classes of maps $X\to Y$ (check that $\simeq$ gives an equivalence relation).
-%\end{definition}
-%
-%\begin{proposition} Let $X,Y \in \Top$. Then there is a bijection
-%\begin{align*}
-%	[X,Y] \xto{\cong} \pi_0 \Map(X,Y).
-%\end{align*}
-%\end{proposition}
-%\begin{proof} We note that
-%\begin{align*}
-%	\Map(I\times X, Y) \cong \Map(I, \Map(X,Y)),
-%\end{align*}
-%so a homotopy $f\simeq g$ corresponds to a path between $f$ and $g$ in the mapping space $\Map(X,Y)$.
-%\end{proof}
-%
-%\begin{definition} A \textit{based homotopy}\index[ind]{homotopy!based} from $f$ to $g$, where $f,g : (X,x_0) \to (Y,y_0)$ is a homotopy $h:f\simeq g$ with the extra condition that each $h(-,t) : (X,x_0) \to (Y,y_0)$ is based.
-%
-%\textbf{Check}: This is equivalent to a based map $h : X \smashprod I_+ \to Y$.
-%\end{definition}
-%
-%\begin{definition} The set of based homotopy equivalence classes of maps is denoted $[X,Y]_\ast$. For example, $[S^1, (X,x_0)]_\ast = \pi_1(X,x_0)$.
-%\end{definition}
-%
-%\begin{definition} We say that two spaces are \textit{homotopy equivalent} if there exist maps $f: X \to Y$ and $g : Y \to X$ such that $f\circ g\simeq \id_Y$ and $g\circ f \simeq \id_X$.
-%\end{definition}
-%
-%\begin{exercise} Show that $\simeq$ is an equivalence relation on objects in $\Top$.
-%\end{exercise}
-%
-%\begin{proposition} Homotopy equivalence satisfies ``2 out of 3'': meaning if two out of the maps $f, g, g\circ f$ are homotopy equivalences, then so is the third (check).
-%
-%\[
-%	\begin{tikzcd}
-%	X\rar["f"]\ar[dr,"g\circ f" below left] & Y\dar["g" right] \\
-%	 & Z.
-%	\end{tikzcd}
-%\]
-%
-%\begin{note} The property ``2 out of 3'' holds automatically for all categorical isomorphisms.\footnote{In fact, the class of isomorphisms satisfies a stronger property, called \textit{2-out-of-6}.}
-%\end{note}
-%
-%\end{proposition}
-%
-%\begin{definition} A space $X$ is \textit{contractible}\index[ind]{contractible} if it is homotopy equivalent to a point (e.g. $I$, $D^n$, $\R^n$, $S^\infty$, ...).
-%\end{definition}
-%
-%\begin{definition} The \textit{cone}\index[ind]{cone} on $X$ is defined to be the quotient space $CX := \frac{X\times I}{X\times \{1\}}$.
-%\end{definition}
-%
-%
-%\begin{exercise} $\ $
-%\begin{enumerate}
-%	\item Show $X$ is contractible if and only if $\id_X$ is null-homotopic (homotopic to a constant map)
-%	\item Show that $f: S^n \to Y$ is null-homotopic if and only if there exists an extension of $f$ to the closed disk
-%	\[
-%		\begin{tikzcd}
-%		S^n\rar["f"]\dar[hook] & Y \\
-%		D^{n+1}\ar[ur,dashed,"\widetilde{f}" below right] &
-%		\end{tikzcd}
-%	\]
-%
-%	\item More generally, show that $f: X \to Y$ is null-homotopic if and only if there exists an extension
-%	\[
-%		\begin{tikzcd}
-%		X\rar["f"]\dar[hook] & Y \\
-%		CX\ar[ur,dashed,"\widetilde{f}" below right] &
-%		\end{tikzcd}
-%	\]
-%\end{enumerate}
-%\end{exercise}
+\begin{note} The product of CW complexes $X\times Y$ gets a cell structure with $n$-cells of $X\times Y$ corresponding to a $p$-cell of $X$ and a $q$-cell of $Y$ where $p+q=n$. The idea behind this is that
+\[
+    D^{p+q} \cong I^{p+q} \cong I^p \times I^q \cong D^p \times D^q.
+\]
+\end{note}
+
+The issue is that the product of two CW complexes $X\times Y$ is only a CW complex if the product topology is the same as the weak topology. We also note that the product topology is generally not as fine as the weak topology.
+
+
+There were some partial results known before the introduction of CGWH spaces.
+\vspace{-1em}
+\begin{enumerate}\itemsep0em
+	\item Whitehead '49 showed that if $X$ and $Y$ are CW complexes, and one is locally finite, then $X\times Y$ is CW
+	\item Milnor '56 showed that if both are locally countable, then $X\times Y$ is CW
+	\item Tanaka '82 counterexample: if $X$ and $Y$ are CW and neither are locally countable, then $X\times Y$ is \textit{not} CW.
+\end{enumerate}
+
+
+
+But the good news is that in $\CGWH$ we have that $X\times_k Y$ is always a CW complex (for a proof see \cite{Hatcher}).
+
+\subsection{Existence of limits and colimits in $\Top$}
+
+\begin{definition} A category with all limits is called \textit{complete}, and a category with all colimits is called \textit{cocomplete}.\index[ind]{category!(co)complete}
+\end{definition}
+
+We start with a remark about a way to describe limits when they exist. 
+
+\begin{remark}\label{diagonallimit} We may check that, in any $\C$ which has $J$-shaped limits,
+	\begin{align*}
+		\Hom_\C (Z, \lim_J F) \cong \Hom_{\C^J} (\Delta  Z, F)
+	\end{align*}
+	where $\Delta : \C \to \C^J$ is the diagonal functor which sends $c$ to the constant diagram at $c$.
+\end{remark}
+
+\begin{proposition} If $\C$ has arbitrary coproducts and coequalizers, then it is cocomplete. Dually, if $\C$ has arbitrary products and equalizers, then it is complete.
+\end{proposition}
+
+\begin{proposition} $\Top$ is complete and cocomplete.
+\end{proposition}
+\begin{proof}[Proof idea] Note that we have coproducts given by disjoint union, and coequalizers are given by quotients
+\begin{align*}
+	\coeq \left( X \overset{f}{\underset{g}{\rightrightarrows}} Y \right) := X\Big/f(x) \sim g(x).
+\end{align*}
+Products are given by products, and we may check that equalizers are a subspace given by equality of two functions.
+
+\end{proof}
+
+\begin{proposition} The category $\CGWH$ is  complete and cocomplete.
+\end{proposition}
+
+\begin{proof}
+
+Recall that we had adjunctions
+\begin{align*}
+	\Top \overset{k}{\underset{i}{\rightleftarrows}} \CG \overset{j}{\underset{h}{\rightleftarrows}} \CGWH.
+\end{align*}
+
+\begin{enumerate}
+	\item We have that $i$ preserves colimits, so colimits of CG spaces are computed in $\Top$ when they exist. So we must check that coequalizers and coproducts of CG spaces are CG (exercise).
+
+	For limits, we claim that $\displaystyle \lim_J D$ for $D\colon J\to \CG$ is $\displaystyle k\lim_J (i\circ G)$ in $\CG$.
+First note that
+	\begin{align*}
+		\Hom_\CG (X, k\lim_J (i\circ D)) \cong \Hom_\Top (iX, \lim_J (i \circ D)).
+	\end{align*}
+	
+	Using \autoref{diagonallimit}, we have that
+	\begin{align*}
+		\Hom_\Top (iX, \lim_J( i \circ D)) &\cong \Hom_{\Top^J} (\Delta(iX), iD) \\
+		&\cong \Hom_{\Top^J} (i\circ \Delta X, iD) \\
+		&\cong \Hom_{\CG^J} (\Delta X, k\circ iD) \\
+		&\cong \Hom_{\CG^J}(\Delta X, D),
+	\end{align*}
+	where this last isomorphism is since $D$ already takes values in $\CG$. Finally, we see that
+	\begin{align*}
+		\Hom_{\CG^J}(\Delta X, D) &\cong \Hom_\CG (X, \lim_J D).
+	\end{align*}
+
+	Since this is true for all objects $X$, we may check that $k\lim_J (i\circ D) = \lim_J D$.
+
+
+	\textbf{Upshot}: We have that $\CG$ is complete and cocomplete and we know how to compute limits and colimits:
+	\begin{itemize}
+		\item colimits: do nothing except compute them in $\Top$
+		\item limits: just apply $k(-)$ to it.
+	\end{itemize}
+
+	\item Since $j$ preserves limits, we have that $\CGWH$ is complete if all limits of $\CG$ spaces exist in $\CGWH$. We must check this on products and equalizers (exercise). For colimits, we need to apply $h$ to the colimit in $\CG$, similarly to as we did above.
+\end{enumerate}
+
+So we have that $\CGWH$ is complete, cocomplete, and cartesian closed.
+\end{proof}
+
+\begin{customenvironment}{Notation} From here on we redefine the category of topological spaces to be $\Top := \CGWH$, and redefine $\times := \times_k$, $\Map := k\Map$. 
+\end{customenvironment}
+
+\subsection{The category of based topological spaces}
+Let $\Top_\ast$ be the category of based (CGWH) spaces and based maps. Let $\Map_\ast (X, Y)$ be the space of based maps, and  note that we may base this mapping space at the constant map sending every $x\in X$ to the basepoint $y_0$ of $Y$.
+
+The functor $\Map_\ast (X, -)$ has an adjoint, but it is not given by the product! Instead, the functor $X\smashprod -$ is an adjoint. We can verify that, for any other based spaces $Y$ and $Z$ we have a natural isomorphism
+\begin{align*}
+	\Hom_{\Top_\ast} (Y\smashprod X, Z) \cong \Hom_{\Top_\ast} (Y, \Map_\ast (X,Z)).
+\end{align*}
+
+\begin{lemma} There exist natural isomorphisms
+\begin{enumerate}
+	\item $(X\smashprod Y) \smashprod Z \cong X\smashprod (Y\smashprod Z)$
+	\item $X\smashprod Y \cong Y\smashprod X$
+	\item $X\smashprod S^0 \cong X \cong S^0 \smashprod X$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}[Proof idea] For (1), it is important that we are in $\CGWH$. By \cite[Proposition 2.20]{Strickland-cgwh}, products preserve quotients, so that 
+\begin{align*}
+	X\times Y \times Z \to (X\smashprod Y)\times Z \to (X\smashprod Y)\smashprod Z.
+\end{align*}
+is a composite of quotient maps, and may be identified with the quotient
+\begin{align*}
+	X\times Y \times Z \to \frac{X\times Y\times Z}{X\vee Y\vee Z}.
+\end{align*}
+Thus it does not depend on the order.
+
+\end{proof}
+
+We remark that the associativity isomorphism does not hold in the category of all topological spaces. A counterexample is given by $(\N\smashprod \Q)\smashprod \Q)$ which is not homeomorphic to $\N\smashprod (\Q \smashprod \Q)$. For a discussion see this \href{https://mathoverflow.net/questions/196084/counterexample-for-associativity-of-smash-product}{mathoverflow post}.
+
+
+
+
+\begin{definition} A \textit{symmetric monoidal category}\index[ind]{symmetric monoidal category} is a category $(\C,\otimes,\mathbbm{1})$ is a category equipped with a functor
+\begin{align*}
+	- \otimes - : \C \times \C \to \C,
+\end{align*}
+such that there are natural isomorphisms
+\begin{align*}
+	(c\otimes d)\otimes e &\cong c\otimes (d\otimes e) \\
+	c\otimes d & \cong d\otimes c \\
+	\mathbbm{1} \otimes c &\cong c \cong c\otimes \mathbbm{1},
+\end{align*}
+for any objects in $\C$, such that all possible diagrams involving these commute (infinite data, really hard to check). However by MacLane's coherence theorem, we only need to check a few diagrams (in particular, the pentagon), and all higher diagrams commute.
+\end{definition}
+
+\begin{definition} A symmetric monoidal category is \textit{closed}\index[ind]{symmetric monoidal category!closed} if $-\otimes X$ has an adjoint for all $X$.
+\end{definition}
+
+\begin{proposition} $(\Top_\ast, \smashprod, S^0)$ is a closed symmetric monoidal category.
+\end{proposition}
+
+
+
+\section{Higher homotopy groups}
+\subsection{Homotopies}
+Recall for $f,g : X \to Y$, a \textit{homotopy}\index[ind]{homotopy} $h$ from $f$ to $g$ is a map
+\begin{align*}
+	h : X\times I \to Y
+\end{align*}
+such that $h(x,0) = f(x)$, and $h(x,1) = g(x)$ for all $x\in X$. We write $f\simeq g$ to denote the homotopy.
+
+\begin{definition} Let $[X,Y]$ be the set of homotopy equivalence classes of maps $X\to Y$ (check that $\simeq$ gives an equivalence relation).
+\end{definition}
+
+\begin{proposition} Let $X,Y \in \Top$. Then there is a bijection
+\begin{align*}
+	[X,Y] \xto{\cong} \pi_0 \Map(X,Y).
+\end{align*}
+\end{proposition}
+\begin{proof} We note that
+\begin{align*}
+	\Map(I\times X, Y) \cong \Map(I, \Map(X,Y)),
+\end{align*}
+so a homotopy $f\simeq g$ corresponds to a path between $f$ and $g$ in the mapping space $\Map(X,Y)$.
+\end{proof}
+
+\begin{definition} A \textit{based homotopy}\index[ind]{homotopy!based} from $f$ to $g$, where $f,g : (X,x_0) \to (Y,y_0)$ is a homotopy $h:f\simeq g$ with the extra condition that each $h(-,t) : (X,x_0) \to (Y,y_0)$ is based.
+
+\textbf{Check}: This is equivalent to a based map $h : X \smashprod I_+ \to Y$.
+\end{definition}
+
+\begin{definition} The set of based homotopy equivalence classes of maps is denoted $[X,Y]_\ast$. For example, $[S^1, (X,x_0)]_\ast = \pi_1(X,x_0)$.
+\end{definition}
+
+\begin{definition} We say that two spaces are \textit{homotopy equivalent} if there exist maps $f: X \to Y$ and $g : Y \to X$ such that $f\circ g\simeq \id_Y$ and $g\circ f \simeq \id_X$.
+\end{definition}
+
+\begin{exercise} Show that $\simeq$ is an equivalence relation on objects in $\Top$.
+\end{exercise}
+
+\begin{proposition} Homotopy equivalence satisfies ``2 out of 3'': meaning if two out of the maps $f, g, g\circ f$ are homotopy equivalences, then so is the third (check).
+
+\[
+	\begin{tikzcd}
+	X\rar["f"]\ar[dr,"g\circ f" below left] & Y\dar["g" right] \\
+	 & Z.
+	\end{tikzcd}
+\]
+
+\begin{note} The property ``2 out of 3'' holds automatically for all categorical isomorphisms.\footnote{In fact, the class of isomorphisms satisfies a stronger property, called \textit{2-out-of-6}.}
+\end{note}
+
+\end{proposition}
+
+\begin{definition} A space $X$ is \textit{contractible}\index[ind]{contractible} if it is homotopy equivalent to a point (e.g. $I$, $D^n$, $\R^n$, $S^\infty$, ...).
+\end{definition}
+
+\begin{definition} The \textit{cone}\index[ind]{cone} on $X$ is defined to be the quotient space $CX := \frac{X\times I}{X\times \{1\}}$.
+\end{definition}
+
+
+\begin{exercise} $\ $
+\begin{enumerate}
+	\item Show $X$ is contractible if and only if $\id_X$ is null-homotopic (homotopic to a constant map)
+	\item Show that $f: S^n \to Y$ is null-homotopic if and only if there exists an extension of $f$ to the closed disk
+	\[
+		\begin{tikzcd}
+		S^n\rar["f"]\dar[hook] & Y \\
+		D^{n+1}\ar[ur,dashed,"\widetilde{f}" below right] &
+		\end{tikzcd}
+	\]
+
+	\item More generally, show that $f: X \to Y$ is null-homotopic if and only if there exists an extension
+	\[
+		\begin{tikzcd}
+		X\rar["f"]\dar[hook] & Y \\
+		CX\ar[ur,dashed,"\widetilde{f}" below right] &
+		\end{tikzcd}
+	\]
+\end{enumerate}
+\end{exercise}
 
 
 \begin{comment}

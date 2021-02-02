@@ -5,10 +5,13 @@
   \indexspace
 
   \item category
+    \subitem (co)complete, \hyperpage{17}
     \subitem opposite, \hyperpage{6}
   \item coequalizer, \hyperpage{15}
   \item colimit, \hyperpage{13}
   \item compactly generated, \hyperpage{11}
+  \item cone, \hyperpage{21}
+  \item contractible, \hyperpage{20}
   \item coproduct, \hyperpage{14}
 
   \indexspace
@@ -23,6 +26,11 @@
 
   \indexspace
 
+  \item homotopy, \hyperpage{20}
+    \subitem based, \hyperpage{20}
+
+  \indexspace
+
   \item limit, \hyperpage{13}
 
   \indexspace
@@ -34,6 +42,11 @@
   \item product, \hyperpage{14}
   \item pullback, \hyperpage{15}
   \item pushout, \hyperpage{15}
+
+  \indexspace
+
+  \item symmetric monoidal category, \hyperpage{19}
+    \subitem closed, \hyperpage{19}
 
   \indexspace
 
