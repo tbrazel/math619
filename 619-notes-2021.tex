@@ -389,12 +389,13 @@ Note that for any category $\mathscr{C}$, we have that $(\mathscr{C}^\op)^\op$ i
 
 For any two categories $\C$ and $\D$, we can define the product category $\C\times \D$, with objects and morphisms given by pairs of objects and morphisms, and identities and composition defined componentwise. 
 
-\begin{exercise}\label{} Show that the data of a natural transformation is the same as a functor $H : \C\times\mathbbm{2} \to \D$, such that $H(-,0)=F$ and $H(-,1) = G$. 
+\begin{exercise} Show that the data of a natural transformation is the same as a functor $H : \C\times\mathbbm{2} \to \D$, such that $H(-,0)=F$ and $H(-,1) = G$. 
 \end{exercise}
 
 
 \begin{example} Let $(-)^{\ast\ast} : \Vect(\R) \to \Vect(\R)$ denote the double dual functor. We have a natural transformation $\eta : \id_{\Vect(\R)} \Rightarrow (-)^{\ast\ast}$ whose components are the isomorphisms $\eta_V \to V^{\ast\ast}$ given by $x\mapsto [\ev_x : V^\ast \to \R]$. One may check that the corresponding diagram commutes, and gives a natural isomorphism.
 \end{example}
+
 
 \begin{remark} For every $V$, there also exists an isomorphism $V\cong V^\ast$, however there is no natural isomorphism $\id \Rightarrow (-)^\ast$.
 \end{remark}
@@ -696,7 +697,6 @@ Prove \autoref{prop:LAPC}.
 \end{definition}
 
 \begin{examples} What follows are some examples of products and coproducts:
- \vspace{-1em}
 \begin{itemize}\itemsep0em
 	\item In $\Set$, a functor determines two sets $F(0) = A$ and $F(1) = B$, and their colimit $A\amalg B$ satisfies the universal property that, for any other set $X$ equipped with morphisms $A\to X$ and $B\to X$, there is a unique map $A \amalg B \to X$ such that
 \[
