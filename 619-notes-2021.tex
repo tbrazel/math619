@@ -3792,12 +3792,36 @@ Let $\mathscr{C}$ be a category, not necessarily assumed to be locally small. We
 if any two of $f$, $g$, or $g\circ f$ have property \textbf{P}, then the third does as well.
 \end{definition}
 
+
 \begin{exercise} $\ $
 \begin{enumerate}
     \item Prove that isomorphisms satisfy 2-out-of-3.
     \item In the category $\Set$, prove that injections and surjections do not satisfy 2-out-of-3.
 \end{enumerate}
 \end{exercise}
+
+\begin{definition}\label{def:cancellative-properties} Let \textbf{P} be a property of morphisms.
+\begin{enumerate}
+    \item We say that \textbf{P} is a \textit{left cancellative property} if any time $g\circ f$ has property \textbf{P}, this implies that $f$ has property \textbf{P} as well.
+    \item We say that \textbf{P} is a \textit{right cancellative property} if any time $g\circ f$ has property \textbf{P}, this implies that $g$ has property \textbf{P} as well.
+\end{enumerate}
+\end{definition}
+As a warning to the reader, \textbf{the terminology in} \autoref{def:cancellative-properties} \textbf{is not standard}, although we would advocate for its usage. The notion of left cancellative properties is referred to as (CANC) \cite[Appendix~C]{GortzWedhorn}, and has many examples in algebraic geometry (e.g. immersions, locally of finite type, purely inseparable, quasi-separated, separated). Many other examples occur under hypotheses on $g$, e.g. if it is separated or unramified. In a broader categorical context, we will see that mono-(resp. epi-)morphisms are left (resp. right) cancellative. 
+
+
+\begin{definition}\label{def:closed-under-retracts} Let \textbf{P} be a property of morphisms. We say that \textbf{P} is \textit{closed under retracts} if, for any $f: A \to B$ with property \textbf{P}, and any $g: X \to Y$ fitting into a commutative diagram
+\[ \begin{tikzcd}
+    X\ar[rr,bend left=30,"\id_X" above]\dar["g" left]\rar & A\dar["f"]\rar & X\dar["g" right]\\
+    Y\rar\ar[rr,bend right=30,"\id_Y" below] & B\rar & Y,
+\end{tikzcd} \]
+we have that $g$ has property \textbf{P} as well.
+\end{definition}
+
+
+
+
+
+
 
 \begin{definition} Let \textbf{P} be a property of morphisms. Then we say that \textbf{P} is \textit{stable under pullback} (often also called \textit{stable under base change}) if for any pullback diagram of the form
 \[ \begin{tikzcd}
@@ -3814,7 +3838,7 @@ if $k$ has property \textbf{P}, then $f$ has property \textbf{P} as well.
 
 \begin{exercise}\label{exer:injective-stable-under-pullback} $\ $
 \begin{enumerate}
-    \item Prove that isomorphisms are always stable under pullback.
+    \item Prove that isomorphisms are always stable under pushout and pullback.
     \item Prove in the category $\Set$ that injective functions are stable under pullback, and surjective functions are stable under pushout.
 \end{enumerate}
 \end{exercise}
@@ -3822,7 +3846,7 @@ if $k$ has property \textbf{P}, then $f$ has property \textbf{P} as well.
 
 Thus far we have discussed closure properties internal to a category. We might wonder how properties translate across functors.
 
-\begin{definition}\label{def:labelname} Let $F: \mathscr{C} \to \mathscr{D}$ be a functor, and let \textbf{P} be a property of morphisms.
+\begin{definition}\label{def:functor-preserve-reflect-properties} Let $F: \mathscr{C} \to \mathscr{D}$ be a functor, and let \textbf{P} be a property of morphisms.
 \begin{enumerate}
     \item We say that $F$ \textit{preserves property} \textbf{P} if any time $f: x \to y$ is a morphisms in $\mathscr{C}$ with property \textbf{P}, we have that $Ff: Fx \to Fy$ has property \textbf{P} as well.
 
@@ -3877,7 +3901,7 @@ If $\mathscr{C}$ is locally small, there is another equivalent condition:
 \begin{enumerate}
     \item Monomorphisms are closed under composition
     \item Monomorphisms are stable under pullback
-    \item Any time $f\circ g$ is a monomorphism, then $g$ is a monomorphism.
+    \item Monomorphisms are left cancellative.
 \end{enumerate}
 \end{exercise}
 
@@ -3918,7 +3942,7 @@ Epimorphisms satisfy all the dual properties to monomorphisms.
     \item Any morphism to an initial object is an epimorphism.
     \item Epimorphisms are closed under composition.
     \item Epimorphisms are stable under pushout.
-    \item If $f\circ g$ is an epimorphism, then $f$ is an epimorphism.
+    \item Epimorphisms are right cancellative. 
     \item Right adjoints preserve epimorphisms.
 \end{enumerate}
 \end{exercise}
@@ -3954,6 +3978,31 @@ $\Grp$ & underlying injections & underlying surjections  \\\hline	 \bottomrule
 
 \begin{counterexample} We have that the inclusion $\Z \hookto \mathbb{Q}$ is an epimorphism in the category $\Ring$ of unital rings. This tells us that the forgetful functor $U: \Ring \to \Set$ is \textit{not} faithful.
 \end{counterexample}
+
+\subsection{Properties of morphisms can induce properties of objects}
+
+Suppose we have a commutative diagram of the form
+\[ \begin{tikzcd}
+    A\rar["i" above]\ar[dr,"\id_A" below left] & B\dar["r" right]\\
+     & A.
+\end{tikzcd} \]
+In this case we say the object $A$ is a \textit{retract} of $B$. We can ask about what properties of objects descend to their retracts, motivating the following definition.
+
+\begin{definition}\label{def:property-objects-closed-under-retracts} Let \textbf{O} be a property of objects in $\mathscr{C}$ (we can just think of this as some subclass of the class of objects). Then we say that \textbf{O} is \textit{closed under retracts} if, any time $B \in \mathbf{O}$, and $A$ is a retract of $B$, we have that $A\in \mathbf{O}$ as well.
+\end{definition}
+
+We can ask about how a property of objects could potentially be related to a property of morphisms. In particular, we could ask about how properties of morphisms might induce properties of objects. Our perspective on this is stolen from algebraic geometry, in which a scheme is defined to have a property if and only if its structure morphism has the associated property. In the world of schemes and varieties, there basically don't exist properties for objects, only properties for morphisms. This is a feature of life with a terminal object. In many situations, such as topological spaces, we have the same luxury.
+
+\begin{terminology}\label{term:inducing-properties-of-objects-from-properties-of-morphisms} Let $\mathscr{C}$ be a category with a terminal object $\ast$, and let \textbf{P} be a property of morphisms in $\mathscr{C}$. Then we have an \textit{induced property of objects} \textbf{O}, defined by saying that $X\in \mathbf{O}$ if the unique morphism $X \xto{!} \ast$ lies in \textbf{P}.
+\end{terminology}
+
+\begin{exercise} Let $\mathscr{C}$ be a category with a terminal object. Prove that if \textbf{P} is a property of morphisms closed under retracts in the sense of \autoref{def:closed-under-retracts}, then the induced property of objects is closed under retracts in the sense of \autoref{def:property-objects-closed-under-retracts}.
+\end{exercise}
+
+\begin{remark} The passage from fibrations to fibrant objects follows \autoref{term:inducing-properties-of-objects-from-properties-of-morphisms}.
+\end{remark}
+
+
 
 
 
