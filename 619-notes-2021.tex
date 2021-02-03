@@ -423,7 +423,19 @@ Prove the Yoneda lemma.
 
 \emph{Hint: There are two parts to this. First, define the required set isomorphism. Second, draw out the naturality squares, along maps $c\to c'$ and along natural transformations $F\Rightarrow F'$ and check that with the definition  of the isomorphism you gave, these squares commute.  A reference for the proof is for example \cite[Lemma 2.5]{mehrle}.}
 \end{exercise}
-There is an equivalent contravariant version of the Yoneda lemma.
+There is an equivalent contravariant version of the Yoneda lemma. Moreover, it turns out we can prove two objects in a category are isomorphic by showing that the representables are naturally isomorphic.
+
+\begin{lemma}
+Suppose that there is a natural isomorphism of functors $$\eta\colon \Hom_\C(c, -)\cong \Hom_\C(d, -).$$ Then $c\cong d$ in $\C$.
+\end{lemma}
+
+\begin{proof}
+We can show that $\eta_c(\id_c)\colon d\to c$ is an isomorphism. Since $\eta_d$ is an isomorphism, there exists an $f\colon c\to d$ such that $\eta_d(f)=\id_d$. Considering the naturality sqaure
+\[\xymatrix{
+\Hom_\C(c,c)\ar[r]^-{\eta_c}\ar[d]_-{\circ f}  & \Hom_\C(d,c) \ar[d]^-{\circ f} \\
+\Hom_\C(c,d) \ar[r]_-{\eta_d}& \Hom(d,d)
+}\]  we can see that $f\circ \eta_c(\id_c)\circ f=\id_d$. Similarly considering the naturality square for $\eta_c(\id_c)\colon d\to c$ we can show that $\eta_c(\id_c)\circ f=\id_c$.
+\end{proof}
 
 \subsection{Adjoint pairs of functors}
 
@@ -666,11 +678,13 @@ Prove \autoref{prop:limits-unique-up-to-iso}.
 
 Before moving on to many examples, we state a proposition whose usefulness is hard to overestimate. It says that left adjoints preserve colimits and right adjoints preserve limits.
 
-\begin{proposition}\label{prop:LAPC} (\textit{LAPC}\footnote{Left adjoints preserve colimits.}) Let $F\adj G$ be adjoint functors. Then $F$ preserves colimits and $G$ preserves limits.
+\begin{proposition}\label{prop:LAPC} (\textit{LAPC and RAPL}\footnote{Left adjoints preserve colimits and right adjoints preserve limits.}) Let $F\adj G$ be adjoint functors. Then $F$ preserves colimits and $G$ preserves limits.
 \end{proposition}
 
 \begin{exercise}
 Prove \autoref{prop:LAPC}.
+
+ \emph{Hint: Note that if you prove that right adjoint preserve limits, it will dually follow that left adjoints preserve colimits by considering opposite categories. Now, to prove RAPL, the simplest way to approach it is straight from the hom bijection definition of adjoints and the definition of limit. Namely, show that if $L$ is a limit of a diagram in the domain category $\C$ then $GL$ satisfies the universal property of the limit in the target category $\D$. Another way would be to show that the proposition holds for representables and then go from there. Or, we using \autoref{diagonallimit}, which we will see in the next section, assuming limits exist, you can use that adjunction to prove that a right adjoint preserves limits.}
 \end{exercise}
 
 
@@ -842,7 +856,7 @@ There were some partial results known before the introduction of CGWH spaces.
 
 
 
-But the good news is that in $\CGWH$ we have that $X\times_k Y$ is always a CW complex (for a proof see \cite{Hatcher}).
+But the good news is that in $\CGWH$ we have that $X\times_k Y$ is always a CW complex. A proof can be found in \cite[Theorem A.6]{Hatcher}.
 
 \subsection{Existence of limits and colimits in $\Top$}
 
@@ -878,8 +892,9 @@ Products are given by products, and we may check that equalizers are a subspace 
 
 Recall that we had adjunctions
 \begin{align*}
-	\Top \overset{k}{\underset{i}{\rightleftarrows}} \CG \overset{j}{\underset{h}{\leftrightarrows}} \CGWH.
+	\Top \overset{k}{\underset{i}{\rightleftarrows}} \CG \overset{j}{\underset{h}{\leftrightarrows}} \CGWH,
 \end{align*}
+where the right adjoints are displayed on top.
 
 \begin{enumerate}
 	\item We have that $i$ preserves colimits, so colimits of CG spaces are computed in $\Top$ when they exist. So we must check that coequalizers and coproducts of CG spaces are CG (exercise).
@@ -963,7 +978,7 @@ such that there are natural isomorphisms
 	c\otimes d & \cong d\otimes c \\
 	\mathbbm{1} \otimes c &\cong c \cong c\otimes \mathbbm{1},
 \end{align*}
-for any objects in $\C$, such that all possible diagrams involving these commute (infinite data, really hard to check). However by MacLane's coherence theorem, we only need to check a few diagrams (in particular, the pentagon), and all higher diagrams commute.
+for any objects in $\C$, such that all possible diagrams involving these commute (infinite data, really hard to check). However by MacLane's coherence theorem, we only need to check a few diagrams (in particular, the pentagon), and it then follows that all higher diagrams commute.
 \end{definition}
 
 \begin{definition} A symmetric monoidal category is \textit{closed}\index[ind]{symmetric monoidal category!closed} if $-\otimes X$ has an adjoint for all $X$.
@@ -974,7 +989,13 @@ for any objects in $\C$, such that all possible diagrams involving these commute
 
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 
 
 
@@ -1061,7 +1082,7 @@ We should check that this is equivalent to a based map $h : X \smashprod I_+ \to
 \end{exercise}
 
 
-\begin{comment}
+
 %%%
 % LECTURE 5
 % \section{Lecture 5: January 31st}
@@ -1109,10 +1130,12 @@ which are the classes of based maps under based homotopy. We note that $[X,Y]_\a
 
 In algebraic topology, or in homotopy theory, we always want functors from $\Top$ or $\Top_\ast$ to some category of algebraic objects ($\Grp$, $\Ab$, $\Ring$) which factor through the homotopy category.
 
-\begin{customenvironment}{Warning} The categories $\Ho(\Top)$ and $\Ho(\Top_\ast)$ do not have all limits and colimits.
+\begin{warn} The categories $\Ho(\Top)$ and $\Ho(\Top_\ast)$ do not have all limits and colimits.
 % todo: commutative diagrams in the homotopy category may only commute in $\Top$ up to homotopy
+\end{warn}
 
-\end{customenvironment}
+
+
 
 \begin{definition} For $n\geq 1$, the higher homotopy groups are defined to be
 \begin{align*}

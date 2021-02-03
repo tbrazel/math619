@@ -1,6 +1,6 @@
 \begin{theindex}
 
-  \item $k$-closed, \hyperpage{11}
+  \item $k$-closed, \hyperpage{12}
 
   \indexspace
 
@@ -9,9 +9,7 @@
     \subitem opposite, \hyperpage{6}
   \item coequalizer, \hyperpage{15}
   \item colimit, \hyperpage{13}
-  \item compactly generated, \hyperpage{11}
-  \item cone, \hyperpage{21}
-  \item contractible, \hyperpage{20}
+  \item compactly generated, \hyperpage{12}
   \item coproduct, \hyperpage{14}
 
   \indexspace
@@ -26,12 +24,7 @@
 
   \indexspace
 
-  \item homotopy, \hyperpage{20}
-    \subitem based, \hyperpage{20}
-
-  \indexspace
-
-  \item limit, \hyperpage{13}
+  \item limit, \hyperpage{14}
 
   \indexspace
 
@@ -45,12 +38,12 @@
 
   \indexspace
 
-  \item symmetric monoidal category, \hyperpage{19}
-    \subitem closed, \hyperpage{19}
+  \item symmetric monoidal category, \hyperpage{20}
+    \subitem closed, \hyperpage{20}
 
   \indexspace
 
   \item weak Hausdorff, \hyperpage{12}
-  \item weak topology, \hyperpage{16}
+  \item weak topology, \hyperpage{17}
 
 \end{theindex}
