@@ -10,5 +10,6 @@
 \contentsline {subsection}{\numberline {2.6}The category of based topological spaces}{19}{subsection.2.6}
 \contentsline {section}{\numberline {A}More category theory: properties of morphisms}{20}{appendix.A}
 \contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{20}{subsection.A.1}
-\contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{22}{subsection.A.2}
-\contentsline {subsection}{\numberline {A.3}Preservation properties under limits and colimits}{24}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{23}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.3}Properties of morphisms can induce properties of objects}{25}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.4}Preservation properties under limits and colimits}{26}{subsection.A.4}
