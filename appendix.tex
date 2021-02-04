@@ -43,7 +43,7 @@ if any two of $f$, $g$, or $g\circ f$ have property \textbf{P}, then the third d
     \item We say that \textbf{P} is a \textit{right cancellative property} if any time $g\circ f$ has property \textbf{P}, this implies that $g$ has property \textbf{P} as well.
 \end{enumerate}
 \end{definition}
-As a warning to the reader, \textbf{the terminology in} \autoref{def:cancellative-properties} \textbf{is not standard}, although we would advocate for its usage. The notion of left cancellative properties is referred to as (CANC) \cite[Appendix~C]{GortzWedhorn}, and has many examples in algebraic geometry (e.g. immersions, locally of finite type, purely inseparable, quasi-separated, separated). Many other examples occur under hypotheses on $g$, e.g. if it is separated or unramified. In a broader categorical context, we will see that mono-(resp. epi-)morphisms are left (resp. right) cancellative. 
+As a warning to the reader, \textbf{the terminology in} \autoref{def:cancellative-properties} \textbf{is not standard}, although we would advocate for its usage. The notion of left cancellative properties is referred to as (CANC) in \cite[Appendix~C]{GortzWedhorn}, and has many examples in algebraic geometry (e.g. immersions, locally of finite type, purely inseparable, quasi-separated, separated). Many other examples occur under hypotheses on $g$, e.g. if it is separated or unramified. In a broader categorical context, we will see that mono-(resp. epi-)morphisms are left (resp. right) cancellative. 
 
 
 \begin{definition}\label{def:closed-under-retracts} Let \textbf{P} be a property of morphisms. We say that \textbf{P} is \textit{closed under retracts} if, for any $f: A \to B$ with property \textbf{P}, and any $g: X \to Y$ fitting into a commutative diagram
@@ -276,16 +276,16 @@ is in \textbf{P} as well (assuming both colimits exist). Dually we have a notion
 \end{proposition}
 \begin{proof} We will prove (1) and remark that (2) follows formally. Let $f: A \to B$ and $g: C \to D$ be monomorphisms. Then assuming their products exist, there is an induced map $(f \times g) : A \times C \to B \times D$. We claim that this is a monomorphism as well. Via \autoref{def:monomorphism}, we can restate the statement that $f$ and $g$ are monomorphisms into the statement that these diagrams are pullbacks
 \[ \begin{tikzcd}
-    A\rar\dar\pb & B\dar\\
-    B\rar & B
+    A\rar\dar\pb & A\dar\\
+    A\rar & B
 \end{tikzcd} \quad\quad  \begin{tikzcd}
-    C\rar\dar\pb & D\dar\\
-    D\rar & D.
+    C\rar\dar\pb & C\dar\\
+    C\rar & D.
 \end{tikzcd} \]
 Since limits commute, we have that taking a product of the two pullbacks is the same as the pullback of the product of the two diagrams, that is, the following diagram is a pullback
 \[ \begin{tikzcd}
-    A \times C\rar["f \times g"]\dar["f \times g" left] & B \times D\dar["\id \times \id" right]\\
-    B \times D \rar["\id \times \id" below] & B \times D.
+    A \times C\rar["\id \times \id"]\dar["\id \times \id" left]\pb & A \times C\dar["f \times g" right]\\
+    A \times C \rar["f \times g" below] & B \times D.
 \end{tikzcd} \]
 Thus $f \times g$ is a monomorphism.
 \end{proof}
