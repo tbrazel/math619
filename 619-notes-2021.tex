@@ -4051,8 +4051,8 @@ is in \textbf{P} as well (assuming both colimits exist). Dually we have a notion
 \end{tikzcd} \]
 Since limits commute, we have that taking a product of the two pullbacks is the same as the pullback of the product of the two diagrams, that is, the following diagram is a pullback
 \[ \begin{tikzcd}
-    A \times B\rar["f \times g"]\dar["f \times g" left] & C \times D\dar["\id \times \id" right]\\
-    C \times D \rar["\id \times \id" below] & C \times D.
+    A \times C\rar["f \times g"]\dar["f \times g" left] & B \times D\dar["\id \times \id" right]\\
+    B \times D \rar["\id \times \id" below] & B \times D.
 \end{tikzcd} \]
 Thus $f \times g$ is a monomorphism.
 \end{proof}
@@ -4105,6 +4105,14 @@ preserves limits in both arguments (limits in $\mathscr{C}^\op$ are colimits in 
 Thus far we have defined two notions of preservation of properties. Namely, properties preserved under functors (as in \autoref{def:functor-preserve-reflect-properties}), and properties preserved under limits and colimits (as in \autoref{def:colimit-preserve-property}). We can see that these are both instances of the same idea.
 
 \subsection{Colimits and limits as functors}
+
+In order to relate these two notions of preservation, we should relate one to the other. In particular we claim that the most general notion of preservation of properties of morphisms is under a functor. In order to see that this encapsulates the other definition, we should view the construction of limits and colimits as a functor in some sense.
+
+Let $\mathscr{C}$ be a category, and $I$ be an indexing category which we want to take limits and colimits over. Then there is a \textit{diagonal functor}
+\begin{align*}
+    \Delta : \mathscr{C} &\to \Fun(I, \mathscr{C}).
+\end{align*}
+This sends an object $c$ to the functor $\Delta(c): I \to \mathscr{C}$, where $\Delta(c)(i) = c$ for all $i\in I$, and $\Delta(c)(i \to i') = \id_c$. That is, $\Delta_c$ is really a constant functor at the object $c\in \mathscr{C}$. For a morphism $f:c\to c'$
 
 \begin{center}
     [[todo]]    
