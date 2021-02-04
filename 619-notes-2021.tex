@@ -504,7 +504,8 @@ which is natural in both $a$ and $b$.
 
 \begin{exercise} Demonstrate the equivalence of these four definitions. 
 \end{exercise}
-\emph{These equivalences of definitions can all be found in the nLab entry on adjunctions. Also, the proof of the equivalence of \autoref{def1} and \autoref{def4} can be found as  \cite[Theorem 2.2.5]{leinster} or \cite[Theorem 3.9]{mehrle}. The equivalence of \autoref{def2} and \autoref{def4} can be found in \cite[Section 3]{henderson} or \cite[Theorem 2.3.6.]{leinster}, where the universal property of the unit is formulated in terms of initial objects. The argument using \autoref{def3} instead of \autoref{def2} should be exactly analogous.}
+
+Hint: These equivalences of definitions can all be found in the nLab entry on adjunctions. Also, the proof of the equivalence of \autoref{def1} and \autoref{def4} can be found as  \cite[Theorem 2.2.5]{leinster} or \cite[Theorem 3.9]{mehrle}. The equivalence of \autoref{def2} and \autoref{def4} can be found in \cite[Section 3]{henderson} or \cite[Theorem 2.3.6.]{leinster}, where the universal property of the unit is formulated in terms of initial objects. The argument using \autoref{def3} instead of \autoref{def2} should be exactly analogous.
 
 %\warning The second definition only makes sense in a setting where we are allowed to compare $\Hom_\D(F(a),b)$ and $\Hom_\C(a,G(b))$, for example when $\C$ and $\D$ are both locally small.
 
@@ -685,7 +686,7 @@ Before moving on to many examples, we state a proposition whose usefulness is ha
 \begin{exercise}
 Prove \autoref{prop:LAPC}.
 
- \emph{Hint: Note that if you prove that right adjoint preserve limits, it will dually follow that left adjoints preserve colimits by considering opposite categories. Now, to prove RAPL, the simplest way to approach it is straight from the hom bijection definition of adjoints and the definition of limit. Namely, show that if $L$ is a limit of a diagram in the domain category $\C$ then $GL$ satisfies the universal property of the limit in the target category $\D$. Another way would be to show that the proposition holds for representables and then go from there. Or, we using \autoref{diagonallimit}, which we will see in the next section, assuming limits exist, you can use that adjunction to prove that a right adjoint preserves limits.}
+ Hint: Note that if you prove that right adjoint preserve limits, it will dually follow that left adjoints preserve colimits by considering opposite categories. Now, to prove RAPL, the simplest way to approach it is straight from the hom bijection definition of adjoints and the definition of limit. Namely, show that if $L$ is a limit of a diagram in the domain category $\C$ then $GL$ satisfies the universal property of the limit in the target category $\D$. Another way would be to show that the proposition holds for representables and then go from there. Or, we using \autoref{diagonallimit}, which we will see in the next section, assuming limits exist, you can use that adjunction to prove that a right adjoint preserves limits.
 \end{exercise}
 
 
@@ -988,20 +989,6 @@ for any objects in $\C$, such that all possible diagrams involving these commute
 \end{proposition}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-
-
-
-
-
-
 \section{Higher homotopy groups}
 \subsection{Homotopies}
 Recall for $f,g : X \to Y$, a \textit{homotopy}\index[ind]{homotopy} $h$ from $f$ to $g$ is a map
@@ -1096,7 +1083,8 @@ An isomorphism in $\Ho(\Top)$ is the equivalence class of a homotopy equivalence
 
 There exists an obvious functor $\Top \xto{\gamma} \Ho(\Top)$ sending a map to its equivalence class.
 
-\begin{proposition} The functor $\gamma : \Top \to \Ho(\Top)$ is universal among functors $F: \Top \to \C$ which send homotopy equivalences into isomorphisms.\footnote{This is equivalent to being homotopy invariant, meaning $F(f) = F(g)$ if $f\simeq g$.} That is, for any such functor, it factors uniquely as
+\begin{proposition} The functor $\gamma : \Top \to \Ho(\Top)$ is universal among functors $F: \Top \to \C$ which send homotopy equivalences into isomorphisms. \footnote{This is equivalent to being homotopy invariant, meaning $F(f) = F(g)$ if $f\simeq g$.} 
+That is, for any such functor, it factors uniquely as
 \[
 	\begin{tikzcd}
 	\Top\dar["\gamma" left]\rar["F" above] & \C \\
@@ -1106,7 +1094,7 @@ There exists an obvious functor $\Top \xto{\gamma} \Ho(\Top)$ sending a map to i
 \end{proposition}
 \begin{proof} We will define $\phi_F : \Ho(\Top) \to \C$ on objects to be $\phi_F(X) = F(X)$. For a morphism $\alpha : X \to Y$ in $\Ho(\Top)$, let $f_\alpha : X\to Y$ be a representative of $\alpha$ in $\Top$. Then we define $\phi_F (\alpha) = F(f_\alpha)$.
 
-To see that this is well-defined, suppose $g\simeq f_\alpha$. Then there exists $h: X\times I \to Y$ such that $h \circ i_0 = f_\alpha$ and $f\circ i_1 = g$, where $i_0,i_1 : X \to X\times I$ are the inclusions at time 0 and 1. Let $\pi_X : X\times I \to X$ be the projection on $X$, and note that $i_0, i_1, \pi_X$ are all homotopy equivalences. Therefore $F(i_0), F(i_1), F(\pi_X)$ are all isomorphisms. We note also that
+To see that this is well-defined, suppose $g\simeq f_\alpha$. Then there exists $h\colon X\times I \to Y$ such that $h \circ i_0 = f_\alpha$ and $h \circ i_1 = g$, where $i_0,i_1 \colon X \to X\times I$ are the inclusions at time 0 and 1. Let $\pi_X \colon X\times I \to X$ be the projection on $X$, and note that $i_0, i_1, \pi_X$ are all homotopy equivalences. Therefore $F(i_0), F(i_1), F(\pi_X)$ are all isomorphisms. We note also that
 \begin{align*}
 	\pi_X \circ i_0 = \id_X = \pi_X \circ i_1.
 \end{align*}
@@ -1141,8 +1129,10 @@ In algebraic topology, or in homotopy theory, we always want functors from $\Top
 \begin{align*}
 	\pi_n(X,x_0) = [S^n, (X,x_0)]_{\ast}.
 \end{align*}
+\end{definition}
 
-For $n=0$, we obtain the classes of based maps $S^0 \to X$, which correspond to path components of $X$. Thus $\pi_0$ is a functor to based sets.
+For $n=0$, the same definition gives classes of based maps $S^0 \to X$, which correspond to path components of $X$. Thus $\pi_0(X, x_0)$ is a based set. We need to prove that $\pi_n(X, x_0)$ are groups. You have already seen the proof for $n=1$, i.e. for the fundamental group, in a first algebraic topology course. For all the higher homotopy groups we will have an even stronger result: we will see that $\pi_n(X, x_0)$ are abelian groups for all $n\geq 2$.
+
 
 For $n=1$, we think of $S^1$ as $I^1 \Big/ \partial I^1$. Then we recall the \textit{pinch map} is given by
 	\begin{align*}
@@ -1163,14 +1153,14 @@ For $n\geq 2$, we note that $S^n \cong S^1 \smashprod \cdots \smashprod S^1$ is 
 
 	\begin{exercise} $(X\vee Y)\smashprod Z \cong (X\smashprod Z)\vee (Y\smashprod Z)$.
 	\end{exercise}
-	\begin{proof} Left adjoints preserve colimits, and note that $-\smashprod Z : \Top_\ast \to \Top_\ast$ is a left adjoint.
+	\begin{proof} Left adjoints preserve colimits, and note that $-\smashprod Z \colon\Top_\ast \to \Top_\ast$ is a left adjoint.
 	\end{proof}
 
 	Thus we can define $n$ different pinch maps:
 	\begin{align*}
-		p_1 &: S^n \cong S^1 \smashprod S^{\smashprod (n-1)} \xto {p\smashprod \id} (S^1 \vee S^1)\smashprod S^{n-1} = S^n \vee S^n \\
+		p_1 &\colon S^n \cong S^1 \smashprod S^{\smashprod (n-1)} \xto {p\smashprod \id} (S^1 \vee S^1)\smashprod S^{n-1} = S^n \vee S^n \\
 		&\vdots \\
-		p_k &: S^n \cong S^{k-1}\smashprod S^1 \smashprod S^{n-k} \xto{\id\smashprod p \smashprod \id} S^{k-1}\smashprod (S^1 \vee S^1)\smashprod S^{n-k} \cong S^n \vee S^n \\
+		p_k &\colon S^n \cong S^{k-1}\smashprod S^1 \smashprod S^{n-k} \xto{\id\smashprod p \smashprod \id} S^{k-1}\smashprod (S^1 \vee S^1)\smashprod S^{n-k} \cong S^n \vee S^n \\
 		&\vdots
 	\end{align*}
 	where we apply the pinch map $p$ to any one of the $n$ factors. A priori, this seems troubling, since it seems to indicate that we may form $n$ different multiplications on $\pi_n(X)$ for each space $X$.
@@ -1185,6 +1175,16 @@ For $n\geq 2$, we note that $S^n \cong S^1 \smashprod \cdots \smashprod S^1$ is 
 	\end{enumerate}
 	Then $\dot = \ast$ and they are both commutative.
 	\end{lemma}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
+
 	\begin{proof} Using the unit and the interchange law,
 	\begin{align*}
 		(x\dot y) &= (x\ast e)\dot (e\ast y) \\
@@ -1224,13 +1224,17 @@ For $n\geq 2$, we note that $S^n \cong S^1 \smashprod \cdots \smashprod S^1$ is 
 
 
 
-\end{definition}
+
 
 \epigraph{Topologists of the early 20th century were aware that the non commutative nature of the fundamental group was useful in geometry and analysis; that the first homology group was, for a connected space, the fundamental group made abelian; and that the homology groups were defined in all dimensions. Consequently, there was a desire to find higher dimensional versions of the fundamental group, keeping its nonabelian nature.\vspace{1em}
 
 In 1932, E. Cech submitted to the ICM at Zurich a paper on higher homotopy groups; however, Alexandroff and Hopf, the kings of topology at the time, objected to the fact that they were abelian for $n\geq 2$, and on these grounds persuaded Cech to withdraw his paper, so that only a small paragraph appeared in the ICM Proceedings.\vspace{1em}
 
 It seems that Hurewicz attended this ICM. In 1935, the first of his notes on homotopy groups was published, and from then the concerns about the abelian nature of higher homotopy groups were regarded as a failure to accept a basic fact of life.}{\cite{Ronnie-brown-stack-exchange}}
+
+
+
+
 
 
 \subsection{Dependence of \texorpdfstring{$\pi_k$}{pi_k} on the basepoint}
