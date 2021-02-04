@@ -7,6 +7,10 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{HHR16}
 
+\bibitem[Bro]{Ronnie-brown-stack-exchange}
+R.~Brown, \emph{Eckmann-hilton and higher homotopy groups}, Mathematics Stack
+  Exchange.
+
 \bibitem[Fra13]{martincgwh}
 Martin Frankland,
   \emph{\href{http://uregina.ca/~franklam/Math527/Math527_0204.pdf}{Additional
@@ -16,6 +20,11 @@ Martin Frankland,
 B.~Guillou and H.~Skiadas,
   \emph{\href{https://faculty.math.illinois.edu/~bertg/WOMP-CategoryTheory.pdf}{WOMP
   2004: Category Theory}}.
+
+\bibitem[GW10]{GortzWedhorn}
+Ulrich G\"{o}rtz and Torsten Wedhorn, \emph{Algebraic geometry {I}}, Advanced
+  Lectures in Mathematics, Vieweg + Teubner, Wiesbaden, 2010, Schemes with
+  examples and exercises. \MR{2675155}
 
 \bibitem[Hat03]{Hatcher}
 A.~Hatcher,

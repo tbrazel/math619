@@ -10,10 +10,13 @@
   \item coequalizer, \hyperpage{15}
   \item colimit, \hyperpage{13}
   \item compactly generated, \hyperpage{12}
+  \item cone, \hyperpage{21}
+  \item contractible, \hyperpage{21}
   \item coproduct, \hyperpage{14}
 
   \indexspace
 
+  \item Eckmann-Hilton argument, \hyperpage{23}
   \item equalizer, \hyperpage{15}
 
   \indexspace
@@ -21,6 +24,13 @@
   \item functor
     \subitem forgetful, \hyperpage{6}
     \subitem free, \hyperpage{6}
+
+  \indexspace
+
+  \item homotopy, \hyperpage{20}
+    \subitem based, \hyperpage{20}
+  \item homotopy category
+    \subitem of $\Top$, \hyperpage{21}
 
   \indexspace
 
