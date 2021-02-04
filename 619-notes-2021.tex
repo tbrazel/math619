@@ -3920,8 +3920,8 @@ There is a dual notion, called an \textit{epimorphism}.
 
     \item The following diagram is a pushout:
 \[ \begin{tikzcd}
-    x\rar["f" above]\dar["f" left]\pb & y\dar["\id_y" right]\\
-    y\rar["\id_y" below] & y.
+    x\rar["f" above]\dar["f" left] & y\dar["\id_y" right]\\
+    y\rar["\id_y" below] & y\po.
 \end{tikzcd} \]
 
 If $\mathscr{C}$ is locally small, there is another equivalent condition:
@@ -4009,7 +4009,116 @@ We can ask about how a property of objects could potentially be related to a pro
 
 \subsection{Preservation properties under limits and colimits}
 
-[[todo]]
+\begin{definition}\label{def:naturally-P} Let $I$ be an indexing category, let $\mathscr{C}$ be a category, and let \textbf{P} be a property of morphisms in $\mathscr{C}$. Let $f_1, f_2 : I \to \mathscr{C}$ be two diagrams in $\mathscr{C}$, and let $\eta: f_1 \Rightarrow f_2$ be a natural transformation between them. We say that $\eta$ \textit{has property} \textbf{P} \textit{levelwise} (or \textit{has property} \textbf{P} \textit{naturally}) if each of the components $\eta_c : f_1(c) \to f_2(c)$ has property \textbf{P}. As some examples:
+\begin{enumerate}
+    \item a \textit{natural isomorphism} is a natural transformation whose components are isomorphisms.
+    \item a \textit{natural monomorphism} is a natural transformation whose components are monomorphisms.
+\end{enumerate}
+\end{definition}
+
+
+
+\begin{definition}\label{def:colimit-preserve-property} Let $I$ be an indexing category, and let \textbf{P} be a property of morphisms in $\mathscr{C}$. We say that \textbf{P} \textit{is preserved under} $I$\textit{-shaped colimits} if, any time we have a natural transformation $\eta: f_1 \Rightarrow f_2$ which has property \textbf{P} levelwise, we have that the induced map
+\begin{align*}
+    \colim_I(f_1) \to \colim_I(f_2)
+\end{align*}
+is in \textbf{P} as well (assuming both colimits exist). Dually we have a notion of preservation under $I$-shaped limits.
+\end{definition}
+
+\begin{example} We have that isomorphisms are preserved under arbitrary limits and colimits.
+\end{example}
+
+\begin{example} If $I = \bullet\ \bullet$ is a discrete category on two points, we say that a property \textbf{P} is \textit{preserved under products} (resp. \textit{coproducts}) if it is preserved under $I$-shaped limits (resp. colimits).
+\end{example}
+
+\begin{proposition}\label{prop:monos-preserved-under-products} We have that
+\begin{enumerate}
+    \item Monomorphisms are preserved under products
+    \item Epimorphisms are preserved under coproducts.
+\end{enumerate}
+\end{proposition}
+\begin{proof} We will prove (1) and remark that (2) follows formally. Let $f: A \to B$ and $g: C \to D$ be monomorphisms. Then assuming their products exist, there is an induced map $(f \times g) : A \times C \to B \times D$. We claim that this is a monomorphism as well. Via \autoref{def:monomorphism}, we can restate the statement that $f$ and $g$ are monomorphisms into the statement that these diagrams are pullbacks
+\[ \begin{tikzcd}
+    A\rar\dar\pb & B\dar\\
+    B\rar & B
+\end{tikzcd} \quad\quad  \begin{tikzcd}
+    C\rar\dar\pb & D\dar\\
+    D\rar & D.
+\end{tikzcd} \]
+Since limits commute, we have that taking a product of the two pullbacks is the same as the pullback of the product of the two diagrams, that is, the following diagram is a pullback
+\[ \begin{tikzcd}
+    A \times B\rar["f \times g"]\dar["f \times g" left] & C \times D\dar["\id \times \id" right]\\
+    C \times D \rar["\id \times \id" below] & C \times D.
+\end{tikzcd} \]
+Thus $f \times g$ is a monomorphism.
+\end{proof}
+
+
+This is an instance of a more general phenomenon, namely functors preserving limits and colimits.
+
+\begin{definition}\label{def:preserve-reflect-create-limits} Let $F:\mathscr{C} \to \mathscr{D}$ be a functor, and let $I$ be an indexing diagram.
+\begin{enumerate}
+    \item We say that $F$ \textit{preserves} $I$-shaped limits if, for any functor $j: I \to \mathscr{C}$, we have that the natural map is an isomorphism
+    \begin{align*}
+        F(\lim(j)) \cong \lim(F\circ j).
+    \end{align*}
+    That is, a limit cone over $j$ is sent to a limit cone over $F\circ j$.
+
+    \item We say that $F$ \textit{reflects} $I$-shaped limits if, for any functor $j: I \to \mathscr{C}$, if we have that $F(c)$ is the limit of $F\circ j$, then $c$ is a limit of $j$. Phrased differently, a limit cone over $F\circ j$ in the image of $F$ must have come from a limit cone over $j$.
+
+    \item We say $F$ \textit{creates} limits if it preserves and reflects them.
+\end{enumerate}
+We have analogous definitions for colimits.
+\end{definition}
+
+This relates to some things we have already seen: e.g. \autoref{prop:LAPC} said that left adjoints preserve colimits, and right adjoints preserve limits.
+
+\begin{proposition}\label{prop:hom-functors-preserve-limits} Hom functors preserve limits in both arguments. That is, if $\mathscr{C}$ is a locally small category, then the bifunctor
+\begin{align*}
+    \Hom : \mathscr{C}^\op \times \mathscr{C} &\to \Set
+\end{align*}
+preserves limits in both arguments (limits in $\mathscr{C}^\op$ are colimits in $\mathscr{C}$).
+\end{proposition}
+
+
+\begin{corollary}\label{cor:Yoneda-embedding-preserves-limits} Let $\mathscr{C}$ be locally small. Then the Yoneda embedding $y: \mathscr{C} \hookto \Fun(\mathscr{C}^\op, \Set)$ preserves all limits.
+\end{corollary}
+
+\begin{proposition}\label{prop:fully-faithful-functor-reflects-limits-colimits} A fully faithful functor reflects all limits and colimits.
+\end{proposition}
+
+
+\begin{remark}\label{rmk:labelname} If $F$ is a functor preserving all limits over the diagram $I = \bullet \to \bullet \from \bullet$, we say that it \textit{preserves pullbacks}. Dually if $F$ preserves limits over the span diagram $J = \bullet \from \bullet \to \bullet$, we say it is \textit{preserves pushouts}.
+\end{remark}
+
+\begin{exercise}\label{exer:pullback-preserving-functor-preserves-monos} Let $F: \mathscr{C}\to \mathscr{D}$ be a functor.
+\begin{enumerate}
+    \item If $F$ preserves pullbacks, then it preserves monomorphisms.
+    \item If $F$ preserves pushouts, then it preserves epimorphisms.
+\end{enumerate}
+\end{exercise}
+
+Thus far we have defined two notions of preservation of properties. Namely, properties preserved under functors (as in \autoref{def:functor-preserve-reflect-properties}), and properties preserved under limits and colimits (as in \autoref{def:colimit-preserve-property}). We can see that these are both instances of the same idea.
+
+\subsection{Colimits and limits as functors}
+
+\begin{center}
+    [[todo]]    
+\end{center}
+
+\subsection{Filtered limits and colimits}
+
+\begin{center}
+    [[todo]]    
+\end{center}
+
+
+
+
+
+
+
+
 
 
 
