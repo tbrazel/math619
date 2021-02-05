@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {3}Higher homotopy groups}{20}{section.3}
 \contentsline {subsection}{\numberline {3.1}Homotopies}{20}{subsection.3.1}
 \contentsline {section}{\numberline {A}More category theory: properties of morphisms}{24}{appendix.A}
-\contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{24}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{25}{subsection.A.1}
 \contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{27}{subsection.A.2}
 \contentsline {subsection}{\numberline {A.3}Properties of morphisms can induce properties of objects}{29}{subsection.A.3}
 \contentsline {subsection}{\numberline {A.4}Preservation properties under limits and colimits}{30}{subsection.A.4}

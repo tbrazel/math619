@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  4 FEB 2021 20:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  4 FEB 2021 20:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1201,20 +1201,16 @@ runsystem(makeindex ind.idx)...executed safely (allowed).
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3812.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3812.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3814.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3814.
 
 (./619-notes-2021.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3812.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3812.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3814.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3814.
 
 Package rerunfilecheck Info: File `619-notes-2021.out' has not changed.
 (rerunfilecheck)             Checksum: 12DFFADA21163862261FE7984D957DF9;1510.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3812.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3814.
  ) 
 Here is how much of TeX's memory you used:
  26869 strings out of 492649
@@ -1261,7 +1257,7 @@ ist/fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2018/texmf-dist/fonts
 /type1/public/rsfs/rsfs7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
 blic/xypic/xycmat10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
 xypic/xycmbt10.pfb>
-Output written on 619-notes-2021.pdf (34 pages, 613859 bytes).
+Output written on 619-notes-2021.pdf (34 pages, 613867 bytes).
 PDF statistics:
  927 PDF objects out of 1000 (max. 8388607)
  843 compressed objects within 9 object streams
