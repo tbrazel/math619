@@ -5,14 +5,14 @@
   \indexspace
 
   \item category
-    \subitem (co)complete, \hyperpage{17}
-    \subitem opposite, \hyperpage{6}
+    \subitem (co)complete, \hyperpage{18}
+    \subitem opposite, \hyperpage{7}
   \item coequalizer, \hyperpage{15}
-  \item colimit, \hyperpage{13}
+  \item colimit, \hyperpage{14}
   \item compactly generated, \hyperpage{12}
-  \item cone, \hyperpage{21}
-  \item contractible, \hyperpage{21}
-  \item coproduct, \hyperpage{14}
+  \item cone, \hyperpage{22}
+  \item contractible, \hyperpage{22}
+  \item coproduct, \hyperpage{15}
 
   \indexspace
 
@@ -22,12 +22,12 @@
   \indexspace
 
   \item functor
-    \subitem forgetful, \hyperpage{6}
-    \subitem free, \hyperpage{6}
+    \subitem forgetful, \hyperpage{7}
+    \subitem free, \hyperpage{7}
 
   \indexspace
 
-  \item homotopy, \hyperpage{20}
+  \item homotopy, \hyperpage{21}
     \subitem based, \hyperpage{21}
   \item homotopy category
     \subitem of $\Top$, \hyperpage{22}
@@ -42,9 +42,9 @@
 
   \indexspace
 
-  \item product, \hyperpage{14}
-  \item pullback, \hyperpage{15}
-  \item pushout, \hyperpage{15}
+  \item product, \hyperpage{15}
+  \item pullback, \hyperpage{16}
+  \item pushout, \hyperpage{16}
 
   \indexspace
 
@@ -53,7 +53,7 @@
 
   \indexspace
 
-  \item weak Hausdorff, \hyperpage{12}
+  \item weak Hausdorff, \hyperpage{13}
   \item weak topology, \hyperpage{17}
 
 \end{theindex}
