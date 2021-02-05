@@ -952,11 +952,11 @@ The functor $\Map_\ast (X, -)$ has an adjoint, but it is not given by the produc
 \end{enumerate}
 \end{lemma}
 
-\begin{proof}[Proof idea] For (1), it is important that we are in $\CGWH$. By \cite[Proposition 2.20]{Strickland-cgwh}, products preserve quotients, so that 
+\begin{proof}[Proof idea] For (1), it is important that we are in $\CGWH$. By \cite[Proposition 2.20]{Strickland-cgwh}, products preserve quotients, so that the first map in the following composite is a quotient
 \begin{align*}
 	X\times Y \times Z \to (X\smashprod Y)\times Z \to (X\smashprod Y)\smashprod Z.
 \end{align*}
-is a composite of quotient maps, and may be identified with the quotient
+Since the composite of quotient maps is a quotient map, it may be identified with the quotient
 \begin{align*}
 	X\times Y \times Z \to \frac{X\times Y\times Z}{X\vee Y\vee Z}.
 \end{align*}
@@ -987,6 +987,17 @@ for any objects in $\C$, such that all possible diagrams involving these commute
 
 \begin{proposition} $(\Top_\ast, \smashprod, S^0)$ is a closed symmetric monoidal category.
 \end{proposition}
+
+We end with a definition that we don't fully spell out, but which we will encounter over and over again in this class. 
+
+\begin{definition}
+Let $\mathscr{V}$ be a symmetric monoidal category. We say that a category $\C$ is enriched in $\mathscr{V}$ if each $\Hom_\C(c,d)$ is an object of $\mathscr{V}$,  the composition is given by a map
+$$\Hom_\C(c,d)\otimes \Hom_\C(b,c)\to \Hom_\C(b,d)$$ in $\mathscr{V}$, and there are unit maps $\mathbbm{1}\to \Hom_\C(c,c)$, such that the appropriate associativity and unitality diagrams commute.
+\end{definition}
+
+\begin{example}
+The main example we have already encountered is $\Top$, which is enriched over itself since the mapping spaces carry a topology. Moreover we have seen that the $-\times X$ and $\Map(X, -)$ adjunction is an enriched adjunction (the isomorphisms of hom sets were actually homeomorphisms of mapping spaces).
+\end{example}
 
 
 \section{Higher homotopy groups}
@@ -1083,7 +1094,7 @@ An isomorphism in $\Ho(\Top)$ is the equivalence class of a homotopy equivalence
 
 There exists an obvious functor $\Top \xto{\gamma} \Ho(\Top)$ sending a map to its equivalence class.
 
-\begin{proposition} The functor $\gamma : \Top \to \Ho(\Top)$ is universal among functors $F: \Top \to \C$ which send homotopy equivalences into isomorphisms. \footnote{This is equivalent to being homotopy invariant, meaning $F(f) = F(g)$ if $f\simeq g$.} 
+\begin{proposition} The functor $\gamma : \Top \to \Ho(\Top)$ is universal among functors $F: \Top \to \C$ which send homotopy equivalences into isomorphisms.\footnote{For example, any homotopy invariant functor $F$, meaning $F(f) = F(g)$ if $f\simeq g$ sends homotopy equivalences to isomorphisms. }
 That is, for any such functor, it factors uniquely as
 \[
 	\begin{tikzcd}
