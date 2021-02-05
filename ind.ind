@@ -7,7 +7,7 @@
   \item category
     \subitem (co)complete, \hyperpage{18}
     \subitem opposite, \hyperpage{7}
-  \item coequalizer, \hyperpage{15}
+  \item coequalizer, \hyperpage{16}
   \item colimit, \hyperpage{14}
   \item compactly generated, \hyperpage{12}
   \item cone, \hyperpage{22}
@@ -17,7 +17,7 @@
   \indexspace
 
   \item Eckmann-Hilton argument, \hyperpage{24}
-  \item equalizer, \hyperpage{15}
+  \item equalizer, \hyperpage{16}
 
   \indexspace
 
@@ -28,9 +28,9 @@
   \indexspace
 
   \item homotopy, \hyperpage{21}
-    \subitem based, \hyperpage{21}
+    \subitem based, \hyperpage{22}
   \item homotopy category
-    \subitem of $\Top$, \hyperpage{22}
+    \subitem of $\Top$, \hyperpage{23}
 
   \indexspace
 
@@ -49,11 +49,11 @@
   \indexspace
 
   \item symmetric monoidal category, \hyperpage{20}
-    \subitem closed, \hyperpage{20}
+    \subitem closed, \hyperpage{21}
 
   \indexspace
 
   \item weak Hausdorff, \hyperpage{13}
-  \item weak topology, \hyperpage{17}
+  \item weak topology, \hyperpage{18}
 
 \end{theindex}

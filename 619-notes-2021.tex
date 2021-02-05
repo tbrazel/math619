@@ -660,6 +660,13 @@ In other words, once in $\CG$, passing to weak Hausdorff spaces, does not change
 
 \subsection{Limits and colimits in categories}
 
+\begin{figure}[h]
+  \includegraphics[scale=.1]{pics/limits.png}
+  \centering
+  \caption{A limit cone and colimit cocone.}
+  \label{fig:lim}
+\end{figure}
+
 \begin{definition} Let $F: I\to \C$ be a functor. We call this an \textit{$I$-shaped diagram in $\C$}. The \textit{colimit}\index[ind]{colimit} of $F$, denoted $\colim F$, is an object in $\C$ together with a family of morphisms $F(X) \to \colim F$ for each $X \in I$, such that
 \[
 	\begin{tikzcd}
@@ -679,6 +686,8 @@ for each $X\to Y$.
 \end{definition}
 
 The \textit{limit} of a diagram $F: I \to \C$ is dual to this definition, meaning that a limit is a colimit in the opposite category $\C^\op$, i.e. the colimit of the composite functor $I\xto{F} \C \to \C^\op$.\index[ind]{limit}
+
+
 
 \begin{proposition}\label{prop:limits-unique-up-to-iso} Limits and colimits, when they exist, are unique up to isomorphism.
 \end{proposition}
@@ -1195,6 +1204,13 @@ For $n\geq 2$, we note that $S^n \cong S^1 \smashprod \cdots \smashprod S^1$ is 
 	\end{enumerate}
 	Then $\dot = \ast$ and they are both commutative.
 	\end{lemma}
+	
+	\begin{figure}[h]
+  \includegraphics[scale=.13]{pics/eckmann-hilton.png}
+  \centering
+  \caption{Eckmann-Hilton proof in pictures.}
+  \label{fig:eckmann}
+\end{figure}
 	
 	(TO BE  CONTINUED)
 	
