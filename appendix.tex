@@ -318,7 +318,7 @@ preserves limits in both arguments (limits in $\mathscr{C}^\op$ are colimits in 
 \end{proposition}
 
 
-\begin{corollary}\label{cor:Yoneda-embedding-preserves-limits} Let $\mathscr{C}$ be locally small. Then the Yoneda embedding $y: \mathscr{C} \hookto \Fun(\mathscr{C}^\op, \Set)$ preserves all limits.
+\begin{corollary}\label{cor:Yoneda-embedding-preserves-limits} Let $\mathscr{C}$ be locally small. Then the Yoneda embedding $y: \mathscr{C} \hookto \Fun(\mathscr{C}^\op, \Set)$ preserves and reflects all limits.
 \end{corollary}
 
 \begin{proposition}\label{prop:fully-faithful-functor-reflects-limits-colimits} A fully faithful functor reflects all limits and colimits.
@@ -345,7 +345,7 @@ Let $\mathscr{C}$ be a category, and $I$ be an indexing category which we want t
 \begin{align*}
     \Delta : \mathscr{C} &\to \Fun(I, \mathscr{C}).
 \end{align*}
-This sends an object $c$ to the functor $\Delta(c): I \to \mathscr{C}$, where $\Delta(c)(i) = c$ for all $i\in I$, and $\Delta(c)(i \to i') = \id_c$. That is, $\Delta_c$ is really a constant functor at the object $c\in \mathscr{C}$. For a morphism $f:c\to c'$
+This sends an object $c$ to the functor $\Delta_c: I \to \mathscr{C}$, where $\Delta_c(i) = c$ for all $i\in I$, and $\Delta_c(i \to i') = \id_c$. That is, $\Delta_c$ is really a constant functor at the object $c\in \mathscr{C}$. For a morphism $f:c\to c'$, we have an induced natural transformation  $\Delta_c \Rightarrow \Delta_{c'}$, all of whose components are $f$. 
 
 \begin{center}
     [[todo]]    
@@ -360,7 +360,104 @@ This sends an object $c$ to the functor $\Delta(c): I \to \mathscr{C}$, where $\
 
 
 
+\section{Unsorted subsections on category theory}
 
+\subsection{Conventions}
+
+We record some standard notation for use in these notes.
+
+\begin{notation}\label{nota:initial-terminal-objects} We denote an \textit{initial object} in a category $\mathscr{C}$ by $\emptyset$. We denote a \textit{terminal object} in a category $\mathscr{C}$ by $\ast$. If $X \in \mathscr{C}$ is arbitrary, it receives a unique map from the initial object and to the terminal object. We decorate each of these with a shriek:
+\begin{align*}
+    \emptyset &\xto{!} X \\
+    X &\xto{!} \ast.
+\end{align*}
+\end{notation}
+
+\begin{notation}\label{nota:diagonal-map} Let $\mathscr{C}$ be a category, and let $X\in \mathscr{C}$ be an arbitrary object. If the product $X \times X$ exists, there is a \textit{diagonal map}, which we denote by
+\begin{align*}
+    X \xto{\Delta} X \times X,
+\end{align*}
+defined to be the unique map provided to us by the universal property of the product
+\[ \begin{tikzcd}
+     & X\dar\ar[ddl,bend right=10,"\id_X" left]\ar[ddr,bend left=10,"\id_X" right]\dar[dashed,"\Delta" right] & \\
+     & X \times X\ar[dl,"\pr_1" below right]\ar[dr,"\pr_2" below left] & \\
+    X &  & X.
+\end{tikzcd} \]
+\end{notation}
+\begin{notation}\label{nota:fold-map} Let $\mathscr{C}$ be a category, and let $X\in \mathscr{C}$ be an arbitrary object. If the coproduct $X \amalg X$, there is a \textit{fold map}, which we denote by
+\begin{align*}
+    X \amalg X \xto{\nabla} X,
+\end{align*}
+defined to be the unique map provided to us by the universal property of the coproduct
+\[ \begin{tikzcd}
+    X\ar[dr,"i_1" above right]\ar[ddr,bend right=10,"\id_X" left] &  & X\ar[dl,"i_2" above left]\ar[ddl,bend left=10,"\id_X" right]\\
+     & X \amalg X\dar[dashed,"\nabla" right]& \\
+     & X. & \\
+\end{tikzcd} \]
+\end{notation}
+
+The terminology for the \textit{diagonal} map comes from the world of sets (or concrete categories more generally), where the function $\Delta: X \to X \times X$ is defined elementwise by $x \mapsto (x,x)$. That is, its image is the diagonal in the product. The \textit{fold} map comes from the mental image of taking two disjoint copies of $X$ and folding them over one another into one copy of $X$.
+
+\begin{notation}\label{nota:product-coproduct-of-morphisms} Let $\mathscr{C}$ be a category with products, and let $f: A \to B$ and $g: C \to D$ be two morphisms. Then we denote by
+\begin{align*}
+    f \times g : A \times C \to B \times D
+\end{align*}
+the morphism given via the universal property
+\[ \begin{tikzcd}
+     & A \times B\ar[dl]\ar[dr]\dar[dashed,"f \times g"] & \\
+    A\dar["f" left] & C \times D\ar[dl]\ar[dr] & B\dar["g" right]\\
+    C &  & D.
+\end{tikzcd} \]
+Similarly if $\mathscr{C}$ is a category with coproducts, we denote by
+\begin{align*}
+    f \amalg g : A \amalg C \to B \amalg D
+\end{align*}
+the morphism provided by the universal property
+\[ \begin{tikzcd}
+    A\ar[dr]\dar["f" left] &  & B\ar[dl]\dar["g" right]\\
+    C\ar[dr] & A\amalg B\dar[dashed,"f \amalg g"] & D\ar[dl]\\
+     & C \amalg D. &
+\end{tikzcd} \]
+
+\end{notation}
+
+
+
+
+\subsection{Laws for pullbacks and pushouts}
+
+Frequently we will be asked to glue together commutative squares and talk about whether the composite square is a pullback and/or whether the individual squares are pullbacks. This is discussed in the so-called \textit{pasting law}.
+
+\begin{proposition}\label{prop:pasting-law-pullbacks-pushouts} \textit{(Pasting law for pullbacks and pushouts)} Let $\mathscr{C}$ be an arbitrary category, and consider a commutative diagram of the following form
+\[ \begin{tikzcd}
+    \bullet\rar\dar & \bullet\rar\dar & \bullet\dar\\
+    \bullet\rar & \bullet\rar & \bullet.
+\end{tikzcd} \]
+\begin{enumerate}
+    \item If the right square is a pullback, then the total square is a pullback if and only if the left square is a pullback.
+    \item If the left square is a pushout, then the total square is a pushout if and only if the right square is a pushout.
+\end{enumerate}
+\end{proposition}
+
+We also have the ``magic square,'' which is generally stated for varieties or schemes, but holds in a more broad context.
+
+\begin{proposition}\label{prop:magic-pullback-square} \textit{(Magic pullback square)} Let $\mathscr{C}$ be a locally small category with products and pullbacks. Let $f: X \to Z$, and $g: Y \to Z$ be morphisms in $\mathscr{C}$. Then the following square is a pullback
+\[ \begin{tikzcd}
+    X \times_Y Z\rar\dar\pb & X \times Y\dar["f \times g" right]\\
+    Z\rar["\Delta" below] & Z \times Z.
+\end{tikzcd} \]
+\end{proposition}
+\begin{proof} We first check that this holds if $\mathscr{C} = \Set$. This is certainly true, since elements of $(X \times Y)\times_{Z \times Z} Z$ are precisely elements $(x,y) \in X \times Y$ so that $f(x) = g(y)$. Then for any locally small category $\mathscr{C}$, we have that this diagram is a levelwise pullback in $\Fun \left( \mathscr{C}^\op, \Set \right)$. Finally we remark that under the Yoneda embedding $y : \mathscr{C} \hookto \Fun(\mathscr{C}^\op, \Set)$, limits are reflected.
+\end{proof}
+
+The magic pullback square is generally stated in the following form.
+
+\begin{corollary}\label{cor:magic-square-over-S} Let $\mathscr{C}$ be a locally small category, and $S\in \mathscr{C}$ be any element. Then if $f: X \to Z$ and $g : Y \to Z$ are morphisms over $S$, we have a pullback square
+\[ \begin{tikzcd}
+    X \times_Y Z\rar\dar\pb & X \times_S Y\dar["f \times g"]\\
+    Z\rar["\Delta" below] & Z \times_S Z.
+\end{tikzcd} \]
+\end{corollary}
 
 
 
