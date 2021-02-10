@@ -18,7 +18,10 @@
 \contentsline {section}{\numberline {A}More category theory: properties of morphisms}{31}{appendix.A}
 \contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{31}{subsection.A.1}
 \contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{33}{subsection.A.2}
-\contentsline {subsection}{\numberline {A.3}Properties of morphisms can induce properties of objects}{35}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.3}Properties of morphisms can induce properties of objects}{36}{subsection.A.3}
 \contentsline {subsection}{\numberline {A.4}Preservation properties under limits and colimits}{36}{subsection.A.4}
 \contentsline {subsection}{\numberline {A.5}Colimits and limits as functors}{38}{subsection.A.5}
-\contentsline {subsection}{\numberline {A.6}Filtered limits and colimits}{38}{subsection.A.6}
+\contentsline {subsection}{\numberline {A.6}Filtered limits and colimits}{39}{subsection.A.6}
+\contentsline {section}{\numberline {B}Unsorted subsections on category theory}{39}{appendix.B}
+\contentsline {subsection}{\numberline {B.1}Conventions}{39}{subsection.B.1}
+\contentsline {subsection}{\numberline {B.2}Laws for pullbacks and pushouts}{40}{subsection.B.2}

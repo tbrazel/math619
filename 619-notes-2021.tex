@@ -1044,6 +1044,9 @@ such that $h(x,0) = f(x)$, and $h(x,1) = g(x)$ for all $x\in X$. We write $f\sim
 so a homotopy $f\simeq g$ corresponds to a path between $f$ and $g$ in the mapping space $\Map(X,Y)$.
 \end{proof}
 
+\begin{definition} We say that two spaces are \textit{homotopy equivalent} if there exist maps $f: X \to Y$ and $g : Y \to X$ such that $f\circ g\simeq \id_Y$ and $g\circ f \simeq \id_X$.
+\end{definition}
+
 \begin{exercise} Show that $\simeq$ is an equivalence relation on objects in $\Top$.
 \end{exercise}
 
@@ -1060,6 +1063,8 @@ so a homotopy $f\simeq g$ corresponds to a path between $f$ and $g$ in the mappi
 \end{note}
 
 \end{proposition}
+
+
 
 \begin{definition} A space $X$ is \textit{contractible}\index[ind]{contractible} if it is homotopy equivalent to a point (e.g. $I$, $D^n$, $\R^n$, $S^\infty$, ...).
 \end{definition}
@@ -1097,8 +1102,7 @@ We should check that this is equivalent to a based map $h : X \smashprod I_+ \to
 \begin{notation} The set of based homotopy equivalence classes of maps is denoted $[X,Y]_\ast$. For example, $[S^1, (X,x_0)]_\ast = \pi_1(X,x_0)$.
 \end{notation}
 
-\begin{definition} We say that two spaces are \textit{homotopy equivalent} if there exist maps $f: X \to Y$ and $g : Y \to X$ such that $f\circ g\simeq \id_Y$ and $g\circ f \simeq \id_X$.
-\end{definition}
+
 
 
 %%%
@@ -1291,7 +1295,7 @@ We would note that such a homotopy gives a path from $f(\ast)$ to the basepoint,
 	\pi_n(X,x) \cong \pi_n(X,y).
 \end{align*}
 \end{proposition}
-\begin{proof} Consider any map representing a class $[f] \in \pi_n(X,y)$ as a map $f \colon I^n \to X$ sending $\partial I^n$ to $y$. Let $\gamma$ denote a path from $y$ to $x$. Let $J=[\epsilon, 1-\epsilon]\subset I$, where $\epsilon\in(0,\frac{1}{2}$, and so that $J^n$ is a smaller cube inside $I^n$, as depicted in \autoref{cubefig}. From each point on $\partial I^n$, draw a line segment to the center of $I^n$, which intersects $\partial J^n$. Consider the radial segments from $\partial I^n$ to $\partial J^n$ defined by these lines. Now reparametrize $f$, so that its domain is $J^n$. Note that on $\del J^n$, $f$ is then identically $y$.
+\begin{proof} Consider any map representing a class $[f] \in \pi_n(X,y)$ as a map $f \colon I^n \to X$ sending $\partial I^n$ to $y$. Let $\gamma$ denote a path from $y$ to $x$. Let $J=[\epsilon, 1-\epsilon]\subset I$, where $\epsilon\in(0,\frac{1}{2})$, and so that $J^n$ is a smaller cube inside $I^n$, as depicted in \autoref{cubefig}. From each point on $\partial I^n$, draw a line segment to the center of $I^n$, which intersects $\partial J^n$. Consider the radial segments from $\partial I^n$ to $\partial J^n$ defined by these lines. Now reparametrize $f$, so that its domain is $J^n$. Note that on $\del J^n$, $f$ is then identically $y$.
 
 \begin{figure}[h]
   \includegraphics[scale=1]{pics/cubefig.png}
@@ -1375,7 +1379,7 @@ Let $g: Y \to X$ be the homotopy inverse to $f$, and suppose that $x\in X$ is a 
 \begin{align*}
 	\pi_n(X,x) \xto{f_\ast} \pi_n(Y,f(x)) \xto{g_\ast} \pi_n(X, g(f(x))).
 \end{align*}
-We know that $g\circ f \simeq \id_X$, however this is not necessarily a based homotopy. Let $\gamma$ be a path from $gf(x)$ to $x$. Letting $\gamma$ act on $\pi_n(X,gf(x))$, we get a composite
+We know that $g\circ f \simeq \id_X$, however this is not necessarily a based homotopy. Let $\gamma$ be the path from $gf(x)$ to $x$ defined by the homotopy. Letting $\gamma$ act on $\pi_n(X,gf(x))$, we get a composite
 \begin{align*}
 	\pi_n(X,x) \xto{f_\ast} \pi_n(Y,f(x)) \xto{g_\ast} \pi_n(X, g(f(x))) \xto{\gamma\cdot} \pi_n(X,x),
 \end{align*}
@@ -1388,6 +1392,17 @@ Finally, by a symmetric argument, one may show that $f_\ast$ is surjective by pr
 
 \begin{lemma}\label{basepthomotopy}
 Suppose $f,g\colon X\to Y$ are homotopic maps via a homotopy $h$. Let $\gamma$ be the path given by $h_t(x)$ from $f(x)$ to $g(x)$. Then the following diagram commutes.
+%\[\xymatrix{
+%\pi_n(X,x)\ar[r]^-{f_\ast} \ar[dr] & \pi_n(Y, f(x))\ar[d]\\
+%&\pi_n(Y, g(x))
+%}\]
+\[
+	\begin{tikzcd}
+	\pi_n(X,x)\rar["f_\ast" above]\ar[dr, "g_\ast" below] & \pi_n(Y, f(x))\dar["\gamma\cdot" right] \\
+	 & \pi_n(Y, g(x))
+	\end{tikzcd}\quad
+\]
+
 \end{lemma}
 
 \begin{proof}
