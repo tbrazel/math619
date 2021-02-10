@@ -16,14 +16,14 @@
 
   \indexspace
 
-  \item Eckmann-Hilton argument, \hyperpage{24}
+  \item Eckmann-Hilton argument, \hyperpage{25}
   \item equalizer, \hyperpage{16}
 
   \indexspace
 
   \item functor
-    \subitem forgetful, \hyperpage{7}
-    \subitem free, \hyperpage{7}
+    \subitem forgetful, \hyperpage{6}
+    \subitem free, \hyperpage{6}
 
   \indexspace
 
@@ -53,7 +53,12 @@
 
   \indexspace
 
+  \item topologists' sine curve, \hyperpage{30}
+
+  \indexspace
+
   \item weak Hausdorff, \hyperpage{13}
+  \item weak homotopy equivalence, \hyperpage{29}
   \item weak topology, \hyperpage{18}
 
 \end{theindex}

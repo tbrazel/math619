@@ -265,7 +265,7 @@ We may also define a category $\Ho\Sp$ which is the localization of the category
 	\end{tikzcd}
 \]
 
-However $\Ho\Sp$ is a difficult category to work in, since it does not have many limits or colimits.
+However $\Ho\Sp$ is a difficult category to work in, since it does not have many limits or colimits. A survey of the history of stable homotopy theory is given by \cite{May-history}. For a great introduction to spectra and assocaited constructions, see \cite{Cary-stable}, where you can find the following diagram relating different constructions the describe the passage between spaces and spectra, and abelian groups and spectra.
 \[
 	\begin{tikzcd}
 	\CW\dar\rar["\text{disjoint}" above, "\text{basept.}" below] & \CW_\ast\dar \rar["\Sigma^\infty"] & \Sp\dar & \Ab\lar["H-"above]\dar["\text{0th component}"]\\
@@ -304,6 +304,9 @@ Here are some questions and applications where spectra are key.
 
 \begin{example} A very old question in differential topology dating back to the 1960s was: \emph{For which $n$ does there exist a stably framed $n$-manifold with the Kervaire invariant one?} This is known as the \emph{Kervaire invariant one problem}. The Kervaire invariant of a smooth stably framed manifold is the so-called Arf-invariant of an associated quadratic form $H^{\frac{n}{2}}(M, \Z/2)\to\Z/2$. The answer to the Kervaire invariant 1 problem is yes in dimensions $n=2,6,14,62$ and possibly $126$, but it was ruled out in all other dimensions in 2009 by a recent breakthrough result of Hill, Hopkins and Ravenel \cite{HHR}. This question can again be translated into the survival of certain elements in the Adams spectral sequence for the stable homotopy groups of spheres, and it was further translated by the authors into a question in equivariant stable homotopy theory and solved in that setting.
 \end{example}
+
+\subsection{Some references}
+The notes for this course will mostly be based on \cite{may}, \cite{hatcher}, and we often follow \href{http://www.ms.uky.edu/~guillou/S11/527.html}{Bert Guillou's course notes}. These will be supplemented with many other resources along the way, which we will specify and reference in each subsection accordingly.
 
 
 \section{The category of spaces}
@@ -1041,17 +1044,6 @@ such that $h(x,0) = f(x)$, and $h(x,1) = g(x)$ for all $x\in X$. We write $f\sim
 so a homotopy $f\simeq g$ corresponds to a path between $f$ and $g$ in the mapping space $\Map(X,Y)$.
 \end{proof}
 
-\begin{definition}\label{def:based-homotopy} A \textit{based homotopy}\index[ind]{homotopy!based} from $f$ to $g$, where $f,g : (X,x_0) \to (Y,y_0)$ is a homotopy $h:f\simeq g$ with the extra condition that each $h(-,t) : (X,x_0) \to (Y,y_0)$ is based.
-
-We should check that this is equivalent to a based map $h : X \smashprod I_+ \to Y$.
-\end{definition}
-
-\begin{notation} The set of based homotopy equivalence classes of maps is denoted $[X,Y]_\ast$. For example, $[S^1, (X,x_0)]_\ast = \pi_1(X,x_0)$.
-\end{notation}
-
-\begin{definition} We say that two spaces are \textit{homotopy equivalent} if there exist maps $f: X \to Y$ and $g : Y \to X$ such that $f\circ g\simeq \id_Y$ and $g\circ f \simeq \id_X$.
-\end{definition}
-
 \begin{exercise} Show that $\simeq$ is an equivalence relation on objects in $\Top$.
 \end{exercise}
 
@@ -1097,12 +1089,24 @@ We should check that this is equivalent to a based map $h : X \smashprod I_+ \to
 \end{enumerate}
 \end{exercise}
 
+\begin{definition}\label{def:based-homotopy} A \textit{based homotopy}\index[ind]{homotopy!based} from $f$ to $g$, where $f,g : (X,x_0) \to (Y,y_0)$ is a homotopy $h:f\simeq g$ with the extra condition that each $h(-,t) : (X,x_0) \to (Y,y_0)$ is based.
+
+We should check that this is equivalent to a based map $h : X \smashprod I_+ \to Y$.
+\end{definition}
+
+\begin{notation} The set of based homotopy equivalence classes of maps is denoted $[X,Y]_\ast$. For example, $[S^1, (X,x_0)]_\ast = \pi_1(X,x_0)$.
+\end{notation}
+
+\begin{definition} We say that two spaces are \textit{homotopy equivalent} if there exist maps $f: X \to Y$ and $g : Y \to X$ such that $f\circ g\simeq \id_Y$ and $g\circ f \simeq \id_X$.
+\end{definition}
 
 
 %%%
 % LECTURE 5
 % \section{Lecture 5: January 31st}
 
+
+\subsection{The homotopy category of spaces}
 \begin{definition} The \textit{homotopy category of $\Top$},\index[ind]{homotopy category!of $\Top$} denoted $\Ho(\Top)$, is the category whose objects are topological spaces, and whose morphisms are given by
 \begin{align*}
 	\Hom_{\Ho(\Top)} (X,Y) = [X,Y].
@@ -1112,7 +1116,7 @@ An isomorphism in $\Ho(\Top)$ is the equivalence class of a homotopy equivalence
 
 There exists an obvious functor $\Top \xto{\gamma} \Ho(\Top)$ sending a map to its equivalence class.
 
-\begin{proposition} The functor $\gamma : \Top \to \Ho(\Top)$ is universal among functors $F: \Top \to \C$ which send homotopy equivalences into isomorphisms.\footnote{For example, any homotopy invariant functor $F$, meaning $F(f) = F(g)$ if $f\simeq g$ sends homotopy equivalences to isomorphisms. }
+\begin{proposition} The functor $\gamma \colon \Top \to \Ho(\Top)$ is universal among functors $F\colon \Top \to \C$ which send homotopy equivalences into isomorphisms.\footnote{For example, any homotopy invariant functor $F$, meaning $F(f) = F(g)$ if $f\simeq g$ sends homotopy equivalences to isomorphisms. }
 That is, for any such functor, it factors uniquely as
 \[
 	\begin{tikzcd}
@@ -1121,9 +1125,9 @@ That is, for any such functor, it factors uniquely as
 	\end{tikzcd}
 \]
 \end{proposition}
-\begin{proof} We will define $\phi_F : \Ho(\Top) \to \C$ on objects to be $\phi_F(X) = F(X)$. For a morphism $\alpha : X \to Y$ in $\Ho(\Top)$, let $f_\alpha : X\to Y$ be a representative of $\alpha$ in $\Top$. Then we define $\phi_F (\alpha) = F(f_\alpha)$.
+\begin{proof} We will define $\phi_F : \Ho(\Top) \to \C$ on objects to be $\phi_F(X) = F(X)$. For a morphism  $f\colon  X\to Y$ in $\Top$, define $\phi_F ([f]) = F(f)$.
 
-To see that this is well-defined, suppose $g\simeq f_\alpha$. Then there exists $h\colon X\times I \to Y$ such that $h \circ i_0 = f_\alpha$ and $h \circ i_1 = g$, where $i_0,i_1 \colon X \to X\times I$ are the inclusions at time 0 and 1. Let $\pi_X \colon X\times I \to X$ be the projection on $X$, and note that $i_0, i_1, \pi_X$ are all homotopy equivalences. Therefore $F(i_0), F(i_1), F(\pi_X)$ are all isomorphisms. We note also that
+To see that this is well-defined, suppose $g\simeq f$. Then there exists $h\colon X\times I \to Y$ such that $h \circ i_0 = f$ and $h \circ i_1 = g$, where $i_0,i_1 \colon X \to X\times I$ are the inclusions at time 0 and 1. Let $\pi_X \colon X\times I \to X$ be the projection on $X$, and note that $i_0, i_1, \pi_X$ are all homotopy equivalences. Therefore $F(i_0), F(i_1), F(\pi_X)$ are all isomorphisms. We note also that
 \begin{align*}
 	\pi_X \circ i_0 = \id_X = \pi_X \circ i_1.
 \end{align*}
@@ -1133,7 +1137,7 @@ Thus
 \end{align*}
 Since $F(\pi_X)$ is an isomorphism, we cancel it to see $F(i_0) = F(i_1)$. Then
 \begin{align*}
-	F(g) &= F(h) \circ F(i_1) = F(h)\circ F(i_0) = F(f_\alpha).
+	F(g) &= F(h) \circ F(i_1) = F(h)\circ F(i_0) = F(f).
 \end{align*}
 
 Thus $\phi_F$ is well-defined, and we may check that it is a functor, and that it is unique (exercise).
@@ -1152,7 +1156,7 @@ In algebraic topology, or in homotopy theory, we always want functors from $\Top
 \end{warn}
 
 
-
+\subsection{Higher homotopy groups}
 
 \begin{definition} For $n\geq 1$, the higher homotopy groups are defined to be
 \begin{align*}
@@ -1205,24 +1209,9 @@ For $n\geq 2$, we note that $S^n \cong S^1 \smashprod \cdots \smashprod S^1$ is 
 	Then $\dot = \ast$ and they are both commutative.
 	\end{lemma}
 	
-	\begin{figure}[h]
-  \includegraphics[scale=.13]{pics/eckmann-hilton.png}
-  \centering
-  \caption{Eckmann-Hilton proof in pictures.}
-  \label{fig:eckmann}
-\end{figure}
-	
-	(TO BE  CONTINUED)
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
 
-
+	
+	
 	\begin{proof} Using the unit and the interchange law,
 	\begin{align*}
 		(x\dot y) &= (x\ast e)\dot (e\ast y) \\
@@ -1236,13 +1225,19 @@ For $n\geq 2$, we note that $S^n \cong S^1 \smashprod \cdots \smashprod S^1$ is 
 		&= y\ast x \\
 		&= y\dot x.
 	\end{align*}
+		\begin{figure}[h]
+  \includegraphics[scale=.13]{pics/eckmann-hilton.png}
+  \centering
+  \caption{Eckmann-Hilton proof of commutativty in pictures.}
+  \label{fig:eckmann}
+\end{figure}
 	\end{proof}
 
 	\begin{corollary} For $n\geq 2$, all the multiplications on $\pi_n(X)$ defined above are the same, and they are commutative.
 	\end{corollary}
 	\begin{proof} Suppose we have two maps $f,g : S^n \to X$. We can think of these as maps $f,g: I^n \to X$ such that $f(\partial I^n) = x_0 = g(\partial I^n)$. Then, using the pinch maps on the first and second factor, we define
 	\begin{align*}
-		f\dot g &= \begin{cases} f(2x_1, x_2, \ldots, x_n) & 0 \leq x_1 \leq \frac{1}{2} \\ g(2x-1, x_2, \ldots,x_n) & 0 \leq x_1 \leq \frac{1}{2} \\ \end{cases} \\
+		f\dot g &= \begin{cases} f(2x_1, x_2, \ldots, x_n) & 0 \leq x_1 \leq \frac{1}{2} \\ g(2x_1-1, x_2, \ldots,x_n) & 0 \leq x_1 \leq \frac{1}{2} \\ \end{cases} \\
 		f\ast g &= \begin{cases} f(x_1, 2x_2, \ldots, x_n) & 0 \leq x_s \leq \frac{1}{2} \\ g(x_1,2x_2-1,\ldots,x_n) & 0 \leq x_2 \leq \frac{1}{2}. \\ \end{cases}
 	\end{align*}
 
@@ -1277,73 +1272,90 @@ It seems that Hurewicz attended this ICM. In 1935, the first of his notes on hom
 
 \subsection{Dependence of \texorpdfstring{$\pi_k$}{pi_k} on the basepoint}
 
+We are mostly following the proof in \cite[Chapter 4]{hatcher}. A good exposition is also given \cite[Section 3]{hutchings}.
+
 \textbf{Recall}: The homology groups $H_n$ do not depend on the basepoint, so if we exprect some relation between $\pi_n$ and $H_n$, we might expect that $\pi_n$ does not depend on the basepoint up to isomorphism (at least for $X$ path-connected).
 
 Consider the forgetful map
 \begin{align*}
 	[S^n, (X,x_0)]_\ast \to [S^n, X].
 \end{align*}
-When is this surjective? That is, given $\beta : S^n \to X$, is it homotopic to a based map?
+When is this surjective? That is, given $f : S^n \to X$, is it homotopic to a based map?
 
-We would note that such a homotopy gives a path to the basepoint, so we certainly need $X$ to be path-connected.
+We would note that such a homotopy gives a path from $f(\ast)$ to the basepoint, so we certainly need $X$ to be path-connected.
 
 \textbf{Claim}: If $X$ is path-connected, then any two choices of basepoint give isomorphic homotopy groups. This is why we generally write $\pi_n(X)$, omitting the basepoint.
 
-\begin{proposition} Let $X$ be path-connected, with points $x,y \in X$. Then
+\begin{proposition}\label{basepoint_dependence} Let $X$ be path-connected, with points $x,y \in X$. Then
 \begin{align*}
 	\pi_n(X,x) \cong \pi_n(X,y).
 \end{align*}
 \end{proposition}
-\begin{proof} Consider any map representing a class $[f] \in \pi_n(X,y)$ as a map $f : I^n \to X$ sending $\partial I^n$ to $y$. Let $\gamma$ denote a path from $x$ to $y$. Set $S = [\epsilon,1-\epsilon]^n$ for some $\epsilon \in \left( 0, \frac{1}{2} \right)$. From each point on $\partial I^n$, draw a line segment to $\left( \frac{1}{2},\frac{1}{2},\ldots \right)$ which intersects $\partial S$. Now define $f'$ by reparametrizing $f$ so that its domain is $S$. Note that on $\del S$, $f$ is identically $y$.
+\begin{proof} Consider any map representing a class $[f] \in \pi_n(X,y)$ as a map $f \colon I^n \to X$ sending $\partial I^n$ to $y$. Let $\gamma$ denote a path from $y$ to $x$. Let $J=[\epsilon, 1-\epsilon]\subset I$, where $\epsilon\in(0,\frac{1}{2}$, and so that $J^n$ is a smaller cube inside $I^n$, as depicted in \autoref{cubefig}. From each point on $\partial I^n$, draw a line segment to the center of $I^n$, which intersects $\partial J^n$. Consider the radial segments from $\partial I^n$ to $\partial J^n$ defined by these lines. Now reparametrize $f$, so that its domain is $J^n$. Note that on $\del J^n$, $f$ is then identically $y$.
 
-Extend $f'$ to a map $f\gamma : I^n \to X$ by letting $f\circ \gamma$ be $\gamma$ on each radial segment (reparametrized appropriately). Now we can create the change of basepoint map
+\begin{figure}[h]
+  \includegraphics[scale=1]{pics/cubefig.png}
+  \centering
+  \caption{$J^n$ inside $I^n$, to be replaced with Maxine's professional pic}
+  \label{cubefig}
+\end{figure}
+
+Now we can define the change of basepoint map
 \begin{align*}
-	\pi_n(X,y) &\to \pi_n(X,x) \\
-	[f] &\mapsto [f\circ \gamma].
+\gamma\cdot	\pi_n(X,y) &\to \pi_n(X,x) \\
+	[f] &\mapsto [\gamma \cdot f ].
 \end{align*}
 
-Check that it is well-defined (can reparametrize homotopies). Now to show it is a homomorphism, let $f,g \in \pi_n(X,y)$. We let $f + 0$ be reparametrized to have domain $x_1 \leq \frac{1}{2}$ and be constantly equal to $y$ on the other half. We let $0+g$ be the same, but with domain $x_1 \geq \frac{1}{2}$. We note that these reparametrizations do not affect the homotopy type, so $f+0\simeq f$ and $0+g\simeq g$. We claim then that
+We define $\gamma\cdot f\colon I^n\to X$ as follows:
+\begin{itemize}\itemsep=0em
+\item For $z\in J^n$, let $(\gamma\cdot f)(z)=f(z)$, where we are using the reparametrized $f$ with domain shrunk to $J^n$. So note that $(\gamma\cdot f)(\partial J^n)=y.$
+\item For $z$ lying on one of the the radial segments, let $(\gamma\cdot f)(z)=\gamma(z)$, where we have reparametrized the radial segment from $\partial J^n$ to $\partial I^n$ to coincide with $I$, so that on each radial segment we can apply the map $\gamma\colon I\to X$. 
+\end{itemize}
+Note that this assignment is continuous since $(\gamma\cdot f)(\partial J^n)=y$, and $\gamma(0)=y$. Also note that $(\gamma\cdot f)(\partial I^n)=x$.
+ 
+We can check that it is well-defined (can reparametrize homotopies). Now to show it is a homomorphism, let $f,g \in \pi_n(X,y)$. We let $f + 0$ be $f$, reparametrized to have domain $x_1 \leq \frac{1}{2}$ and be constantly equal to $y$ on the other half. We let $0+g$ be $g$ reparametrized in the same way, but with domain $x_1 \geq \frac{1}{2}$. We note that these reparametrizations do not affect the homotopy class, so $f+0\simeq f$ and $0+g\simeq g$. We claim then that
 \begin{align*}
-	(f+g)\circ \gamma &\simeq (f+0)\circ \gamma + (0+g)\circ \gamma \simeq f\circ\gamma + g\circ \gamma.
+	\gamma\cdot f + \gamma \cdot g &\simeq \gamma\cdot (f+0) + \gamma\cdot (0+g) \simeq \gamma\cdot  (f+g).
 \end{align*}
-The first homotopy is given by
+The second homotopy is given by
 \begin{align*}
-	h_t (s_1,\ldots, s_n) &= \begin{cases} (f+0)\circ \gamma ((2-t)s_1, s_2, \ldots, s_n) & s_1 \in \left[0,\frac{1}{2} \right] \\ (0+g)\circ\gamma((2-t)s_1 + t-1, s_2, \ldots,s_n) & s_1 \in \left[\frac{1}{2}, 1\right] \\ \end{cases}
+	h_t (x_1,\ldots, x_n) &= \begin{cases} \gamma\cdot (f+0) ((2-t)x_1, x_2, \ldots, x_n) & x_1 \in \left[0,\frac{1}{2} \right] \\ \gamma\cdot (0+g)((2-t)x_1 + t-1, x_2, \ldots,x_n) & x_1 \in \left[\frac{1}{2}, 1\right] \\ \end{cases}
 \end{align*}
-We check that these are the same at $s_1 = \frac{1}{2}$, that is
+We check that these are the same at $x_1 = \frac{1}{2}$, that is
 \begin{align*}
-	(f+0)|circ\gamma (1-\frac{t}{2}, s_2, \ldots, ) \overset{?}{=} (0+g)\circ \gamma \left( \frac{t}{2}, s_2, \ldots, \right)
+	\gamma\cdot (f+0) (1-\frac{t}{2}, x_2, \ldots, ) \overset{?}{=} \gamma\cdot (0+g) \left( \frac{t}{2}, x_2, \ldots, \right)
 \end{align*}
 
 If $t/2 > \epsilon$, then both are $y$. If $t/2 < \epsilon$, both are the same point on $\gamma$.
 
 %[[todo picture]]
-
-\end{proof}
-
 %%%
 % LECTURE 6
 % \section{Lecture 6: February 5th}
-Let $X$ be path connected, and last time recall that we defined
-\begin{align*}
-	\gamma\circ - : \pi_n(X,x) &\xto{\cong} \pi_n(X,y) \\
-	f &\mapsto \gamma\circ f,
-\end{align*}
-where $\gamma$ is a path from $x$ to $y$. Recall also that we showed $\gamma (f+g) \simeq \gamma f + \gamma g$.
+%Let $X$ be path connected, and last time recall that we defined
+%\begin{align*}
+%	\gamma\circ - : \pi_n(X,x) &\xto{\cong} \pi_n(X,y) \\
+%	f &\mapsto \gamma\circ f,
+%\end{align*}
+%where $\gamma$ is a path from $x$ to $y$. Recall also that we showed $\gamma (f+g) \simeq \gamma f + \gamma g$.
 
-We also get (by reparametrizing) that $(\gamma \eta) f \simeq \gamma(\eta f)$ and $c f \simeq f$, where $c$ is a constant path.
+We also get (by reparametrizing) that $(\gamma \eta)\cdot f \simeq \gamma\cdot (\eta\cdot f)$ and $c\cdot f \simeq f$, where $c$ is a constant path. In particular, this shows that $ \gamma^{-1}\cdot$ is an inverse isomorphism to $ \gamma\cdot $.
+\end{proof}
 
-Note that we can apply this for based loops at $x$. Then the formulae above define an action of $\pi_1(X,x)$ on $\pi_n(X,x)$. For $n=1$, this is just the conjugation action in $\pi_1(X,x)$, which is generally nontrivial when $\pi_1(X,x)$ is nonabelian.
+\begin{note} Note that we can apply this for based loops at $x$. Then the formulae above define an action of $\pi_1(X,x)$ on $\pi_n(X,x)$. For $n=1$, this is just the conjugation action in $\pi_1(X,x)$, which is generally nontrivial when $\pi_1(X,x)$ is nonabelian.
+\end{note}
 
 \begin{note} If $X$ is not simply connected, the isomorphism $\gamma\circ -$ is not canonical.
 \end{note}
 
 \begin{note} For a non-contractible loop $\gamma$ based at $x$, our isomorphism
 \begin{align*}
-	\gamma\circ- : \pi_n(X,x) \xto{\cong} \pi_n(X,x)
+	\gamma\cdot- : \pi_n(X,x) \xto{\cong} \pi_n(X,x)
 \end{align*}
 is not the identity. Thus we note that $\pi_n(X,x)$ is defined only up to isomorphism without a choice of basepoint. However if $\pi_1(X,x)$ is trivial, then $\pi_n(X)$ is well-defined without a choice of basepoint.
 \end{note}
+
+\subsection{Weak homotopy equivalence}
 
 \begin{definition} A map $f: X\to Y$ is a \textit{weak homotopy equivalence}\index[ind]{weak homotopy equivalence} if, for every choice of basepoint $x \in X$, the induced maps
 \begin{align*}
@@ -1355,7 +1367,7 @@ are group isomorphisms for $n\geq 1$ and a bijection for $n=0$.
 \begin{note} If $X$ and $Y$ are path-connected, it is sufficient to require that $f_\ast : \pi_n(X,x) \to \pi_n(Y,f(x))$ is an isomorphism for all $n\geq 1$ and for all $x\in X$.
 \end{note}
 
-\begin{proposition} A homotopy equivalence $f: X\to Y$ is a weak homotopy equivalence.
+\begin{proposition}\label{htpyequivisweak} A homotopy equivalence $f: X\to Y$ is a weak homotopy equivalence.
 \end{proposition}
 \begin{proof} We first check that $f$ induces a bijection on path components, and moreover that $f$ restricts to a homotopy equivalence on each path component (exercise). We now restrict to the case where $X$ and $Y$ are path-connected.
 
@@ -1365,22 +1377,30 @@ Let $g: Y \to X$ be the homotopy inverse to $f$, and suppose that $x\in X$ is a 
 \end{align*}
 We know that $g\circ f \simeq \id_X$, however this is not necessarily a based homotopy. Let $\gamma$ be a path from $gf(x)$ to $x$. Letting $\gamma$ act on $\pi_n(X,gf(x))$, we get a composite
 \begin{align*}
-	\pi_n(X,x) \xto{f_\ast} \pi_n(Y,f(x)) \xto{g_\ast} \pi_n(X, g(f(x))) \xto{\gamma\circ -} \pi_n(X,x),
+	\pi_n(X,x) \xto{f_\ast} \pi_n(Y,f(x)) \xto{g_\ast} \pi_n(X, g(f(x))) \xto{\gamma\cdot} \pi_n(X,x),
 \end{align*}
-which we claim is an isomorphism. This is because we may find a based homotopy $\gamma\circ (g\circ f) \simeq \id_X$ (exercise).
+which we claim is the identity. This follows from the following more general \autoref{basepthomotopy}.
 
 By 2-out-of-3 for group isomorphisms, we must have that $g_\ast \circ f_\ast$ is an isomorphism, and we have that $f_\ast$ is injective.
 
 Finally, by a symmetric argument, one may show that $f_\ast$ is surjective by proving that $f_\ast \circ g_\ast$ is an isomorphism.
 \end{proof}
 
-\begin{remark} The converse does not hold. The example is the \textit{topologist's sine curve}\index[ind]{topologists' sine curve}
+\begin{lemma}\label{basepthomotopy}
+Suppose $f,g\colon X\to Y$ are homotopic maps via a homotopy $h$. Let $\gamma$ be the path given by $h_t(x)$ from $f(x)$ to $g(x)$. Then the following diagram commutes.
+\end{lemma}
+
+\begin{proof}
+Exercise, generalizing the case $n=1$, which appears as \cite[Proposition 1.18]{hatcher}.
+\end{proof}
+
+\begin{remark} The converse to \autoref{htpyequivisweak} does not hold. The example is the \textit{topologist's sine curve}\index[ind]{topologists' sine curve}
 \begin{align*}
-	X = \{ (x,\sin(1/x)) \ : \ 0<x \leq 1\} \cup (\{0\}\times[-1,1]).
+	X = \{ (x,\sin\frac{1}{x}) \ : \ 0<x \leq 1\} \cup (\{0\}\times[-1,1]).
 \end{align*}
 This space is connected but not path-connected. Let's base $X$ at $x = (0,1)$, and take a based map
 \begin{align*}
-	f : (S^0,0) \to X \\
+	f \colon (S^0,0) \to X \\
 	0 &\mapsto x \\
 	1&\mapsto (1,\sin(1)).
 \end{align*}
@@ -1396,11 +1416,11 @@ This is a weak equivalence but not a homotopy equivalence.
 	 & Z.
 	\end{tikzcd}
 \]
-We claim that if $f$ and $h$ are weak equivalences, then so is $g$. Let $y \in Y$ be a chosen basepoint. If $y\in \im(f)$, then we are done. If not, then see that since $f$ induces a bijection on path-components, there is a point $y_0 \in \im(f)$ and a path $\gamma$ between $y$ and $y_0$. Then we have that conjugation specifies an isomorphism
+We claim that if $f$ and $h$ are weak equivalences, then so is $g$. Let $y \in Y$ be a chosen basepoint. If $y\in \im(f)$, then we are done. If not, then see that since $f$ induces a bijection on path-components, there is a point $y_0 \in \im(f)$ and a path $\gamma$ between $y$ and $y_0$. Then by \autoref{basepoint_dependence} we have  isomorphisms
 \begin{align*}
 	\pi_n(Y,y) \xto{\cong} \pi_n(Y,y_0),
 \end{align*}
-and similarly
+and 
 \begin{align*}
 	\pi_n(Z,g(y)) \xto{\cong} \pi_n(Z,g(y_0)).
 \end{align*}
@@ -1412,9 +1432,21 @@ Thus the diagram commutes
 	\pi_n(Y,y_0)\rar["\cong" below] & \pi_n(Z,g(y_0)),
 	\end{tikzcd}
 \]
-and since all the other maps are isomorphisms, we see that $g : \pi_n(Y,y) \to \pi_n(Z,g(y))$ is an isomorphism.
+and since all the other maps are isomorphisms, we see that $g\colon \pi_n(Y,y) \to \pi_n(Z,g(y))$ is an isomorphism.
 
 \end{proof}
+
+
+
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
 
 
 \subsection{Cofibrations}

@@ -7,6 +7,10 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{HHR16}
 
+\bibitem[Bro]{Ronnie-brown-stack-exchange}
+R.~Brown, \emph{\href{https://math.stackexchange.com/q/162329}{Eckmann-Hilton
+  and higher homotopy groups}}, Mathematics Stack Exchange.
+
 \bibitem[Fra13]{martincgwh}
 Martin Frankland,
   \emph{\href{http://uregina.ca/~franklam/Math527/Math527_0204.pdf}{Additional
@@ -22,7 +26,7 @@ Ulrich G\"{o}rtz and Torsten Wedhorn, \emph{Algebraic geometry {I}}, Advanced
   Lectures in Mathematics, Vieweg + Teubner, Wiesbaden, 2010, Schemes with
   examples and exercises. \MR{2675155}
 
-\bibitem[Hat03]{Hatcher}
+\bibitem[Hat03]{hatcher}
 A.~Hatcher,
   \emph{\href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf}{Algebraic
   Topology}}, Cambridge University Press, 2003.
@@ -37,6 +41,11 @@ M.~A. Hill, M.~J. Hopkins, and D.~C. Ravenel,
   \emph{\href{https://people.math.rochester.edu/faculty/doug/mypapers/HHR-published.pdf}{On
   the nonexistence of elements of {K}ervaire invariant one}}, Ann. of Math. (2)
   \textbf{184} (2016), no.~1, 1--262. \MR{3505179}
+
+\bibitem[Hut11]{hutchings}
+Michael Hutchings,
+  \emph{\href{https://math.berkeley.edu/~hutching/teach/215b-2011/homotopy.pdf}{Introduction
+  to higher homotopy groups and obstruction theory}}, 2011.
 
 \bibitem[Joh15]{mehrle}
 Peter Johnstone,
@@ -53,6 +62,16 @@ Saunders MacLane,
   \emph{\href{https://www.maths.ed.ac.uk/~v1ranick/papers/maclanecat.pdf}{Categories
   for the Working Mathematician}}, Springer-Verlag, New York, 1971, Graduate
   Texts in Mathematics, Vol. 5. \MR{MR0354798 (50 \#7275)}
+
+\bibitem[Mal]{Cary-stable}
+C.~Malkiewich, \emph{The stable homotopy category}.
+
+\bibitem[May]{May-history}
+J.P. May, \emph{Stable algebraic topology, 1945---1966}.
+
+\bibitem[May99]{may}
+\bysame, \emph{A concise course in algebraic topology}, Chicago Lectures in
+  Mathematics, University of Chicago Press, 1999.
 
 \bibitem[Mun00]{munkres}
 James~R. Munkres,

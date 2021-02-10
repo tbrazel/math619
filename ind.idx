@@ -1,5 +1,5 @@
-\indexentry{functor!forgetful|hyperpage}{7}
-\indexentry{functor!free|hyperpage}{7}
+\indexentry{functor!forgetful|hyperpage}{6}
+\indexentry{functor!free|hyperpage}{6}
 \indexentry{category!opposite|hyperpage}{7}
 \indexentry{natural transformation|hyperpage}{7}
 \indexentry{$k$-closed|hyperpage}{12}
@@ -18,8 +18,10 @@
 \indexentry{symmetric monoidal category|hyperpage}{20}
 \indexentry{symmetric monoidal category!closed|hyperpage}{21}
 \indexentry{homotopy|hyperpage}{21}
-\indexentry{homotopy!based|hyperpage}{22}
 \indexentry{contractible|hyperpage}{22}
 \indexentry{cone|hyperpage}{22}
+\indexentry{homotopy!based|hyperpage}{22}
 \indexentry{homotopy category!of $\Top$|hyperpage}{23}
-\indexentry{Eckmann-Hilton argument|hyperpage}{24}
+\indexentry{Eckmann-Hilton argument|hyperpage}{25}
+\indexentry{weak homotopy equivalence|hyperpage}{29}
+\indexentry{topologists' sine curve|hyperpage}{30}
