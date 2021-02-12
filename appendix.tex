@@ -460,4 +460,148 @@ The magic pullback square is generally stated in the following form.
 \end{corollary}
 
 
+\section{Homotopy colimits}
+
+Here we explore instances in which homotopy (co)limits appear in the basic curriculum of algebraic topology, namely in \cite{Hatcher} and \cite{May}. A rigorous treatment of homotopy colimits is not provided here, we defer to the far better expositors Dugger and Riehl for their expositions of simplicial and categorical understandings of homotopy colimits \cite{Dugger,Riehl-hocolims}. We would posit that homotopy colimits are an intuitive concept to grasp and work with, and that recognizing them as they occur in basic algebraic topology provides the reader with another tool to grasp the material.
+
+\subsection{Intro to homotopy colimits}
+
+As described above, we neglect to provide a rigorous definition of homotopy colimits, as the rigorous definitions ($\hocolim$ is the derived functor of $\colim$; homotopy colimits are the geometric realization of the simplicial replacement) are technical to state. Instead, we provide the following characterization of homotopy colimits, based on an intuitive understanding of colimits:
+\begin{center}
+    Colimits are obtained by gluing spaces.\\
+    \textit{Homotopy colimits} are obtained by gluing spaces \textit{with wiggle room, in a continuous fashion}.
+\end{center}
+
+What do we mean by this? Say we want to glue two spaces $X$ and $Y$ together along distinguished basepoints to form a wedge product $X \vee Y$. How do we do this in general? We take the disjoint union $X \amalg Y$ and mod out by the equivalence relation $x_0 \sim y_0$. Phrased differently, we glue $x_0$ and $y_0$ together to force them to become the same point in the quotient space.
+
+Instead of gluing them directly together, we could instead draw a path connecting $x_0$ and $y_0$. Now instead of formally identifying the two points, we provide them a path by which one can travel to the other.
+
+\begin{figure}[H]
+  \scalebox{0.2}{\includegraphics{pics/whisker-gluing.png}}
+  \centering
+\end{figure}
+
+
+
+
+\begin{example} As another example, suppose $\ast \hookto X$ is the inclusion of a point $x\in X$. Taking the cofiber of this map\footnote{Recall the cofiber of a map $f: X \to Y$ is the colimit $\colim \left( \ast \from X \xto{f} Y \right)$.} is the same as simply gluing the point $\ast$ to $x\in X$, and you simply end up with the space $X$. If, instead, you wanted to take the \textit{homotopy cofiber} of this map, you would end up with the space $X$, with a small whisker protruding from the point $x$, ending at the point $\ast$. This procedure has a name, and it is actually called \textit{whiskering}. For example if $(X,x)$ is a based space which is not well based\footnote{Recall a space is \textit{well-based/non-degenerately based} if the inclusion of the basepoint is a cofibraion.}, we can take the based space $(\hocolim(\ast \hookto X),\ast)$, which becomes well-based.
+\end{example}
+
+\begin{figure}[H]
+  \scalebox{0.2}{\includegraphics{pics/whisker.png}}
+  \centering
+\end{figure}
+
+
+In both of these previous examples, the resulting space obtained by taking a homotopy colimit was weakly homotopy equivalent to the original one obtained by taking a colimit. We can ask whether this will always be the case, which the following example (a rephrased version of Example 2.1 in \cite{Dugger}) illustrates.
+
+\begin{example} Consider the map $S^1 \to \ast$ collapsing the sphere to a point. The cofiber of this map is $\ast$, that is, a one-point space. However to form the homotopy cofiber, we must draw a path from each point on $S^1$ to the point $\ast$. Here is where we sweep some more rigor under the rug, and illustrate what we mean by ``in a continuous fashion'' in our characterization of homotopy colimits. When creating our paths from points on $S^1$ to $\ast$, a small change in the choice of point on the circle $S^1$ should correspond to a small change in the path drawn. We shouldn't think of these paths as a loose collection of uncountably many strings, flying everywhere and connecting each point on $S^1$ to $\ast$. Instead, nearby strings should coagulate to form surfaces.
+
+\begin{figure}[H]
+  \scalebox{0.2}{\includegraphics{pics/cone.png}}
+  \centering
+\end{figure}
+
+If you've followed this rough description, then it would make sense to you that the homotopy cofiber of the map $S^1 \to \ast$ becomes a hollow cone over $S^1$, whose vertex is the point $\ast$. If, on the other hand, this lack of rigor has disgusted you, then the author understands wholeheartedly and invites you to read \cite{Dugger}.
+\end{example}
+
+
+
+\begin{example} Consider the diagram $\ast \from S^1 \to \ast$. Its colimit is the pushout $\ast \amalg_{S^1} \ast \cong \ast$, which is just a one-point space. On the other hand, its homotopy colimit can be constructed via the previous example. By gluing $S^1$ to each point $\ast$, we obtain two hollow cones which are identified together along their bases. That is, we obtain a 2-sphere $S^2$. Note that $S^2 \not \simeq \ast$!
+\end{example}
+
+This is an example of a general phenomena; for a diagram $D: I \to \Top$, it is often the case that $\colim(D) \not\simeq \hocolim(D)$.
+
+
+\begin{remark} In the previous section we have said that a homotopy colimit ``is'' a certain space. The reader should be advised that homotopy colimits are only defined up to weak equivalence. This turns out to be both a blessing and a curse, in that we fail to obtain a well-defined construction in the topological category, however the ambiguity allows homotopy colimits to satisfy a property that colimits fail to satisfy: \textit{homotopy invariance.} We will make this precise.
+\end{remark}
+
+\subsection{Homotopy Invariance}
+
+\begin{definition} A \textit{weak homotopy equivalence of diagrams} is a natural transformation $D \Rightarrow D'$ (occasionally denoted $D \simeq D'$) between two diagrams $D,D' : I \to \Top$ whose components are weak homotopy equivalences.
+\end{definition}
+
+\begin{example}\label{ex:we-of-diagrams} Let our index category be $I = \bullet \from \bullet \to \bullet$, and let $D(I) = \left(D^{n+1} \hookfrom S^n \hookto D^{n+1}\right)$, and $D'(I) = \left(\ast \from S^n \to \ast \right)$. Then there is a weak homotopy equivalence of diagrams $D \Rightarrow D'$ whose components are the identity map on $S^n$ and the contraction $D^{n+1} \xto{\sim} \ast$ on the disks.
+\end{example}
+
+\begin{remark} Colimits fail to satisfy \textit{homotopy invariance}. That is, for a weak homotopy equivalence of diagrams $D\simeq D'$, we may have that $\colim(D) \not\simeq \colim(D')$.
+\end{remark}
+
+\begin{exercise} See in Example \ref{ex:we-of-diagrams} that $\colim(D) = S^{n+1}$ but $\colim(D') = \ast$.
+\end{exercise}
+
+\begin{theorem} Homotopy colimits satisfy homotopy invariance. That is, for $D\simeq D'$, one always has that
+\begin{align*}
+    \hocolim(D) \simeq \hocolim(D').
+\end{align*}
+\end{theorem}
+
+\begin{corollary} Given any diagram, we may replace maps and objects in the diagram by weakly equivalent ones and obtain the same homotopy colimit.
+\end{corollary}
+
+
+\subsection{Homotopy colimits coinciding with colimits}
+
+There are many deep questions to ask about homotopy colimits, but perhaps the first one that we might be curious about is when homotopy colimits and colimits coincide. This question is non-trivial to answer, and as always we defer to \cite{Dugger} for a full treatment. However we will give one example, which is a stronger condition on a diagram than one needs in general, but will suit our examples:
+
+\begin{proposition} If a diagram $D: I \to \Top$ has the property that all of its maps are cofibrations, then $\colim(D) \simeq \hocolim(D)$.
+\end{proposition}
+
+In particular, if the maps are inclusions of subspaces which form a relative CW complex, they are cofibrations.
+
+This fact, combined with homotopy invariance of homotopy colimits, will allow us to provide a characterization of a lot of phenomena occurring in algebraic topology in terms of homotopy colimits.
+
+\begin{example} We have that $\Sigma X = \hocolim(\ast \from X \to \ast)$.
+\end{example}
+\begin{proof} Let $CX$ denote the cone over $X$, and note that $CX \simeq \ast$ is contractible. Then since the inclusion $X \hookto CX$ is a relative CW complex, one has
+\begin{align*}
+    \Sigma X &= \colim \left( \begin{tikzcd}[ampersand replacement=\&] X\rar[hook]\dar[hook] \& CX \\ CX \& \end{tikzcd} \right) = \hocolim \left( \begin{tikzcd}[ampersand replacement=\&] X\rar[hook]\dar[hook] \& CX \\ CX \& \end{tikzcd} \right) \\
+    &=\hocolim \left( \begin{tikzcd}[ampersand replacement=\&] X\rar[hook]\dar[hook] \& \ast \\ \ast \& \end{tikzcd} \right).
+\end{align*}
+\end{proof}
+
+\begin{example} Let $\phi: S^n \to X_n$ be the attaching map for an $(n+1)$-cell, and let $X_{n+1}$ be the space obtained by attaching this cell. Then
+\begin{align*}
+    X_{n+1} = \hocofib\left(S^n \xto{\phi} X_n\right).
+\end{align*}
+\end{example}
+\begin{proof} Again we apply the previous proposition and homotopy invariance of homotopy colimits. We have that
+\begin{align*}
+    X_{n+1} &= \colim \left( \begin{tikzcd}[ampersand replacement=\&] S^n\rar[hook,"\phi" above]\dar[hook] \& X_n \\ D^{n+1} \& \end{tikzcd} \right) = \hocolim \left( \begin{tikzcd}[ampersand replacement=\&] S^n\rar[hook,"\phi" above]\dar[hook] \& X_n \\ D^{n+1} \& \end{tikzcd} \right) \\
+    &=\hocolim \left( \begin{tikzcd}[ampersand replacement=\&] S^n\rar[hook,"\phi" above]\dar[hook] \& X_n \\ \ast \& \end{tikzcd} \right) = \hocofib(\phi).
+\end{align*}
+\end{proof}
+
+\begin{example} For a map $f: X\to Y$, the \textit{mapping cylinder}, defined on \cite[p.2]{Hatcher} may be thought of as $M_f = \hocolim(X \xto{f} Y)$.
+\end{example}
+
+
+\begin{example} For a map $f: X\to Y$ \textit{mapping cone} $C_f$, defined on \cite[p.13]{Hatcher}, is the homotopy cofiber of the map $f$:
+\begin{align*}
+    C_f = \hocofib(f).
+\end{align*}
+\end{example}
+
+\begin{example} The \textit{join} of two spaces $X$ and $Y$, defined on \cite[p.9]{Hatcher}, is the homotopy pushout $\hocolim(X \from X\times Y \to Y)$.
+\end{example}
+
+\begin{example} As a generalization of the previous example, the \textit{double mapping cylinder}, defined on \cite[p.80]{May}, is the homotopy pushout $\hocolim( A \from X \to B)$.
+\end{example}
+
+\begin{example} The \textit{mapping telescope}, defined on \cite[p.138]{Hatcher}, is the homotopy colimit
+\begin{align*}
+    \hocolim\left(X_0 \xto{f_0} X_1 \xto{f_1} \cdots \right).
+\end{align*}
+
+\end{example}
+
+
+
+
+\begin{theorem} \cite[Theorem~24.9]{chacholski} Homotopy colimits commute.
+\end{theorem}
+
+\begin{corollary} On \cite[p.57]{May}, a critical aspect of the cofiber sequence generated by a map $f$ is that there is a weak equivalence (really a homeomorphism) $\Sigma C_f \simeq C(\Sigma f)$. This can be easily remembered by the fact that homotopy colimits commute.
+\end{corollary}
+
 
