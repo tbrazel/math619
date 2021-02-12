@@ -493,7 +493,6 @@ Instead of gluing them directly together, we could instead draw a path connectin
 \end{figure}
 
 
-In both of these previous examples, the resulting space obtained by taking a homotopy colimit was weakly homotopy equivalent to the original one obtained by taking a colimit. We can ask whether this will always be the case, which the following example (a rephrased version of Example 2.1 in \cite{Dugger}) illustrates.
 
 \begin{example} Consider the map $S^1 \to \ast$ collapsing the sphere to a point. The cofiber of this map is $\ast$, that is, a one-point space. However to form the homotopy cofiber, we must draw a path from each point on $S^1$ to the point $\ast$. Here is where we sweep some more rigor under the rug, and illustrate what we mean by ``in a continuous fashion'' in our characterization of homotopy colimits. When creating our paths from points on $S^1$ to $\ast$, a small change in the choice of point on the circle $S^1$ should correspond to a small change in the path drawn. We shouldn't think of these paths as a loose collection of uncountably many strings, flying everywhere and connecting each point on $S^1$ to $\ast$. Instead, nearby strings should coagulate to form surfaces.
 
@@ -502,9 +501,11 @@ In both of these previous examples, the resulting space obtained by taking a hom
   \centering
 \end{figure}
 
-If you've followed this rough description, then it would make sense to you that the homotopy cofiber of the map $S^1 \to \ast$ becomes a hollow cone over $S^1$, whose vertex is the point $\ast$. If, on the other hand, this lack of rigor has disgusted you, then the author understands wholeheartedly and invites you to read \cite{Dugger}.
+If you've followed this rough description, then it would make sense to you that the homotopy cofiber of the map $S^1 \to \ast$ becomes a hollow cone over $S^1$, whose vertex is the point $\ast$. If, on the other hand, this lack of rigor has disgusted you, then the authors understand wholeheartedly and invite you to read \cite{Dugger}.
 \end{example}
 
+
+In the previous examples, the resulting space obtained by taking a homotopy colimit was weakly homotopy equivalent to the original one obtained by taking a colimit. We can ask whether this will always be the case, which the following example (a rephrased version of Example 2.1 in \cite{Dugger}) illustrates.
 
 
 \begin{example} Consider the diagram $\ast \from S^1 \to \ast$. Its colimit is the pushout $\ast \amalg_{S^1} \ast \cong \ast$, which is just a one-point space. On the other hand, its homotopy colimit can be constructed via the previous example. By gluing $S^1$ to each point $\ast$, we obtain two hollow cones which are identified together along their bases. That is, we obtain a 2-sphere $S^2$. Note that $S^2 \not \simeq \ast$!
