@@ -1454,14 +1454,7 @@ and since all the other maps are isomorphisms, we see that $g\colon \pi_n(Y,y) \
 
 
 	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-
+	
 
 
 \subsection{Cofibrations}
@@ -1471,7 +1464,7 @@ and since all the other maps are isomorphisms, we see that $g\colon \pi_n(Y,y) \
 \begin{definition} A map $i : A\to X$ satisfies the \textit{homotopy extension property}\index[ind]{homotopy extension property} if for any given map $X \xto{f} Y$ and homotopy $A\times I \xto{h} Y$, with $h_0 = f\circ i$, then there exists an extension $\til{h} : X\times I \to Y$ such that $\til{h}(i\times \id) = h$ and $\til{h}_0 = f$. Diagramatically,
 \[
 	\begin{tikzcd}
-	A\ar[rr,"i_0"]\ar[dd] & & A\times I\ar[dl]\ar[dd,"i\times \id" right]\\
+	A\ar[rr,"i_0"]\ar[dd, "i" left] & & A\times I\ar[dl, "h" above]\ar[dd,"i\times \id" right]\\
 	 & Y &  \\
 	X\ar[rr,"i_0" below]\ar[ur,"f" above left] &  & X\times I\ar[ul,dashed,"\til{h}" above right]
 	\end{tikzcd}
@@ -1611,6 +1604,15 @@ which, by adjunction, corresponds to a diagram, which can be filled, since $i$ i
 	\end{tikzcd}
 \]
 \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
 
 \subsection{Replacing maps by cofibrations}
 Let $f: X \to Y$ be any map. Then we get an induced map $r: Mf \to Y$ via
