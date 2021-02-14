@@ -1409,7 +1409,8 @@ Suppose $f,g\colon X\to Y$ are homotopic maps via a homotopy $h$. Let $\gamma$ b
 Exercise, generalizing the case $n=1$, which appears as \cite[Proposition 1.18]{hatcher}.
 \end{proof}
 
-\begin{remark} The converse to \autoref{htpyequivisweak} does not hold. The example is the \textit{topologist's sine curve}\index[ind]{topologists' sine curve}
+The converse to \autoref{htpyequivisweak} does not hold. Here are two famous counterexamples.
+\begin{example} Consider the \textit{topologist's sine curve}\index[ind]{topologists' sine curve}
 \begin{align*}
 	X = \{ (x,\sin\frac{1}{x}) \ : \ 0<x \leq 1\} \cup (\{0\}\times[-1,1]).
 \end{align*}
@@ -1420,7 +1421,11 @@ This space is connected but not path-connected. Let's base $X$ at $x = (0,1)$, a
 	1&\mapsto (1,\sin(1)).
 \end{align*}
 This is a weak equivalence but not a homotopy equivalence.
-\end{remark}
+\end{example}
+
+\begin{example}
+The pseudo circle is a finite topological space $X=\{a,b,c,d\}$, with topology corresponding to the partial order $a<c, a<d, b<c, b<d$. It turns out that this space is indistinguishable from the circle when it comes to weak equivalence. Consider the  map $f\colon S^1\to X$ which sends the north pole to $c$, the south pole to $d$, the left hemisphere to $a$ and the right hemisphere to $b$. This map is continuous, and it induces an isomorphism on all homotopy groups. However, there is no inverse homotopy equivalence.
+\end{example}
 
 \begin{proposition} The weak equivalences satisfy 2-out-of-3.
 \end{proposition}
@@ -1461,6 +1466,8 @@ and since all the other maps are isomorphisms, we see that $g\colon \pi_n(Y,y) \
 
 %[[todo: talk about inclusions $i: A \hookto X$ such that $A\simeq \ast$ but $X/A \not\simeq X$ --- is this some ability to do cofibrant replacement in homotopy colimits?]]
 
+Consider an inclusion $i \colon A \hookto X$ where $A\simeq \ast$. Is $X/A\simeq  X$? In general no, but if the inclusion is ``nice," then yes. Cofibrations are precisely ``nice" inclusions.
+
 \begin{definition} A map $i : A\to X$ satisfies the \textit{homotopy extension property}\index[ind]{homotopy extension property} if for any given map $X \xto{f} Y$ and homotopy $A\times I \xto{h} Y$, with $h_0 = f\circ i$, then there exists an extension $\til{h} : X\times I \to Y$ such that $\til{h}(i\times \id) = h$ and $\til{h}_0 = f$. Diagramatically,
 \[
 	\begin{tikzcd}
@@ -1469,7 +1476,8 @@ and since all the other maps are isomorphisms, we see that $g\colon \pi_n(Y,y) \
 	X\ar[rr,"i_0" below]\ar[ur,"f" above left] &  & X\times I\ar[ul,dashed,"\til{h}" above right]
 	\end{tikzcd}
 \]
-Via our adjunction $\Hom(A\times I, Y) \cong \Hom(A, Y^I)$, we can alter our test diagram to a simpler diagram as follows
+
+Via our adjunction $\Hom(A\times I, Y) \cong \Hom(A, Y^I)$, we can translate our test diagram to a simpler diagram that looks as follows
 
 \begin{figure}[h!]
 \[
@@ -1486,7 +1494,7 @@ A map which satisfies HEP is called a \textit{cofibration} (or $h$-cofibration).
 
 \end{definition}
 
-\begin{note} We have a universal example of such a lifting diagram. Given the data $f: X\to Y$ and $h: A\times I \to Y$ starting at $f\circ i$, we obtain a map from the space defined via the pushout
+\begin{note} We have a universal example of such a lifting diagram. Given the data $f\colon X\to Y$ and $h\colon A\times I \to Y$ starting at $f\circ i$, we obtain a map from the space defined via the pushout
 \[
 	\begin{tikzcd}
 	A\rar["i_0" above]\dar["i" left] & A\times I\dar\ar[ddr,bend left=10, "h" above right] & \\
@@ -1494,7 +1502,7 @@ A map which satisfies HEP is called a \textit{cofibration} (or $h$-cofibration).
 	 &  & Y
 	\end{tikzcd}
 \]
-Where $Mi$ is the \textit{mapping cylinder}\index[ind]{mapping cylinder}. %TODO define
+The pushout $Mi$ is called  the \textit{mapping cylinder}\index[ind]{mapping cylinder} of the map $i$. %TODO define
 We get a factorization
 \[
 	\begin{tikzcd}
@@ -1507,14 +1515,16 @@ Therefore it suffices to find a lift $X \to Mi^I$ in order to get our lift $X \t
 
 \begin{exercise} $\ $
 \begin{enumerate}
-	\item If $i : A \cofto X$ is a cofibration, it is a closed inclusion (proof in Strickland).\todo{Where in strickland?}
-
-	\item A map $i: A \to X$ is a cofibration if and only if $Mi$ is a retract of $X \times I$
+	\item If $i : A \cofto X$ is a cofibration, it is a closed inclusion.
+		\item A map $i: A \to X$ is a cofibration if and only if $Mi$ is a retract of $X \times I$.
 \end{enumerate}
 \end{exercise}
 
-\textbf{Examples of cofibrations}:
-\begin{itemize}
+The first part is an exercise in \cite{may} and is worked out in \href{https://mathoverflow.net/questions/221183/in-cgwh-is-every-cofibration-an-inclusion-with-closed-image}{this mathoverflow post} (see Peter May's comment).
+
+Here are some examples of cofibrations, which you have likely encountered:
+\vspace{-1em}
+\begin{itemize}\itemsep0em
 	\item The unbased inclusion $\emptyset \xcofto{i} X$ for any space $X$
 	\item The inclusions $\{0\} \cofto I$ or $\partial I \cofto I$ for the interval $[0,1]$
 	\item $S^{n-1} \cofto D^n$
@@ -1524,7 +1534,8 @@ Therefore it suffices to find a lift $X \to Mi^I$ in order to get our lift $X \t
 \end{itemize}
 
 \begin{proposition} The class of cofibrations is closed under:
-\begin{enumerate}
+\vspace{-1em}
+\begin{enumerate}\itemsep0em
 	\item composition
 	\item pushouts
 	\item retracts
@@ -1556,7 +1567,7 @@ and note that $\til{h}$ exists by the HEP for $i$ and $h\circ f$. We therefore h
 % LECTURE 7
 % \section{Lecture 7: February 12th}
 
-For (3), suppose $i : A \to X$ is a retract of $j : B \to Z$, that is, we have a diagram
+For (3), suppose $i \colon A \to X$ is a retract of $j \colon B \to Z$, that is, we have a diagram
 \[
 	\begin{tikzcd}
 	A\rar\dar["i"] & B\rar\dar["j"] & A\dar["i"]\\
@@ -1570,7 +1581,7 @@ we sack a test diagram to it:
 	X\rar & Z\rar\ar[urr,dashed] & X\rar & Y
 	\end{tikzcd}
 \]
-If $j$ is a cofibration, then a lift $\til{h} : X \to Y^I$ exists, and composing with $X\to Z$, we get that $i$ is a cofibration.
+If $j$ is a cofibration, then a lift $\til{h}\colon X \to Y^I$ exists, and composing with $X\to Z$, we get that $i$ is a cofibration.
 
 (4) and (5) are left as an exercise.
 
@@ -1580,12 +1591,12 @@ If $j$ is a cofibration, then a lift $\til{h} : X \to Y^I$ exists, and composing
 
 \begin{corollary} If $A\xhookto{i} X$ is a relative CW complex, then $i$ is a cofibration.
 \end{corollary}
-\begin{proof} Use (2), (4) to show $S^{n-1}\hookto D^n$ is a cofibration. Then we use (5), since $X = \colim_n X_n$ is a colimit.
+\begin{proof} We know that $S^{n-1}\hookto D^n$ is a cofibration. Using (2), (4) it follows that the inclusion of skeleta at each stage is a cofibration. Lastly we use (5), since $X = \colim_n X_n$ is a sequential colimit.
 \end{proof}
 
-\begin{proposition}\label{prop:cof-times-space} If $i:A \cofto X$ is a cofibration, and $Z$ is any space, then
+\begin{proposition}\label{prop:cof-times-space} If $i\colon A \cofto X$ is a cofibration, and $Z$ is any space, then
 \begin{align*}
-	i\times\id_Z: A\times Z \cofto X\times Z
+	i\times\id_Z\colon A\times Z \cofto X\times Z
 \end{align*}
 is also a cofibration.
 \end{proposition}

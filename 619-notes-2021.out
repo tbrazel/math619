@@ -26,3 +26,7 @@
 \BOOKMARK [1][-]{appendix.B}{Unsorted subsections on category theory}{}% 26
 \BOOKMARK [2][-]{subsection.B.1}{Conventions}{appendix.B}% 27
 \BOOKMARK [2][-]{subsection.B.2}{Laws for pullbacks and pushouts}{appendix.B}% 28
+\BOOKMARK [1][-]{appendix.C}{Homotopy colimits}{}% 29
+\BOOKMARK [2][-]{subsection.C.1}{Intro to homotopy colimits}{appendix.C}% 30
+\BOOKMARK [2][-]{subsection.C.2}{Homotopy Invariance}{appendix.C}% 31
+\BOOKMARK [2][-]{subsection.C.3}{Homotopy colimits coinciding with colimits}{appendix.C}% 32
