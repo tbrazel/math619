@@ -1,95 +1,70 @@
 \begin{theindex}
 
-  \item $k$-closed, \hyperpage{13}
+  \item $k$-closed, \hyperpage{12}
 
   \indexspace
 
   \item category
-<<<<<<< Updated upstream
-    \subitem (co)complete, \hyperpage{19}
-    \subitem opposite, \hyperpage{8}
-  \item coequalizer, \hyperpage{17}
-  \item cofibration, \hyperpage{32}
-  \item colimit, \hyperpage{15}
-  \item compactly generated, \hyperpage{13}
-  \item cone, \hyperpage{23}
-  \item contractible, \hyperpage{23}
-  \item coproduct, \hyperpage{16}
-=======
     \subitem (co)complete, \hyperpage{18}
     \subitem opposite, \hyperpage{7}
   \item coequalizer, \hyperpage{16}
-  \item cofibration, \hyperpage{31}
+  \item cofibration, \hyperpage{32}
   \item colimit, \hyperpage{14}
   \item compactly generated, \hyperpage{12}
   \item cone, \hyperpage{22}
   \item contractible, \hyperpage{22}
   \item coproduct, \hyperpage{15}
->>>>>>> Stashed changes
 
   \indexspace
 
-  \item Eckmann-Hilton argument, \hyperpage{26}
-  \item equalizer, \hyperpage{17}
+  \item Eckmann-Hilton argument, \hyperpage{24}
+  \item equalizer, \hyperpage{16}
 
   \indexspace
 
   \item functor
-    \subitem forgetful, \hyperpage{7}
-    \subitem free, \hyperpage{7}
+    \subitem forgetful, \hyperpage{6}
+    \subitem free, \hyperpage{6}
 
   \indexspace
 
-  \item homotopy, \hyperpage{22}
-    \subitem based, \hyperpage{23}
+  \item homotopy, \hyperpage{21}
+    \subitem based, \hyperpage{22}
   \item homotopy category
-<<<<<<< Updated upstream
-    \subitem of $\Top$, \hyperpage{24}
+    \subitem of $\Top$, \hyperpage{22}
   \item homotopy extension property, \hyperpage{32}
-=======
-    \subitem of $\Top$, \hyperpage{23}
-  \item homotopy extension property, \hyperpage{31}
->>>>>>> Stashed changes
 
   \indexspace
 
-  \item limit, \hyperpage{15}
+  \item limit, \hyperpage{14}
 
   \indexspace
 
-<<<<<<< Updated upstream
-  \item mapping cylinder, \hyperpage{33}
-=======
   \item mapping cylinder, \hyperpage{32}
 
   \indexspace
 
   \item natural transformation, \hyperpage{7}
->>>>>>> Stashed changes
 
   \indexspace
 
-  \item natural transformation, \hyperpage{8}
+  \item product, \hyperpage{15}
+  \item pullback, \hyperpage{16}
+  \item pushout, \hyperpage{16}
 
   \indexspace
 
-  \item product, \hyperpage{16}
-  \item pullback, \hyperpage{17}
-  \item pushout, \hyperpage{17}
+  \item symmetric monoidal category, \hyperpage{20}
+    \subitem closed, \hyperpage{20}
 
   \indexspace
 
-  \item symmetric monoidal category, \hyperpage{21}
-    \subitem closed, \hyperpage{22}
+  \item topologists' sine curve, \hyperpage{30}
 
   \indexspace
 
-  \item topologists' sine curve, \hyperpage{31}
-
-  \indexspace
-
-  \item weak Hausdorff, \hyperpage{14}
-  \item weak homotopy equivalence, \hyperpage{30}
-  \item weak topology, \hyperpage{19}
+  \item weak Hausdorff, \hyperpage{13}
+  \item weak homotopy equivalence, \hyperpage{28}
+  \item weak topology, \hyperpage{17}
 
 \end{theindex}

@@ -1406,7 +1406,23 @@ Suppose $f,g\colon X\to Y$ are homotopic maps via a homotopy $h$. Let $\gamma$ b
 \end{lemma}
 
 \begin{proof}
-Exercise, generalizing the case $n=1$, which appears as \cite[Proposition 1.18]{hatcher}.
+Exercise, generalizing the case $n=1$, which appears as \cite[Proposition 1.18]{hatcher}. Suppose $f\simeq_h g$ and $\alpha\colon I^n/\partial I^n \to X$. Let  $\gamma$ be a path from $f(x0$ to $g(x)$ and for any fixed $t$, let $\gamma_t$ be the path from $\gamma(t)$ to $g(x)$, reparametrized over $I$. 
+
+\begin{figure}[h]
+  \includegraphics[scale=.7]{pics/gammat.png}
+  \centering
+  \caption{Definition of $\gamma_t$}
+  \label{cubefig}
+\end{figure}
+
+Here is a pictorial proof, generalizing that for $n=1$ in Hatcher:
+\begin{figure}[h]
+  \includegraphics[scale=.6]{pics/homotopy.png}
+  \centering
+  \caption{A homotopy from $\gamma\cdot (f_\ast \alpha)$ to $g_\ast(\alpha)$}
+  \label{cubefig}
+\end{figure}
+
 \end{proof}
 
 The converse to \autoref{htpyequivisweak} does not hold. Here are two famous counterexamples.
@@ -1424,7 +1440,15 @@ This is a weak equivalence but not a homotopy equivalence.
 \end{example}
 
 \begin{example}
-The pseudo circle is a finite topological space $X=\{a,b,c,d\}$, with topology corresponding to the partial order $a<c, a<d, b<c, b<d$. It turns out that this space is indistinguishable from the circle when it comes to weak equivalence. Consider the  map $f\colon S^1\to X$ which sends the north pole to $c$, the south pole to $d$, the left hemisphere to $a$ and the right hemisphere to $b$. This map is continuous, and it induces an isomorphism on all homotopy groups. However, there is no inverse homotopy equivalence.
+The pseudo circle is a finite topological space $X=\{a,b,c,d\}$, with topology given by \{\{a,b,c,d\}, \{a,b,c\}, \{a,b,d\}, \{a,b\}, \{a\}, \{b\}\}. It turns out that this space is indistinguishable from the circle when it comes to weak equivalence. Consider the  map $f\colon S^1\to X$ which sends the north pole to $c$, the south pole to $d$, the left hemisphere to $a$ and the right hemisphere to $b$. 
+\begin{figure}[h]
+  \includegraphics[scale=.6]{pics/pseudocircle.png}
+  \centering
+  \caption{The map from the circle to the pseudo circle}
+  \label{cubefig}
+\end{figure}
+
+This map is continuous, and it induces an isomorphism on all homotopy groups. However, there is no inverse homotopy equivalence.
 \end{example}
 
 \begin{proposition} The weak equivalences satisfy 2-out-of-3.
@@ -1460,7 +1484,8 @@ and since all the other maps are isomorphisms, we see that $g\colon \pi_n(Y,y) \
 
 	
 	
-
+\section{Fiber and cofiber sequences of spaces}
+We might ask: is there a notion of sequence of spaces which induces long exact sequences in homotopy groups or (co)homology groups. In this section we will make sense of such notions of ``exact sequences" in spaces.
 
 \subsection{Cofibrations}
 
