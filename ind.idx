@@ -1,30 +1,30 @@
-\indexentry{functor!forgetful|hyperpage}{6}
-\indexentry{functor!free|hyperpage}{6}
-\indexentry{category!opposite|hyperpage}{7}
-\indexentry{natural transformation|hyperpage}{7}
-\indexentry{$k$-closed|hyperpage}{12}
-\indexentry{compactly generated|hyperpage}{12}
-\indexentry{weak Hausdorff|hyperpage}{13}
-\indexentry{colimit|hyperpage}{14}
-\indexentry{limit|hyperpage}{14}
-\indexentry{product|hyperpage}{15}
-\indexentry{coproduct|hyperpage}{15}
-\indexentry{equalizer|hyperpage}{16}
-\indexentry{coequalizer|hyperpage}{16}
-\indexentry{pushout|hyperpage}{16}
-\indexentry{pullback|hyperpage}{16}
-\indexentry{weak topology|hyperpage}{17}
-\indexentry{category!(co)complete|hyperpage}{18}
-\indexentry{symmetric monoidal category|hyperpage}{20}
-\indexentry{symmetric monoidal category!closed|hyperpage}{20}
-\indexentry{homotopy|hyperpage}{21}
-\indexentry{contractible|hyperpage}{22}
-\indexentry{cone|hyperpage}{22}
-\indexentry{homotopy!based|hyperpage}{22}
-\indexentry{homotopy category!of $\Top$|hyperpage}{22}
-\indexentry{Eckmann-Hilton argument|hyperpage}{24}
-\indexentry{weak homotopy equivalence|hyperpage}{28}
-\indexentry{topologists' sine curve|hyperpage}{30}
-\indexentry{homotopy extension property|hyperpage}{32}
-\indexentry{cofibration|hyperpage}{32}
-\indexentry{mapping cylinder|hyperpage}{32}
+\indexentry{functor!forgetful|hyperpage}{7}
+\indexentry{functor!free|hyperpage}{7}
+\indexentry{category!opposite|hyperpage}{8}
+\indexentry{natural transformation|hyperpage}{8}
+\indexentry{$k$-closed|hyperpage}{13}
+\indexentry{compactly generated|hyperpage}{13}
+\indexentry{weak Hausdorff|hyperpage}{14}
+\indexentry{colimit|hyperpage}{15}
+\indexentry{limit|hyperpage}{15}
+\indexentry{product|hyperpage}{16}
+\indexentry{coproduct|hyperpage}{16}
+\indexentry{equalizer|hyperpage}{17}
+\indexentry{coequalizer|hyperpage}{17}
+\indexentry{pushout|hyperpage}{17}
+\indexentry{pullback|hyperpage}{17}
+\indexentry{weak topology|hyperpage}{19}
+\indexentry{category!(co)complete|hyperpage}{19}
+\indexentry{symmetric monoidal category|hyperpage}{21}
+\indexentry{symmetric monoidal category!closed|hyperpage}{22}
+\indexentry{homotopy|hyperpage}{22}
+\indexentry{contractible|hyperpage}{23}
+\indexentry{cone|hyperpage}{23}
+\indexentry{homotopy!based|hyperpage}{23}
+\indexentry{homotopy category!of $\Top$|hyperpage}{24}
+\indexentry{Eckmann-Hilton argument|hyperpage}{26}
+\indexentry{weak homotopy equivalence|hyperpage}{30}
+\indexentry{topologists' sine curve|hyperpage}{32}
+\indexentry{homotopy extension property|hyperpage}{33}
+\indexentry{cofibration|hyperpage}{33}
+\indexentry{mapping cylinder|hyperpage}{34}
