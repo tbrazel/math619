@@ -1641,20 +1641,14 @@ which, by adjunction, corresponds to a diagram, which can be filled, since $i$ i
 \]
 \end{proof}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
+
 
 
 \subsection{Replacing maps by cofibrations}
 Let $f: X \to Y$ be any map. Then we get an induced map $r: Mf \to Y$ via
 \[
 	\begin{tikzcd}
-	X\rar["f" above]\dar["i_1" left] & Y\dar["j" right]\ar[ddr,equal,bend left=20] & \\
+	X\rar["f" above]\dar["i_0" left] & Y\dar["j" right]\ar[ddr,equal,bend left=20] & \\
 	X\times I\rar["k" below]\ar[dr,bend right=10,"p" below left] & Mf\po\ar[dr,dashed,"r" above right] &  \\
 	& X\ar[r,"f" below]  & Y.
 	\end{tikzcd}
@@ -1697,10 +1691,12 @@ By Proposition \ref{prop:cof-times-space}, $X\amalg X = X\times \del I \cofto X\
 \subsection{Criterion for a map to be a cofibration}
 
 \begin{definition} A pair $(X,A)$ is a \textit{neighborhood deformation retraction (NDR)}\index[ind]{neighborhood deformation retraction} pair if
-\begin{itemize}
-	\item there exists a continuous map $u : X\to U$ such that $u^{-1}(0) = A$
+\vspace{-10pt}
+\begin{itemize}\itemsep0em
+	\item there exists a continuous map $u : X\to I$ such that $u^{-1}(0) = A$
 	\item there exists a homotopy $h : X \times I \to X$ such that
-	\begin{enumerate}
+	\begin{enumerate}\itemsep0em
+	\vspace{-5pt}
 		\item $h_0 = \id_X$
 		\item $h(a, t) = a$ for all $a\in A$
 		\item $h(x,1) \in A$ for each $x$ with $u(x) < 1$.
@@ -1709,12 +1705,14 @@ By Proposition \ref{prop:cof-times-space}, $X\amalg X = X\times \del I \cofto X\
 \end{definition}
 
 \begin{proposition} The following are equivalent:
-\begin{itemize}
+\vspace{-10pt}
+\begin{enumerate}\itemsep0em
 	\item $(X,A)$ is an NDR pair
 	\item $A\xcofto{i} X$ is a cofibration
 	\item the mapping cylinder $Mi = (X\times\{0\}) \cup (A\times I$) is a retract of $X \times I$.
-\end{itemize}
+\end{enumerate}
 \end{proposition}
+The proof can be found in \cite[VI, Section 4]{may}.
 
 \begin{exercise} Show that $(D^n, S^{n-1})$ is an NDR pair.
 \end{exercise}
@@ -1738,7 +1736,7 @@ A homotopy between maps under $A$ is a homotopy which at each time $t$ is a map 
 
 \begin{proposition} Suppose that $i,j$ are cofibrations, and $f$ is a homotopy equivalence. Then $f$ is a homotopy equivalence rel $A$.
 \end{proposition}
-\begin{proof} This may be found in \cite[p.44]{May} or \cite[0.19]{Hatcher}. This is a more serious application of HEP.
+\begin{proof} This may be found in \cite[VI, Section 5]{may} or \cite[0.19]{hatcher}. This is a more serious application of HEP.
 \end{proof}
 
 In particular, in the case where $A=\ast$, a homotopy equivalence between based spaces is a based homotopy equivalence \textit{if} the inclusions $i: \ast \hookto X$ and $j: \ast \hookto Y$ are cofibrations.
@@ -1749,8 +1747,8 @@ In particular, in the case where $A=\ast$, a homotopy equivalence between based 
 \begin{example} Any CW complex, based at a 0-cell is well-based.
 \end{example}
 
-\begin{customenvironment}{Nonexample} The space $X = \{0\} \cup \left\{ \frac{1}{n} \ : \ n\in\mathbb{N} \right\}$, based at 0, is not well-based.
-\end{customenvironment}
+\textbf{Nonexample:} The space $X = \{0\} \cup \left\{ \frac{1}{n} \ : \ n\in\mathbb{N} \right\}$, based at 0, is not well-based.
+
 
 \begin{note} We can make any based space well-based via \textit{whiskering}\index[ind]{whiskering}. This is done by concatenating an interval onto our basepoint and moving the basepoint to the end of the line segment. This is the mapping cylinder of the inclusion of the basepoint $\ast \hookto X$.
 \end{note}
@@ -1784,7 +1782,8 @@ For the backwards direction: (difficult) given a map $A \to X$ based, we must de
 	A\dar\rar["h" above] & X^I\dar["\ev_0" right] \\
 	X\rar["f" below] & Y.
 	\end{tikzcd}
-\]
+\] 
+A proof can be found in \cite[VI, Section 5]{may}, and is quite technical. 
 \end{proof}
 
 
@@ -1812,6 +1811,15 @@ where $H_\ast (Y,X) \cong \til{H}(Y/X)$. This is the long exact sequence of a pa
 \]
 where $i_1, i_2$ are cofibrations, and $f_1,f_2$ are (weak) homotopy equivalences. Then the induced map $Y_1/X_1 \to Y_2/X_2$ is a (weak) homotopy equivalence.\footnote{More broadly, we will see that given some diagram where a certain number of maps are cofibrations, we have that the limit and the homotopy colimit coincide.}
 \end{proposition}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 
 \subsection{Fibrations}
 For any $p: E \to B$, we can define the \textit{fiber}\index[ind]{fiber} of $b\in B$ as $F_b:= p^{-1}(b)$. This can be thought of as the pullback
@@ -2048,8 +2056,8 @@ is trivial, which will indicate that the connecting homomorphism $\delta$ is tri
 \end{customenvironment}
 % Lecture 9 --- February 19th
 
-\begin{customenvironment}{Criterion for fibrations}[{\cite[7.4]{May}}] Given a map $p : X\to Y$ to a paracompact\footnote{Every open cover admits a numerable refinement.} space $Y$ with numberable open cover $\{U_i\}$, then $p$ is a fibration if and only if each $\left. p\right|_{p^{-1}(U_i)} : p^{-1}(U_i) \to U_i$ is a fibration for each $U_i$.
-\end{customenvironment}
+\textbf{Criterion for fibrations}[{\cite[7.4]{May}}] Given a map $p : X\to Y$ to a paracompact\footnote{Every open cover admits a numerable refinement.} space $Y$ with numberable open cover $\{U_i\}$, then $p$ is a fibration if and only if each $\left. p\right|_{p^{-1}(U_i)} : p^{-1}(U_i) \to U_i$ is a fibration for each $U_i$.
+
 
 Therefore every fiber bundle with paracompact base is a fibration. More generally, without the paracompactness hypothesis on the base, we may still show that every fiber bundle is a Serre fibration (the idea is to subdivide $I^n\times I$ into small cubes so that the preimage of each open $U\subseteq B$ is contained in a single cube. We then build our lifts locally and glue them together).
 

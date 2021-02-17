@@ -8,7 +8,9 @@
     \subitem (co)complete, \hyperpage{19}
     \subitem opposite, \hyperpage{8}
   \item coequalizer, \hyperpage{17}
+  \item cofiber, \hyperpage{39}
   \item cofibration, \hyperpage{33}
+    \subitem based, \hyperpage{39}
   \item colimit, \hyperpage{15}
   \item compactly generated, \hyperpage{13}
   \item cone, \hyperpage{23}
@@ -45,6 +47,8 @@
   \indexspace
 
   \item natural transformation, \hyperpage{8}
+  \item neighborhood deformation retraction, \hyperpage{37}
+  \item non-degenerately based, \hyperpage{38}
 
   \indexspace
 
@@ -66,5 +70,7 @@
   \item weak Hausdorff, \hyperpage{14}
   \item weak homotopy equivalence, \hyperpage{30}
   \item weak topology, \hyperpage{19}
+  \item well-based, \hyperpage{38}
+  \item whiskering, \hyperpage{38}
 
 \end{theindex}
