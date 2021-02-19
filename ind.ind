@@ -8,9 +8,9 @@
     \subitem (co)complete, \hyperpage{19}
     \subitem opposite, \hyperpage{8}
   \item coequalizer, \hyperpage{17}
-  \item cofiber, \hyperpage{39}
-  \item cofibration, \hyperpage{33}
-    \subitem based, \hyperpage{39}
+  \item cofiber, \hyperpage{37}
+  \item cofibration, \hyperpage{34}
+    \subitem based, \hyperpage{40}
   \item colimit, \hyperpage{15}
   \item compactly generated, \hyperpage{13}
   \item cone, \hyperpage{23}
@@ -24,6 +24,11 @@
 
   \indexspace
 
+  \item fiber, \hyperpage{41}
+  \item fibration
+    \subitem based, \hyperpage{45}
+    \subitem Hurewicz, \hyperpage{41}
+    \subitem Serre, \hyperpage{42}
   \item functor
     \subitem forgetful, \hyperpage{7}
     \subitem free, \hyperpage{7}
@@ -34,7 +39,8 @@
     \subitem based, \hyperpage{23}
   \item homotopy category
     \subitem of $\Top$, \hyperpage{24}
-  \item homotopy extension property, \hyperpage{33}
+  \item homotopy extension property, \hyperpage{34}
+  \item homotopy lifting property (HLP), \hyperpage{41}
 
   \indexspace
 
@@ -42,13 +48,13 @@
 
   \indexspace
 
-  \item mapping cylinder, \hyperpage{34}
+  \item mapping cylinder, \hyperpage{35}
 
   \indexspace
 
   \item natural transformation, \hyperpage{8}
-  \item neighborhood deformation retraction, \hyperpage{37}
-  \item non-degenerately based, \hyperpage{38}
+  \item neighborhood deformation retraction, \hyperpage{39}
+  \item non-degenerately based, \hyperpage{40}
 
   \indexspace
 
@@ -63,14 +69,14 @@
 
   \indexspace
 
-  \item topologists' sine curve, \hyperpage{32}
+  \item topologists' sine curve, \hyperpage{31}
 
   \indexspace
 
   \item weak Hausdorff, \hyperpage{14}
   \item weak homotopy equivalence, \hyperpage{30}
   \item weak topology, \hyperpage{19}
-  \item well-based, \hyperpage{38}
-  \item whiskering, \hyperpage{38}
+  \item well-based, \hyperpage{40}
+  \item whiskering, \hyperpage{40}
 
 \end{theindex}

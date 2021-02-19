@@ -15,22 +15,24 @@
 \contentsline {subsection}{\numberline {3.3}Higher homotopy groups}{25}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Dependence of $\pi _k$ on the basepoint}{28}{subsection.3.4}
 \contentsline {subsection}{\numberline {3.5}Weak homotopy equivalence}{30}{subsection.3.5}
-\contentsline {section}{\numberline {4}Fiber and cofiber sequences of spaces}{33}{section.4}
-\contentsline {subsection}{\numberline {4.1}Cofibrations}{33}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Replacing maps by cofibrations}{36}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Criterion for a map to be a cofibration}{37}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Based cofibrations}{38}{subsection.4.4}
-\contentsline {section}{\numberline {A}More category theory: properties of morphisms}{40}{appendix.A}
-\contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{40}{subsection.A.1}
-\contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{43}{subsection.A.2}
-\contentsline {subsection}{\numberline {A.3}Properties of morphisms can induce properties of objects}{45}{subsection.A.3}
-\contentsline {subsection}{\numberline {A.4}Preservation properties under limits and colimits}{46}{subsection.A.4}
-\contentsline {subsection}{\numberline {A.5}Colimits and limits as functors}{48}{subsection.A.5}
-\contentsline {subsection}{\numberline {A.6}Filtered limits and colimits}{48}{subsection.A.6}
-\contentsline {section}{\numberline {B}Unsorted subsections on category theory}{48}{appendix.B}
-\contentsline {subsection}{\numberline {B.1}Conventions}{48}{subsection.B.1}
-\contentsline {subsection}{\numberline {B.2}Laws for pullbacks and pushouts}{50}{subsection.B.2}
-\contentsline {section}{\numberline {C}Homotopy colimits}{51}{appendix.C}
-\contentsline {subsection}{\numberline {C.1}Intro to homotopy colimits}{51}{subsection.C.1}
-\contentsline {subsection}{\numberline {C.2}Homotopy Invariance}{53}{subsection.C.2}
-\contentsline {subsection}{\numberline {C.3}Homotopy colimits coinciding with colimits}{54}{subsection.C.3}
+\contentsline {section}{\numberline {4}Cofibrations and fibrations}{33}{section.4}
+\contentsline {subsection}{\numberline {4.1}Cofibrations}{34}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Replacing maps by cofibrations}{38}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Criterion for a map to be a cofibration}{39}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Based cofibrations}{39}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Fibrations}{41}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Path lifting functions}{42}{subsection.4.6}
+\contentsline {section}{\numberline {A}More category theory: properties of morphisms}{45}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{45}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{48}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.3}Properties of morphisms can induce properties of objects}{50}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.4}Preservation properties under limits and colimits}{51}{subsection.A.4}
+\contentsline {subsection}{\numberline {A.5}Colimits and limits as functors}{53}{subsection.A.5}
+\contentsline {subsection}{\numberline {A.6}Filtered limits and colimits}{53}{subsection.A.6}
+\contentsline {section}{\numberline {B}Unsorted subsections on category theory}{53}{appendix.B}
+\contentsline {subsection}{\numberline {B.1}Conventions}{53}{subsection.B.1}
+\contentsline {subsection}{\numberline {B.2}Laws for pullbacks and pushouts}{55}{subsection.B.2}
+\contentsline {section}{\numberline {C}Homotopy colimits}{56}{appendix.C}
+\contentsline {subsection}{\numberline {C.1}Intro to homotopy colimits}{56}{subsection.C.1}
+\contentsline {subsection}{\numberline {C.2}Homotopy Invariance}{58}{subsection.C.2}
+\contentsline {subsection}{\numberline {C.3}Homotopy colimits coinciding with colimits}{59}{subsection.C.3}

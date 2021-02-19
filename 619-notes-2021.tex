@@ -1298,9 +1298,9 @@ We would note that such a homotopy gives a path from $f(\ast)$ to the basepoint,
 \begin{proof} Consider any map representing a class $[f] \in \pi_n(X,y)$ as a map $f \colon I^n \to X$ sending $\partial I^n$ to $y$. Let $\gamma$ denote a path from $y$ to $x$. Let $J=[\epsilon, 1-\epsilon]\subset I$, where $\epsilon\in(0,\frac{1}{2})$, and so that $J^n$ is a smaller cube inside $I^n$, as depicted in \autoref{cubefig}. From each point on $\partial I^n$, draw a line segment to the center of $I^n$, which intersects $\partial J^n$. Consider the radial segments from $\partial I^n$ to $\partial J^n$ defined by these lines. Now reparametrize $f$, so that its domain is $J^n$. Note that on $\del J^n$, $f$ is then identically $y$.
 
 \begin{figure}[h]
-  \includegraphics[scale=1]{pics/cubefig.png}
+  \includegraphics[scale=.3]{pics/cubefig.png}
   \centering
-  \caption{$J^n$ inside $I^n$, to be replaced with Maxine's professional pic}
+  \caption{$J^n$ inside $I^n$}
   \label{cubefig}
 \end{figure}
 
@@ -1406,21 +1406,21 @@ Suppose $f,g\colon X\to Y$ are homotopic maps via a homotopy $h$. Let $\gamma$ b
 \end{lemma}
 
 \begin{proof}
-Exercise, generalizing the case $n=1$, which appears as \cite[Proposition 1.18]{hatcher}. Suppose $f\simeq_h g$ and $\alpha\colon I^n/\partial I^n \to X$. Let  $\gamma$ be a path from $f(x0$ to $g(x)$ and for any fixed $t$, let $\gamma_t$ be the path from $\gamma(t)$ to $g(x)$, reparametrized over $I$. 
+Exercise, generalizing the case $n=1$, which appears as \cite[Proposition 1.18]{hatcher}. Suppose $f\simeq_h g$ and $\alpha\colon I^n/\partial I^n \to X$. Let  $\gamma$ be a path from $f(x0$ to $g(x)$ and for any fixed $t$, let $\gamma_t$ be the path from $\gamma(t)$ to $g(x)$, reparametrized over $I$, as in \autoref{gammat}
 
 \begin{figure}[h]
   \includegraphics[scale=.7]{pics/gammat.png}
   \centering
   \caption{Definition of $\gamma_t$}
-  \label{cubefig}
+  \label{gammat}
 \end{figure}
 
-Here is a pictorial proof, generalizing that for $n=1$ in Hatcher:
+A pictorial proof, generalizing that for $n=1$ in Hatcher, can be seen in \autoref{homotopypic}.
 \begin{figure}[h]
-  \includegraphics[scale=.6]{pics/homotopy.png}
+  \includegraphics[scale=.5]{pics/homotopy.png}
   \centering
   \caption{A homotopy from $\gamma\cdot (f_\ast \alpha)$ to $g_\ast(\alpha)$}
-  \label{cubefig}
+  \label{homotopypic}
 \end{figure}
 
 \end{proof}
@@ -1430,6 +1430,14 @@ The converse to \autoref{htpyequivisweak} does not hold. Here are two famous cou
 \begin{align*}
 	X = \{ (x,\sin\frac{1}{x}) \ : \ 0<x \leq 1\} \cup (\{0\}\times[-1,1]).
 \end{align*}
+
+\begin{figure}[h]
+  \includegraphics[scale=.2]{pics/topologist_sin.png}
+  \centering
+  \caption{The map from the circle to the pseudo circle}
+  \label{cubefig}
+\end{figure}
+
 This space is connected but not path-connected. Let's base $X$ at $x = (0,1)$, and take a based map
 \begin{align*}
 	f \colon (S^0,0) \to X \\
@@ -1440,16 +1448,19 @@ This is a weak equivalence but not a homotopy equivalence.
 \end{example}
 
 \begin{example}
-The pseudo circle is a finite topological space $X=\{a,b,c,d\}$, with topology given by \{\{a,b,c,d\}, \{a,b,c\}, \{a,b,d\}, \{a,b\}, \{a\}, \{b\}\}. It turns out that this space is indistinguishable from the circle when it comes to weak equivalence. Consider the  map $f\colon S^1\to X$ which sends the north pole to $c$, the south pole to $d$, the left hemisphere to $a$ and the right hemisphere to $b$. 
+The pseudo circle is a finite topological space $X=\{a,b,c,d\}$, with topology given by \{\{a,b,c,d\}, \{a,b,c\}, \{a,b,d\}, \{a,b\}, \{a\}, \{b\}\}. It turns out that this space is indistinguishable from the circle when it comes to weak equivalence. Consider the  map $f\colon S^1\to X$ which sends the north pole to $c$, the south pole to $d$, the left hemisphere to $a$ and the right hemisphere to $b$, as depicted in \autoref{pseudocircle}.
+
 \begin{figure}[h]
-  \includegraphics[scale=.6]{pics/pseudocircle.png}
+  \includegraphics[scale=.18]{pics/pseudocircle.png}
   \centering
   \caption{The map from the circle to the pseudo circle}
-  \label{cubefig}
+  \label{pseudocircle}
 \end{figure}
 
 This map is continuous, and it induces an isomorphism on all homotopy groups. However, there is no inverse homotopy equivalence.
 \end{example}
+
+
 
 \begin{proposition} The weak equivalences satisfy 2-out-of-3.
 \end{proposition}
@@ -1484,8 +1495,11 @@ and since all the other maps are isomorphisms, we see that $g\colon \pi_n(Y,y) \
 
 	
 	
-\section{Fiber and cofiber sequences of spaces}
-We might ask: is there a notion of sequence of spaces which induces long exact sequences in homotopy groups or (co)homology groups. In this section we will make sense of such notions of ``exact sequences" in spaces.
+
+\section{Cofibrations and fibrations}
+We might ask: is there a notion of sequence of spaces which induces long exact sequences in homotopy groups or (co)homology groups. In this section we will make sense of  notions of short ``exact sequences" in spaces, and in the next section we will iterate these to ``long exact sequences" of spaces.
+
+One might also ask: what conditions on an inclusion make the quotient homotopy invariant and what conditions on a map make the fibers homotopy invariant? These questions will lead to the concepts of cofibrations and fibrations.
 
 \subsection{Cofibrations}
 
@@ -1641,6 +1655,27 @@ which, by adjunction, corresponds to a diagram, which can be filled, since $i$ i
 \]
 \end{proof}
 
+Recall that the \textit{quotient/cofiber}\index[ind]{cofiber} of $X\xto{f} Y$ is defined to be the colimit of $(\ast \from X \xto{f} Y)$. Suppose $f : X\cofto Y$ is a cofibration. Then there is a long exact sequence for homology and cohomology:
+\begin{align*}
+	\cdots \to \til{H}_n(X) \to \til{H}_n(Y) \to \til{H}(Y/X) \to \cdots
+\end{align*}
+where $H_\ast (Y,X) \cong \til{H}(Y/X)$. This is the long exact sequence of a pair.\footnote{This is stated in \cite{hatcher} in terms of ``good pairs,'' whose inclusion satisfies HEP.}
+
+
+\begin{remark} Quotients defined as above are not homotopy invariant. That is, the cofiber of $S^1\hookto D^2$ is $S^2$, but the cofiber of $S^1 \to \ast$ is $\ast$.\footnote{This is the failure of our colimit to be a homotopy colimit.}
+\end{remark}
+
+\begin{proposition} Suppose we have a diagram
+\[
+	\begin{tikzcd}
+	X_1\rar["f_1" above, "\simeq" below]\dar[tail,"i_1" left] & X_2\dar[tail,"i_2" right] \\
+	Y_1\rar["f_2" below,"\simeq" above] & Y_2
+	\end{tikzcd}
+\]
+where $i_1, i_2$ are cofibrations, and $f_1,f_2$ are (weak) homotopy equivalences. Then the induced map $Y_1/X_1 \to Y_2/X_2$ is a (weak) homotopy equivalence.\footnote{More broadly, we will see that given some diagram where a certain number of maps are cofibrations, we have that the limit and the homotopy colimit coincide.}
+\end{proposition}
+
+
 
 
 
@@ -1792,37 +1827,13 @@ A proof can be found in \cite[VI, Section 5]{may}, and is quite technical.
 % Lecture 8 : February 14th
 %%
 
-\begin{note} Recall that the \textit{quotient/cofiber}\index[ind]{cofiber} of $X\xto{f} Y$ is defined to be the colimit of $(\ast \from X \xto{f} Y)$. Suppose $f : X\cofto Y$ is a cofibration. Then there is a long exact sequence for homology and cohomology:
-\begin{align*}
-	\cdots \to \til{H}_n(X) \to \til{H}_n(Y) \to \til{H}(Y/X) \to \cdots
-\end{align*}
-where $H_\ast (Y,X) \cong \til{H}(Y/X)$. This is the long exact sequence of a pair.\footnote{This is stated in \cite{Hatcher} in terms of ``good pairs,'' whose inclusion satisfies HEP.}
-\end{note}
-
-\begin{remark} Quotients defined as above are not homotopy invariant. That is, the cofiber of $S^1\hookto D^2$ is $S^2$, but the cofiber of $S^1 \to \ast$ is $\ast$.\footnote{This is the failure of our colimit to be a homotopy colimit.}
-\end{remark}
-
-\begin{proposition} Suppose we have a diagram
-\[
-	\begin{tikzcd}
-	X_1\rar["f_1" above, "\simeq" below]\dar[tail,"i_1" left] & X_2\dar[tail,"i_2" right] \\
-	Y_1\rar["f_2" below,"\simeq" above] & Y_2
-	\end{tikzcd}
-\]
-where $i_1, i_2$ are cofibrations, and $f_1,f_2$ are (weak) homotopy equivalences. Then the induced map $Y_1/X_1 \to Y_2/X_2$ is a (weak) homotopy equivalence.\footnote{More broadly, we will see that given some diagram where a certain number of maps are cofibrations, we have that the limit and the homotopy colimit coincide.}
-\end{proposition}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
+
+
 
 \subsection{Fibrations}
-For any $p: E \to B$, we can define the \textit{fiber}\index[ind]{fiber} of $b\in B$ as $F_b:= p^{-1}(b)$. This can be thought of as the pullback
+For any $p\colon E \to B$, we can define the \textit{fiber}\index[ind]{fiber} of $b\in B$ as $F_b:= p^{-1}(b)$. This can be thought of as the pullback
 \[
 	\begin{tikzcd}
 	p^{-1}(b)\pb\rar\dar & E\dar["p" right] \\
@@ -1831,7 +1842,7 @@ For any $p: E \to B$, we can define the \textit{fiber}\index[ind]{fiber} of $b\i
 \]
 This is not homotopy invariant. For example, the map $S^1\subseteq \R^2 \xto{f} \R$ given by projection to the $x$-axis may have fiber $\emptyset$, $\ast$, or $S^0$. However, the fiber of $S^1\to \ast$ is $S^1$, which is not equivalent to any of the possible fibers of $f$.
 
-\begin{definition} A map $p: E \to B$ is called a \textit{(Hurewicz) fibration}\index[ind]{fibration!Hurewicz} if, for every space $X$ and map $X\xto{f} E$ with homotopy $X\times I \to B$ with $h_0 = p\circ f$, there exists an extension $\til{h}: X\times I \to E$. That is,
+\begin{definition} A map $p: E \to B$ is called a \textit{(Hurewicz) fibration}\index[ind]{fibration!Hurewicz} if, for every map $X\xto{f} E$ and homotopy $X\times I \to B$ with $h_0 = p\circ f$, there exists an extension $\til{h}: X\times I \to E$. That is,
 \[
 	\begin{tikzcd}
 	X\rar["f"]\dar["i_0" left] & E\dar["p" right] \\
@@ -1849,12 +1860,13 @@ By adjunction, this corresponds to a lift
 In this case, we say $p$ satisfies the \textit{homotopy lifting property (HLP)}\index[ind]{homotopy lifting property (HLP)}
 \end{definition}
 
-\begin{customenvironment}{Examples of fibrations} $\ $
-\begin{itemize}
-	\item The unique map $X\xto{!}\ast$
+\begin{examples} Here are some easy examples of fibrations:
+\vspace{-10pt}
+\begin{itemize}\itemsep0em
+	\item The unique map $X\to\ast$
 	\item The projection $X\times F \to X$, that is, the trivial bundle with fiber $F$.
 \end{itemize}
-\end{customenvironment}
+\end{examples}
 
 \begin{note} There is a notion of \textit{Serre fibration}\index[ind]{fibration!Serre}, where we ask that HLP is only satisfied with respect to $X=I^n$ (we'll come back to this).
 \end{note}
@@ -1862,7 +1874,8 @@ In this case, we say $p$ satisfies the \textit{homotopy lifting property (HLP)}\
 When we say ``fibration,'' we will generally be referring to Hurewicz fibrations.
 
 \begin{proposition} Fibrations are closed under
-\begin{enumerate}
+\vspace{-10pt}
+\begin{enumerate}\itemsep0em
 	\item composition
 	\item pullbacks
 	\item products
@@ -1871,7 +1884,8 @@ When we say ``fibration,'' we will generally be referring to Hurewicz fibrations
 \end{enumerate}
 \end{proposition}
 
-Again, we have a ``universal diagram'' to check.
+\subsection{Path lifting functions}
+Again, like for cofibrations, we have a ``universal diagram'' to check.
 
 \begin{note} The maps $f : X \to E$ and $h : X \to B^I$ correspond to a single map $X \to E\times_B B^I$, that is,
 \[
@@ -1920,36 +1934,32 @@ is a fibration.
 So we need to show there is a lift
 \[
 	\begin{tikzcd}
-	Z\rar\dar["i_0" left] & \Map(X,Y)\dar \\
-	Z\times I\ar[ur,dashed,"?"]\rar & \Map(\{x_0\},Y).
+	Z\times 0 \rar\dar["i_0" left] & \Map(X,Y)\dar \\
+	Z\times I\ar[ur,dashed,"?"]\rar & \Map(x_0,Y).
 	\end{tikzcd}
 \]
-This corresponds, via applying the adjunction twice, to a diagram
-\[
-	\begin{tikzcd}
-	X\rar\dar & \Map(Z,Y)\dar \\
-	x_0\rar\ar[ur,dashed] & \Map(Z\times I, Y).
-	\end{tikzcd}
-\]
+Applying the adjunction twice, this corresponds to a diagram
 
-Also corresponds to
 \[
 	\begin{tikzcd}
 	x_0\dar\rar & \Map(Z\times I, Y) \dar\\
-	X\rar & \Map (Z^{x_0}, Y)
+	X\rar & \Map (Z\times 0, Y)
 	\end{tikzcd}
 \]
+Since $x_0 \cofto X$ is a cofibration, this diagram has a lift.
 
-Again via the adjunction, we are looking for maps
-\begin{align*}
-	\{x_0\} \times I &\to \Map(Z,Y) \\
-	X\times\{0\} &\to \Map(Z,Y)
-\end{align*}
-which agree on $\{x_0\}\times\{0\}$. We get a map $g : \{x_0\} \times I \cup X\times \{0\} \to \Map(Z,Y)$ Since $\{x_0\}\cofto X$ is a cofibration, there exists a retraction
-\begin{align*}
-	r : X\times I \to \{x_0\} \times I \cup X\times \{0\}.
-\end{align*}
-Can define $g\circ r : X\times I \to \Map(Z,Y)$. By adjunction, this corresponds to a map $Z\times I \to \Map(X,Y)$, which gives the desired lift.
+%Again via the adjunction, we are looking for maps
+%\begin{align*}
+%	\{x_0\} \times I &\to \Map(Z,Y) \\
+%	X\times\{0\} &\to \Map(Z,Y)
+%\end{align*}
+%which agree on $\{x_0\}\times\{0\}$. We get a map $g : \{x_0\} \times I \cup X\times \{0\} \to \Map(Z,Y)$ 
+%Since $\{x_0\}\cofto X$ is a cofibration, there exists a retraction
+%\begin{align*}
+%	r : X\times I \to \{x_0\} \times I \cup X\times \{0\}.
+%\end{align*}
+%Can define $g\circ r : X\times I \to \Map(Z,Y)$. By adjunction, this corresponds to a map $Z\times I \to \Map(X,Y)$, which gives the desired lift.
+
 \end{proof}
 
 \begin{proposition} More generally, if $A \cofto X$ is a cofibration, then $\Map(X,Z) \to \Map(A,Z)$ is a fibration.
@@ -1974,9 +1984,9 @@ corresponds, via adjunction to
 and we note that this lift exists since $X\to Y$ is a fibration.
 \end{proof}
 
-\begin{proposition} For a fibration $p: X\to Y$, and two points $y,y'\in Y$ in the same path component, one has a homotopy equivalence $F_y := p^{-1}(y) \simeq p^{-1}(y') \simeq F_{y'}$.
+\begin{proposition} For a fibration $p: X\to Y$, and two points $y,y'\in Y$ in the same path component, one has a homotopy equivalence $F_y = p^{-1}(y) \simeq p^{-1}(y') = F_{y'}$.
 \end{proposition}
-\begin{proof} See \cite[4.6.1]{Hatcher}.
+\begin{proof} See \cite[4.6.1]{hatcher}.
 \end{proof}
 
 One might wonder whether, given a map whose fibers are all homotopy equivalent, is it a fibration? The answer is no.
@@ -2011,55 +2021,44 @@ where $p_1,p_2$ are fibrations and $f_1,f_2$ are (weak) homotopy equivalences, t
 	F_p \simeq F_{f_2(p)}.
 \end{align*}
 \end{proposition}
-\begin{proof} See \cite[7.4]{May}. This uses the homotopy lifting property. It is easy to see that we get weak equivalences via the long exact sequence of homotopy groups.
+\begin{proof} See \cite[7.4]{may}. This uses the homotopy lifting property. It is easy to see that we get weak equivalences via the long exact sequence of homotopy groups.
 \end{proof}
 
-There is a notion of \textit{based fibration}\index[ind]{fibration!based}, where all the maps and lifts involved are based.
+\textbf{Based fibrations.} There is a notion of \textit{based fibration}\index[ind]{fibration!based}, where all the maps and lifts involved are based.
 
 \begin{proposition} A based map $p : E \to B$ is a based fibration if and only if it is an unbased fibration.
 \end{proposition}
 \begin{proof} Again, given a based fibration, we may restrict to spaces $X_+$ in the HLP diagram, and note that $X_+ \smashprod I_+ \cong (X\times I)_+$. The other direction is much more difficult.
 \end{proof}
 
-\begin{theorem} Given a fibration of based spaces $X\xto{p} Y$, and $F = p^{-1}(y_0) \neq \emptyset$ based at $x_0$, then we obtain a long exact sequence of homotopy groups
-\begin{align*}
-	\cdots \to \pi_n(F) \to \pi_n(X) \xto{p_\ast} \pi_n(Y) \xto{\delta} \pi_{n-1}(F) \to \cdots
-\end{align*}
-\end{theorem}
+%\begin{theorem} Given a fibration of based spaces $X\xto{p} Y$, and $F = p^{-1}(y_0) \neq \emptyset$ based at $x_0$, then we obtain a long exact sequence of homotopy groups
+%\begin{align*}
+%	\cdots \to \pi_n(F) \to \pi_n(X) \xto{p_\ast} \pi_n(Y) \xto{\delta} \pi_{n-1}(F) \to \cdots
+%\end{align*}
+%\end{theorem}
 
-\begin{note} If $p : X\to Y$ admits a section $s: Y \to X$, then the composite
-\begin{align*}
-	\pi_n(Y) \xto{s} \pi_n(X) \xto{p} \pi_n(Y)
-\end{align*}
-is trivial, which will indicate that the connecting homomorphism $\delta$ is trivial.
-\end{note}
 
-\begin{customenvironment}{Path-loop fibration} Let $X$ be a based space. We define $PX$ to be the \textit{path space}\index[ind]{path space} of $X$, defined via the pullback
-	\[
-		\begin{tikzcd}
-		PX\rar\dar\pb & X^I\dar["\ev_0" right] \\
-		\{x_0\}\rar & X
-		\end{tikzcd},
-	\]
-	which is of the form $PX = \{\gamma \in X^I \ : \ \gamma(0) = x_0\}$, that is, all paths starting at $x_0$. One may see that $PX \simeq \ast$. We can see that we have a map $PX \xto{\ev_1} X$ with fiber
-	\begin{align*}
-		\Omega X:= \{\gamma \in X^I \ : \ \gamma(0)=\gamma(1)=x_0\}.
-	\end{align*}
-	This is called the \textit{loop space}\index[ind]{loop space} of $X$. From the fibration $\Omega \hookto PX \to X$, we get a long exact sequence
-	\begin{align*}
-		\cdots \to \pi_n(\Omega X) \to \pi_n(PX) \to \pi_n(X) \to \pi_{n-1}(\Omega X) \to \cdots
-	\end{align*}
-	which gives us that
-	\begin{align*}
-		\pi_n(X) \cong \pi_{n-1}(\Omega X).
-	\end{align*}
-\end{customenvironment}
+
 % Lecture 9 --- February 19th
 
-\textbf{Criterion for fibrations}[{\cite[7.4]{May}}] Given a map $p : X\to Y$ to a paracompact\footnote{Every open cover admits a numerable refinement.} space $Y$ with numberable open cover $\{U_i\}$, then $p$ is a fibration if and only if each $\left. p\right|_{p^{-1}(U_i)} : p^{-1}(U_i) \to U_i$ is a fibration for each $U_i$.
+\textbf{Criterion for fibrations}. Given a map $p : X\to Y$ to a paracompact\footnote{Every open cover admits a numerable refinement.} space $Y$ with numberable open cover $\{U_i\}$, then $p$ is a fibration if and only if each $\left. p\right|_{p^{-1}(U_i)} : p^{-1}(U_i) \to U_i$ is a fibration for each $U_i$.
 
 
 Therefore every fiber bundle with paracompact base is a fibration. More generally, without the paracompactness hypothesis on the base, we may still show that every fiber bundle is a Serre fibration (the idea is to subdivide $I^n\times I$ into small cubes so that the preimage of each open $U\subseteq B$ is contained in a single cube. We then build our lifts locally and glue them together).
+
+This is worked out in detail in  \cite[VII, Section 4]{may}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
+
+\subsection{Long exact sequence for fibrations}
 
 \begin{theorem}[Long exact sequence of Serre fibrations] Let $p: (E,e_0) \to (X,x_0)$ denote a Serre fibration with fiber $(F,e_0)$. Then there exists a long exact sequence
 \begin{align*}
@@ -2067,6 +2066,15 @@ Therefore every fiber bundle with paracompact base is a fibration. More generall
 	\cdots &\to \pi_0(E,e_0) \xto{p_\ast} \pi_0(X,x_0).
 \end{align*}
 \end{theorem}
+
+\begin{note} If $p \colon E\to X$ admits a section $s\colon X \to E$, then the composite
+\begin{align*}
+	\pi_n(X) \xto{s_\ast} \pi_n(E) \xto{p_\ast} \pi_n(X)
+\end{align*}
+is trivial, which will indicate that the connecting homomorphism $\delta$ is trivial.
+\end{note}
+
+
 \begin{proof} Define $J^n = (I^n \times \{0\}) \cup (\del I^n \times I) \subseteq I^{n+1}$ to be the ``open box'' in $I^{n+1}$. We note that there is an equivalence of pairs $(I^{n+1}, J^n) \cong (I^{n+1}, I^n\times\{0\})$. So any Serre fibration has the right lifting property with respect to the inclusion $J^n \hookto I^{n+1}$.
 
 To define the connecting homomorphism, we first let $[\alpha] \in \pi_n (X,x_0)$. We may think of $\alpha$ as a map of pairs
@@ -2076,7 +2084,7 @@ To define the connecting homomorphism, we first let $[\alpha] \in \pi_n (X,x_0)$
 Then consider the lifting diagram
 \[
 	\begin{tikzcd}
-	J^{n+1}\rar["\const_{e_0}" above]\dar & E\dar["p" right] \\
+	J^{n-1}\rar["\const_{e_0}" above]\dar & E\dar["p" right] \\
 	I^n \ar[ur,dashed,"\beta"]\rar["\alpha" below] & X.
 	\end{tikzcd}
 \]
@@ -2106,8 +2114,31 @@ where $\left. k \right|_{I^n\times\{0\}} = \alpha$ is $\alpha$ on the bottom of 
 Exercise: check exactness at $\pi_n(F)$ and $\pi_n(X)$.
 \end{proof}
 
-\subsection{Some consequences (other long exact sequences)}
-Recall for any $X\xto{f} Y$ we may factor it as a homotopy equivalence followed by a fibration
+
+
+\subsection{Path-loop fibration.} Let $X$ be a based space. We define $PX$ to be the \textit{path space}\index[ind]{path space} of $X$, defined via the pullback
+	\[
+		\begin{tikzcd}
+		PX\rar\dar\pb & X^I\dar["\ev_0" right] \\
+		\{x_0\}\rar & X
+		\end{tikzcd},
+	\]
+	which is of the form $PX = \{\gamma \in X^I \ : \ \gamma(0) = x_0\}$, that is, all paths starting at $x_0$. One may see that $PX \simeq \ast$. We can see that we have a map $PX \xto{\ev_1} X$ with fiber
+	\begin{align*}
+		\Omega X:= \{\gamma \in X^I \ : \ \gamma(0)=\gamma(1)=x_0\}.
+	\end{align*}
+	This is called the \textit{loop space}\index[ind]{loop space} of $X$. From the fibration $\Omega \hookto PX \to X$, we get a long exact sequence
+	\begin{align*}
+		\cdots \to \pi_n(\Omega X) \to \pi_n(PX) \to \pi_n(X) \to \pi_{n-1}(\Omega X) \to \cdots
+	\end{align*}
+	which gives us that
+	\begin{align*}
+		\pi_n(X) \cong \pi_{n-1}(\Omega X).
+	\end{align*}
+
+
+\subsection{Replacing a map by a fibration}
+For any $X\xto{f} Y$ we may factor it as a homotopy equivalence followed by a fibration
 \[
 	\begin{tikzcd}
 	X\rar["\simeq"]\ar[dr,"f" below left] & Nf\dar[two heads,"p" right] \\
@@ -2116,9 +2147,9 @@ Recall for any $X\xto{f} Y$ we may factor it as a homotopy equivalence followed 
 \]
 where $Nf = \{(\alpha,x)\in Y^I\times X \ : \ \alpha(1) = f(x)\} = Y^I \times_Y X$, and $p(\alpha,x) = \alpha(0)$.
 
-\begin{definition} The \textit{homotopy fiber}\index[ind]{homotopy fiber} of $f$ (occasionally denoted $\hofib(f)$) is the fiber $Ff(y) := p^{-1}(y)$, for the map $Nf\xtto{p} X$ above. That is,
+\begin{definition} The \textit{homotopy fiber}\index[ind]{homotopy fiber} of $f$ (occasionally denoted $\hofib(f)$) is the fiber $Ff_y := p^{-1}(y)$, for the map $Nf\xtto{p} X$ above. That is,
 \begin{align*}
-	Ff &= \{(\alpha,x) \ : \ \alpha(1) = f(x) \}.
+	Ff_y &= \{(\alpha,x) \ : \ \alpha(0)=y,\ \alpha(1) = f(x) \}.
 \end{align*}
 This is not the precise fiber $f^{-1}(y)$, but it is the fiber ``up to homotopy,'' that is, elements in $Ff(y)$ may be connected via a path to elements in $f^{-1}(y)$. There is a map from the fiber to the homotopy fiber given by
 \begin{align*}
@@ -2146,7 +2177,7 @@ This is not the precise fiber $f^{-1}(y)$, but it is the fiber ``up to homotopy,
 Really what we are doing here is replacing $X$ by the homotopy equivalent space $Nf$ and considering the long exact sequence associated with the fibration $Ff\hookto Nf \tto Y$.
 \end{corollary}
 
-\subsection{Relative homotopy groups}
+\subsection{Long exact sequence in relative homotopy groups}
 For $A\subseteq X$ with $x_0 \in A$, let $(X,A,x_0)$ denote the pointed pair of spaces. Then the map
 \begin{align*}
 	i_\ast : \pi_n(A,x_0) \to \pi_n(X,x_0) \quad \quad n\ge 0
@@ -2185,6 +2216,10 @@ As a consequence, relative homotopy groups are groups for $n\geq 2$ and abelian 
 	\cdots \to \pi_{n+1}(X,A) \to \pi_n(A) \to \pi_n(X) \to \pi_n(X,A) \to \cdots
 \end{align*}
 \end{corollary}
+
+
+\section{Fiber and cofiber sequences of spaces}
+In this section we will construct  long ``exact" sequences directly in spaces. 
 
 \subsection{Iterated fiber sequences}
 We may obtain another long exact sequence by first creating a long exact sequence of spaces, and then applying the functor $\pi_0(-)$ to obtain a long exact sequence of sets, and in particular groups.
@@ -2256,8 +2291,8 @@ where the map on the bottom diagonal is $\gamma \mapsto (\ast_{Ff},\gamma)$, and
 \begin{theorem} Applying $[Z,-]_\ast : \Top_\ast \to \Set_\ast$ yields a long exact sequence of pointed sets.
 \end{theorem}
 
-\begin{customenvironment}{Claim} $[Z,\Omega X]$ is a group, and $[Z,\Omega^n X]$ is abelian for $n\geq 2$.
-\end{customenvironment}
+\textbf{Claim.} $[Z,\Omega X]$ is a group, and $[Z,\Omega^n X]$ is abelian for $n\geq 2$.
+
 
 \begin{note} For $Z = S^0$, we get a long exact sequence in $\pi_n$ by noting that
 \begin{align*}
@@ -2368,7 +2403,7 @@ which is expressible as a pushout
 \end{enumerate}
 \end{exercise}
 
-\begin{customenvironment}{Examples of homotopy cofibers} $\ $
+\begin{examples}
 \begin{itemize}
 	\item $\hocof(X \xto{\id_X} X) \cong CX \simeq \ast$
 	\item $\hocof(X \xto{!} \ast) \cong \Sigma X$
@@ -2378,7 +2413,7 @@ which is expressible as a pushout
 	\end{align*}
 	then $Cf = X\cup_f e^n$ is $X$ with an $n$-cell attached via $f$.
 \end{itemize}
-\end{customenvironment}
+\end{examples}
 
 %\blue{Question: If $X$ is a CW complex, then is $CX$ a CW complex? If so then we can think about building CW complexes as homotopy colimits occurring in the category $\CW$.}
 
@@ -2452,9 +2487,9 @@ In some sense we are interchanging endpoints of the cone $Ci$. %\blue{TODO: figu
 \begin{exercise} Show that $[\Sigma X, Y]_\ast$ is a group and $[\Sigma^2 X, Y]$ is abelian. Moreover, we have a long exact sequence of groups.
 \end{exercise}
 
-\begin{customenvironment}{Long exact sequences in homology and cohomology} $\ $
-\begin{enumerate}
-	\item We cannot deduce the long exact sequence in reduced homology $\til{H}_n$ from this long exact sequence, but we may witness it at the space level.
+\subsection{Long exact sequences in homology and cohomology} 
+
+	 We cannot deduce the long exact sequence in reduced homology $\til{H}_n$ from this long exact sequence, but we may witness it at the space level.
 
 	\begin{proposition} For a pointed map $A \xto{i} X$ between well-pointed spaces, we may apply $\til{H}_n(-)$ to the cofiber sequence generated by $i$, which gives us (up to sign) the long exact sequence in homology:
 	\begin{align*}
@@ -2466,10 +2501,10 @@ In some sense we are interchanging endpoints of the cone $Ci$. %\blue{TODO: figu
 	\begin{align*}
 		\til{H}_k(X) \cong \til{H}_{k+1} (\Sigma X)
 	\end{align*}
-    for all $k$, and $\til{H}_k(X,A) \cong \til{H}_k (Ci)$. This gives the long exact sequence of the ``good pair'' $(Mi,A)$ \cite[Theorem~2.13]{Hatcher}. This coincides up to sign with the sequence obtained by applying $\til{H}_n$ to the Puppe sequence of spaces.
+    for all $k$, and $\til{H}_k(X,A) \cong \til{H}_k (Ci)$. This gives the long exact sequence of the ``good pair'' $(Mi,A)$ \cite[Theorem~2.13]{hatcher}. This coincides up to sign with the sequence obtained by applying $\til{H}_n$ to the Puppe sequence of spaces.
 	\end{proof}
 
-	\item We may also get the long exact sequence in cohomology via the Puppe sequence as follows:
+	 We may also get the long exact sequence in cohomology via the Puppe sequence as follows:
 
 	\begin{proposition} For a pointed map $A\xto{i} A$ between well-pointed spaces, then there exists a long exact sequence in $\til{H}^n(-; \pi)$, where $\pi\in\Ab$ is an abelian group of coefficients:
 	\begin{align*}
@@ -2497,8 +2532,10 @@ In some sense we are interchanging endpoints of the cone $Ci$. %\blue{TODO: figu
 	\end{proof}
 
 
-\end{enumerate}
-\end{customenvironment}
+
+
+
+
 
 % Lecture 11 February 26th
 
@@ -2557,7 +2594,7 @@ is bijective, we have that $e\circ f\circ e$ and $e$ are both mapped to by $[\id
 
 \textbf{Recall}: A map $f:X\to Y$ between CW complexes is \textit{cellular} if $f(X^{(n)}) \subseteq Y^{(n)}$ takes the $n$-skeleton of $X$ into the $n$-skeleton of $Y$ for all $n$. That is, $f$ respects the skeletal filtration.
 
-\begin{customenvironment}{Examples and non-examples} $\ $
+\begin{examples} Here are some examples and nonexamples:
 \begin{enumerate}
 	\item Note that the inclusion
 	\begin{align*}
@@ -2576,7 +2613,7 @@ is bijective, we have that $e\circ f\circ e$ and $e$ are both mapped to by $[\id
 	\end{align*}
 	are cellular.
 \end{enumerate}
-\end{customenvironment}
+\end{examples}
 
 \textbf{Main ingredient in the proofs of  Theorems \ref{thm:Whitehead} and \ref{thm:cellular-approximation}}: We first have (HELP), the ``homotopy extension and lifting property.'' Given $(X,A)$ a relative CW complex of dimension $\leq n$ and $e: Y \to Z$ an $n$-equivalence, then given $f: X\to Z$ and $g: A \to Y$, and a homotopy $h: A\times I \to Z$ with $\left. f \right|_A = h\circ i_0$ and $e\circ g = h\circ i_1$, then there exists $\til{g}: X\to Y$ and $\til{h}: X\times I \to Z$ making the whole diagram commute
 
@@ -2652,12 +2689,12 @@ where $\Delta$ is induced by the diagonal map on spaces.
 \begin{note} Cellular cohomology is functorial only with respect to cellular maps. But the diagonal $\Delta$ is usually \textit{not} a cellular map! For example, for $S^1$ we have $\Delta: S^1 \to S^1\times S^1$ where the skeleton maps $S^1\mapsto S_1 \vee S^1$. Thus we need to approximate $\Delta$ by a cellular map.
 \end{note}
 
-\begin{customenvironment}{CW approximation, functorially} We might think about CW approximation as a functor
+\textbf{CW approximation, functorially} We might think about CW approximation as a functor
 \begin{align*}
 	\Gamma: \Ho(\Top) \to \Ho(\Top)
 \end{align*}
 such that, for each representative space $X$ of a homotopy class, we have that $\Gamma(X)$ is a CW complex, and we have a natural transformation $\gamma: \Gamma \Rightarrow \id$ whose components $\gamma_X : \Gamma X \to X$ are weak equivalences.
-\end{customenvironment}
+
 
 We restate this in the following theorem.
 
@@ -2939,7 +2976,7 @@ We note that the maps $A\to Nf$ and $B\to Ng$ induce a map on the homotopy pullb
 
 What about homotopy groups? The bad news is that they do not always satisfy excision.
 
-\begin{customenvironment}{Counterexample} Consider $(S^2,D^2)\simeq (S^2, \ast)$. We note that $\pi_n(S^2, D^2) \cong \pi_n(S^2,\ast)$, which are nonzero infinitely often. Let $U$ be a smaller disk sitting inside $D^2$. Then excision would tell us that
+\begin{counterexample} Consider $(S^2,D^2)\simeq (S^2, \ast)$. We note that $\pi_n(S^2, D^2) \cong \pi_n(S^2,\ast)$, which are nonzero infinitely often. Let $U$ be a smaller disk sitting inside $D^2$. Then excision would tell us that
 \begin{align*}
 	\pi_n(S^2, D^2) \cong \pi_n(S^2-U, D^2-U) \cong \pi_n(D^2, S^1).
 \end{align*}
@@ -2948,7 +2985,7 @@ By the long exact sequence in homotopy, this tells us
 	\cdots \to \pi_i(S^1) \to \pi_i(D^2) \to \pi_i(D^2, S^1) \to \pi_{i-1}(S^1) \to \cdots.
 \end{align*}
 However this implies $\pi_i (D^2, S^1) \cong \pi_{i-1}(S^1) = 0$ unless $i=1$.
-\end{customenvironment}
+\end{counterexample}
 
 \textbf{Morally}: Homotopy groups are much harder to compute because excision fails.
 
@@ -2968,7 +3005,7 @@ For simplicity, we'll assume that all our spaces $A$, $B$, and $A\cap B$ are pat
 is $(m+n)$-connected.\footnote{For this result in \cite{Hatcher}, $(X,A)$ and $(X,B)$ are required to be CW pairs, but recall by Remark \ref{rmk:excisive-triad-approximation}, we may approximate an excisive triad by a CW triad.}
 \end{theorem}
 
-\begin{customenvironment}{Another formulation of homotopy excision} For an excisive triad $X,A,B$, we have a homotopy pushout
+\textbf{Another formulation of homotopy excision.} For an excisive triad $X,A,B$, we have a homotopy pushout
 \[
 	\begin{tikzcd}
 	A\cap B\rar\dar["i" left] & A\dar["j" right] \\
@@ -2976,7 +3013,7 @@ is $(m+n)$-connected.\footnote{For this result in \cite{Hatcher}, $(X,A)$ and $(
 	\end{tikzcd}
 \]
 Recall that $\pi_{k-1}(Fi) \cong \pi_k(B, A\cap B)$ and similarly $\pi_{k-1}(Fj) \cong \pi_k(X, A)$. We get an induced map on the homotopy fibers $Fi \to Fj$. If $A\cap B\hookto A$ is $m$-connected and $A\cap B\hookto B$ is $n$-connected, then $Fi \to Fj$ is $(m+n-1)$-connected.
-\end{customenvironment}
+
 
 \begin{exercise} For a square
 \[
@@ -2990,12 +3027,12 @@ the map to the homotopy pullback $C\to B\times_X^h A$ is $k$-connected if and on
 
 For an excisive triad, this square is always homotopy pushout. We can ask whether it is a homotopy pullback, and the failure of this square to be a homotopy pullback is precisely measured by how connected the map $C\to B\times_X^h A$ is.
 
-\begin{customenvironment}{Application: Freudenthal Suspension}\index[ind]{Freudenthal suspension} Consider the suspension map
+\textbf{Application: Freudenthal Suspension}\index[ind]{Freudenthal suspension} Consider the suspension map
 \begin{align*}
 	\pi_j(X) &= [S^j, X]_\ast \to [\Sigma S^j, \Sigma X]_\ast \cong [S^{j+1}, \Sigma X]_\ast = \pi_{j+1}(\Sigma X).
 \end{align*}
 For $X$ well-pointed and $n$-connected, this map is an isomorphism for $j\geq 2n$ and a surjection for $j=2n+1$.
-\end{customenvironment}
+
 
 \begin{proof} If $X$ is well-based, the reduced and unreduced suspensions are homotopy equivalent, so without loss of generality we work with the unreduced suspension. Consider two large cones $C_+ X$ and $C_- X$ covering the suspension $\Sigma X$, and whose intersection is homotopy equivalent to $X$. Then they form an excisive triad, and we obtain a diagram
 \[
@@ -3268,12 +3305,11 @@ We define the \textit{homotopy groups of a prespectrum} $X$ as
 	recovers the stable homotopy of $X$. When $X = S^0$, then $\Sigma^\infty S^0 = \S$ is called the \textit{sphere spectrum}. We call $\pi_\ast (\S)$ the \textit{stable homotopy groups of spheres}.
 \end{example}
 
-\begin{customenvironment}{Digression} Consider the category $\FinSet$ of finite sets, which is equipped with a monoid structure from the operation of set union. In some sense that can be made rigorous (the Barratt-Priddy Theorem), the sphere spectrum is the group completion of $\FinSet$ with respect to set union.
-\end{customenvironment}
+\textbf{Digression.} Consider the category $\FinSet$ of finite sets, which is equipped with a monoid structure from the operation of set union. In some sense that can be made rigorous (the Barratt-Priddy Theorem), the sphere spectrum is the group completion of $\FinSet$ with respect to set union.
 
 
-\begin{customenvironment}{Spoiler} The \textit{Eilenberg-Maclane spaces} $\{K(\pi,n)\}$ form a prespectrum which determines singular homology with coefficients in an abelian group $\pi$.
-\end{customenvironment}
+\textbf{Spoiler} The \textit{Eilenberg-Maclane spaces} $\{K(\pi,n)\}$ form a prespectrum which determines singular homology with coefficients in an abelian group $\pi$.
+
 
 \begin{note} Singular homology satisfies all axioms, including the dimension axiom (we have seen all of these axioms, except weak equivalence).
 \end{note}
@@ -3311,8 +3347,8 @@ Thus since $i_n$ is surjective on $H_k$ for $k\leq n$, so is $f$. As an exercise
 
 \end{proof}
 
-\begin{customenvironment}{Upshot} We may prove things about singular homology of all spaces by only using singular homology of CW complexes.
-\end{customenvironment}
+\textbf{Upshot} We may prove things about singular homology of all spaces by only using singular homology of CW complexes.
+
 
 There is a link between homology and homotopy groups:
 
@@ -3399,8 +3435,8 @@ Similarly as for homology:
 \end{remark}
 
 
-\begin{customenvironment}{Question}\label{q:cohom-thy} Can we find other cohomology theories? How do we recover singular cohomology? Is there a sequence of spaces $\{P_n\}$ such that $[-,P_n]_\ast$ is a generalized cohomology theory?
-\end{customenvironment}
+\begin{question}\label{q:cohom-thy} Can we find other cohomology theories? How do we recover singular cohomology? Is there a sequence of spaces $\{P_n\}$ such that $[-,P_n]_\ast$ is a generalized cohomology theory?
+\end{question}
 
 
 Let $Z$ be a based space of the homotopy type of a CW complex, and consider the functor
@@ -3481,13 +3517,13 @@ From this we see it suffices to define $\{P_n\}$ by letting the adjoint maps to 
 defines a generalized cohomology theory.
 \end{remark}
 
-\begin{customenvironment}{Question} Is every generalized cohomology theory of this form?
-\end{customenvironment}
+\begin{question} Is every generalized cohomology theory of this form?
+\end{question}
 
 Yes! By Brown representability.
 
-\begin{customenvironment}{Warning} The homotopy category of spectra and the category of generalized cohomology theories are not equivalent. We can have a non-nullhomotopic map of spectra which induces the zero map on corresponding cohomology theories, see \cite{mo-hyperphantoms}.
-\end{customenvironment}
+\begin{warn} The homotopy category of spectra and the category of generalized cohomology theories are not equivalent. We can have a non-nullhomotopic map of spectra which induces the zero map on corresponding cohomology theories, see \cite{mo-hyperphantoms}.
+\end{warn}
 
 % TODO hyperphantoms \href{https://mathoverflow.net/questions/117684/are-spectra-really-the-same-as-cohomology-theories}{Overflow post}
 
@@ -3510,7 +3546,7 @@ But for any (pre)spectrum $P_\bullet$, we may replace $P_n$ by $\colim_k \Omega^
 
 Let's start with $K(\pi,1)$, which works for all $\pi$ (not necessarily abelian). This is also called the \textit{bar construction}.
 
-\begin{customenvironment}{Idea for the bar construction} We define $BG$ to be the configuration space of $n+1$ points in the unit interval $I$, over all natural numbers $n$ such that
+\textbf{Idea for the bar construction} We define $BG$ to be the configuration space of $n+1$ points in the unit interval $I$, over all natural numbers $n$ such that
 \begin{align*}
     0\leq g_0 \leq g_1 \leq \cdots \leq g_n \leq 1.
 \end{align*}
@@ -3537,7 +3573,7 @@ We subject this configuration space to the following relations:
     \end{align*}
 \end{itemize}
 
-\end{customenvironment}
+
 
 \ifx
 We want configurations of points in $I$, labeled by elements in $G$, such that
@@ -3648,8 +3684,8 @@ For $X\in \sSet$, we obtain a set $X_n$ for all $n\geq 0$, and we have maps $d_i
 
 A map of simplicial sets $f_\dot : X_\dot \to Y_\dot$ is a collection of functions $f_n : X_n \to Y_n$ that commute with the face and degeneracy maps.
 
-\begin{customenvironment}{References} For a nice introduction to simplicial sets, see \cite{friedman4221elementary} or \cite{riehl-sset}. A more in-depth treatment of simplicial homotopy theory is given in \cite{goerss-jardine}.
-\end{customenvironment}
+ For a nice introduction to simplicial sets, see \cite{friedman4221elementary} or \cite{riehl-sset}. A more in-depth treatment of simplicial homotopy theory is given in \cite{goerss-jardine}.
+
 
 \begin{example} The singular complex of a space $X$. We first define the topological $n$-simplex as
     \[
@@ -3698,9 +3734,9 @@ where $F$ takes a free abelian group on each $X_n$, and we have that $\delta:= \
 We have degeneracy maps $s_j : (N\mathscr{C})_n \to (N\mathscr{C})_{n+1}$ inserting an identity at the $j$th slot,and we get face maps $d_i : (N\mathscr{C})_n \to (N\mathscr{C})_{n-1}$ which, for $0\leq i\leq n-1$, composes the $i$ and $i+1$st morphism, and $d_n$ omits the last maps, respectively.
 \end{definition}
 
-\begin{customenvironment}{Observation} If we have a group $G$, it is a category with one object, and composition is given by the group multiplication. Its nerve has $(NG)_n = G^n$, whose face maps $d_i : G \to G^{n-1}$ are given by multiplication at slot $i$, for $0<i<n$, and for $d_0$ and $d_n$ forget the $0$th and $n$th entry, respectively. The degeneracy maps $s_i$ insert the identity $e$ at slot $i$.\todo{We should be consistent in $d_i$, $s_j$, etc. I think this is a common thing in the literature to use different indexing notation.}
+\begin{obs} If we have a group $G$, it is a category with one object, and composition is given by the group multiplication. Its nerve has $(NG)_n = G^n$, whose face maps $d_i : G \to G^{n-1}$ are given by multiplication at slot $i$, for $0<i<n$, and for $d_0$ and $d_n$ forget the $0$th and $n$th entry, respectively. The degeneracy maps $s_i$ insert the identity $e$ at slot $i$.\todo{We should be consistent in $d_i$, $s_j$, etc. I think this is a common thing in the literature to use different indexing notation.}
 
-\end{customenvironment}
+\end{obs}
 
 % Lecture 17: March 28th
 
@@ -3732,8 +3768,8 @@ where the equivalence relation is given by
 and whose topology is the quotient topology.
 \end{definition}
 
-\begin{customenvironment}{Intuition} Out of this simplicial set $X_\dot$, we woudl like to build a topological space which records the combinatorial data of the simplicial set in a topological way. More specifically, we will build a CW complex whose 0-cells are precisely $X_0$, and whose higher cells are non-degenerate simplices, that is, our $n$-cells should not arise as the degeneracy of some lower-dimensional information.
-\end{customenvironment}
+\textbf{Intuition} Out of this simplicial set $X_\dot$, we woudl like to build a topological space which records the combinatorial data of the simplicial set in a topological way. More specifically, we will build a CW complex whose 0-cells are precisely $X_0$, and whose higher cells are non-degenerate simplices, that is, our $n$-cells should not arise as the degeneracy of some lower-dimensional information.
+
 
 \begin{definition} An $n$-simplex is called \textit{nondegenerate}\index[ind]{simplex!nondegenerate} if it cannot be written as $s_i y$ for any $y\in X_{n-1}$ for any $i$.
 \end{definition}
@@ -3796,8 +3832,8 @@ by taking a morphism of simplicial sets $X\xto{f} \Sing(Y)$ .... \todo{finish th
 \end{enumerate}
 \end{examples}
 
-\begin{customenvironment}{Easy example} The classifying space of the single object category, that is, the trivial group $\{e\}$, is the topological space with a single point.
-\end{customenvironment}
+\begin{example} The classifying space of the single object category, that is, the trivial group $\{e\}$, is the topological space with a single point.
+\end{example}
 
 
 \begin{exercise} We have that $B(\Z\big/2) \cong \RP^\infty$.
