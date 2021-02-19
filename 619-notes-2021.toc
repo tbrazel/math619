@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {3.3}Higher homotopy groups}{25}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Dependence of $\pi _k$ on the basepoint}{28}{subsection.3.4}
 \contentsline {subsection}{\numberline {3.5}Weak homotopy equivalence}{30}{subsection.3.5}
-\contentsline {section}{\numberline {4}Cofibrations and fibrations}{33}{section.4}
+\contentsline {section}{\numberline {4}Cofibrations and fibrations}{34}{section.4}
 \contentsline {subsection}{\numberline {4.1}Cofibrations}{34}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Replacing maps by cofibrations}{38}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Criterion for a map to be a cofibration}{39}{subsection.4.3}

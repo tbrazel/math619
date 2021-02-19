@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  18 FEB 2021 16:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  18 FEB 2021 16:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -966,11 +966,7 @@ s
 \f@nch@O@olf=\skip69
 \f@nch@O@orf=\skip70
 )
-(./619-notes-2021.aux
-
-LaTeX Warning: Label `cubefig' multiply defined.
-
-)
+(./619-notes-2021.aux)
 \openout1 = `619-notes-2021.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
@@ -987,7 +983,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
- (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count160
 \scratchdimen=\dimen304
@@ -1215,7 +1212,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 File: pics/cubefig.png Graphic file (type png)
 <use pics/cubefig.png>
 Package pdftex.def Info: pics/cubefig.png  used on input line 1301.
-(pdftex.def)             Requested size: 230.3624pt x 165.62003pt.
+(pdftex.def)             Requested size: 176.6061pt x 126.9717pt.
 
 Overfull \hbox (1.62138pt too wide) in paragraph at lines 1316--1317
 []\OT1/cmr/m/n/10 For $\OML/cmm/m/it/10 z$ \OT1/cmr/m/n/10 ly-ing on one of the
@@ -1225,34 +1222,37 @@ t/10 ^^M\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 )$, where we have re
 parametrized
  []
 
-[29 <./pics/cubefig.png>] [30]
+[29 <./pics/cubefig.png>]
+<pics/homotopybasept.png, id=671, 1951.29pt x 784.9325pt>
+File: pics/homotopybasept.png Graphic file (type png)
+<use pics/homotopybasept.png>
+Package pdftex.def Info: pics/homotopybasept.png  used on input line 1337.
+(pdftex.def)             Requested size: 390.25108pt x 156.98372pt.
+ [30 <./pics/homotopybasept.png>]
 <pics/gammat.png, id=691, 220.825pt x 97.36375pt>
 File: pics/gammat.png Graphic file (type png)
 <use pics/gammat.png>
-Package pdftex.def Info: pics/gammat.png  used on input line 1412.
+Package pdftex.def Info: pics/gammat.png  used on input line 1420.
 (pdftex.def)             Requested size: 154.57643pt x 68.15414pt.
-<pics/homotopy.png, id=693, 642.4pt x 261.97874pt>
+<pics/homotopy.png, id=693, 465.74pt x 187.70125pt>
 File: pics/homotopy.png Graphic file (type png)
 <use pics/homotopy.png>
-Package pdftex.def Info: pics/homotopy.png  used on input line 1420.
-(pdftex.def)             Requested size: 321.19922pt x 130.98904pt.
+Package pdftex.def Info: pics/homotopy.png  used on input line 1429.
+(pdftex.def)             Requested size: 279.44615pt x 112.62161pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<pics/topologist_sin.png, id=695, 635.37375pt x 459.7175pt>
-File: pics/topologist_sin.png Graphic file (type png)
-<use pics/topologist_sin.png>
-Package pdftex.def Info: pics/topologist_sin.png  used on input line 1435.
-(pdftex.def)             Requested size: 127.0725pt x 91.94186pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [31 <./pics/gammat.png>]
-<pics/pseudocircle.png, id=709, 1285.80376pt x 677.53125pt>
+<pics/topologist_sin.png, id=708, 635.37375pt x 459.7175pt>
+File: pics/topologist_sin.png Graphic file (type png)
+<use pics/topologist_sin.png>
+Package pdftex.def Info: pics/topologist_sin.png  used on input line 1444.
+(pdftex.def)             Requested size: 127.0725pt x 91.94186pt.
+<pics/pseudocircle.png, id=710, 1285.80376pt x 677.53125pt>
 File: pics/pseudocircle.png Graphic file (type png)
 <use pics/pseudocircle.png>
-Package pdftex.def Info: pics/pseudocircle.png  used on input line 1454.
+Package pdftex.def Info: pics/pseudocircle.png  used on input line 1463.
 (pdftex.def)             Requested size: 231.4347pt x 121.95036pt.
 
 
@@ -1283,18 +1283,18 @@ LaTeX Warning: Citation `Hatcher' on page 56 undefined on input line 465.
 
 LaTeX Warning: Citation `May' on page 56 undefined on input line 465.
 
-<pics/whisker-gluing.png, id=1071, 1003.75pt x 749.80125pt>
+<pics/whisker-gluing.png, id=1076, 1003.75pt x 749.80125pt>
 File: pics/whisker-gluing.png Graphic file (type png)
 <use pics/whisker-gluing.png>
 Package pdftex.def Info: pics/whisker-gluing.png  used on input line 480.
 (pdftex.def)             Requested size: 1003.74756pt x 749.79942pt.
 [56]
-<pics/whisker.png, id=1081, 1003.75pt x 752.8125pt>
+<pics/whisker.png, id=1086, 1003.75pt x 752.8125pt>
 File: pics/whisker.png Graphic file (type png)
 <use pics/whisker.png>
 Package pdftex.def Info: pics/whisker.png  used on input line 491.
 (pdftex.def)             Requested size: 1003.74756pt x 752.81065pt.
-<pics/cone.png, id=1082, 1003.75pt x 748.7975pt>
+<pics/cone.png, id=1087, 1003.75pt x 748.7975pt>
 File: pics/cone.png Graphic file (type png)
 <use pics/cone.png>
 Package pdftex.def Info: pics/cone.png  used on input line 500.
@@ -1307,12 +1307,12 @@ runsystem(makeindex ind.idx)...executed safely (allowed).
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3961.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3961.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3970.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3970.
 
 (./619-notes-2021.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3961.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3961.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3970.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3970.
 
 Package rerunfilecheck Info: File `619-notes-2021.out' has not changed.
 (rerunfilecheck)             Checksum: 0B4573535998E9417201F7EFF657BDF9;2895.
@@ -1321,15 +1321,15 @@ Package rerunfilecheck Info: File `619-notes-2021.out' has not changed.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3961.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3970.
  ) 
 Here is how much of TeX's memory you used:
- 29399 strings out of 492649
- 573473 string characters out of 6129622
- 674372 words of memory out of 5000000
- 32060 multiletter control sequences out of 15000+600000
+ 29407 strings out of 492649
+ 573642 string characters out of 6129622
+ 674494 words of memory out of 5000000
+ 32066 multiletter control sequences out of 15000+600000
  27035 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,23n,84p,3225b,1162s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1375,10 +1375,10 @@ fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
 e1/public/rsfs/rsfs7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
 /xypic/xycmat10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/xypi
 c/xycmbt10.pfb>
-Output written on 619-notes-2021.pdf (62 pages, 5302021 bytes).
+Output written on 619-notes-2021.pdf (62 pages, 5782724 bytes).
 PDF statistics:
- 1494 PDF objects out of 1728 (max. 8388607)
- 1350 compressed objects within 14 object streams
- 634 named destinations out of 1000 (max. 500000)
- 377 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1499 PDF objects out of 1728 (max. 8388607)
+ 1353 compressed objects within 14 object streams
+ 635 named destinations out of 1000 (max. 500000)
+ 382 words of extra memory for PDF output out of 10000 (max. 10000000)
 

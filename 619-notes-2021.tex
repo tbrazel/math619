@@ -1298,7 +1298,7 @@ We would note that such a homotopy gives a path from $f(\ast)$ to the basepoint,
 \begin{proof} Consider any map representing a class $[f] \in \pi_n(X,y)$ as a map $f \colon I^n \to X$ sending $\partial I^n$ to $y$. Let $\gamma$ denote a path from $y$ to $x$. Let $J=[\epsilon, 1-\epsilon]\subset I$, where $\epsilon\in(0,\frac{1}{2})$, and so that $J^n$ is a smaller cube inside $I^n$, as depicted in \autoref{cubefig}. From each point on $\partial I^n$, draw a line segment to the center of $I^n$, which intersects $\partial J^n$. Consider the radial segments from $\partial I^n$ to $\partial J^n$ defined by these lines. Now reparametrize $f$, so that its domain is $J^n$. Note that on $\del J^n$, $f$ is then identically $y$.
 
 \begin{figure}[h]
-  \includegraphics[scale=.3]{pics/cubefig.png}
+  \includegraphics[scale=.23]{pics/cubefig.png}
   \centering
   \caption{$J^n$ inside $I^n$}
   \label{cubefig}
@@ -1328,9 +1328,17 @@ The second homotopy is given by
 We check that these are the same at $x_1 = \frac{1}{2}$, that is
 \begin{align*}
 	\gamma\cdot (f+0) (1-\frac{t}{2}, x_2, \ldots, ) \overset{?}{=} \gamma\cdot (0+g) \left( \frac{t}{2}, x_2, \ldots, \right)
-\end{align*}
-
+\end{align*}	
 If $t/2 > \epsilon$, then both are $y$. If $t/2 < \epsilon$, both are the same point on $\gamma$.
+
+	Pictorially, this is depicted in \autoref{homotopybasept}.
+	
+	\begin{figure}[h]
+  \includegraphics[scale=.2]{pics/homotopybasept.png}
+  \centering
+  \caption{The homomorphism proof}
+  \label{homotopybasept}
+\end{figure}
 
 %[[todo picture]]
 %%%
@@ -1416,17 +1424,18 @@ Exercise, generalizing the case $n=1$, which appears as \cite[Proposition 1.18]{
 \end{figure}
 
 A pictorial proof, generalizing that for $n=1$ in Hatcher, can be seen in \autoref{homotopypic}.
+
 \begin{figure}[h]
-  \includegraphics[scale=.5]{pics/homotopy.png}
+  \includegraphics[scale=.6]{pics/homotopy.png}
   \centering
-  \caption{A homotopy from $\gamma\cdot (f_\ast \alpha)$ to $g_\ast(\alpha)$}
+  \caption{A homotopy from $\gamma\cdot (f_\ast \alpha)$ to $g_\ast(\alpha)$, to be replaced with better pic of Maxine}
   \label{homotopypic}
 \end{figure}
 
 \end{proof}
 
 The converse to \autoref{htpyequivisweak} does not hold. Here are two famous counterexamples.
-\begin{example} Consider the \textit{topologist's sine curve}\index[ind]{topologists' sine curve}
+\begin{example} Consider the \textit{topologist's sine curve}\index[ind]{topologists' sine curve} depicted in \autoref{topologistsin}
 \begin{align*}
 	X = \{ (x,\sin\frac{1}{x}) \ : \ 0<x \leq 1\} \cup (\{0\}\times[-1,1]).
 \end{align*}
@@ -1434,8 +1443,8 @@ The converse to \autoref{htpyequivisweak} does not hold. Here are two famous cou
 \begin{figure}[h]
   \includegraphics[scale=.2]{pics/topologist_sin.png}
   \centering
-  \caption{The map from the circle to the pseudo circle}
-  \label{cubefig}
+  \caption{The topologist's sin}
+  \label{topologistsin}
 \end{figure}
 
 This space is connected but not path-connected. Let's base $X$ at $x = (0,1)$, and take a based map
