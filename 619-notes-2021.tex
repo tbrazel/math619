@@ -1516,6 +1516,13 @@ One might also ask: what conditions on an inclusion make the quotient homotopy i
 
 Consider an inclusion $i \colon A \hookto X$ where $A\simeq \ast$. Is $X/A\simeq  X$? In general no, but if the inclusion is ``nice," then yes. Cofibrations are precisely ``nice" inclusions.
 
+		\begin{figure}[h]
+  \includegraphics[scale=.13]{pics/cof.png}
+  \centering
+  \caption{Cofibrations}
+  \label{fig:cof}
+\end{figure}
+
 \begin{definition} A map $i : A\to X$ satisfies the \textit{homotopy extension property}\index[ind]{homotopy extension property} if for any given map $X \xto{f} Y$ and homotopy $A\times I \xto{h} Y$, with $h_0 = f\circ i$, then there exists an extension $\til{h} : X\times I \to Y$ such that $\til{h}(i\times \id) = h$ and $\til{h}_0 = f$. Diagramatically,
 \[
 	\begin{tikzcd}
@@ -2058,13 +2065,7 @@ Therefore every fiber bundle with paracompact base is a fibration. More generall
 This is worked out in detail in  \cite[VII, Section 4]{may}.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
+
 
 
 \subsection{Long exact sequence for fibrations}
@@ -2083,6 +2084,8 @@ This is worked out in detail in  \cite[VII, Section 4]{may}.
 is trivial, which will indicate that the connecting homomorphism $\delta$ is trivial.
 \end{note}
 
+
+For the proof, we are following \href{https://www.math.ru.nl/~gutierrez/files/Lecture05.pdf}{these notes}, where you can find teh details left as exercises.
 
 \begin{proof} Define $J^n = (I^n \times \{0\}) \cup (\del I^n \times I) \subseteq I^{n+1}$ to be the ``open box'' in $I^{n+1}$. We note that there is an equivalence of pairs $(I^{n+1}, J^n) \cong (I^{n+1}, I^n\times\{0\})$. So any Serre fibration has the right lifting property with respect to the inclusion $J^n \hookto I^{n+1}$.
 
@@ -2136,7 +2139,7 @@ Exercise: check exactness at $\pi_n(F)$ and $\pi_n(X)$.
 	\begin{align*}
 		\Omega X:= \{\gamma \in X^I \ : \ \gamma(0)=\gamma(1)=x_0\}.
 	\end{align*}
-	This is called the \textit{loop space}\index[ind]{loop space} of $X$. From the fibration $\Omega \hookto PX \to X$, we get a long exact sequence
+	This is called the \textit{loop space}\index[ind]{loop space} of $X$. From the fibration $\Omega X \hookto PX \to X$, we get a long exact sequence
 	\begin{align*}
 		\cdots \to \pi_n(\Omega X) \to \pi_n(PX) \to \pi_n(X) \to \pi_{n-1}(\Omega X) \to \cdots
 	\end{align*}
@@ -2156,7 +2159,7 @@ For any $X\xto{f} Y$ we may factor it as a homotopy equivalence followed by a fi
 \]
 where $Nf = \{(\alpha,x)\in Y^I\times X \ : \ \alpha(1) = f(x)\} = Y^I \times_Y X$, and $p(\alpha,x) = \alpha(0)$.
 
-\begin{definition} The \textit{homotopy fiber}\index[ind]{homotopy fiber} of $f$ (occasionally denoted $\hofib(f)$) is the fiber $Ff_y := p^{-1}(y)$, for the map $Nf\xtto{p} X$ above. That is,
+\begin{definition} The \textit{homotopy fiber}\index[ind]{homotopy fiber} of $f$ at $y$ (occasionally denoted $\hofib(f)$) is the fiber $Ff_y := p^{-1}(y)$, for the map $Nf\xtto{p} X$ above. That is,
 \begin{align*}
 	Ff_y &= \{(\alpha,x) \ : \ \alpha(0)=y,\ \alpha(1) = f(x) \}.
 \end{align*}
@@ -2166,9 +2169,10 @@ This is not the precise fiber $f^{-1}(y)$, but it is the fiber ``up to homotopy,
 	x &\mapsto (\const_y, x).
 \end{align*}
 
+When $f: (X,x_0) \to (Y,y_0)$  is a based map, we talk about \emph{the} $Ff$, which is the homotopy fiber at the basepoint $Ff(y_0)$.
+
+
 \end{definition}
-\begin{exercise} If $f$ is a fibration, then this map between the fiber and the homotopy fiber is a homotopy equivalence.
-\end{exercise}
 
 \begin{note} We may express the homotopy fiber as a pullback
 \[
@@ -2178,6 +2182,9 @@ This is not the precise fiber $f^{-1}(y)$, but it is the fiber ``up to homotopy,
 	\end{tikzcd}
 \]
 \end{note}
+
+\begin{exercise} If $f$ is a fibration, then this map between the fiber and the homotopy fiber is a homotopy equivalence.
+\end{exercise}
 
 \begin{corollary} If $f: (X,x_0) \to (Y,y_0)$ is any map, where $Ff$ denotes the homotopy fiber of $f$, then there exists a long exact sequence
 \begin{align*}
@@ -2234,12 +2241,23 @@ In this section we will construct  long ``exact" sequences directly in spaces.
 We may obtain another long exact sequence by first creating a long exact sequence of spaces, and then applying the functor $\pi_0(-)$ to obtain a long exact sequence of sets, and in particular groups.
 
 
-\begin{definition} Let $(X,x_0) \xto{f} (Y,y_0)$ be a based map. Then $Ff\xto{p} X \xto{f} Y$ is called a \textit{fiber sequence}\index[ind]{fiber sequence}, where
+\begin{definition} Let $(X,x_0) \xto{f} (Y,y_0)$ be a based map. Then $Ff\xto{} X \xto{f} Y$ is called a \textit{fiber sequence}\index[ind]{fiber sequence}, where
 \begin{align*}
 	Ff = \{(x,\gamma) \ : \gamma(0) = y_0,\ \gamma(1) = f(x)\},
 \end{align*}
-and $p: Ff \to X$ is the projection onto $X$.
+is the homotopy fiber and the map$Ff \to X$ is the projection onto $X$.
 \end{definition}
+
+TO BE CONTINUED...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
 
 For any other based space $g: Z \to X$, consider the following diagram in $\Top_\ast$
 \[
@@ -2288,7 +2306,7 @@ Thus we get a commutative diagram
 \]
 where the map on the bottom diagonal is $\gamma \mapsto (\ast_{Ff},\gamma)$, and the map on the top comes from applying $f$ and then doing loops in reverse.
 \end{proposition}
-\begin{proof} See \cite[8.6]{May}.
+\begin{proof} See \cite[8.6]{may}.
 \end{proof}
 
 \begin{definition} The \textit{fiber sequence} of $X\xto{f} Y$ (Puppe sequence) is a long exact sequence of spaces obtained by iteratively taking homotopy fibers of $f$. Up to homotopy equivalence, this looks like
@@ -2308,6 +2326,9 @@ where the map on the bottom diagonal is $\gamma \mapsto (\ast_{Ff},\gamma)$, and
 	[S^0, \Omega^n X]_\ast \cong [\Sigma^n S^0, X]_\ast \cong [S^n, X]_\ast.
 \end{align*}
 \end{note}
+
+
+
 
 % Lecture 10 --- February 21st
 \subsection{Cofiber sequences}

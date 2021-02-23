@@ -9,8 +9,8 @@
     \subitem opposite, \hyperpage{8}
   \item coequalizer, \hyperpage{17}
   \item cofiber, \hyperpage{37}
-  \item cofibration, \hyperpage{34}
-    \subitem based, \hyperpage{40}
+  \item cofibration, \hyperpage{35}
+    \subitem based, \hyperpage{41}
   \item colimit, \hyperpage{15}
   \item compactly generated, \hyperpage{13}
   \item cone, \hyperpage{23}
@@ -25,6 +25,7 @@
   \indexspace
 
   \item fiber, \hyperpage{41}
+  \item fiber sequence, \hyperpage{49}
   \item fibration
     \subitem based, \hyperpage{45}
     \subitem Hurewicz, \hyperpage{41}
@@ -40,11 +41,13 @@
   \item homotopy category
     \subitem of $\Top$, \hyperpage{24}
   \item homotopy extension property, \hyperpage{34}
-  \item homotopy lifting property (HLP), \hyperpage{41}
+  \item homotopy fiber, \hyperpage{47}
+  \item homotopy lifting property (HLP), \hyperpage{42}
 
   \indexspace
 
   \item limit, \hyperpage{15}
+  \item loop space, \hyperpage{47}
 
   \indexspace
 
@@ -58,9 +61,14 @@
 
   \indexspace
 
+  \item path space, \hyperpage{47}
   \item product, \hyperpage{16}
   \item pullback, \hyperpage{17}
   \item pushout, \hyperpage{17}
+
+  \indexspace
+
+  \item relative homotopy group, \hyperpage{48}
 
   \indexspace
 
