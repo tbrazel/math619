@@ -9,6 +9,7 @@
     \subitem opposite, \hyperpage{8}
   \item coequalizer, \hyperpage{17}
   \item cofiber, \hyperpage{37}
+  \item cofiber sequence, \hyperpage{53}
   \item cofibration, \hyperpage{35}
     \subitem based, \hyperpage{41}
   \item colimit, \hyperpage{15}
@@ -20,6 +21,7 @@
   \indexspace
 
   \item Eckmann-Hilton argument, \hyperpage{26}
+  \item Eilenberg-Maclane space, \hyperpage{55}
   \item equalizer, \hyperpage{17}
 
   \indexspace
@@ -40,9 +42,14 @@
     \subitem based, \hyperpage{23}
   \item homotopy category
     \subitem of $\Top$, \hyperpage{24}
+  \item homotopy cofiber, \hyperpage{52}
   \item homotopy extension property, \hyperpage{34}
   \item homotopy fiber, \hyperpage{47}
   \item homotopy lifting property (HLP), \hyperpage{42}
+
+  \indexspace
+
+  \item iterated cofiber sequence, \hyperpage{54}
 
   \indexspace
 
@@ -51,7 +58,9 @@
 
   \indexspace
 
+  \item mapping cone, \hyperpage{52}
   \item mapping cylinder, \hyperpage{35}
+    \subitem reduced, \hyperpage{51}
 
   \indexspace
 
@@ -68,6 +77,8 @@
 
   \indexspace
 
+  \item reduced cone, \hyperpage{52}
+  \item reduced cylinder, \hyperpage{51}
   \item relative homotopy group, \hyperpage{48}
 
   \indexspace

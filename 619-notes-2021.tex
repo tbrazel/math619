@@ -2241,28 +2241,19 @@ In this section we will construct  long ``exact" sequences directly in spaces.
 We may obtain another long exact sequence by first creating a long exact sequence of spaces, and then applying the functor $\pi_0(-)$ to obtain a long exact sequence of sets, and in particular groups.
 
 
-\begin{definition} Let $(X,x_0) \xto{f} (Y,y_0)$ be a based map. Then $Ff\xto{} X \xto{f} Y$ is called a \textit{fiber sequence}\index[ind]{fiber sequence}, where
+\begin{definition} Let $(X,x_0) \xto{f} (Y,y_0)$ be a based map. Then $Ff\xto{\pi} X \xto{f} Y$ is called a \textit{fiber sequence}\index[ind]{fiber sequence}, where
 \begin{align*}
 	Ff = \{(x,\gamma) \ : \gamma(0) = y_0,\ \gamma(1) = f(x)\},
 \end{align*}
-is the homotopy fiber and the map$Ff \to X$ is the projection onto $X$.
+is the homotopy fiber and the map $\pi\colon Ff \to X$ is the projection onto $X$.
 \end{definition}
 
-TO BE CONTINUED...
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
 
 
 For any other based space $g: Z \to X$, consider the following diagram in $\Top_\ast$
 \[
 	\begin{tikzcd}
-	Ff\rar["p" above] & X\rar["f" above] & Y\\
+	Ff\rar["\pi" above] & X\rar["f" above] & Y\\
 	Z\ar[ur,"g" below right]\uar[dashed,"?" left] &  &
 	\end{tikzcd}
 \]
@@ -2276,24 +2267,24 @@ We claim that lifts $\til{g}$ correspond to pointed null-homotopies of $f\circ g
 \]
 Thus lifts $\til{g}: Z \to Ff$ exist if and only if $f\circ g \simeq \ast$. In other words, for any $Z\in \Top_\ast$, we have an exact sequence of pointed sets
 \begin{align*}
-	[Z,Ff]_\ast \xto{p_\ast} [Z,X]_\ast \xto{p_\ast} [Z,Y]_\ast.
+	[Z,Ff]_\ast \xto{\pi_\ast} [Z,X]_\ast \xto{f_\ast} [Z,Y]_\ast.
 \end{align*}
 
 Recall from before that $f^{-1}(y_0) \xto{\phi} Ff$ is a homotopy equivalence whenever $f$ is a fibration.
 
 \begin{remark} Consider the fiber sequence
 \begin{align*}
-	Ff \xto{p} X \xto{f} Y,
+	Ff \xto{\pi} X \xto{f} Y,
 \end{align*}
 and we note that
 \begin{align*}
-	p^{-1}(x_0) = \{(x_0, \gamma) \ : \ \gamma(1) = y_0,\ \gamma(0) = f(x_0) = y_0\} \cong \Omega Y.
+	\pi^{-1}(x_0) = \{(x_0, \gamma) \ : \ \gamma(1) = y_0,\ \gamma(0) = f(x_0) = y_0\} \cong \Omega Y.
 \end{align*}
 Thus we get a commutative diagram
 \[
 	\begin{tikzcd}
-	\Omega Y\rar["i"]\dar["\simeq" right, "\phi" left] & Ff \rar["p"] & X\rar["f"] & Y \\
-	Fp\ar[ur] &
+	\Omega Y\rar["i"]\dar["\simeq" right, "\phi" left] & Ff \rar["\pi"] & X\rar["f"] & Y \\
+	F\pi\ar[ur] &
 	\end{tikzcd}
 \]
 \end{remark}
@@ -2301,7 +2292,7 @@ Thus we get a commutative diagram
 \[
 	\begin{tikzcd}
 	\Omega X\rar["-\Omega f"]\ar[dr] & \Omega Y\dar["\simeq"] \\
-	 & Fp
+	 & F\pi
 	\end{tikzcd}
 \]
 where the map on the bottom diagonal is $\gamma \mapsto (\ast_{Ff},\gamma)$, and the map on the top comes from applying $f$ and then doing loops in reverse.
@@ -2311,7 +2302,7 @@ where the map on the bottom diagonal is $\gamma \mapsto (\ast_{Ff},\gamma)$, and
 
 \begin{definition} The \textit{fiber sequence} of $X\xto{f} Y$ (Puppe sequence) is a long exact sequence of spaces obtained by iteratively taking homotopy fibers of $f$. Up to homotopy equivalence, this looks like
 \begin{align*}
-	\cdots \to \Omega^2 X \xto{\Omega^2 f} \Omega^2 Y \xto{-\Omega i} \Omega Ff \xto{-\Omega p} \Omega X \xto{-\Omega f} \Omega Y \xto{i} Ff \xto{p} X\xto{f} Y.
+	\cdots \to \Omega^2 X \xto{\Omega^2 f} \Omega^2 Y \xto{-\Omega i} \Omega Ff \xto{-\Omega p} \Omega X \xto{-\Omega f} \Omega Y \xto{i} Ff \xto{\pi} X\xto{f} Y.
 \end{align*}
 \end{definition}
 
@@ -2374,12 +2365,12 @@ Recall for any $X\xto{f} Y$ we showed that it factors through the mapping cylind
 \]
 We have an identical factorization in $\Top_\ast$ for maps between well-pointed spaces.
 
-\begin{remark} The mapping cylinder $Mf$ is invariant under homotopy equivalence and weak equivalence (that is, replacing $X\xto{f} Y$ by equivalent spaces $X'\xto{f'} Y'$, we have that $Mf\simeq Mf'$), and changing $f$ up to homotopy (exercise).
-\end{remark}
+\begin{exercise} The mapping cylinder $Mf$ is invariant under homotopy equivalence and weak equivalence (that is, replacing $X\xto{f} Y$ by equivalent spaces $X'\xto{f'} Y'$, we have that $Mf\simeq Mf'$), and changing $f$ up to homotopy.
+\end{exercise}
 
 \begin{definition} The \textit{(reduced) cone}\index[ind]{reduced cone} on $X$ is
 \begin{align*}
-	CX = \frac{X\smashprod I_+}{X\times\{1\}} = \frac{X\times I}{(X\times \{1\})/(\{x_0\} \times I)} \simeq \frac{X\times I}{X\times\{1\}},
+	CX = \frac{X\smashprod I_+}{X\times\{1\}} = \frac{X\times I}{(X\times \{1\})\cup (\{x_0\} \times I)} \simeq \frac{X\times I}{X\times\{1\}},
 \end{align*}
 which is a homotopy equivalence for $X$ well-pointed.
 \end{definition}
@@ -2409,7 +2400,7 @@ which is expressible as a pushout
 \]
 \end{definition}
 
-\begin{note} $Cf$ is obtained by first replacing $f$ by a cofibration $X\cofto Mf$ and then taking the strict cofiber of $X\cofto Mf$ (that is, quotienting out by $X\times\{1\}$).
+\begin{note} $Cf$ is obtained by first replacing $f$ by a cofibration $X\cofto Mf$ and then taking the strict cofiber of $X\cofto Mf$, that is, quotienting out by $X\times\{1\}$.
 \end{note}
 
 \begin{exercise} $\ $
@@ -2433,11 +2424,13 @@ which is expressible as a pushout
 \end{enumerate}
 \end{exercise}
 
-\begin{examples}
-\begin{itemize}
+\begin{examples}Here are some examples of homotopy cofibers.
+\vspace{-10pt}
+
+\begin{itemize}\itemsep0em
 	\item $\hocof(X \xto{\id_X} X) \cong CX \simeq \ast$
 	\item $\hocof(X \xto{!} \ast) \cong \Sigma X$
-	\item we have a familiar example from the unbased space: consider an attaching map
+	\item There is a familiar example from the unbased spaces: consider an attaching map
 	\begin{align*}
 		S^{n-1} \xto{f} X,
 	\end{align*}
@@ -2493,7 +2486,7 @@ where $q: Cf \to \Sigma X \cong Cf \big/i(Y)$ is the quotient map.
 	 & & & Ci \uar["\simeq" right]\ar[ur]
 	\end{tikzcd}
 \]
-where $Ci \to \Sigma X$ is the map from the homotopy cofiber and the strict cofiber, and the bottom right map is given by
+where $Ci \to \Sigma X$ is the map from the homotopy cofiber to the strict cofiber, and the bottom right map is given by
 \begin{align*}
 	Ci &= Cf\cup_i CY \to \frac{Cf \cup_i CY}{Cf} \cong \frac{CY}{Y\times\{0\}} \cong \Sigma Y.
 \end{align*}
@@ -2517,6 +2510,9 @@ In some sense we are interchanging endpoints of the cone $Ci$. %\blue{TODO: figu
 \begin{exercise} Show that $[\Sigma X, Y]_\ast$ is a group and $[\Sigma^2 X, Y]$ is abelian. Moreover, we have a long exact sequence of groups.
 \end{exercise}
 
+
+
+
 \subsection{Long exact sequences in homology and cohomology} 
 
 	 We cannot deduce the long exact sequence in reduced homology $\til{H}_n$ from this long exact sequence, but we may witness it at the space level.
@@ -2536,7 +2532,7 @@ In some sense we are interchanging endpoints of the cone $Ci$. %\blue{TODO: figu
 
 	 We may also get the long exact sequence in cohomology via the Puppe sequence as follows:
 
-	\begin{proposition} For a pointed map $A\xto{i} A$ between well-pointed spaces, then there exists a long exact sequence in $\til{H}^n(-; \pi)$, where $\pi\in\Ab$ is an abelian group of coefficients:
+	\begin{proposition} For a pointed map $A\xto{i} X$ between well-pointed spaces, then there exists a long exact sequence in $\til{H}^n(-; \pi)$, where $\pi\in\Ab$ is an abelian group of coefficients:
 	\begin{align*}
 		\cdots \to \til{H}^{n-1}(A,\pi) \xto{d} \til{H}^n(X,A,\pi) \to \til{H}^n (X,\pi) \to \til{H}^n(A,\pi) \to \til{H}^{n+1}(X,A,\pi)\to \cdots
 	\end{align*}
@@ -2550,13 +2546,13 @@ In some sense we are interchanging endpoints of the cone $Ci$. %\blue{TODO: figu
 	\begin{align*}
 		\cdots \to [\Sigma X,K(\pi,n)]_\ast\to [\Sigma A, K(\pi,n)]_\ast \to [Cf,K(\pi,n)]_\ast] \to [X,K(\pi,n)]_\ast \to [A,K(\pi,n)]_\ast
 	\end{align*}
-	Applying the suspension-loops adjunction, we get that $[\Sigma X, K(\pi,n)]_\ast \cong [X,\Omega K(\pi,n)]_\ast = [X,K(\pi,n-1)]_\ast$. Moreover, we note that $\Omega K(\pi,0) \simeq \ast$. This gives suspension isomorphisms
+	Applying the suspension-loops adjunction, we get that $$[\Sigma X, K(\pi,n)]_\ast \cong [X,\Omega K(\pi,n)]_\ast = [X,K(\pi,n-1)]_\ast.$$ Moreover, we note that $\Omega K(\pi,0) \simeq \ast$. This gives suspension isomorphisms
 	\begin{align*}
-		\til{H}^k(X,\pi) \cong \til{H}^{k+1}(\Sigma X, \pi) \quad \quad k\geq 1.
+		\til{H}^n(X,\pi) \cong \til{H}^{n+1}(\Sigma X, \pi) \quad \quad n\geq 1.
 	\end{align*}
 	Moreover,
 	\begin{align*}
-		\til{H}^k (X,A,\pi) \cong \til{H}^k (Ci, \pi).
+		\til{H}^n (X,A,\pi) \cong \til{H}^n (Ci, \pi).
 	\end{align*}
 	Taking $n$ large enough, we get the entire long exact sequence in cohomology.
 	\end{proof}
@@ -2564,6 +2560,14 @@ In some sense we are interchanging endpoints of the cone $Ci$. %\blue{TODO: figu
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 
 
 

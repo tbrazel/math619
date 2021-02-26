@@ -28,17 +28,20 @@
 \BOOKMARK [2][-]{subsection.4.10}{Long exact sequence in relative homotopy groups}{section.4}% 28
 \BOOKMARK [1][-]{section.5}{Fiber and cofiber sequences of spaces}{}% 29
 \BOOKMARK [2][-]{subsection.5.1}{Iterated fiber sequences}{section.5}% 30
-\BOOKMARK [1][-]{appendix.A}{More category theory: properties of morphisms}{}% 31
-\BOOKMARK [2][-]{subsection.A.1}{Stability and closure definitions}{appendix.A}% 32
-\BOOKMARK [2][-]{subsection.A.2}{Monomorphisms and epimorphisms}{appendix.A}% 33
-\BOOKMARK [2][-]{subsection.A.3}{Properties of morphisms can induce properties of objects}{appendix.A}% 34
-\BOOKMARK [2][-]{subsection.A.4}{Preservation properties under limits and colimits}{appendix.A}% 35
-\BOOKMARK [2][-]{subsection.A.5}{Colimits and limits as functors}{appendix.A}% 36
-\BOOKMARK [2][-]{subsection.A.6}{Filtered limits and colimits}{appendix.A}% 37
-\BOOKMARK [1][-]{appendix.B}{Unsorted subsections on category theory}{}% 38
-\BOOKMARK [2][-]{subsection.B.1}{Conventions}{appendix.B}% 39
-\BOOKMARK [2][-]{subsection.B.2}{Laws for pullbacks and pushouts}{appendix.B}% 40
-\BOOKMARK [1][-]{appendix.C}{Homotopy colimits}{}% 41
-\BOOKMARK [2][-]{subsection.C.1}{Intro to homotopy colimits}{appendix.C}% 42
-\BOOKMARK [2][-]{subsection.C.2}{Homotopy Invariance}{appendix.C}% 43
-\BOOKMARK [2][-]{subsection.C.3}{Homotopy colimits coinciding with colimits}{appendix.C}% 44
+\BOOKMARK [2][-]{subsection.5.2}{Cofiber sequences}{section.5}% 31
+\BOOKMARK [2][-]{subsection.5.3}{Iterated cofiber sequences}{section.5}% 32
+\BOOKMARK [2][-]{subsection.5.4}{Long exact sequences in homology and cohomology}{section.5}% 33
+\BOOKMARK [1][-]{appendix.A}{More category theory: properties of morphisms}{}% 34
+\BOOKMARK [2][-]{subsection.A.1}{Stability and closure definitions}{appendix.A}% 35
+\BOOKMARK [2][-]{subsection.A.2}{Monomorphisms and epimorphisms}{appendix.A}% 36
+\BOOKMARK [2][-]{subsection.A.3}{Properties of morphisms can induce properties of objects}{appendix.A}% 37
+\BOOKMARK [2][-]{subsection.A.4}{Preservation properties under limits and colimits}{appendix.A}% 38
+\BOOKMARK [2][-]{subsection.A.5}{Colimits and limits as functors}{appendix.A}% 39
+\BOOKMARK [2][-]{subsection.A.6}{Filtered limits and colimits}{appendix.A}% 40
+\BOOKMARK [1][-]{appendix.B}{Unsorted subsections on category theory}{}% 41
+\BOOKMARK [2][-]{subsection.B.1}{Conventions}{appendix.B}% 42
+\BOOKMARK [2][-]{subsection.B.2}{Laws for pullbacks and pushouts}{appendix.B}% 43
+\BOOKMARK [1][-]{appendix.C}{Homotopy colimits}{}% 44
+\BOOKMARK [2][-]{subsection.C.1}{Intro to homotopy colimits}{appendix.C}% 45
+\BOOKMARK [2][-]{subsection.C.2}{Homotopy Invariance}{appendix.C}% 46
+\BOOKMARK [2][-]{subsection.C.3}{Homotopy colimits coinciding with colimits}{appendix.C}% 47
