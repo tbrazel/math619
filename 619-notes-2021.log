@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 FEB 2021 01:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  26 FEB 2021 19:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1234,11 +1234,11 @@ File: pics/gammat.png Graphic file (type png)
 <use pics/gammat.png>
 Package pdftex.def Info: pics/gammat.png  used on input line 1420.
 (pdftex.def)             Requested size: 154.57643pt x 68.15414pt.
-<pics/homotopy.png, id=738, 465.74pt x 187.70125pt>
+<pics/homotopy.png, id=738, 1567.8575pt x 1256.695pt>
 File: pics/homotopy.png Graphic file (type png)
 <use pics/homotopy.png>
 Package pdftex.def Info: pics/homotopy.png  used on input line 1429.
-(pdftex.def)             Requested size: 279.44615pt x 112.62161pt.
+(pdftex.def)             Requested size: 235.16847pt x 188.49611pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1249,34 +1249,31 @@ File: pics/topologist_sin.png Graphic file (type png)
 <use pics/topologist_sin.png>
 Package pdftex.def Info: pics/topologist_sin.png  used on input line 1444.
 (pdftex.def)             Requested size: 127.0725pt x 91.94186pt.
-<pics/pseudocircle.png, id=755, 1285.80376pt x 677.53125pt>
+ [32 <./pics/homotopy.png> <./pics/topologist_sin.png>]
+<pics/pseudocircle.png, id=766, 1285.80376pt x 677.53125pt>
 File: pics/pseudocircle.png Graphic file (type png)
 <use pics/pseudocircle.png>
 Package pdftex.def Info: pics/pseudocircle.png  used on input line 1463.
 (pdftex.def)             Requested size: 231.4347pt x 121.95036pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[32 <./pics/homotopy.png> <./pics/topologist_sin.png>] [33 <./pics/pseudocircle
-.png>]
+[33 <./pics/pseudocircle.png>]
 <pics/cof.png, id=777, 1845.89626pt x 1340.00626pt>
 File: pics/cof.png Graphic file (type png)
 <use pics/cof.png>
 Package pdftex.def Info: pics/cof.png  used on input line 1520.
 (pdftex.def)             Requested size: 239.97493pt x 174.20692pt.
- [34 <./pics/cof.png>] [35] [36] [37] [38] [39] [40] [41] [42] [43]
-[44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54]
-Excluding 'comment' comment. (./appendix.tex [55]
+ [34 <./pics/cof.png>] [35] [36] [37] [38]
+[39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53]
+[54] [55] Excluding 'comment' comment. (./appendix.tex
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
 ut line 8.
  [56] [57] [58] [59]
 Package hyperref Info: bookmark level for unknown counterexample defaults to 0 
 on input line 216.
- [60
-\pgfsyspdfmark {pgfid88}{29358298}{32296255}
-\pgfsyspdfmark {pgfid91}{37054042}{32308543}
-\pgfsyspdfmark {pgfid92}{39167578}{32084629}
+
+[60
+\pgfsyspdfmark {pgfid88}{29358298}{23415853}
+\pgfsyspdfmark {pgfid91}{37054042}{23428141}
+\pgfsyspdfmark {pgfid92}{39167578}{23204227}
 ]
 Package hyperref Info: bookmark level for unknown terminology defaults to 0 on 
 input line 233.
@@ -1288,23 +1285,24 @@ LaTeX Warning: Citation `Hatcher' on page 66 undefined on input line 465.
 LaTeX Warning: Citation `May' on page 66 undefined on input line 465.
 
 [66]
-<pics/whisker-gluing.png, id=1249, 1003.75pt x 749.80125pt>
+<pics/whisker-gluing.png, id=1247, 1003.75pt x 749.80125pt>
 File: pics/whisker-gluing.png Graphic file (type png)
 <use pics/whisker-gluing.png>
 Package pdftex.def Info: pics/whisker-gluing.png  used on input line 480.
 (pdftex.def)             Requested size: 1003.74756pt x 749.79942pt.
-<pics/whisker.png, id=1252, 1003.75pt x 752.8125pt>
+ [67 <./pics/whisker-gluing.png>]
+<pics/whisker.png, id=1262, 1003.75pt x 752.8125pt>
 File: pics/whisker.png Graphic file (type png)
 <use pics/whisker.png>
 Package pdftex.def Info: pics/whisker.png  used on input line 491.
 (pdftex.def)             Requested size: 1003.74756pt x 752.81065pt.
- [67 <./pics/whisker-gluing.png> <./pics/whisker.png>]
-<pics/cone.png, id=1266, 1003.75pt x 748.7975pt>
+<pics/cone.png, id=1263, 1003.75pt x 748.7975pt>
 File: pics/cone.png Graphic file (type png)
 <use pics/cone.png>
 Package pdftex.def Info: pics/cone.png  used on input line 500.
 (pdftex.def)             Requested size: 1003.74756pt x 748.79567pt.
- [68 <./pics/cone.png>] [69] [70]) (./619-notes-2021.bbl [71]) [72]
+ [68 <./pics/whisker.png> <./pics/cone.png>] [69] [70]) (./619-notes-2021.bbl [
+71]) [72]
 runsystem(makeindex ind.idx)...executed safely (allowed).
 
  (./ind.ind [73
@@ -1324,12 +1322,15 @@ Package rerunfilecheck Info: File `619-notes-2021.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3995.
  ) 
 Here is how much of TeX's memory you used:
  30251 strings out of 492649
  593848 string characters out of 6129622
- 690850 words of memory out of 5000000
+ 689688 words of memory out of 5000000
  32817 multiletter control sequences out of 15000+600000
  27035 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1376,7 +1377,7 @@ fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
 e1/public/rsfs/rsfs7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
 /xypic/xycmat10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/xypi
 c/xycmbt10.pfb>
-Output written on 619-notes-2021.pdf (73 pages, 7088070 bytes).
+Output written on 619-notes-2021.pdf (73 pages, 7512867 bytes).
 PDF statistics:
  1704 PDF objects out of 1728 (max. 8388607)
  1543 compressed objects within 16 object streams

@@ -8,7 +8,7 @@
     \subitem (co)complete, \hyperpage{19}
     \subitem opposite, \hyperpage{8}
   \item coequalizer, \hyperpage{17}
-  \item cofiber, \hyperpage{37}
+  \item cofiber, \hyperpage{38}
   \item cofiber sequence, \hyperpage{53}
   \item cofibration, \hyperpage{35}
     \subitem based, \hyperpage{41}
@@ -27,10 +27,10 @@
   \indexspace
 
   \item fiber, \hyperpage{41}
-  \item fiber sequence, \hyperpage{49}
+  \item fiber sequence, \hyperpage{50}
   \item fibration
     \subitem based, \hyperpage{45}
-    \subitem Hurewicz, \hyperpage{41}
+    \subitem Hurewicz, \hyperpage{42}
     \subitem Serre, \hyperpage{42}
   \item functor
     \subitem forgetful, \hyperpage{7}
@@ -44,7 +44,7 @@
     \subitem of $\Top$, \hyperpage{24}
   \item homotopy cofiber, \hyperpage{52}
   \item homotopy extension property, \hyperpage{34}
-  \item homotopy fiber, \hyperpage{47}
+  \item homotopy fiber, \hyperpage{48}
   \item homotopy lifting property (HLP), \hyperpage{42}
 
   \indexspace
@@ -79,7 +79,7 @@
 
   \item reduced cone, \hyperpage{52}
   \item reduced cylinder, \hyperpage{51}
-  \item relative homotopy group, \hyperpage{48}
+  \item relative homotopy group, \hyperpage{49}
 
   \indexspace
 
