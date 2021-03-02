@@ -2561,20 +2561,17 @@ In some sense we are interchanging endpoints of the cone $Ci$. %\blue{TODO: figu
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
+
 
 
 
 % Lecture 11 February 26th
 
-\subsection{CW approximation, cellular approximation, and the Whitehead theorem}
+\section{CW approximation, cellular approximation, and the Whitehead theorem}
 
+We saw that a weak equivalance is not necessarily a homotopy equivalence. However, the counterexamples we saw were involving pretty pathological spaces (the topologist's sin curve and the pseudo circle). It turns out that between nice space (CW complexes), a weak equivalence is always a homotopy equivalence. Moreover, we will show that every space is weakly equivalent to a CW complex, and every map is homotopic to a cellular map. 
+
+\subsection{Whitehead's theorem}
 Recall $f:X \to Y$ is a \textit{weak homotopy equivalence} if the induced map on homotopy groups $\pi_n(X) \xto{f_\ast} \pi_n(Y)$ are isomorphisms for all $n$ and for all $x_0 \in X$. We note, unlike homotopy equivalence, weak equivalence is not an equivalence relation, since there may not even be a map $Y\to X$ inducing the inverse maps on homotopy.
 
 \begin{definition} We say two spaces $X$ and $Y$ are \textit{weakly equivalent}\index[ind]{weakly equivalent spaces} if there exist a zig-zag of finitely many weak equivalences between $X$ and $Y$. For example,
@@ -2613,12 +2610,16 @@ for all $a\in A$ and for $1\leq k\leq n$.
 
 \begin{corollary}[Whitehead's theorem] A weak equivalence between CW complexes is a homotopy equivalence.
 \end{corollary}
-\begin{proof} Suppose $e: Y \to Z$ is a weak equivalence between CW complexes. By the above theorem, $e_\ast : [Z,Y] \to [Z,Z]$ is a bijection, so there exists a map $[f]\mapsto [\id_Z]$, that is, $e\circ f \simeq \id_Z$. Then $e\circ f\circ e \simeq e$, and since
+\begin{proof} Suppose $e: Y \to Z$ is a weak equivalence between CW complexes. We will let $Y$ and $Z$ each play the role of $X$ in the theorem above, using that they are both CW complexes. By  \autoref{thm:Whitehead}, we have that $e_\ast : [Z,Y] \to [Z,Z]$ is a bijection, so there exists a map $[f]\mapsto [\id_Z]$, that is, $e\circ f \simeq \id_Z$. Then $e\circ f\circ e \simeq e$, and since again by \autoref{thm:Whitehead} we have that 
 \begin{align*}
 	e_\ast : [Y,Y] \to [Y,Z]
 \end{align*}
-is bijective, we have that $e\circ f\circ e$ and $e$ are both mapped to by $[\id]$, thus $f\circ e \simeq \id$.
+is bijective, and since $e\circ f\circ e$ and $\id_Y$ are both mapped to the class of $e$, we get that $f\circ e \simeq \id$.
 \end{proof}
+
+\subsection{Cellular approximation theorem}
+
+We state the cellular approximation theorem for pairs of CW complexes, where taking the subspaces in the pairs to be basepoints, we derive the corollary.
 
 \begin{theorem}[Cellular approximation theorem]\label{thm:cellular-approximation}\index[ind]{cellular approximation} A map $f:(X,A) \to (Y,B)$ between relative CW complexes is homotopic rel $A$ to a cellular map.
 \end{theorem}
@@ -2635,7 +2636,7 @@ is bijective, we have that $e\circ f\circ e$ and $e$ are both mapped to by $[\id
 		\R^n &\hookto \R^{n+1} \\
 		(t_1,\ldots,t_n) &\mapsto (t_1,\ldots,t_n,0)
 	\end{align*}
-	induces a map on the one-point compactification $S^n \hookto S^{n+1}$. Consider the CW structure, which we denote $(S^n)_1$ which has two cells in each dimension. Let $(S^n)_2$ denote the CW structure with one 0-cell and one $n$-cell. % todo swap these notations
+	induces a map on the one-point compactification $S^n \hookto S^{n+1}$. Consider the CW structure, which we denote $(S^n)_1$ and which has two cells in each dimension. Let $(S^n)_2$ denote the CW structure with one 0-cell and one $n$-cell. % todo swap these notations
 
 	Now we may see that the embedding $(S^n)_1 \hookto (S^{n+1})_1$ is cellular, but $(S^n)_2 \hookto (S^{n+1})_2$ is not cellular. Additionally, $(S^n)_2 \hookto (S^{n+1})_1$ is cellular.
 
@@ -2649,14 +2650,16 @@ is bijective, we have that $e\circ f\circ e$ and $e$ are both mapped to by $[\id
 \end{enumerate}
 \end{examples}
 
-\textbf{Main ingredient in the proofs of  Theorems \ref{thm:Whitehead} and \ref{thm:cellular-approximation}}: We first have (HELP), the ``homotopy extension and lifting property.'' Given $(X,A)$ a relative CW complex of dimension $\leq n$ and $e: Y \to Z$ an $n$-equivalence, then given $f: X\to Z$ and $g: A \to Y$, and a homotopy $h: A\times I \to Z$ with $\left. f \right|_A = h\circ i_0$ and $e\circ g = h\circ i_1$, then there exists $\til{g}: X\to Y$ and $\til{h}: X\times I \to Z$ making the whole diagram commute
+\subsection{Main ingredient in the proofs: HELP diagram}
+
+The main ingredient in the proofs of  Theorems \ref{thm:Whitehead} and \ref{thm:cellular-approximation} is HELP, the ``homotopy extension and lifting property.'' Given $(X,A)$ a relative CW complex of dimension $\leq n$ and $e: Y \to Z$ an $n$-equivalence, then given $f\colon X\to Z$ and $g: A \to Y$, and a homotopy $h\colon A\times I \to Z$ with $\left. f \right|_A = h\circ i_0$ and $e\circ g = h\circ i_1$, then there exists $\til{g}\colon X\to Y$ and $\til{h}\colon X\times I \to Z$ making the whole diagram commute
 
 \[
 	\begin{tikzcd}
 	A\ar[rr,"i_0" above]\ar[dd] & & A\times I\ar[dl,"h"]\ar[dd] & & A\ar[ll,"i_1" above]\ar[dd]\ar[dl,"g"]\\
-	&Z && Y\ar[ll,"e"] & \\
+	&Z && Y\ar[ll,"e" above right] & \\
 	X\ar[rr,"i_0" below]\ar[ur,"f"] & & X\times I\ar[ul,dashed,"\til{h}"] & &  X\ar[ll,"i_1"]\ar[ul,dashed,"\til{g}"] \\
-	 & ? & ?
+	 %& ? & ?
 	\end{tikzcd}
 \]
 
@@ -2669,14 +2672,14 @@ We know that
 \]
 commutes up to homotopy (where the homotopy is given by $h$).
 
-\begin{remark} Given $(X,A)$ relative CW complex, we use $e: X \to X$ and get $i: A \to X$ is a cofibration.
+\begin{remark} Given $(X,A)$ relative CW complex, we can take $e\colon Y \xrightarrow{=} Y$ and get $i\colon A \to X$ is a cofibration.
 \end{remark}
 
 \begin{proof}[Proof idea for HELP] We first show that $e$ is an $n$-equivalence if and only if HELP holds for $(CS^n,S^n)\simeq (D^{n+1},S^n)$ and then induct over cells not in $A$.
 
 \end{proof}
 
-\begin{proof}[Proof idea of Theorem~\ref{thm:Whitehead}] We have that $e: Y \to Z$ is an $n$-equivalence. Applying HELP to $(X,\emptyset)$ we get the surjectivity of $e_\ast$. Applying HELP to $(X\times I, X\times \del I)$ and letting $h$ be the constant homotopy, we get the injectivity of $e_\ast$.
+\begin{proof}[Proof idea of Theorem~\ref{thm:Whitehead}] We have that $e\colon Y \to Z$ is an $n$-equivalence. Applying HELP to $(X,\emptyset)$ we get the surjectivity of $e_\ast$. Applying HELP to $(X\times I, X\times \del I)$ and letting $h$ be the constant homotopy, we get the injectivity of $e_\ast$.
 
 \end{proof}
 
@@ -2684,46 +2687,54 @@ commutes up to homotopy (where the homotopy is given by $h$).
 \todo{Restructure the following proof}
 \textit{Proof sketch of Theorem \ref{thm:cellular-approximation}}: We induct on the dimension of the skeleton. For the base case, we see that any point in $Y$ is connected by a path to a point in $Y^{(0)}$. So $\left. f \right|_{X{(0)}}$ is homotopic to a map landing in $Y^{(0)}$. For the inductive step, assume we have a homotopy
 \begin{align*}
-	h_n : X^{(n)} \times I &\to Y \\
+	h_n \colon X^{(n)} \times I &\to Y \\
 	\left. h_n \right|_{t=0} & = \left. f \right|_{X^{(n)}} \\
 	\left. h_n \right|_{t=1} &= i_n \circ g_n,
 \end{align*}
 where
 \begin{align*}
-	g_n : X^{(n)} &\to Y^{(n)} \\
-	i_n : Y^{(n)} &\to Y.
+	g_n \colon X^{(n)} &\to Y^{(n)} \\
+	i_n \colon Y^{(n)} &\to Y.
 \end{align*}
-Then given any attaching map $j: S^n \to X^{(n)}$ for an $(n+1)$-cell $\phi: D^{n+1} \to X$, we would like to apply HELP to the diagram
+Then given any attaching map $j: S^n \to X^{(n)}$ for an $(n+1)$-cell $\phi\colon D^{n+1} \to X$, we would like to apply HELP to the diagram
 \[
 	\begin{tikzcd}
-	S^n\ar[dd]\ar[rr] & & S^n\times I \ar[dd]\ar[dl,"h_n\circ(j\times\id)" above left] &  & S^n\ar[dd]\ar[ll]\ar[dl,"g_n \circ j"]\\
-	 & Z &  & Y^{(n+1)}\ar[ll, near start,"i_{n+1}" above] & \\
+	S^n\ar[dd]\ar[rr] & & S^n\times I \ar[dd]\ar[dl,"h_n\circ(j\times\id)" above left] &  & S^n\ar[dd]\ar[ll]\ar[dl,"i_n\circ g_n \circ j" left]\\
+	 & Y &  & Y^{(n+1)}\ar[ll, near start,"i_{n+1}" above] & \\
 	D^{n+1}\ar[ur,"f\circ \phi"]\ar[rr] & & D^{n+1}\times I \ar[ul,dashed] &  & D^{n+1}\ar[ul,dashed]\ar[ll]
 	\end{tikzcd}
 \]
 
-However in order to apply HELP, we need that $i_{n+1} : Y^{(n+1)} \to Y$ is an $(n+1)$-equivalence. This is given by the following proposition.
+However in order to apply HELP, we need that $i_{n+1} \colon Y^{(n+1)} \to Y$ is an $(n+1)$-equivalence. This is given by the following proposition.
 
 \begin{proposition} The inclusion $X^{(n)} \xhookto{i_n} X$ is an $n$-equivalence for any CW complex.
 \end{proposition}
-\textit{Proof idea}: Given $(f,g) : (D^n, S^{n-1}) \to (X,X^{(n)})$, we need a homotopy $f$ rel $S^{n-1}$ to a map landing in $X^{(n)}$. Since $D^n$ is compact, it intersects only finitely many cells. Thus we induct on the number of cells. This requires the following lemma.
+\textit{Proof idea}: Given $(f,g) \colon (D^n, S^{n-1}) \to (X,X^{(n)})$, we need a homotopy  of $f$ rel $S^{n-1}$ to a map landing in $X^{(n)}$. Since $D^n$ is compact, it intersects only finitely many cells. Thus we induct on the number of cells. This requires the following lemma.
 
-\begin{lemma}[{\cite[4.10]{Hatcher}}] Any map $f: D^n \to X^{(n)} \cup e^N$ for $N>n$ is homotopic rel $S^{n-1}$ to a map $f' : D^n \to X^{(n)} \cup e^N$ which misses a point in $e^N$.
+\begin{lemma}[{\cite[4.10]{hatcher}}] Any map $f\colon D^n \to X^{(n)} \cup e^N$ for $N>n$ is homotopic rel $S^{n-1}$ to a map $f' : D^n \to X^{(n)} \cup e^N$ which misses a point in $e^N$.
 \end{lemma}
 
 \begin{note} For $k<n$, we have that $\pi_k(X)$ only depends upon $X^{(n)}$. So we have that $\pi_k(S^n) \cong 0$ for $k<n$. We see this by letting $S^n$ have the CW structure of one 0-cell and one $n$-cell, and seeing that any map $S^k \to S^n$ is homotopic rel the basepoint to a constant map.
 \end{note}
 
-\textbf{Application of cellular approximation} Recall that we have an operation in cohomology called the \textit{cup product}, which makes $H^\ast$ into a graded ring. This is defined by
+\textbf{Application of cellular approximation.} Recall that we have an operation in cohomology called the \textit{cup product}, which makes $H^\ast$ into a graded ring. This is defined by
 \begin{align*}
 	H^n(X) \otimes H^p(X) \to H^{n+p}(X\times X) \xto{\Delta} H^{n+p}(X),
 \end{align*}
 where $\Delta$ is induced by the diagonal map on spaces.
 
-\begin{note} Cellular cohomology is functorial only with respect to cellular maps. But the diagonal $\Delta$ is usually \textit{not} a cellular map! For example, for $S^1$ we have $\Delta: S^1 \to S^1\times S^1$ where the skeleton maps $S^1\mapsto S_1 \vee S^1$. Thus we need to approximate $\Delta$ by a cellular map.
+\begin{note} Cellular cohomology is functorial only with respect to cellular maps. But the diagonal $\Delta$ is usually \textit{not} a cellular map! For example, for $S^1$ we have $\Delta: S^1 \to S^1\times S^1$ where the skeleton maps $S^1\mapsto S^1 \vee S^1$. Thus we need to approximate $\Delta$ by a cellular map.
 \end{note}
 
-\textbf{CW approximation, functorially} We might think about CW approximation as a functor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
+\subsection{CW approximation} We might think about CW approximation as a functor
 \begin{align*}
 	\Gamma: \Ho(\Top) \to \Ho(\Top)
 \end{align*}
@@ -2784,7 +2795,7 @@ Then there is a functor
 We note that a map in $\Top$ is a weak equivalence if and only if it becomes an isomorphism in $w\Ho(\Top)$.
 \end{definition}
 
-Equivalently, $\Ho(\CW)$ has the same objects as CW complexes, and $\Ho(\CW)(X,Y) = [X,Y]$.
+Alternatively, $\Ho(\CW)$ has the same objects as CW complexes, and $\Ho(\CW)(X,Y) = [X,Y]$.
 
 \begin{exercise} There is an equivalence of categories
 \begin{align*}
@@ -2821,7 +2832,9 @@ thus the functor $\Map(f,S^0) : \Map(X, S^0) \to \Map(S^0, S^0)$ is \textit{not}
 \end{align*}
 does preserve weak equivalence. We may think about it as the derived functor of the mapping space functor.
 
-\subsection{Homotopy pushouts and homotopy pullbacks}
+
+
+\section{Homotopy pushouts and homotopy pullbacks}
 Recall the strict cofiber of a map $f: A \to X$ was defined to be the pushout
 \[
 	\begin{tikzcd}
@@ -2985,6 +2998,9 @@ We note that the maps $A\to Nf$ and $B\to Ng$ induce a map on the homotopy pullb
 	\end{align*}
 \end{enumerate}
 \end{examples}
+
+
+
 
 
 % Lecture 13: March 12th

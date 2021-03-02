@@ -5,7 +5,7 @@
 
 As we have seen, limits and colimits allow us ways to construct new objects, morphisms, and universal properties, over indexing diagrams. In particular we might be interested in relating certain properties of morphisms in a category to induced morphisms produced out of a colimit. As a motivating example, consider the following question.
 
-\begin{question} Let $I$ be a small indexing diagram, and let $\alpha,\beta: I \to \Set$ denote two functors, and let $A_i := \alpha(i)$ and $B_i = \beta(i)$ denote the sets at each object $i\in I$. Suppose we have a natural transformation between these functors, consisting of functions $f_i : A_i \to B_i$ for each $i$. \textit{If each $f_i$ is injective, is it true that the induced map $f: \colim \alpha \to \colim \beta$ is injective as well?}
+\begin{question} Let $I$ be a small indexing diagram, and let $\alpha,\beta: I \to \Set$ denote two functors, and let $A_i := \alpha(i)$ and $B_i = \beta(i)$ denote the sets at each object $i\in I$. Suppose we have a natural transformation between these functors, consisting of functions $f_i \colon A_i \to B_i$ for each $i$. \textit{If each $f_i$ is injective, is it true that the induced map $f\colon \colim \alpha \to \colim \beta$ is injective as well?}
 \end{question}
 
 It turns out the answer to this diagram depends on the shape of $I$. It is true if the colimits are \textit{filtered}, which is a condition on the indexing diagram which tells us that it interacts well with finite limits. This motivates the more broad question of what properties of morphisms are preserved under limits and colimits. In general this is a hard question, but it will be important when we investigate fibrations and cofibrations in the category of topological spaces.

@@ -1,12 +1,17 @@
 \begin{theindex}
 
   \item $k$-closed, \hyperpage{13}
+  \item $n$-connected
+    \subitem map, \hyperpage{56}
+    \subitem pair, \hyperpage{57}
+    \subitem space, \hyperpage{56}
 
   \indexspace
 
   \item category
     \subitem (co)complete, \hyperpage{19}
     \subitem opposite, \hyperpage{8}
+  \item cellular approximation, \hyperpage{57}
   \item coequalizer, \hyperpage{17}
   \item cofiber, \hyperpage{38}
   \item cofiber sequence, \hyperpage{53}
@@ -95,7 +100,9 @@
   \item weak Hausdorff, \hyperpage{14}
   \item weak homotopy equivalence, \hyperpage{30}
   \item weak topology, \hyperpage{19}
+  \item weakly equivalent spaces, \hyperpage{56}
   \item well-based, \hyperpage{40}
   \item whiskering, \hyperpage{40}
+  \item Whitehead's theorem, \hyperpage{57}
 
 \end{theindex}

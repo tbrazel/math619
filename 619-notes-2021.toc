@@ -31,17 +31,21 @@
 \contentsline {subsection}{\numberline {5.2}Cofiber sequences}{51}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}Iterated cofiber sequences}{54}{subsection.5.3}
 \contentsline {subsection}{\numberline {5.4}Long exact sequences in homology and cohomology}{55}{subsection.5.4}
-\contentsline {section}{\numberline {A}More category theory: properties of morphisms}{56}{appendix.A}
-\contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{56}{subsection.A.1}
-\contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{58}{subsection.A.2}
-\contentsline {subsection}{\numberline {A.3}Properties of morphisms can induce properties of objects}{61}{subsection.A.3}
-\contentsline {subsection}{\numberline {A.4}Preservation properties under limits and colimits}{61}{subsection.A.4}
-\contentsline {subsection}{\numberline {A.5}Colimits and limits as functors}{63}{subsection.A.5}
-\contentsline {subsection}{\numberline {A.6}Filtered limits and colimits}{64}{subsection.A.6}
-\contentsline {section}{\numberline {B}Unsorted subsections on category theory}{64}{appendix.B}
-\contentsline {subsection}{\numberline {B.1}Conventions}{64}{subsection.B.1}
-\contentsline {subsection}{\numberline {B.2}Laws for pullbacks and pushouts}{65}{subsection.B.2}
-\contentsline {section}{\numberline {C}Homotopy colimits}{66}{appendix.C}
-\contentsline {subsection}{\numberline {C.1}Intro to homotopy colimits}{67}{subsection.C.1}
-\contentsline {subsection}{\numberline {C.2}Homotopy Invariance}{69}{subsection.C.2}
-\contentsline {subsection}{\numberline {C.3}Homotopy colimits coinciding with colimits}{69}{subsection.C.3}
+\contentsline {section}{\numberline {6}CW approximation, cellular approximation, and the Whitehead theorem}{56}{section.6}
+\contentsline {subsection}{\numberline {6.1}Whitehead's theorem}{56}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Cellular approximation theorem}{57}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Main ingredient in the proofs: HELP diagram}{58}{subsection.6.3}
+\contentsline {section}{\numberline {A}More category theory: properties of morphisms}{60}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{60}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{62}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.3}Properties of morphisms can induce properties of objects}{64}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.4}Preservation properties under limits and colimits}{65}{subsection.A.4}
+\contentsline {subsection}{\numberline {A.5}Colimits and limits as functors}{67}{subsection.A.5}
+\contentsline {subsection}{\numberline {A.6}Filtered limits and colimits}{67}{subsection.A.6}
+\contentsline {section}{\numberline {B}Unsorted subsections on category theory}{68}{appendix.B}
+\contentsline {subsection}{\numberline {B.1}Conventions}{68}{subsection.B.1}
+\contentsline {subsection}{\numberline {B.2}Laws for pullbacks and pushouts}{69}{subsection.B.2}
+\contentsline {section}{\numberline {C}Homotopy colimits}{70}{appendix.C}
+\contentsline {subsection}{\numberline {C.1}Intro to homotopy colimits}{70}{subsection.C.1}
+\contentsline {subsection}{\numberline {C.2}Homotopy Invariance}{73}{subsection.C.2}
+\contentsline {subsection}{\numberline {C.3}Homotopy colimits coinciding with colimits}{73}{subsection.C.3}
