@@ -2726,25 +2726,19 @@ where $\Delta$ is induced by the diagonal map on spaces.
 \begin{note} Cellular cohomology is functorial only with respect to cellular maps. But the diagonal $\Delta$ is usually \textit{not} a cellular map! For example, for $S^1$ we have $\Delta: S^1 \to S^1\times S^1$ where the skeleton maps $S^1\mapsto S^1 \vee S^1$. Thus we need to approximate $\Delta$ by a cellular map.
 \end{note}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
+
 
 \subsection{CW approximation} We might think about CW approximation as a functor
 \begin{align*}
 	\Gamma: \Ho(\Top) \to \Ho(\Top)
 \end{align*}
-such that, for each representative space $X$ of a homotopy class, we have that $\Gamma(X)$ is a CW complex, and we have a natural transformation $\gamma: \Gamma \Rightarrow \id$ whose components $\gamma_X : \Gamma X \to X$ are weak equivalences.
+such that, for each representative space $X$ of a homotopy class, we have that $\Gamma(X)$ is a CW complex, and we have a natural transformation $\gamma\colon  \Gamma \Rightarrow \id$ whose components $\gamma_X \colon \Gamma X \to X$ are weak equivalences.
 
 
 We restate this in the following theorem.
 
 
-\begin{theorem} For each space $X$, there exists a CW complex $\Gamma X$ and a weak equivalence $\gamma_X : \Gamma X \to X$ such that for each map $X\xto{f} Y$ of spaces, we have a map $\Gamma X \xto{\Gamma f} \Gamma Y$ and a diagram which commutes up to homotopy:
+\begin{theorem} For each space $X$, there exists a CW complex $\Gamma X$ and a weak equivalence $\gamma_X \colon \Gamma X \to X$ such that for each map $X\xto{f} Y$ of spaces, we have a map $\Gamma X \xto{\Gamma f} \Gamma Y$ and a diagram which commutes up to homotopy:
 \[
 	\begin{tikzcd}
 	X\rar["f" above] & Y \\
@@ -2753,9 +2747,9 @@ We restate this in the following theorem.
 \]
 \end{theorem}
 
-Moreover, $\Gamma f$ is defined and unique up to homotopy, and we see by Theorem \ref{thm:Whitehead} that the induced map
+Moreover, $\Gamma f$ is defined and unique up to homotopy, and we see by  \autoref{thm:Whitehead} that the induced map
 \begin{align*}
-	(\gamma_Y)_\ast : [\Gamma X, \Gamma Y] \to [\Gamma X, Y]
+	(\gamma_Y)_\ast \colon [\Gamma X, \Gamma Y] \to [\Gamma X, Y]
 \end{align*}
 is bijective.
 
@@ -2765,7 +2759,7 @@ is bijective.
 \begin{itemize}
 	\item We start with a space
 	\begin{align*}
-		X_1 = \bigvee_q \bigvee_{j : S^q \to X} S^q,
+		X_1 = \bigvee_q \bigvee_{j \colon S^q \to X} S^q,
 	\end{align*}
 	where the second wedge is taken over all generators of $\pi_q(X)$. The map $X_1 \to X$ is now an epimorphism on all homotopy groups.
 	\item We start making this space injective one homotopy group at a time.
@@ -2821,12 +2815,12 @@ Fix a space $Z$, and consider the contravariant functor
 \begin{align*}
 	\Map(-,Z) : \Top^\op \to \Top.
 \end{align*}
-We note that this isn't homotopically well-behaved since it does not preserve weak equivalences. For example, we had a weak equivalence $f: S^0 \to X$ to the topologists' sine curve, which we recall was connected but not path connected. We note then that
+We note that this isn't homotopically well-behaved since it does not preserve weak equivalences. For example, we had a weak equivalence $f\colon S^0 \to X$ to the topologists' sine curve, which we recall was connected but not path connected. We note then that
 \begin{align*}
 	\Map(X,S^0) &= S^0 \\
 	\Map(S^0, S^0) &= S^0 \amalg S^0,
 \end{align*}
-thus the functor $\Map(f,S^0) : \Map(X, S^0) \to \Map(S^0, S^0)$ is \textit{not} a weak equivalence. However, the functor
+thus the functor $\Map(f,S^0) \colon \Map(X, S^0) \to \Map(S^0, S^0)$ is \textit{not} a weak equivalence. However, the functor
 \begin{align*}
 	\Map(\Gamma(-),Z)
 \end{align*}
@@ -2835,7 +2829,7 @@ does preserve weak equivalence. We may think about it as the derived functor of 
 
 
 \section{Homotopy pushouts and homotopy pullbacks}
-Recall the strict cofiber of a map $f: A \to X$ was defined to be the pushout
+Recall the strict cofiber of a map $f\colon A \to X$ was defined to be the pushout
 \[
 	\begin{tikzcd}
 	A\rar["f" above]\dar & X\dar \\
@@ -2862,15 +2856,15 @@ We have that the two diagrams are weakly equivalent, however the resulting pusho
 \end{align*}
 \end{definition}
 
-We may think about this as a ``fattening'' of the strict pushout. We note that the double mapping cylinder is the actual pushout of $Mf \coffrom A \xto{g} B$ or the pushout of $X\from{f} A \cofto Mg$.
+We may think about this as a ``fattening'' of the strict pushout. We note that the double mapping cylinder is the actual pushout of $Mf \coffrom A \xto{g} B$ or the pushout of $X\xleftarrow{f} A \cofto Mg$.
 
 \begin{note} This is an example of a homotopy colimit over the diagram $\bullet \from \bullet \to \bullet$.
 \end{note}
 
 \begin{exercise}$\ $
 \begin{enumerate}
-	\item  If $f$ is a cofibration, then the pushout is a homotopy pushout
-	\item Given pointwise equivalences $A\simeq A'$, $B\simeq B'$ and $C\simeq C'$, then we get an equivalence $B\cup_A C \simeq B'\cup_{A'} C'$. This is called the \textit{gluing lemma}.\index[ind]{gluing lemma}
+	\item  If $f$ is a cofibration, then the pushout is a homotopy pushout.
+	\item Given pointwise equivalences $A\simeq A'$, $B\simeq B'$ and $C\simeq C'$,  if $A\to B$ and $A'\to B'$ are cofibrations, we get an equivalence $B\cup_A C \simeq B'\cup_{A'} C'$. This is called the \textit{gluing lemma}.\index[ind]{gluing lemma}
 \end{enumerate}
 We note that ``equivalence'' here can be either homotopy equivalence or weak equivalence.
 \end{exercise}
@@ -2932,7 +2926,7 @@ We note that ``equivalence'' here can be either homotopy equivalence or weak equ
 
 Another source of homotopy pushouts comes from excisive triads.
 
-\begin{theorem}[{\cite[10.7]{May}}] For an excisive triad $(X;A,B)$, we have that
+\begin{theorem}[{\cite[10.7]{may}}] For an excisive triad $(X;A,B)$, we have that
 \[
 	\begin{tikzcd}
 	A\cap B\rar\dar & A\dar \\
@@ -2947,10 +2941,10 @@ Recall that pullback is not homotopy invariant. For example,
 \[
 	\begin{tikzcd}
 	\emptyset\rar\dar\pb & \{1\}\dar \\
-	\{0\}\rar & \{0,1\}
+	\{0\}\rar & I
 	\end{tikzcd} \quad \quad\begin{tikzcd}
 	\ast\rar\dar\pb & \{1\}\dar \\
-	\{0\} & \ast
+	\{0\} \rar & \ast
 	\end{tikzcd}
 \]
 
@@ -3001,6 +2995,14 @@ We note that the maps $A\to Nf$ and $B\to Ng$ induce a map on the homotopy pullb
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 
 
 % Lecture 13: March 12th

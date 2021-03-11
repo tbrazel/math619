@@ -70,8 +70,18 @@ Saunders MacLane,
   for the Working Mathematician}}, Springer-Verlag, New York, 1971, Graduate
   Texts in Mathematics, Vol. 5. \MR{MR0354798 (50 \#7275)}
 
-\bibitem[Mal]{Cary-stable}
-C.~Malkiewich, \emph{The stable homotopy category}.
+\bibitem[Mala]{Cary-no-pushout}
+C.~Malkiewich,
+  \emph{\href{http://people.math.binghamton.edu/malkiewich/no_pushout.pdf}{Pushouts
+  in the homotopy category do not exist}}.
+
+\bibitem[Malb]{Cary-gluing}
+\bysame,
+  \emph{\href{https://people.math.binghamton.edu/malkiewich/gluing_leftproper.pdf}{The
+  gluing lemma is left-properness}}.
+
+\bibitem[Malc]{Cary-stable}
+\bysame, \emph{The stable homotopy category}.
 
 \bibitem[May]{May-history}
 J.P. May, \emph{Stable algebraic topology, 1945---1966}.

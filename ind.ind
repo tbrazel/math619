@@ -25,6 +25,10 @@
 
   \indexspace
 
+  \item double mapping cylinder, \hyperpage{62}
+
+  \indexspace
+
   \item Eckmann-Hilton argument, \hyperpage{26}
   \item Eilenberg-Maclane space, \hyperpage{55}
   \item equalizer, \hyperpage{17}
@@ -43,6 +47,10 @@
 
   \indexspace
 
+  \item gluing lemma, \hyperpage{63}
+
+  \indexspace
+
   \item homotopy, \hyperpage{22}
     \subitem based, \hyperpage{23}
   \item homotopy category
@@ -51,6 +59,7 @@
   \item homotopy extension property, \hyperpage{34}
   \item homotopy fiber, \hyperpage{48}
   \item homotopy lifting property (HLP), \hyperpage{42}
+  \item homotopy pushout, \hyperpage{62}
 
   \indexspace
 
