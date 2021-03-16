@@ -78,10 +78,8 @@
 
 
 
-%%%
-% LECTURE 1
-% \section{Lecture 1: January 17th}
-
+% To start the preview section indexed at 0
+\setcounter{section}{-1}
 \section{A preview of unstable vs stable homotopy theory}
 
 %\textbf{References}: Suggested references on category theory are \cite{WOMP},\cite{Torres-cat}, \cite{Riehl-context}. For a discussion of the category of compactly generated weakly Hausdorff spaces, we refer the reader to the seminal paper \cite{Steenrod-convenient-cat}, as well as the paper \cite{Strickland-cgwh}. A survey of the history of stable homotopy theory is given by \cite{May-history}. Notes on spectra may be found in \cite{Cary-stable}. For a nice introduction to simplicial sets, see \cite{friedman4221elementary} or \cite{riehl-sset}. A more in-depth treatment of simplicial homotopy theory is given in \cite{goerss-jardine}.
@@ -109,7 +107,7 @@ The basic construction that we stabilize with respect to is the suspension funct
 
 \begin{example}\label{ex:homeomorphism-smashing-spheres} There is a homeomorphism $S^1 \smashprod S^1 \cong S^2$.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[width=\linewidth]{pics/s1_smash_s1.png}
   \centering
   \caption{The homeomorphism $S^1\smashprod S^1 \cong S^2$.}
@@ -286,7 +284,7 @@ Here are some questions and applications where spectra are key.
 	
 \begin{example} One can impose an equivalence relation on closed  manifolds called \emph{cobordism}. 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[scale=1]{pics/cobordism.png}
   \centering
   \caption{A cobordism from $S^1$ to $S^1\amalg S^1 $.}
@@ -663,7 +661,7 @@ In other words, once in $\CG$, passing to weak Hausdorff spaces, does not change
 
 \subsection{Limits and colimits in categories}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[scale=.1]{pics/limits.png}
   \centering
   \caption{A limit cone and colimit cocone.}
@@ -701,11 +699,11 @@ Prove \autoref{prop:limits-unique-up-to-iso}.
 
 Before moving on to many examples, we state a proposition whose usefulness is hard to overestimate. It says that left adjoints preserve colimits and right adjoints preserve limits.
 
-\begin{proposition}\label{prop:LAPC} (\textit{LAPC and RAPL}\footnote{Left adjoints preserve colimits and right adjoints preserve limits.}) Let $F\adj G$ be adjoint functors. Then $F$ preserves colimits and $G$ preserves limits.
-\end{proposition}
+\begin{theorem}\label{thm:LAPC} (\textit{LAPC and RAPL}\footnote{Left adjoints preserve colimits and right adjoints preserve limits.}) Let $F\adj G$ be adjoint functors. Then $F$ preserves colimits and $G$ preserves limits.
+\end{theorem}
 
 \begin{exercise}
-Prove \autoref{prop:LAPC}.
+Prove \autoref{thm:LAPC}.
 
  Hint: Note that if you prove that right adjoint preserve limits, it will dually follow that left adjoints preserve colimits by considering opposite categories. Now, to prove RAPL, the simplest way to approach it is straight from the hom bijection definition of adjoints and the definition of limit. Namely, show that if $L$ is a limit of a diagram in the domain category $\C$ then $GL$ satisfies the universal property of the limit in the target category $\D$. Another way would be to show that the proposition holds for representables and then go from there. Or, we using \autoref{diagonallimit}, which we will see in the next section, assuming limits exist, you can use that adjunction to prove that a right adjoint preserves limits.
 \end{exercise}
@@ -1229,7 +1227,7 @@ For $n\geq 2$, we note that $S^n \cong S^1 \smashprod \cdots \smashprod S^1$ is 
 		&= y\ast x \\
 		&= y\dot x.
 	\end{align*}
-		\begin{figure}[h]
+		\begin{figure}[H]
   \includegraphics[scale=.13]{pics/eckmann-hilton.png}
   \centering
   \caption{Eckmann-Hilton proof of commutativty in pictures.}
@@ -1297,7 +1295,7 @@ We would note that such a homotopy gives a path from $f(\ast)$ to the basepoint,
 \end{proposition}
 \begin{proof} Consider any map representing a class $[f] \in \pi_n(X,y)$ as a map $f \colon I^n \to X$ sending $\partial I^n$ to $y$. Let $\gamma$ denote a path from $y$ to $x$. Let $J=[\epsilon, 1-\epsilon]\subset I$, where $\epsilon\in(0,\frac{1}{2})$, and so that $J^n$ is a smaller cube inside $I^n$, as depicted in \autoref{cubefig}. From each point on $\partial I^n$, draw a line segment to the center of $I^n$, which intersects $\partial J^n$. Consider the radial segments from $\partial I^n$ to $\partial J^n$ defined by these lines. Now reparametrize $f$, so that its domain is $J^n$. Note that on $\del J^n$, $f$ is then identically $y$.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[scale=.23]{pics/cubefig.png}
   \centering
   \caption{$J^n$ inside $I^n$}
@@ -1333,7 +1331,7 @@ If $t/2 > \epsilon$, then both are $y$. If $t/2 < \epsilon$, both are the same p
 
 	Pictorially, this is depicted in \autoref{homotopybasept}.
 	
-	\begin{figure}[h]
+	\begin{figure}[H]
   \includegraphics[scale=.2]{pics/homotopybasept.png}
   \centering
   \caption{The homomorphism proof}
@@ -1416,8 +1414,8 @@ Suppose $f,g\colon X\to Y$ are homotopic maps via a homotopy $h$. Let $\gamma$ b
 \begin{proof}
 Exercise, generalizing the case $n=1$, which appears as \cite[Proposition 1.18]{hatcher}. Suppose $f\simeq_h g$ and $\alpha\colon I^n/\partial I^n \to X$. Let  $\gamma$ be a path from $f(x0$ to $g(x)$ and for any fixed $t$, let $\gamma_t$ be the path from $\gamma(t)$ to $g(x)$, reparametrized over $I$, as in \autoref{gammat}
 
-\begin{figure}[h]
-  \includegraphics[scale=.7]{pics/gammat.png}
+\begin{figure}[H]
+  \includegraphics[scale=.15]{pics/gammat.png}
   \centering
   \caption{Definition of $\gamma_t$}
   \label{gammat}
@@ -1425,7 +1423,7 @@ Exercise, generalizing the case $n=1$, which appears as \cite[Proposition 1.18]{
 
 A pictorial proof, generalizing that for $n=1$ in Hatcher, can be seen in \autoref{homotopypic}.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[scale=.15]{pics/homotopy.png}
   \centering
   \caption{A homotopy from $\gamma\cdot (f_\ast \alpha)$ to $g_\ast(\alpha)$}
@@ -1440,7 +1438,7 @@ The converse to \autoref{htpyequivisweak} does not hold. Here are two famous cou
 	X = \{ (x,\sin\frac{1}{x}) \ : \ 0<x \leq 1\} \cup (\{0\}\times[-1,1]).
 \end{align*}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[scale=.2]{pics/topologist_sin.png}
   \centering
   \caption{The topologist's sin}
@@ -1459,7 +1457,7 @@ This is a weak equivalence but not a homotopy equivalence.
 \begin{example}
 The pseudo circle is a finite topological space $X=\{a,b,c,d\}$, with topology given by \{\{a,b,c,d\}, \{a,b,c\}, \{a,b,d\}, \{a,b\}, \{a\}, \{b\}\}. It turns out that this space is indistinguishable from the circle when it comes to weak equivalence. Consider the  map $f\colon S^1\to X$ which sends the north pole to $c$, the south pole to $d$, the left hemisphere to $a$ and the right hemisphere to $b$, as depicted in \autoref{pseudocircle}.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[scale=.18]{pics/pseudocircle.png}
   \centering
   \caption{The map from the circle to the pseudo circle}
@@ -1516,7 +1514,7 @@ One might also ask: what conditions on an inclusion make the quotient homotopy i
 
 Consider an inclusion $i \colon A \hookto X$ where $A\simeq \ast$. Is $X/A\simeq  X$? In general no, but if the inclusion is ``nice," then yes. Cofibrations are precisely ``nice" inclusions.
 
-		\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[scale=.13]{pics/cof.png}
   \centering
   \caption{Cofibrations}
@@ -2888,7 +2886,7 @@ We note that ``equivalence'' here can be either homotopy equivalence or weak equ
 \begin{enumerate}
 	\item In $\Top$, we have that
 	\begin{align*}
-		\hocolim\left( \begin{tikzcd}[ampersand replacement=\&] \emptyset\rar\dar \& X \\ Y \end{tikzcd} \right) \simeq X \amalg X.
+		\hocolim\left( \begin{tikzcd}[ampersand replacement=\&] \emptyset\rar\dar \& X \\ Y \end{tikzcd} \right) \simeq X \amalg Y.
 	\end{align*}
 
 	\item In $\Top_\ast$, one has

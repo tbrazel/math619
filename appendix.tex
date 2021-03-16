@@ -347,11 +347,95 @@ Let $\mathscr{C}$ be a category, and $I$ be an indexing category which we want t
 \end{align*}
 This sends an object $c$ to the functor $\Delta_c: I \to \mathscr{C}$, where $\Delta_c(i) = c$ for all $i\in I$, and $\Delta_c(i \to i') = \id_c$. That is, $\Delta_c$ is really a constant functor at the object $c\in \mathscr{C}$. For a morphism $f:c\to c'$, we have an induced natural transformation  $\Delta_c \Rightarrow \Delta_{c'}$, all of whose components are $f$. 
 
+\begin{exercise}\label{exer:diagonal-functor-into-functor-cat-fully-faithful} Show that $\Delta$ is fully faithful.
+\end{exercise}
+
+
+\begin{remark} We can consider the construction of colimits as a functor
+\begin{align*}
+    \colim : \Fun(I, \mathscr{C}) \to \mathscr{C},
+\end{align*}
+sending a diagram $I \to \mathscr{C}$ to the nadir of its colimit cone. Similarly $\lim: \Fun(I, \mathscr{C}) \to \mathscr{C}$ is a functor, sending a diagram to the apex of its limit cone.
+\end{remark}
+
+\begin{proposition} We have that $\colim \dashv \Delta \dashv \lim$ are adjoint functors.
+\[ \begin{tikzcd}
+    \mathscr{C}\rar["\Delta"] & \Fun(I,\mathscr{C})\lar[bend right=40,"\colim" above]\lar[bend left=40,"\lim" below].
+\end{tikzcd} \]
+\end{proposition}
+\begin{proof} Let $c\in \mathscr{C}$, and let $j: I \to \mathscr{C}$ be a diagram. Then we have that $\Hom_{\Fun(I,\mathscr{C})}(\Delta_c, j)$ are the natural transformations of diagrams from $\Delta_c \to j$. That is, it is the \textit{set of cones over $j$ with vertex $c$}. By the universal property of the limit, for any such diagram, there is a unique map $c \to \lim(j)$, that is, we have a natural transformation
+\begin{align*}
+    \Hom_{\Fun(I,\mathscr{C})}(\Delta_c, j) \cong \Hom_\mathscr{C}(c, \lim(j)).
+\end{align*}
+A dual argument works to show that $\colim \dashv \Delta$.
+\end{proof}
+
+\begin{remark}\label{rmk:colimits-in-functor-categories} Since $\colim$ is a left adjoint, it now preserves colimits by \autoref{thm:LAPC}. We can ask what a colimit in $\Fun(I,\mathscr{C})$ looks like. Suppose we have a diagram of the form
+\begin{align*}
+    I \to \Fun(J, \mathscr{C}).
+\end{align*}
+This corresponds under adjunction to a map $I \times J \to \Fun(\mathscr{C})$. We can ask whether
+\begin{align*}
+    \colim \left( I \to \Fun(J, \mathscr{C}) \right) \overset{?}{=} \colim \left( I \times J \to \mathscr{C} \right).
+\end{align*}
+If $I$ and $J$ are small indexing diagrams, and $\mathscr{C}$ has all colimits, this is certainly true {\color{blue} because Kan extensions are computed pointwise in this context --- find a better way to explain this though}.
+\end{remark}
+
+
+\begin{theorem}\label{thm:colimits-commute} \textit{(Colimits commute)} Let $I$ and $J$ be small indexing diagrams, and let $\mathscr{C}$ be cocomplete (or at least have all the colimits we are discussing here exist). Then for any bifunctor
+\begin{align*}
+    F: I \times J \to \mathscr{C}
+\end{align*}
+we have a canonical isomorphism
+\begin{align*}
+    \lim_i \lim_j F(i,j) \cong \lim_j \lim_i F(i,j).
+\end{align*}
+See for example \cite[3.8.1]{Riehl-context}. A dual statement is true for colimits as well.
+\end{theorem}
+
+
+
+
+
 \begin{center}
     [[todo]]    
 \end{center}
 
 \subsection{Filtered limits and colimits}
+
+In \autoref{thm:colimits-commute}, we could replace one of the limits with a colimit and ask if everything is still true. Phrased differently, if we have a functor $F: I \times J \to \mathscr{C}$, we can compare
+\begin{align*}
+    \colim_j \lim_i F(i,j) \text{ and } \lim_i \colim_j F(i,j).
+\end{align*}
+We first show that there definitely exists a map between them.
+
+\begin{proposition}\label{prop:labelname} There is a canonical map
+\begin{align*}
+    \colim_j \lim_i F(i,j) \to \lim_i \colim_j F(i,j).
+\end{align*}
+\end{proposition}
+
+\begin{proof} By \autoref{exer:diagonal-functor-into-functor-cat-fully-faithful}, we have that $\Delta$ is fully faithful, therefore the unit and counit maps are natural isomorphisms:
+\begin{align*}
+    1_{\Fun(I,\mathscr{C})} \xto{\sim} \lim \circ \Delta \\
+    \colim \circ \Delta \xto{\sim}  1_\mathscr{C}.
+\end{align*}
+Now consider the diagram
+\[ \begin{tikzcd}
+    \Fun(I \times J, \mathscr{C})\rar[bend left=30,"\colim_I" above]\rar[bend right=30,"\lim_I" below] & \Fun(J, \mathscr{C})\lar["\Delta"]\rar[bend left=30,"\colim_J" above]\rar[bend right=30,"\lim_J" below] & \mathscr{C}\lar["\Delta"].\\
+\end{tikzcd} \]
+
+The composite $\colim_J \lim_I$ weaves through the middle of this diagram in a wave shape. By looping through the units of adjunctions, we have a map
+
+Therefore we see that
+\begin{align*}
+    \colim_J \lim_I = 1 \colim_J \lim_I 1 \to \left( \lim_J \Delta \right)\colim_J \lim_I \left( \Delta \colim_I \right) \\
+    &= 
+\end{align*}
+For an explicit computation of this map, see \cite[3.8.3]{Riehl-context}.
+\end{proof}
+
+
 
 \begin{center}
     [[todo]]    
