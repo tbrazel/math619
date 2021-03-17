@@ -2829,6 +2829,8 @@ does preserve weak equivalence. We may think about it as the derived functor of 
 
 
 \section{Homotopy pushouts and homotopy pullbacks}
+We saw that pushouts and pullbacks are not homotopy invariant. In this section, we define the homotopy versions of these limits and colimits, and we revisit some constructions we have seen as examples of homotopy pushouts and pullbacks. 
+\subsection{Homotopy pushouts}
 Recall the strict cofiber of a map $f\colon A \to X$ was defined to be the pushout
 \[
 	\begin{tikzcd}
@@ -2996,34 +2998,30 @@ We note that the maps $A\to Nf$ and $B\to Ng$ induce a map on the homotopy pullb
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
+
 
 
 % Lecture 13: March 12th
 \section{Stable homotopy theory}
+In this section we start talking about stable phenomena, and generalized homology and cohomology. 
+
 \subsection{Excision}
 
 \textbf{Recall}: Homology satisfies excision, which is what makes it computable.
 
-\begin{theorem}\label{thm:homology-excision-1} For $U\subseteq A\subseteq X$ subspaces with the property that $\bar{U} \subseteq \int(A)$, then the inclusion $(X - U, A - U) \hookto (X,A)$ induces an isomorphism on homology
+\begin{theorem}\label{thm:homology-excision-1} For $U\subseteq A\subseteq X$ subspaces with the property that $\bar{U} \subseteq \mathrm{int}(A)$, then the inclusion $(X - U, A - U) \hookto (X,A)$ induces an isomorphism on homology
 \begin{align*}
 	H_n(X-U, A-U) \xto{\sim} H_n(X,A).
 \end{align*}
 \end{theorem}
 
-\begin{theorem}\label{thm:homology-excision-2} If $A,B\subseteq X$ with $\int(A) \cup \int(B) = X$ (we called this an excisive triad) then the inclusion $(B, A\cap B) \hookto (X,A)$ induces an isomorphism on homology
+\begin{theorem}\label{thm:homology-excision-2} If $A,B\subseteq X$ with $\mathrm{int}(A) \cup \mathrm{int}(B) = X$ (we called this an excisive triad) then the inclusion $(B, A\cap B) \hookto (X,A)$ induces an isomorphism on homology
 \begin{align*}
 	H_n(B, A\cap B) \xto{\sim} H_n(X,A).
 \end{align*}
 \end{theorem}
 
-\begin{exercise} Theorems \ref{thm:homology-excision-1} and \ref{thm:homology-excision-2} are equivalent.
+\begin{exercise}  \autoref{thm:homology-excision-1} and \autoref{thm:homology-excision-2} are equivalent.
 \end{exercise}
 
 What about homotopy groups? The bad news is that they do not always satisfy excision.
@@ -3032,7 +3030,7 @@ What about homotopy groups? The bad news is that they do not always satisfy exci
 \begin{align*}
 	\pi_n(S^2, D^2) \cong \pi_n(S^2-U, D^2-U) \cong \pi_n(D^2, S^1).
 \end{align*}
-By the long exact sequence in homotopy, this tells us
+Then there is a long exact sequence in homotopy groups
 \begin{align*}
 	\cdots \to \pi_i(S^1) \to \pi_i(D^2) \to \pi_i(D^2, S^1) \to \pi_{i-1}(S^1) \to \cdots.
 \end{align*}
@@ -3054,7 +3052,7 @@ For simplicity, we'll assume that all our spaces $A$, $B$, and $A\cap B$ are pat
 \begin{align*}
 	(B, A\cap B) \to (X,A)
 \end{align*}
-is $(m+n)$-connected.\footnote{For this result in \cite{Hatcher}, $(X,A)$ and $(X,B)$ are required to be CW pairs, but recall by Remark \ref{rmk:excisive-triad-approximation}, we may approximate an excisive triad by a CW triad.}
+is $(m+n)$-connected.\footnote{For this result in \cite{hatcher}, $(X,A)$ and $(X,B)$ are required to be CW pairs, but recall by Remark \ref{rmk:excisive-triad-approximation}, we may approximate an excisive triad by a CW triad.}
 \end{theorem}
 
 \textbf{Another formulation of homotopy excision.} For an excisive triad $X,A,B$, we have a homotopy pushout
@@ -3100,7 +3098,7 @@ We note that $X\cofto CX$ is a cofibration since $X$ is well-based. As $X$ is $n
 is $(2n+1)$-connected. Thus $\pi_j(X) \to \pi_j(\Omega \Sigma X) \cong \pi_{j+1}(\Sigma X)$ is an isomorphism for $j\leq 2n$ and a surjection for $j=2n+1$.
 \end{proof}
 
-\begin{definition} The \textit{stable homotopy groups}\index[ind]{stable homotopy group} of $X$ is
+\begin{definition} The \textit{stable homotopy groups}\index[ind]{stable homotopy group} of $X$ are defined as 
 \begin{align*}
 	\pi_\ast^s := \colim_{k\to\infty} \pi_{\ast + k}(\Sigma^k X).
 \end{align*}
@@ -3150,11 +3148,20 @@ Let $\pi$ be an abelian group. We consider the following axiom which might or mi
 \end{enumerate}
 \end{definition}
 
-\begin{remark} Instead of spaces, one may state analogous axioms for CW complexes. An unreduced homology theory $E_\ast$ on $\Ho(\Top^2)$ determines and is determined by a homology theory $E^\CW_\ast$ on $\Ho(\CW^2)$ with all the axioms \textit{except} axiom 4 (since it is no longer necessary by Whitehead's theorem), and where we replace ``excisive triad'' by ``CW triad'' in axiom 2. We may then define
+\begin{remark} Instead of spaces, one may state analogous axioms for CW complexes. An unreduced homology theory $E_\ast$ on $\Ho(\Top^2)$ determines and is determined by a homology theory $E^\CW_\ast$ on $\Ho(\CW^2)$ with all the axioms \textit{except} axiom 4 (which is no longer necessary by Whitehead's theorem), and where we replace ``excisive triad'' by ``CW triad'' in axiom 2. We may then define
 \begin{align*}
 	E_q^\CW (\Gamma X, \Gamma A)= E_q (X,A).
 \end{align*}
 \end{remark}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 
 \begin{definition} A \textit{reduced homology theory}\index[ind]{homology theory!reduced} $\til{E}_\ast$ consists of functors $\til{E}_q : \Ho(\Top_{\ast}^{\text{well-based}}) \to \Ab$ from well-based spaces to abelian groups, satisfying:
 \begin{enumerate}
@@ -3206,50 +3213,50 @@ For $\{\ast\}\subseteq A \subseteq X$, the summand $E_\ast(\ast)$ maps to itself
 	\cdots \to \til{E}_q(A) \to \til{E}_q(X) \to E_q(X,A) \xto{\delta} \til{E}_{q-1}(A) \to \cdots
 \end{align*}
 
-\textbf{Claim}: For $A\xcofto{i} X$ a cofibration, we have $E_\ast(X,A) \to E_\ast(X/A, \ast) \cong \til{E}_\ast (X/A)$.
+\textbf{Claim}: For $A\xcofto{i} X$ a cofibration, we have $E_\ast(X,A) \to E_\ast(X/A, \ast) = \til{E}_\ast (X/A)$ is an isomorphism.
 \begin{proof}[Proof of claim] For the inclusion $A\xcofto{i} X$, consider the ``wizard hat'' $Ci$ and the ``top hat'' $Mi$, drawn below:
-%\begin{figure}[H]
-%	\begin{tikzpicture}[h!,scale=0.25]
-%		\draw (0,0) ellipse (3 and 1);
-%		\draw(0,0) ellipse (6 and 2);
-%		\draw(3,0) -- (0,9);
-%		\draw(-3,0) -- (0,9);
-%		\node (a) at  (0,11){$Ci$};
-%
-%		\draw(15,0) ellipse (3 and 1);
-%		\draw(15,0) ellipse (6 and 2);
-%		\draw(15,9) ellipse (3 and 1);
-%		\draw (18,0) -- (18,9);
-%		\draw(12,0) -- (12,9);
-%		\node (a) at  (15,11){$Mi$};
-%	\end{tikzpicture}
-%        \centering
-%\end{figure}
-%
-%Recall the cone $Ci$ was equivalent to $X/A$. We obtain an excisive triad on the cone $Ci$ as follows:
-%
-%\begin{figure}[H]
-%    \begin{tikzpicture}[h!,scale=0.3]
-%        \draw (0,0) ellipse (3 and 1);
-%	    \draw(0,0) ellipse (6 and 2);
-%        \draw (3,0) -- (1,6);
-%        \draw(-3,0) -- (-1,6);
-%        \draw[dashed] (0,6) ellipse (1 and 0.5);
-%    \node (a) at (0,8){$X\cup_i \left(A\times \left[0,\frac{2}{3}\right]\right)$};
-%    \end{tikzpicture}\quad
-%    \begin{tikzpicture}[h!,scale=0.3]
-%        \draw[dashed] (0,4) ellipse (2 and 1);
-%        \draw (-2,4) -- (0,10);
-%        \draw (2,4) -- (0,10);
-%    \node (a) at (0,12){$X\cup_i \left(A\times \left[0,\frac{2}{3}\right]\right)$};
-%    \end{tikzpicture}
-%    \centering
-%\end{figure}
+\begin{figure}[H]
+	\begin{tikzpicture}[scale=0.25]
+		\draw (0,0) ellipse (3 and 1);
+		\draw(0,0) ellipse (6 and 2);
+		\draw(3,0) -- (0,9);
+		\draw(-3,0) -- (0,9);
+		\node (a) at  (0,11){$Ci$};
+
+		\draw(15,0) ellipse (3 and 1);
+		\draw(15,0) ellipse (6 and 2);
+		\draw(15,9) ellipse (3 and 1);
+		\draw (18,0) -- (18,9);
+		\draw(12,0) -- (12,9);
+		\node (a) at  (15,11){$Mi$};
+	\end{tikzpicture}
+        \centering
+\end{figure}
+
+Recall the cone $Ci$ was equivalent to $X/A$. We obtain an excisive triad on the cone $Ci$ as follows:
+
+\begin{figure}[H]
+    \begin{tikzpicture}[scale=0.3]
+        \draw (0,0) ellipse (3 and 1);
+	    \draw(0,0) ellipse (6 and 2);
+        \draw (3,0) -- (1,6);
+        \draw(-3,0) -- (-1,6);
+        \draw[dashed] (0,6) ellipse (1 and 0.5);
+    \node (a) at (0,8){$X\cup_i \left(A\times \left[0,\frac{2}{3}\right]\right)$};
+    \end{tikzpicture}\quad
+    \begin{tikzpicture}[scale=0.3]
+        \draw[dashed] (0,4) ellipse (2 and 1);
+        \draw (-2,4) -- (0,10);
+        \draw (2,4) -- (0,10);
+    \node (a) at (0,12){$X\cup_i \left(A\times \left[0,\frac{2}{3}\right]\right)$};
+    \end{tikzpicture}
+    \centering
+\end{figure}
 
 
 
 
-Consider the map $(X,A) \to (X/A,\ast)$ ...\cite[p.108]{May} \todo{Finish proof}
+Consider the map $(X,A) \to (X/A,\ast)$ ...\cite[p.108]{may} \todo{Finish proof}
 \end{proof}
 % Lecture 14: March 14th
 The suspension isomorphism follows from the long exact sequence of the cofibration $X\cofto CX$, and $CX\simeq \ast$. Additivity of $\til{E}_\ast$ follows from the observation that
@@ -3286,7 +3293,7 @@ where $Ci_+$ denotes the homotopy cofiber of the based inclusion $A_+ \hookto X_
 \begin{note} We see that $X_+ / A_+ \cong X/A$.
 \end{note}
 
-We need to show excision and exactness (see \cite[Ch.~14]{May}). For the excision trick, it suffices to work with the theory on CW complexes, and note for a CW triad $(X,A,B)$, we have that
+We need to show excision and exactness (see \cite[Ch.~14]{may} for the proofs). For the excision trick, it suffices to work with the theory on CW complexes, and note for a CW triad $(X,A,B)$, we have that
 \begin{align*}
 	A/A\cap B \to X/B
 \end{align*}
@@ -3412,7 +3419,7 @@ where a map $S^n \to X$ corresponds to a map $\Delta^n \to X$ where $\del\Delta^
 % TODO perfect pairing definition
 \end{definition}
 
-\begin{theorem} The Hurewicz homomorphism is a natural homomorphism which is compatible with suspension \cite[15.1]{May}, \cite[2.A]{Hatcher}.
+\begin{theorem} The Hurewicz homomorphism is a natural homomorphism which is compatible with suspension \cite[15.1]{may}, \cite[2.A]{hatcher}.
 \end{theorem}
 
 \begin{theorem} Any reduced homology theory on CW complexes (equivalently, spaces) satisfying axioms (1)---(4) and (5) the dimension axiom is isomorphic as a homology theory to singular homology.
@@ -3426,9 +3433,9 @@ We may check that $d\circ d = 0$.
 
 \begin{theorem} We have that $C_\ast (X) \cong C_\ast^{cell}(X)$ as chain complexes.
 \end{theorem}
-We see $C_n(X) \cong C_n^{cell}(X)$ by additivity since $X^{(n)}/X^{(n-1)} \simeq \wedge S^n$, where the wedge is taken over the $n$-cells of $X$. To reconcile the differentials between these chain complexes, we need the Hurewicz homomorphism \cite[15.2]{May}.
+We see $C_n(X) \cong C_n^{cell}(X)$ by additivity since $X^{(n)}/X^{(n-1)} \simeq \wedge S^n$, where the wedge is taken over the $n$-cells of $X$. To reconcile the differentials between these chain complexes, we need the Hurewicz homomorphism \cite[15.2]{may}.
 
-\begin{theorem} We have then that $H_\ast(X,A) \cong H_\ast (C_\ast (X,A))$ (where $C_\ast(X,A):= C_\ast(X)/C_\ast(A)$) such that differentials agree \cite[15.2]{May}.
+\begin{theorem} We have then that $H_\ast(X,A) \cong H_\ast (C_\ast (X,A))$ (where $C_\ast(X,A):= C_\ast(X)/C_\ast(A)$) such that differentials agree \cite[15.2]{may}.
 \end{theorem}
 It suffices to show this previous theorem on CW complexes.
 
@@ -3438,7 +3445,6 @@ Finally, by dimension, suspension, and additivity, if we know the value of our h
 % Lecture 15: March 19th
 
 % There is no finite-dimensional simply connected complex all of whose homotopy groups we know.
-
 
 \subsection{Generalized cohomology theories}
 \begin{definition} A \textit{reduced generalized cohomology theory}\index[ind]{cohomology theory!reduced} $\til{E}^\ast$ consists of contravariant functors

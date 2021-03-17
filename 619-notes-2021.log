@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  10 MAR 2021 20:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  16 MAR 2021 19:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1098,7 +1098,7 @@ Package hyperref Info: Option `pageanchor' set `true' on input line 68.
  [2]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 110.
-<pics/s1_smash_s1.png, id=298, 1787.67876pt x 384.43625pt>
+<pics/s1_smash_s1.png, id=318, 1787.67876pt x 384.43625pt>
 File: pics/s1_smash_s1.png Graphic file (type png)
 <use pics/s1_smash_s1.png>
 Package pdftex.def Info: pics/s1_smash_s1.png  used on input line 113.
@@ -1121,7 +1121,7 @@ Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
 ut line 236.
  [4] [5]
-<pics/cobordism.png, id=353, 122.68828pt x 135.54893pt>
+<pics/cobordism.png, id=373, 122.68828pt x 135.54893pt>
 File: pics/cobordism.png Graphic file (type png)
 <use pics/cobordism.png>
 Package pdftex.def Info: pics/cobordism.png  used on input line 290.
@@ -1160,7 +1160,7 @@ Package hyperref Info: bookmark level for unknown upshot defaults to 0 on input
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input l
 ine 610.
  [13] [14]
-<pics/limits.png, id=540, 1566.85374pt x 1380.15625pt>
+<pics/limits.png, id=560, 1566.85374pt x 1380.15625pt>
 File: pics/limits.png Graphic file (type png)
 <use pics/limits.png>
 Package pdftex.def Info: pics/limits.png  used on input line 667.
@@ -1191,7 +1191,7 @@ ut line 957.
 Package hyperref Info: bookmark level for unknown warn defaults to 0 on input l
 ine 1158.
  [25]
-<pics/eckmann-hilton.png, id=711, 1627.07875pt x 1216.545pt>
+<pics/eckmann-hilton.png, id=731, 1627.07875pt x 1216.545pt>
 File: pics/eckmann-hilton.png Graphic file (type png)
 <use pics/eckmann-hilton.png>
 Package pdftex.def Info: pics/eckmann-hilton.png  used on input line 1233.
@@ -1208,7 +1208,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `subscript' on input line 1277.
 
 [28]
-<pics/cubefig.png, id=745, 767.86874pt x 552.0625pt>
+<pics/cubefig.png, id=765, 767.86874pt x 552.0625pt>
 File: pics/cubefig.png Graphic file (type png)
 <use pics/cubefig.png>
 Package pdftex.def Info: pics/cubefig.png  used on input line 1301.
@@ -1223,18 +1223,18 @@ parametrized
  []
 
 [29 <./pics/cubefig.png>]
-<pics/homotopybasept.png, id=752, 1951.29pt x 784.9325pt>
+<pics/homotopybasept.png, id=772, 1951.29pt x 784.9325pt>
 File: pics/homotopybasept.png Graphic file (type png)
 <use pics/homotopybasept.png>
 Package pdftex.def Info: pics/homotopybasept.png  used on input line 1337.
 (pdftex.def)             Requested size: 390.25108pt x 156.98372pt.
  [30 <./pics/homotopybasept.png>]
-<pics/gammat.png, id=771, 220.825pt x 97.36375pt>
+<pics/gammat.png, id=791, 220.825pt x 97.36375pt>
 File: pics/gammat.png Graphic file (type png)
 <use pics/gammat.png>
 Package pdftex.def Info: pics/gammat.png  used on input line 1420.
 (pdftex.def)             Requested size: 154.57643pt x 68.15414pt.
-<pics/homotopy.png, id=773, 1567.8575pt x 1256.695pt>
+<pics/homotopy.png, id=793, 1567.8575pt x 1256.695pt>
 File: pics/homotopy.png Graphic file (type png)
 <use pics/homotopy.png>
 Package pdftex.def Info: pics/homotopy.png  used on input line 1429.
@@ -1244,19 +1244,19 @@ Package pdftex.def Info: pics/homotopy.png  used on input line 1429.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [31 <./pics/gammat.png>]
-<pics/topologist_sin.png, id=788, 635.37375pt x 459.7175pt>
+<pics/topologist_sin.png, id=808, 635.37375pt x 459.7175pt>
 File: pics/topologist_sin.png Graphic file (type png)
 <use pics/topologist_sin.png>
 Package pdftex.def Info: pics/topologist_sin.png  used on input line 1444.
 (pdftex.def)             Requested size: 127.0725pt x 91.94186pt.
  [32 <./pics/homotopy.png> <./pics/topologist_sin.png>]
-<pics/pseudocircle.png, id=801, 1285.80376pt x 677.53125pt>
+<pics/pseudocircle.png, id=821, 1285.80376pt x 677.53125pt>
 File: pics/pseudocircle.png Graphic file (type png)
 <use pics/pseudocircle.png>
 Package pdftex.def Info: pics/pseudocircle.png  used on input line 1463.
 (pdftex.def)             Requested size: 231.4347pt x 121.95036pt.
 [33 <./pics/pseudocircle.png>]
-<pics/cof.png, id=812, 1845.89626pt x 1340.00626pt>
+<pics/cof.png, id=833, 1845.89626pt x 1340.00626pt>
 File: pics/cof.png Graphic file (type png)
 <use pics/cof.png>
 Package pdftex.def Info: pics/cof.png  used on input line 1520.
@@ -1273,71 +1273,78 @@ e White-
 \pgfsyspdfmark {pgfid84}{6038827}{38894186}
 \pgfsyspdfmark {pgfid87}{37054042}{38906474}
 \pgfsyspdfmark {pgfid88}{39167578}{38682560}
-] [60] [61] [62] [63] [64] Excluding 'comment' comment. (./appendix.tex
+] [60] [61] [62] [63] [64] [65]
+Package hyperref Info: bookmark level for unknown counterexample defaults to 0 
+on input line 3029.
+ [66] [67] [68] Excluding 'comment' comment.
+(./appendix.tex
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
 ut line 8.
+ [69] [70] [71] [72]
 
-[65] [66] [67] [68] [69]
-Package hyperref Info: bookmark level for unknown counterexample defaults to 0 
-on input line 216.
- [70
-\pgfsyspdfmark {pgfid126}{29358298}{38089653}
-\pgfsyspdfmark {pgfid129}{37054042}{38101941}
-\pgfsyspdfmark {pgfid130}{39167578}{37878027}
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[73
+\pgfsyspdfmark {pgfid129}{29358298}{11388363}
+\pgfsyspdfmark {pgfid132}{37054042}{11400651}
+\pgfsyspdfmark {pgfid133}{39167578}{11176737}
 ]
 Package hyperref Info: bookmark level for unknown terminology defaults to 0 on 
 input line 233.
- [71] [72] [73] [74] [75]
+ [74] [75] [76] [77] [78] [79]
 
-LaTeX Warning: Citation `Hatcher' on page 76 undefined on input line 465.
+LaTeX Warning: Citation `Hatcher' on page 80 undefined on input line 465.
 
 
-LaTeX Warning: Citation `May' on page 76 undefined on input line 465.
+LaTeX Warning: Citation `May' on page 80 undefined on input line 465.
 
-[76]
-<pics/whisker-gluing.png, id=1427, 1003.75pt x 749.80125pt>
+<pics/whisker-gluing.png, id=1489, 1003.75pt x 749.80125pt>
 File: pics/whisker-gluing.png Graphic file (type png)
 <use pics/whisker-gluing.png>
 Package pdftex.def Info: pics/whisker-gluing.png  used on input line 480.
 (pdftex.def)             Requested size: 1003.74756pt x 749.79942pt.
-<pics/whisker.png, id=1430, 1003.75pt x 752.8125pt>
+[80]
+<pics/whisker.png, id=1499, 1003.75pt x 752.8125pt>
 File: pics/whisker.png Graphic file (type png)
 <use pics/whisker.png>
 Package pdftex.def Info: pics/whisker.png  used on input line 491.
 (pdftex.def)             Requested size: 1003.74756pt x 752.81065pt.
- [77 <./pics/whisker-gluing.png> <./pics/whisker.png>]
-<pics/cone.png, id=1443, 1003.75pt x 748.7975pt>
+<pics/cone.png, id=1500, 1003.75pt x 748.7975pt>
 File: pics/cone.png Graphic file (type png)
 <use pics/cone.png>
 Package pdftex.def Info: pics/cone.png  used on input line 500.
 (pdftex.def)             Requested size: 1003.74756pt x 748.79567pt.
- [78 <./pics/cone.png>] [79] [80]) (./619-notes-2021.bbl [81]) [82]
+ [81 <./pics/whisker-gluing.png> <./pics/whisker.png>] [82 <./pics/cone.png>] [
+83]) (./619-notes-2021.bbl [84]) [85]
 runsystem(makeindex ind.idx)...executed safely (allowed).
 
- (./ind.ind [83
+ (./ind.ind [86
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4013.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4013.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4019.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4019.
 
 (./619-notes-2021.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4013.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4013.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4019.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4019.
 
 Package rerunfilecheck Info: File `619-notes-2021.out' has not changed.
-(rerunfilecheck)             Checksum: AA87C3CC0E964B1B048B8460BFA2F6A4;4169.
+(rerunfilecheck)             Checksum: 72FA44F7D75C69BDD2E670914CAFF9B9;4446.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4013.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4019.
  ) 
 Here is how much of TeX's memory you used:
- 31608 strings out of 492649
- 627881 string characters out of 6129622
- 714611 words of memory out of 5000000
- 34070 multiletter control sequences out of 15000+600000
+ 31770 strings out of 492649
+ 631710 string characters out of 6129622
+ 714284 words of memory out of 5000000
+ 34199 multiletter control sequences out of 15000+600000
  27035 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,23n,84p,3225b,1224s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1383,10 +1390,10 @@ fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
 e1/public/rsfs/rsfs7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
 /xypic/xycmat10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/xypi
 c/xycmbt10.pfb>
-Output written on 619-notes-2021.pdf (83 pages, 7557583 bytes).
+Output written on 619-notes-2021.pdf (86 pages, 7575284 bytes).
 PDF statistics:
- 1913 PDF objects out of 2073 (max. 8388607)
- 1740 compressed objects within 18 object streams
- 832 named destinations out of 1000 (max. 500000)
- 515 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1991 PDF objects out of 2073 (max. 8388607)
+ 1814 compressed objects within 19 object streams
+ 865 named destinations out of 1000 (max. 500000)
+ 547 words of extra memory for PDF output out of 10000 (max. 10000000)
 

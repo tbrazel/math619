@@ -8,6 +8,10 @@
 
   \indexspace
 
+  \item Blakers-Massey, \hyperpage{67}
+
+  \indexspace
+
   \item category
     \subitem (co)complete, \hyperpage{19}
     \subitem opposite, \hyperpage{8}
@@ -25,7 +29,7 @@
 
   \indexspace
 
-  \item double mapping cylinder, \hyperpage{62}
+  \item double mapping cylinder, \hyperpage{63}
 
   \indexspace
 
@@ -41,6 +45,7 @@
     \subitem based, \hyperpage{45}
     \subitem Hurewicz, \hyperpage{42}
     \subitem Serre, \hyperpage{42}
+  \item Freudenthal suspension, \hyperpage{67}
   \item functor
     \subitem forgetful, \hyperpage{7}
     \subitem free, \hyperpage{7}
@@ -51,15 +56,18 @@
 
   \indexspace
 
+  \item homology theory
+    \subitem unreduced, \hyperpage{68}
   \item homotopy, \hyperpage{22}
     \subitem based, \hyperpage{23}
   \item homotopy category
     \subitem of $\Top$, \hyperpage{24}
   \item homotopy cofiber, \hyperpage{52}
+  \item homotopy excision, \hyperpage{67}
   \item homotopy extension property, \hyperpage{34}
   \item homotopy fiber, \hyperpage{48}
   \item homotopy lifting property (HLP), \hyperpage{42}
-  \item homotopy pushout, \hyperpage{62}
+  \item homotopy pushout, \hyperpage{63}
 
   \indexspace
 
@@ -97,6 +105,7 @@
 
   \indexspace
 
+  \item stable homotopy group, \hyperpage{68}
   \item symmetric monoidal category, \hyperpage{21}
     \subitem closed, \hyperpage{22}
 
