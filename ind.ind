@@ -39,16 +39,16 @@
 
   \indexspace
 
-  \item fiber, \hyperpage{41}
+  \item fiber, \hyperpage{42}
   \item fiber sequence, \hyperpage{50}
   \item fibration
-    \subitem based, \hyperpage{45}
+    \subitem based, \hyperpage{46}
     \subitem Hurewicz, \hyperpage{42}
-    \subitem Serre, \hyperpage{42}
+    \subitem Serre, \hyperpage{43}
   \item Freudenthal suspension, \hyperpage{67}
   \item functor
-    \subitem forgetful, \hyperpage{7}
-    \subitem free, \hyperpage{7}
+    \subitem forgetful, \hyperpage{8}
+    \subitem free, \hyperpage{8}
 
   \indexspace
 
@@ -59,12 +59,12 @@
   \item homology theory
     \subitem unreduced, \hyperpage{68}
   \item homotopy, \hyperpage{22}
-    \subitem based, \hyperpage{23}
+    \subitem based, \hyperpage{24}
   \item homotopy category
     \subitem of $\Top$, \hyperpage{24}
   \item homotopy cofiber, \hyperpage{52}
   \item homotopy excision, \hyperpage{67}
-  \item homotopy extension property, \hyperpage{34}
+  \item homotopy extension property, \hyperpage{35}
   \item homotopy fiber, \hyperpage{48}
   \item homotopy lifting property (HLP), \hyperpage{42}
   \item homotopy pushout, \hyperpage{63}
@@ -75,20 +75,20 @@
 
   \indexspace
 
-  \item limit, \hyperpage{15}
-  \item loop space, \hyperpage{47}
+  \item limit, \hyperpage{16}
+  \item loop space, \hyperpage{48}
 
   \indexspace
 
   \item mapping cone, \hyperpage{52}
-  \item mapping cylinder, \hyperpage{35}
+  \item mapping cylinder, \hyperpage{36}
     \subitem reduced, \hyperpage{51}
 
   \indexspace
 
-  \item natural transformation, \hyperpage{8}
-  \item neighborhood deformation retraction, \hyperpage{39}
-  \item non-degenerately based, \hyperpage{40}
+  \item natural transformation, \hyperpage{9}
+  \item neighborhood deformation retraction, \hyperpage{40}
+  \item non-degenerately based, \hyperpage{41}
 
   \indexspace
 
@@ -106,7 +106,7 @@
   \indexspace
 
   \item stable homotopy group, \hyperpage{68}
-  \item symmetric monoidal category, \hyperpage{21}
+  \item symmetric monoidal category, \hyperpage{22}
     \subitem closed, \hyperpage{22}
 
   \indexspace
@@ -119,8 +119,8 @@
   \item weak homotopy equivalence, \hyperpage{30}
   \item weak topology, \hyperpage{19}
   \item weakly equivalent spaces, \hyperpage{56}
-  \item well-based, \hyperpage{40}
-  \item whiskering, \hyperpage{40}
+  \item well-based, \hyperpage{41}
+  \item whiskering, \hyperpage{41}
   \item Whitehead's theorem, \hyperpage{57}
 
 \end{theindex}
