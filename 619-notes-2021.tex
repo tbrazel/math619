@@ -876,7 +876,7 @@ There were some partial results known before the introduction of CGWH spaces.
 
 
 
-But the good news is that in $\CGWH$ we have that $X\times_k Y$ is always a CW complex. A proof can be found in \cite[Theorem A.6]{Hatcher}.
+But the good news is that in $\CGWH$ we have that $X\times_k Y$ is always a CW complex. A proof can be found in \cite[Theorem A.6]{hatcher}.
 
 \subsection{Existence of limits and colimits in $\Top$}
 
@@ -3075,7 +3075,7 @@ the map to the homotopy pullback $C\to B\times_X^h A$ is $k$-connected if and on
 
 For an excisive triad, this square is always homotopy pushout. We can ask whether it is a homotopy pullback, and the failure of this square to be a homotopy pullback is precisely measured by how connected the map $C\to B\times_X^h A$ is.
 
-\textbf{Application: Freudenthal Suspension}\index[ind]{Freudenthal suspension} Consider the suspension map
+\textbf{Application: Freudenthal Suspension}\index[ind]{Freudenthal suspension.} Consider the suspension map
 \begin{align*}
 	\pi_j(X) &= [S^j, X]_\ast \to [\Sigma S^j, \Sigma X]_\ast \cong [S^{j+1}, \Sigma X]_\ast = \pi_{j+1}(\Sigma X).
 \end{align*}
@@ -3137,29 +3137,23 @@ such that
 	is an isomorphism.
 \end{enumerate}
 
-Let $\pi$ be an abelian group. We consider the following axiom which might or might not hold:
+We consider the following axiom which might or might not hold:
 \begin{enumerate}\setcounter{enumi}{4}
 	\item \textit{dimension axiom} we have that
 	\begin{align*}
 		E_q (\ast) = \begin{cases} \pi & q=0 \\ 0 & q\neq 0. \\ \end{cases}
 	\end{align*}
+	where $\pi$ is an abelian group. 
 \end{enumerate}
 \end{definition}
 
-\begin{remark} Instead of spaces, one may state analogous axioms for CW complexes. An unreduced homology theory $E_\ast$ on $\Ho(\Top^2)$ determines and is determined by a homology theory $E^\CW_\ast$ on $\Ho(\CW^2)$ with all the axioms \textit{except} axiom 4 (which is no longer necessary by Whitehead's theorem), and where we replace ``excisive triad'' by ``CW triad'' in axiom 2. We may then define
+\begin{remark} Instead of spaces, one may state analogous axioms for CW complexes. An unreduced homology theory $E_\ast$ on $\Ho(\Top^2)$ determines and is determined by a homology theory $E^\CW_\ast$ on $\Ho(\CW^2)$ with all the axioms \textit{except} axiom 4 (which is no longer necessary by Whitehead's theorem), and where we replace ``excisive triad'' by ``CW triad'' in axiom 2. Given a theory on CW pairs, to get a theory defined on all pairs of spaces, we  may then define
 \begin{align*}
-	E_q^\CW (\Gamma X, \Gamma A)= E_q (X,A).
+	E_q (X,A)= E_q^\CW (\Gamma X, \Gamma A).
 \end{align*}
 \end{remark}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
 
 \begin{definition} A \textit{reduced homology theory}\index[ind]{homology theory!reduced} $\til{E}_\ast$ consists of functors $\til{E}_q : \Ho(\Top_{\ast}^{\text{well-based}}) \to \Ab$ from well-based spaces to abelian groups, satisfying:
 \begin{enumerate}
@@ -3174,7 +3168,7 @@ Let $\pi$ be an abelian group. We consider the following axiom which might or mi
 		\Sigma : \til{E}_q(X) \xto{\sim} \til{E}_{q+1} (\Sigma X)
 	\end{align*}
 
-	\item \textit{additivity}: if $X = \bigwedge_i X_i$, then there is an isomorphism
+	\item \textit{additivity}: if $X = \bigvee_i X_i$, then there is an isomorphism
 	\begin{align*}
 		\oplus_i \til{E}_q(X_i) \xto{\sim} \til{E}_q(X)
 	\end{align*}
@@ -3212,28 +3206,39 @@ For $\{\ast\}\subseteq A \subseteq X$, the summand $E_\ast(\ast)$ maps to itself
 \end{align*}
 
 \textbf{Claim}: For $A\xcofto{i} X$ a cofibration, we have $E_\ast(X,A) \to E_\ast(X/A, \ast) = \til{E}_\ast (X/A)$ is an isomorphism.
-\begin{proof}[Proof of claim] For the inclusion $A\xcofto{i} X$, consider the ``wizard hat'' $Ci$ and the ``top hat'' $Mi$, drawn below:
+\begin{proof}[Proof of claim] 
+
+
+%For the inclusion $A\xcofto{i} X$, consider the ``wizard hat'' $Ci$ and the ``top hat'' $Mi$, drawn below:
+%\begin{figure}[H]
+%	\begin{tikzpicture}[scale=0.25]
+%		\draw (0,0) ellipse (3 and 1);
+%		\draw(0,0) ellipse (6 and 2);
+%		\draw(3,0) -- (0,9);
+%		\draw(-3,0) -- (0,9);
+%		\node (a) at  (0,11){$Ci$};
+%
+%		\draw(15,0) ellipse (3 and 1);
+%		\draw(15,0) ellipse (6 and 2);
+%		\draw(15,9) ellipse (3 and 1);
+%		\draw (18,0) -- (18,9);
+%		\draw(12,0) -- (12,9);
+%		\node (a) at  (15,11){$Mi$};
+%	\end{tikzpicture}
+%    \centering
+%\end{figure}
+
+Recall that since $A\xcofto{i} X$ is a cofibration, the mapping cone $Ci$ is homotopy equivalent to $X/A$. We obtain an excisive triad on the cone $Ci$ as follows:
+
 \begin{figure}[H]
-	\begin{tikzpicture}[scale=0.25]
+\begin{tikzpicture}[scale=0.25]
 		\draw (0,0) ellipse (3 and 1);
 		\draw(0,0) ellipse (6 and 2);
 		\draw(3,0) -- (0,9);
 		\draw(-3,0) -- (0,9);
 		\node (a) at  (0,11){$Ci$};
-
-		\draw(15,0) ellipse (3 and 1);
-		\draw(15,0) ellipse (6 and 2);
-		\draw(15,9) ellipse (3 and 1);
-		\draw (18,0) -- (18,9);
-		\draw(12,0) -- (12,9);
-		\node (a) at  (15,11){$Mi$};
-	\end{tikzpicture}
-        \centering
-\end{figure}
-
-Recall the cone $Ci$ was equivalent to $X/A$. We obtain an excisive triad on the cone $Ci$ as follows:
-
-\begin{figure}[H]
+			\end{tikzpicture}
+\quad
     \begin{tikzpicture}[scale=0.3]
         \draw (0,0) ellipse (3 and 1);
 	    \draw(0,0) ellipse (6 and 2);
@@ -3254,12 +3259,12 @@ Recall the cone $Ci$ was equivalent to $X/A$. We obtain an excisive triad on the
 
 
 
-Consider the map $(X,A) \to (X/A,\ast)$ ...\cite[p.108]{may} \todo{Finish proof}
+To do: Include diagram to show that the map $(X,A) \to (X/A,\ast)$ is an isomorphism on $\til{E}_q$ \cite[p.108]{may} \todo{Finish proof with better pics from Maxine}
 \end{proof}
 % Lecture 14: March 14th
 The suspension isomorphism follows from the long exact sequence of the cofibration $X\cofto CX$, and $CX\simeq \ast$. Additivity of $\til{E}_\ast$ follows from the observation that
 \begin{align*}
-	\amalg X_i \big/ \amalg \ast = \bigwedge_i X_i,
+	\amalg X_i \big/ \amalg \ast = \bigvee_i X_i,
 \end{align*}
 and the dimension axiom comes from using suspension to see that
 \begin{align*}
@@ -3271,22 +3276,22 @@ For the other direction, suppose we are given a reduced homology theory $\til{E}
 	E_\ast(X) &:= \til{E}_\ast(X_+) \\
 	E_\ast(X,A) &:= \til{E}_\ast (Ci _+),
 \end{align*}
-where $Ci_+$ denotes the homotopy cofiber of the based inclusion $A_+ \hookto X_+$ (this is equivalent to the cofiber of the unbased inclusion $Ci$ with basepoint the cone point):
-\begin{figure}
-	\begin{tikzpicture}[scale=0.3]
-		\draw (0,0) ellipse (2 and 1);
-		\draw(0,0) ellipse (4 and 2);
-		\draw(2,0) -- (0,7);
-		\draw(-2,0) -- (0,7);
-		\node (a) at  (0,8){$Ci$};
-		\node[circle,fill=black] (b) at (6,7){};
-		\node (c) at (6,8){basept};
-
-		\draw (6,0)--(6,7);
-	\end{tikzpicture}
-	\centering
-\end{figure}
-\todo{Finish picture}
+where $Ci_+$ denotes the homotopy cofiber of the based inclusion $A_+ \hookto X_+$ (this is equivalent to the cofiber of the unbased inclusion $Ci$ with basepoint the cone point).
+%\begin{figure}
+%	\begin{tikzpicture}[scale=0.3]
+%		\draw (0,0) ellipse (2 and 1);
+%		\draw(0,0) ellipse (4 and 2);
+%		\draw(2,0) -- (0,7);
+%		\draw(-2,0) -- (0,7);
+%		\node (a) at  (0,8){$Ci$};
+%		\node[circle,fill=black] (b) at (6,7){};
+%		\node (c) at (6,8){basept};
+%
+%		\draw (6,0)--(6,7);
+%	\end{tikzpicture}
+%	\centering
+%\end{figure}
+%\todo{Finish picture}
 
 \begin{note} We see that $X_+ / A_+ \cong X/A$.
 \end{note}
@@ -3320,8 +3325,17 @@ is exact at each stage in the colimit, and finally we use the fact that colimits
 
 \end{example}
 
-\begin{remark} Colimits commute with other colimits, so in particular they commute with cokernels, which gives right exactness. As an exercise, show that left exactness holds. On the other hand, as limits commute with kernels we get left exactness,\textit{but} limits do not preserve right exactness.% TODO overflow post
+\begin{remark} Colimits commute with other colimits, so in particular they commute with cokernels, which gives right exactness. As an exercise, show that left exactness holds. On the other hand, as limits commute with kernels we get left exactness, \textit{but} limits do not preserve right exactness.% TODO overflow post
 \end{remark}
+
+We note that stable homotopy does not satisfy the dimension axiom.
+
+
+\begin{definition} We call $\pi_q^s(S^0)$ the \textit{$q$th stable homotopy group of spheres}\index[ind]{stable homotopy groups!of spheres}. For example,
+\begin{align*}
+	\pi_q^s(S^0) &= \begin{cases} 0 & q<0 \\ \Z & q=0 \\ \Z\big/2 & q=1,2 \\ \Z\big/24 & q=3. \end{cases}
+\end{align*}
+\end{definition}
 
 \begin{theorem}\label{thm:generalized-cohom} For a sequence of spaces $\{T_n\}$ with $T_n$ being $(n-1)$-connected, and with maps $\Sigma T_n \xto{\sigma_n} \Sigma T_{n+1}$, we could define
 \begin{align*}
@@ -3338,15 +3352,11 @@ Then this defines a generalized homology theory, which satisfies all the axioms 
 \begin{align*}
 	\Sigma(\Sigma^n S^0) \cong S^{n+1} \cong \Sigma^{n+1} S^0.
 \end{align*}
-We note that stable homotopy does not satisfy the dimension axiom.
 \end{remark}
 
-\begin{definition} We call $\pi_q^s(S^0)$ the \textit{$q$th stable homotopy group of spheres}\index[ind]{stable homotopy groups!of spheres}. For example,
-\begin{align*}
-	\pi_q^s(S^0) &= \begin{cases} 0 & q<0 \\ \Z & q=0 \\ \Z\big/2 & q=1,2 \\ \Z\big/24 & q=3. \end{cases}
-\end{align*}
-\end{definition}
 
+
+\subsection{Spectra}
 \begin{definition} A sequence of spaces $T_n$ equipped with structure maps $\sigma_n : \Sigma T_n \to T_{n+1}$ is called a \textit{(pre)spectrum}. A morphism of prespectra is a collection of maps $f_n : T_n \to T_n'$ commuting with the structure maps.\footnote{Symmetric spectra, orthogonal spectra, etc. are just prespectra equipped with additional structure.} %TODO better notation X_n, Y_n
 \end{definition}
 
@@ -3362,10 +3372,19 @@ We define the \textit{homotopy groups of a prespectrum} $X$ as
 	recovers the stable homotopy of $X$. When $X = S^0$, then $\Sigma^\infty S^0 = \S$ is called the \textit{sphere spectrum}. We call $\pi_\ast (\S)$ the \textit{stable homotopy groups of spheres}.
 \end{example}
 
-\textbf{Digression.} Consider the category $\FinSet$ of finite sets, which is equipped with a monoid structure from the operation of set union. In some sense that can be made rigorous (the Barratt-Priddy Theorem), the sphere spectrum is the group completion of $\FinSet$ with respect to set union.
+\textbf{Digression.} Consider the category $\FinSet$ of finite sets, which is equipped with a monoid structure from the operation of set union. In a sense that can be made rigorous (the Barratt-Priddy Theorem), the sphere spectrum is the group completion of $\FinSet$ with respect to set union. This is a homotopical lift on the phenomenon that we witness on $\pi_0$, where $\mathbb{Z}$ is the group completion of $\mathbb{N}$. 
 
 
 \textbf{Spoiler} The \textit{Eilenberg-Maclane spaces} $\{K(\pi,n)\}$ form a prespectrum which determines singular homology with coefficients in an abelian group $\pi$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 
 
 \begin{note} Singular homology satisfies all axioms, including the dimension axiom (we have seen all of these axioms, except weak equivalence).
@@ -3404,7 +3423,7 @@ Thus since $i_n$ is surjective on $H_k$ for $k\leq n$, so is $f$. As an exercise
 
 \end{proof}
 
-\textbf{Upshot} We may prove things about singular homology of all spaces by only using singular homology of CW complexes.
+\textbf{Upshot:} We may prove things about singular homology of all spaces by only using singular homology of CW complexes.
 
 
 There is a link between homology and homotopy groups:
@@ -3443,6 +3462,8 @@ Finally, by dimension, suspension, and additivity, if we know the value of our h
 % Lecture 15: March 19th
 
 % There is no finite-dimensional simply connected complex all of whose homotopy groups we know.
+
+
 
 \subsection{Generalized cohomology theories}
 \begin{definition} A \textit{reduced generalized cohomology theory}\index[ind]{cohomology theory!reduced} $\til{E}^\ast$ consists of contravariant functors

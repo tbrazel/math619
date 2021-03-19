@@ -45,7 +45,7 @@
     \subitem based, \hyperpage{46}
     \subitem Hurewicz, \hyperpage{42}
     \subitem Serre, \hyperpage{43}
-  \item Freudenthal suspension, \hyperpage{67}
+  \item Freudenthal suspension., \hyperpage{67}
   \item functor
     \subitem forgetful, \hyperpage{8}
     \subitem free, \hyperpage{8}
@@ -57,6 +57,7 @@
   \indexspace
 
   \item homology theory
+    \subitem reduced, \hyperpage{69}
     \subitem unreduced, \hyperpage{68}
   \item homotopy, \hyperpage{22}
     \subitem based, \hyperpage{24}
@@ -106,6 +107,9 @@
   \indexspace
 
   \item stable homotopy group, \hyperpage{68}
+  \item stable homotopy groups
+    \subitem of spheres, \hyperpage{72}
+  \item suspension spectrum, \hyperpage{72}
   \item symmetric monoidal category, \hyperpage{22}
     \subitem closed, \hyperpage{22}
 
