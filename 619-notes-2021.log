@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  18 MAR 2021 22:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  24 MAR 2021 00:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1098,7 +1098,7 @@ Package hyperref Info: Option `pageanchor' set `true' on input line 68.
  [2]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 108.
-<pics/s1_smash_s1.png, id=323, 1787.67876pt x 384.43625pt>
+<pics/s1_smash_s1.png, id=333, 1787.67876pt x 384.43625pt>
 File: pics/s1_smash_s1.png Graphic file (type png)
 <use pics/s1_smash_s1.png>
 Package pdftex.def Info: pics/s1_smash_s1.png  used on input line 111.
@@ -1122,7 +1122,7 @@ Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
 ut line 234.
  [5]
-<pics/cobordism.png, id=377, 122.68828pt x 135.54893pt>
+<pics/cobordism.png, id=387, 122.68828pt x 135.54893pt>
 File: pics/cobordism.png Graphic file (type png)
 <use pics/cobordism.png>
 Package pdftex.def Info: pics/cobordism.png  used on input line 288.
@@ -1161,7 +1161,7 @@ Package hyperref Info: bookmark level for unknown upshot defaults to 0 on input
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input l
 ine 608.
  [13] [14]
-<pics/limits.png, id=562, 1566.85374pt x 1380.15625pt>
+<pics/limits.png, id=572, 1566.85374pt x 1380.15625pt>
 File: pics/limits.png Graphic file (type png)
 <use pics/limits.png>
 Package pdftex.def Info: pics/limits.png  used on input line 665.
@@ -1190,7 +1190,7 @@ ut line 955.
 Package hyperref Info: bookmark level for unknown warn defaults to 0 on input l
 ine 1156.
  [25]
-<pics/eckmann-hilton.png, id=737, 1627.07875pt x 1216.545pt>
+<pics/eckmann-hilton.png, id=747, 1627.07875pt x 1216.545pt>
 File: pics/eckmann-hilton.png Graphic file (type png)
 <use pics/eckmann-hilton.png>
 Package pdftex.def Info: pics/eckmann-hilton.png  used on input line 1231.
@@ -1204,7 +1204,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `subscript' on input line 1275.
 
 [28]
-<pics/cubefig.png, id=771, 767.86874pt x 552.0625pt>
+<pics/cubefig.png, id=781, 767.86874pt x 552.0625pt>
 File: pics/cubefig.png Graphic file (type png)
 <use pics/cubefig.png>
 Package pdftex.def Info: pics/cubefig.png  used on input line 1299.
@@ -1219,36 +1219,36 @@ parametrized
  []
 
 [29 <./pics/cubefig.png>]
-<pics/homotopybasept.png, id=778, 1951.29pt x 784.9325pt>
+<pics/homotopybasept.png, id=788, 1951.29pt x 784.9325pt>
 File: pics/homotopybasept.png Graphic file (type png)
 <use pics/homotopybasept.png>
 Package pdftex.def Info: pics/homotopybasept.png  used on input line 1335.
 (pdftex.def)             Requested size: 390.25108pt x 156.98372pt.
  [30 <./pics/homotopybasept.png>]
-<pics/gammat.png, id=797, 1549.79pt x 738.76pt>
+<pics/gammat.png, id=807, 1549.79pt x 738.76pt>
 File: pics/gammat.png Graphic file (type png)
 <use pics/gammat.png>
 Package pdftex.def Info: pics/gammat.png  used on input line 1418.
 (pdftex.def)             Requested size: 232.45847pt x 110.8092pt.
  [31]
-<pics/homotopy.png, id=810, 1567.8575pt x 1256.695pt>
+<pics/homotopy.png, id=820, 1567.8575pt x 1256.695pt>
 File: pics/homotopy.png Graphic file (type png)
 <use pics/homotopy.png>
 Package pdftex.def Info: pics/homotopy.png  used on input line 1427.
 (pdftex.def)             Requested size: 235.16847pt x 188.49611pt.
-<pics/topologist_sin.png, id=813, 635.37375pt x 459.7175pt>
+<pics/topologist_sin.png, id=823, 635.37375pt x 459.7175pt>
 File: pics/topologist_sin.png Graphic file (type png)
 <use pics/topologist_sin.png>
 Package pdftex.def Info: pics/topologist_sin.png  used on input line 1442.
 (pdftex.def)             Requested size: 127.0725pt x 91.94186pt.
  [32 <./pics/gammat.png> <./pics/homotopy.png>]
-<pics/pseudocircle.png, id=824, 1285.80376pt x 677.53125pt>
+<pics/pseudocircle.png, id=835, 1285.80376pt x 677.53125pt>
 File: pics/pseudocircle.png Graphic file (type png)
 <use pics/pseudocircle.png>
 Package pdftex.def Info: pics/pseudocircle.png  used on input line 1461.
 (pdftex.def)             Requested size: 231.4347pt x 121.95036pt.
  [33 <./pics/topologist_sin.png> <./pics/pseudocircle.png>]
-<pics/cof.png, id=838, 1845.89626pt x 1340.00626pt>
+<pics/cof.png, id=848, 1845.89626pt x 1340.00626pt>
 File: pics/cof.png Graphic file (type png)
 <use pics/cof.png>
 Package pdftex.def Info: pics/cof.png  used on input line 1518.
@@ -1271,126 +1271,142 @@ on input line 3027.
 \pgfsyspdfmark {pgfid126}{7968503}{11655203}
 \pgfsyspdfmark {pgfid129}{37054042}{11667491}
 \pgfsyspdfmark {pgfid130}{39167578}{11443577}
-] [71] [72] Excluding 'comment' comment. (./appendix.tex
+] [71] [72] [73] [74]
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
-ut line 8.
- [73] [74] [75]
-[76] [77
-\pgfsyspdfmark {pgfid137}{29358298}{30682341}
-\pgfsyspdfmark {pgfid140}{37054042}{30694629}
-\pgfsyspdfmark {pgfid141}{39167578}{30470715}
+ut line 3511.
+ [75] [76] (./619-notes-2021.tdo)
+\tf@tdo=\write9
+\openout9 = `619-notes-2021.tdo'.
+
+ [77] (./appendix.tex
+[78] [79] [80] [81] [82
+\pgfsyspdfmark {pgfid139}{29358298}{32296255}
+\pgfsyspdfmark {pgfid142}{37054042}{32308543}
+\pgfsyspdfmark {pgfid143}{39167578}{32084629}
 ]
 Package hyperref Info: bookmark level for unknown terminology defaults to 0 on 
 input line 233.
- [78]
+ [83]
 
-LaTeX Warning: Reference `prop:LAPC' on page 79 undefined on input line 311.
+LaTeX Warning: Reference `prop:LAPC' on page 84 undefined on input line 311.
 
-[79] [80] [81] [82] [83] [84]
+[84] [85] [86] [87] [88] [89]
 
-LaTeX Warning: Citation `Hatcher' on page 85 undefined on input line 549.
+LaTeX Warning: Citation `Hatcher' on page 90 undefined on input line 549.
 
 
-LaTeX Warning: Citation `May' on page 85 undefined on input line 549.
+LaTeX Warning: Citation `May' on page 90 undefined on input line 549.
 
-<pics/whisker-gluing.png, id=1561, 1003.75pt x 749.80125pt>
+<pics/whisker-gluing.png, id=1640, 1003.75pt x 749.80125pt>
 File: pics/whisker-gluing.png Graphic file (type png)
 <use pics/whisker-gluing.png>
 Package pdftex.def Info: pics/whisker-gluing.png  used on input line 564.
 (pdftex.def)             Requested size: 1003.74756pt x 749.79942pt.
-[85]
-<pics/whisker.png, id=1574, 1003.75pt x 752.8125pt>
+[90]
+<pics/whisker.png, id=1651, 1003.75pt x 752.8125pt>
 File: pics/whisker.png Graphic file (type png)
 <use pics/whisker.png>
 Package pdftex.def Info: pics/whisker.png  used on input line 575.
 (pdftex.def)             Requested size: 1003.74756pt x 752.81065pt.
-<pics/cone.png, id=1575, 1003.75pt x 748.7975pt>
+<pics/cone.png, id=1652, 1003.75pt x 748.7975pt>
 File: pics/cone.png Graphic file (type png)
 <use pics/cone.png>
 Package pdftex.def Info: pics/cone.png  used on input line 584.
 (pdftex.def)             Requested size: 1003.74756pt x 748.79567pt.
- [86 <./pics/whisker-gluing.png> <./pics/whisker.png>] [87 <./pics/cone.png>] [
-88]) (./619-notes-2021.bbl [89]) [90]
+ [91 <./pics/whisker-gluing.png> <./pics/whisker.png>] [92 <./pics/cone.png>] [
+93]) (./619-notes-2021.bbl [94] [95]) [96]
 runsystem(makeindex ind.idx)...executed safely (allowed).
 
- (./ind.ind [91
+ (./ind.ind [97
 
 
-] [92
+] [98
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4038.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4038.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4042.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4042.
 
 (./619-notes-2021.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4038.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4038.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4042.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4042.
 
-Package rerunfilecheck Info: File `619-notes-2021.out' has not changed.
-(rerunfilecheck)             Checksum: 96ACBDCBBC658061684D02E4A2805877;4503.
 
+
+Package rerunfilecheck Warning: File `619-notes-2021.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `619-notes-2021.out':
+(rerunfilecheck)             Before: 1330858FA655F797503A79B4EED6275C;4655
+(rerunfilecheck)             After:  CB8AE75708C59569C1B27E88958E3FB0;4584.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4038.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4042.
  ) 
 Here is how much of TeX's memory you used:
- 31907 strings out of 492649
- 634541 string characters out of 6129622
- 717978 words of memory out of 5000000
- 34288 multiletter control sequences out of 15000+600000
+ 32036 strings out of 492649
+ 637272 string characters out of 6129622
+ 720763 words of memory out of 5000000
+ 34371 multiletter control sequences out of 15000+600000
  27035 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,23n,84p,3225b,1224s stack positions out of 5000i,500n,10000p,200000b,80000s
- </Users/mmerling/Library/texlive/2018/texmf-var/fonts/pk/ljfour/public/bbm/b
-bm10.600pk></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cme
-x10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra
-/cmex7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmex
-tra/cmex8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmitt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.
-pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pf
-b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/20
-18/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2018/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2018/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2018/tex
-mf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2018/texmf-dist/
-fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
-e1/public/rsfs/rsfs7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
-/xypic/xycmat10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/xypi
-c/xycmbt10.pfb>
-Output written on 619-notes-2021.pdf (92 pages, 7688807 bytes).
+pdfTeX warning (dest): name{section*.10} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+ </Users/mmerling/Library/texlive/2018/texmf-var/fonts/pk/ljfour/public/bbm/bbm
+10.600pk></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
+mex7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextr
+a/cmex8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmitt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2018/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2018/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2018/texmf
+-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2018/texmf-dist/fo
+nts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
+/public/rsfs/rsfs7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/x
+ypic/xycmat10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/xypic/
+xycmbt10.pfb>
+Output written on 619-notes-2021.pdf (98 pages, 7704866 bytes).
 PDF statistics:
- 2081 PDF objects out of 2487 (max. 8388607)
- 1899 compressed objects within 19 object streams
- 913 named destinations out of 1000 (max. 500000)
- 555 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2178 PDF objects out of 2487 (max. 8388607)
+ 1989 compressed objects within 20 object streams
+ 956 named destinations out of 1000 (max. 500000)
+ 571 words of extra memory for PDF output out of 10000 (max. 10000000)
 

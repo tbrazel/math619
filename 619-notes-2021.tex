@@ -3378,13 +3378,7 @@ We define the \textit{homotopy groups of a prespectrum} $X$ as
 \textbf{Spoiler} The \textit{Eilenberg-Maclane spaces} $\{K(\pi,n)\}$ form a prespectrum which determines singular homology with coefficients in an abelian group $\pi$.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
+
 
 
 \begin{note} Singular homology satisfies all axioms, including the dimension axiom (we have seen all of these axioms, except weak equivalence).
@@ -3426,31 +3420,33 @@ Thus since $i_n$ is surjective on $H_k$ for $k\leq n$, so is $f$. As an exercise
 \textbf{Upshot:} We may prove things about singular homology of all spaces by only using singular homology of CW complexes.
 
 
-There is a link between homology and homotopy groups:
+There is a link between homology and homotopy groups. First note that from the dimension axiom for a homology theory with $\Z$-coefficients, we can pick a generator $\iota_0$ of $\til{H}_0(S^0)$, and then we can inductively define generators $\iota_n=\Sigma \iota_{n-1}$, using the suspension axiom.
 
-\begin{definition} The \textit{Hurewicz homomorphism}\index[ind]{Hurewicz homomorphism} is a group homomorphism
-\begin{align*}
+\begin{definition} The \textit{Hurewicz homomorphism}\index[ind]{Hurewicz homomorphism} is the map \begin{align*}
 	h : \pi_n(X) \to \til{H}_n(X),
 \end{align*}
-where a map $S^n \to X$ corresponds to a map $\Delta^n \to X$ where $\del\Delta^n \to \ast$. This corresponds to a cycle in $C_n^{sing}(X)$, which yields an element in $\til{H}_n(X)$.
+defined by $h([f])=f_\ast(\iota_n)$.
+
 % TODO perfect pairing definition
 \end{definition}
 
-\begin{theorem} The Hurewicz homomorphism is a natural homomorphism which is compatible with suspension \cite[15.1]{may}, \cite[2.A]{hatcher}.
+Alternatively, note that a map $S^n \to X$ corresponds to a map $\Delta^n \to X$ where $\del\Delta^n \to \ast$. This corresponds to a cycle in $C_n^{sing}(X)$, which yields an element in $\til{H}_n(X)$.
+
+\begin{theorem} The Hurewicz map is a natural homomorphism which is compatible with suspension \cite[15.1]{may}, \cite[2.A]{hatcher}.
 \end{theorem}
 
 \begin{theorem} Any reduced homology theory on CW complexes (equivalently, spaces) satisfying axioms (1)---(4) and (5) the dimension axiom is isomorphic as a homology theory to singular homology.
 \end{theorem}
 \begin{proof}[Proof idea] Suppose  that $X$ is a CW complex, and $H_\ast$ is some given homology theory satisfying all the axioms, including the dimension axiom. Let $C_n(X) = H_n(X^{(n)}, X^{(n-1)}) \cong \til{H}_n(X^{(n)}/X^{(n-1)})$, together with $d : C_n (X) \to C_{n-1}(X)$ defined by the composite
 \begin{align*}
-	H_n(X^{(n)}, X^{(n-1)}) \xto{\del} H_{n-1}(X^{(n-1)}) \to H_{n-1}( X^{(n-1)}, X^{(n-2)}).
+	H_n(X^{(n)}, X^{(n-1)}) \xto{\delta} H_{n-1}(X^{(n-1)}) \to H_{n-1}( X^{(n-1)}, X^{(n-2)}).
 \end{align*}
 We may check that $d\circ d = 0$.
 \end{proof}
 
-\begin{theorem} We have that $C_\ast (X) \cong C_\ast^{cell}(X)$ as chain complexes.
+\begin{theorem} There is an isomorphism $C_\ast (X) \cong C_\ast^{cell}(X)$ of chain complexes.
 \end{theorem}
-We see $C_n(X) \cong C_n^{cell}(X)$ by additivity since $X^{(n)}/X^{(n-1)} \simeq \wedge S^n$, where the wedge is taken over the $n$-cells of $X$. To reconcile the differentials between these chain complexes, we need the Hurewicz homomorphism \cite[15.2]{may}.
+We see $C_n(X) \cong C_n^{cell}(X)$ by additivity since $X^{(n)}/X^{(n-1)} \simeq \bigvee S^n$, where the wedge is taken over the $n$-cells of $X$. To reconcile the differentials between these chain complexes, we need the Hurewicz homomorphism \cite[15.2]{may}.
 
 \begin{theorem} We have then that $H_\ast(X,A) \cong H_\ast (C_\ast (X,A))$ (where $C_\ast(X,A):= C_\ast(X)/C_\ast(A)$) such that differentials agree \cite[15.2]{may}.
 \end{theorem}
@@ -3483,7 +3479,7 @@ from the homotopy category of well-based spaces to abelian groups satisfying
 		\til{E}^q(X) \cong \til{E}^{q+1}(\Sigma X)
 	\end{align*}
 
-	\item \textit{additivity}: if $X = \bigwedge_i X_i$, then the maps $X_i \to X$ induce an isomorphism
+	\item \textit{additivity}: if $X = \bigvee_i X_i$, then the maps $X_i \to X$ induce an isomorphism
 	\begin{align*}
 		\til{E}^q(X) \xto{\sim} \prod_i \til{E}^q(X_i)
 	\end{align*}
@@ -3512,7 +3508,7 @@ Similarly as for homology:
 \end{remark}
 
 
-\begin{question}\label{q:cohom-thy} Can we find other cohomology theories? How do we recover singular cohomology? Is there a sequence of spaces $\{P_n\}$ such that $[-,P_n]_\ast$ is a generalized cohomology theory?
+\begin{question}\label{q:cohom-thy} Can we find other cohomology theories? How do we recover singular cohomology? %Is there a sequence of spaces $\{P_n\}$ such that $[-,P_n]_\ast$ is a generalized cohomology theory?
 \end{question}
 
 
@@ -3531,467 +3527,475 @@ This has the following properties
 	\begin{align*}
 		[X/A,Z]_\ast \to [X,Z]_\ast \to [A,Z]_\ast
 	\end{align*}
-	is exact, as we have seen before % todo find link
+	is exact, as we have seen before. % todo find link
 
-	\item \textit{additivity}: for $X = \bigwedge_i X_i$, we have an isomorphism
+	\item \textit{additivity}: for $X = \bigvee_i X_i$, we have an isomorphism
 	\begin{align*}
-		[X,Z]\ast = \left[ \bigwedge_i X_i, Z\right]_\ast \xto{\simeq} \prod_i [X_i, Z]_\ast
+		[X,Z]_\ast = \left[ \bigvee_i X_i, Z\right]_\ast \xto{\simeq} \prod_i [X_i, Z]_\ast
 	\end{align*}
 	by the universal properties of products and coproducts.
 \end{itemize}
 
-This satisfies all the axioms of a cohomology theory except the suspension axiom. In order to build a cohomology theory from $[-,Z]_\ast$, we will need to check when this last axiom holds. We will also need to verify that $[X,Z]_\ast$ is a group, rather than just a set. Recall that we have a natural isomorphism
-\begin{align*}
-	[\Sigma X, Y]_\ast \cong [X, \Omega Y]_\ast.
-\end{align*}
-
-\begin{definition} An \textit{$H$-space (Hopf space)}\index[ind]{$H$-space} is a topological space $X$ equipped with a ``multiplication map''
-\begin{align*}
-	\mu: X\times X \to X,
-\end{align*}
-and a two sided identity $e\in X$. Alternatively, we might ask for $\mu(-,e)$ and $\mu(e,-)$ to be homotopic to the identity $\id_X$. This operation is called \textit{homotopy associative} if the diagram commutes up to homotopy:
-\[
-	\begin{tikzcd}
-	X\times X\times X \rar["\mu\times \id" above]\dar["\id\times\mu" left] & X\times X\dar["\mu" right] \\
-	X\times X \rar["\mu" below] & X.
-	\end{tikzcd}
-\]
-The operation is called \textit{homotopy commutative} if the diagram commutes up to homotopy
-\[
-	\begin{tikzcd}
-	X\times X\rar["\mu"]\dar["\text{swap}" left] & X \\
-	X\times X.\ar[ur,"\mu" below right] &
-	\end{tikzcd}
-\]
-\end{definition}
-
-\begin{proposition} The set $[X,Z]_\ast$ has the structure of an abelian monoid if $Z$ is a homotopy associative and commutative $H$-space. This set is furthermore an abelian group if $Z$ is \textit{grouplike}\index[ind]{grouplike space}, that is if the multiplication $\mu$ on $Z$ induces a group structure on $\pi_0(Z)$. We may impose the stronger condition that we have inverses up to homotopy; that is, we have an ``inversion'' map $\chi : Z\to Z$ such that the diagram commutes up to homotopy:
-\[
-	\begin{tikzcd}
-	Z\times Z\rar["\id\times\chi"] & Z\times Z\ar[d,"\mu" right]\\
-	Z\ar[u,"\Delta" left]\rar["\const_{e}" below] & Z.
-	\end{tikzcd}
-\]
-\end{proposition}
-
-\begin{exercise} For any space $Y$, we have that $\Omega Y$ is a grouplike homotopy associative $H$-space, and $\Omega^2 Y$ is a grouplike homotopy associative and commutative $H$-space.
-\end{exercise}
-
-Returning to Question \ref{q:cohom-thy}, we see that it suffices to pick $P_n$ to be $\Omega^2$ of some other space for each $n$, and we also need that $\til{E}^n(X) = \til{E}^{n+1}(\Sigma X)$, that is,
-\begin{align*}
-	[X,P_n]_\ast &\cong [\Sigma X, P_{n+1}]_\ast \cong [X,\Omega P_{n+1}]_\ast.
-\end{align*}
-From this we see it suffices to define $\{P_n\}$ by letting the adjoint maps to the structure maps $P_n \xto{\sim} \Omega P_{n+1}$ be weak equivalences.
-
-\begin{definition} A (pre)spectrum $\{P_n\}$ is called an \textit{$\Omega$-(pre)spectrum}\index[ind]{$\Omega$-spectrum} if the adjoints of the structure maps are weak equivalences.
-\end{definition}
-
-\begin{remark} We have shown that for every $\Omega$-prespectrum $P_\bullet$, the functor
-\begin{align*}
-	h_n : \CW_\ast &\to \Ab \\
-	X &\mapsto [X,P_n]_\ast
-\end{align*}
-defines a generalized cohomology theory.
-\end{remark}
-
-\begin{question} Is every generalized cohomology theory of this form?
-\end{question}
-
-Yes! By Brown representability.
-
-\begin{warn} The homotopy category of spectra and the category of generalized cohomology theories are not equivalent. We can have a non-nullhomotopic map of spectra which induces the zero map on corresponding cohomology theories, see \cite{mo-hyperphantoms}.
-\end{warn}
-
-% TODO hyperphantoms \href{https://mathoverflow.net/questions/117684/are-spectra-really-the-same-as-cohomology-theories}{Overflow post}
-
-\begin{note} Not all (pre)spectra are $\Omega$-spectra. For example, suspension (pre)spectra are not $\Omega$-spectra (in particular $\S$ is not an $\Omega$-spectrum).
-
-But for any (pre)spectrum $P_\bullet$, we may replace $P_n$ by $\colim_k \Omega^k P_{n+k}$, which is an $\Omega$-(pre)spectrum. We define the cohomology theory
-\begin{align*}
-	h^n(X):= \left[X, \colim_k \Omega^k P_{n+k}\right]_\ast.
-\end{align*}
-\end{note}
-
-\begin{example} Bott periodicity, in complex $K$-theory, is the result that $\BU \simeq \Omega^2 \BU$. Thus we define an $\Omega$-(pre)spectrum $\BU_\bullet = \{\BU, \Omega \BU, \BU, \Omega \BU,\ldots\}$, which yields a cohomology theory, called complex topological $K$-theory.
-\end{example}
-
-% Lecture 16: March 26th
-\textbf{Plan}: For an abelian group $\pi$, we want to define spaces $K(\pi,n)$ such that
-\[
-    \pi_q(K(\pi,n)) = \begin{cases} \pi & q=n \\ 0 & \text{otherwise}. \end{cases}
-\]
-
-Let's start with $K(\pi,1)$, which works for all $\pi$ (not necessarily abelian). This is also called the \textit{bar construction}.
-
-\textbf{Idea for the bar construction} We define $BG$ to be the configuration space of $n+1$ points in the unit interval $I$, over all natural numbers $n$ such that
-\begin{align*}
-    0\leq g_0 \leq g_1 \leq \cdots \leq g_n \leq 1.
-\end{align*}
-We subject this configuration space to the following relations:
-\begin{itemize}
-    \item if $g_0 = 0$, then we define an equivalence
-\begin{align*}
-    (0=g_0, g_1,\ldots,g_n) \sim (g_1,\ldots, g_n).
-\end{align*}
-
-    \item if $g_n = 1$, we similarly have
-\begin{align*}
-    (g_0,\ldots,g_n=1) \sim (g_0,\ldots,g_{n-1}).
-\end{align*}
-
-    \item if $g_i = e$ is the identity element of $G$, then we say that
-        \begin{align*}
-            (g_0,\ldots,g_{i-1},e,g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-1},g_{i+1},\ldots,g_n).
-        \end{align*}
-
-    \item finally, we require that
-    \begin{align*}
-    (g_0,\ldots,g_{i-1},g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-2}, g_{i-1}\cdot g_i, g_{i+1},\ldots, g_n).
-    \end{align*}
-\end{itemize}
-
-
-
-\ifx
-We want configurations of points in $I$, labeled by elements in $G$, such that
-    \begin{itemize}
-        \item when points collide, labels combine using multiplication in $G$
-        \item points can slide off to infinity.
-    \end{itemize}
-\end{customenvironment}
-
-That is, subdivisions of the unit interval, where $t_i$ denotes some small length, $g_i \in G$ is a group element, and we have that $\sum_i t_i = 1$:
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|}
-    $t_0$ & $t_1$ & $t_2$ & $\cdots$ & $t_n$ \\
-    \hline
-    $g_0$ & $g_1$ & $g_2$ & $\cdots$ & $g_n$ \\
-\end{tabular}
-\end{center}
-This is subject to the following identifications:
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $0$ & $t_i$ & $\cdots$ & $t_{n-1}$ \\
-    \hline
-    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_i$ & $g_{i+1}$ & $\cdots$ & $g_n$
-\end{tabular} $\ \sim\ $
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i$ & $\cdots$ & $t_{n-1}$ \\
-    \hline
-    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_i g_{i+1}$ & $\cdots$ & $g_n$
-\end{tabular},
-\end{center}
-and
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-    $0$ & $t_0$ & $t_1$ & $\cdots$ & $t_{n-1}$ \\
-    \hline
-    $g_0$ & $g_1$ & $g_2$ & $\cdots$ & $g_n$
-\end{tabular} $\ \sim\ $
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-    $t_0$ & $t_1$ & $t_2$ & $\cdots$ & $t_{n-1}$ \\
-    \hline
-    $g_1$ & $g_2$ & $g_3$ & $\cdots$ & $g_n$
-\end{tabular},
-\end{center}
-and similarly if 0 is at the end, and finally that we are allowed to concatenate lengths by multiplication by the identity in the group:
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i$ & $t_{i+1}$ & $\cdots$ & $t_{n}$ \\
-    \hline
-    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $e$ & $g_{i+1}$ & $\cdots$ & $g_n$
-\end{tabular} $\ \sim\ $
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i + t_{i+1}$ & $\cdots$ & $t_{n}$ \\
-    \hline
-    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_{i+1}$ & $\cdots$ & $g_n$
-\end{tabular}
-\end{center}
-
-
-
-Observe that $BG = \coprod_{n=0}^\infty G^n \times \Delta^n / \sim$. %TODO clean this up
-\fi
-
-
-Let $\DDelta$ denote the category whose objects are finite nonempty totally ordered sets $[n] = \{0<1< \cdots < n\}$, and morphisms are order preserving functions.
-
-\begin{definition} A \textit{simplicial set}\index[ind]{simplicial set} is a contravariant functor $\DDelta \to \Set$, that is, a functor $\DDelta^\op \to \Set$. A morphism of simplicial sets is a natural transformation of these functors.This gives us a category, denoted $\sSet$.
-\end{definition}
-
-\begin{remark} We may define a simplicial object in any category $\mathscr{C}$ as a functor
-    \[
-        \DDelta^\op \to \mathscr{C}.
-    \]
-\end{remark}
-
-\begin{note} The category $\DDelta$ has a generating set of morphisms. For all $n\ge 0$,
-\begin{itemize}
-    \item there exist $n+1$ injections $d^i : [n-1] \to [n]$ for $0\leq i\leq n$, which ``skips'' $i$, that is,
-        \[
-            d^i(k) = \begin{cases} k & k<i \\ k+1 & k\geq i, \end{cases}
-        \]
-        called the \textit{coface maps}. %TODO check
-\end{itemize}
-There exist $n+1$ surjections $s^j : [n+1] \to [n]$ for $0\leq j\leq n$, which ``repeat'' $j$, that is,
-
-\[
-    s^j(k) = \begin{cases} k & k\leq j \\ k-1 & k>j \end{cases}
-\]
-\end{note}
-
-\begin{remark} These satisfy
-    \begin{align*}
-        d^j d^i &= d^i d^{j-1} \quad\text{for } i<j \\
-        s^j s^i &= s^i s^{j+1} \quad\text{for }  i\leq j \\
-        s^j d^i &= \begin{cases} \id & \text{for } i=j,\ i=j+1 \\ d^i s^{j+1} &\text{for } i<j \\ d^{i-1} s^j &\text{for } i>j+1. \end{cases}
-    \end{align*}
-\end{remark}
-Moreover, every morphism in $\DDelta$ can be written as a composite of $s^i$'s and $d^j$'s.
-
-For $X\in \sSet$, we obtain a set $X_n$ for all $n\geq 0$, and we have maps $d_i := X(d^i) : X_n \to X_{n-1}$ for $0\leq i\leq n$, called \textit{face maps}, and we have maps $s_j = X(s^j):X_n \to X_{n+1}$ for $0\leq j\leq n$, called \textit{degeneracy maps}, which satisfy relations dual to those above.
-
-\begin{definition} A simplicial set $X_\dot$ may be defined alternatively as a collection of sets $X_0,X_1,\ldots$ together with functions $d_i: X_n \to X_{n-1}$ and $s^j: X_n \to X_{n+1}$ satisfying the relations:
-\begin{align*}
-    d_i d_j &= d_{j-1} d_i \quad \text{for } i<j \\
-    s_i s_j &= s_{j+1} s_i \quad \text{for } i\leq j \\
-    d_i s_j &= \begin{cases} \id & \text{for } i=j,\ i=j+1 \\ s_{j-1}d_i & \text{for } i<j \\ s_j d_{i-1} & \text{for } i>j+1. \end{cases}
-\end{align*}
-\end{definition}
-
-A map of simplicial sets $f_\dot : X_\dot \to Y_\dot$ is a collection of functions $f_n : X_n \to Y_n$ that commute with the face and degeneracy maps.
-
- For a nice introduction to simplicial sets, see \cite{friedman4221elementary} or \cite{riehl-sset}. A more in-depth treatment of simplicial homotopy theory is given in \cite{goerss-jardine}.
-
-
-\begin{example} The singular complex of a space $X$. We first define the topological $n$-simplex as
-    \[
-        \Delta^n := \{(t_0, \ldots, t_n) \in \R^{n+1} \ : 0\leq t_i\leq 1,\ \sum_{i=0}^n t_i = 1\}.
-    \]
-
-    Note that we have canonical maps for $0\leq i\leq n$
-    \begin{align*}
-        \sigma_j : \Delta^{n} &\to \Delta^{n+1} \\
-        (t_0,\ldots,t_n) &\mapsto (t_0,\ldots,t_{i-1},0,t_i,\ldots,t_n).
-    \end{align*}
-    Which we may think about as viewing an $(n-1)$-simplex as a degenerate $n$-simplex, and we have another map for $0\leq i\leq n$
-    \begin{align*}
-        \delta_i : \Delta^{n} &\to \Delta^{n-1} \\
-        (t_0,\ldots,t_{n}) &\mapsto (t_0,\ldots,t_{i-1}, t_i + t_{i+1},\ldots,t_{n}),
-    \end{align*}
-    which we think of as projecting onto the $(n-1)$-simplex orthogonal to the $i$th face.
-\end{example}
-
-\begin{definition} Let $X$ be a topological space. Then $\Sing(X)$ is the simplicial set with $n$-simplices $\Sing(X)_n = \Top(\Delta^n, X)$ to be the set of continuous maps $\Delta^n \xto{f} X$. This comes with face and degeneracy maps given by
-\begin{align*}
-    d_i : \Top(\Delta^{n}, X) &\to \Top(\Delta^{n-1}, X) \\
-    (\Delta^{n} \xto{f} X) &\mapsto (\Delta^{n-1} \xto{\sigma_i} \Delta^{n} \xto{f} X),
-\end{align*}
-and
-\begin{align*}
-    s_j : \Top(\Delta^{n}, X) &\to \Top(\Delta^{n+1}, X) \\
-    (\Delta^{n} \xto{f} X) &\mapsto (\Delta^{n+1} \xto{\delta_j} \Delta^{n} \xto{f} X).
-\end{align*}
-\end{definition}
-
-\begin{remark} This functor is used to define singular homology:
-\begin{align*}
-    H_n(-,\Z) : \Top \xto{\Sing(-)} \sSet \xto{F} \sAb \to \Ch_\Z,
-\end{align*}
-where $F$ takes a free abelian group on each $X_n$, and we have that $\delta:= \sum (-1)^i d_i$ in $\Ch_\Z$.
-\end{remark}
-
-\begin{definition} Let $\mathscr{C}$ be a small category. The \textit{nerve of $\mathscr{C}$}\index[ind]{nerve of a category}, denoted $N\mathscr{C}$ is the simplicial set with
-\begin{align*}
-    (N\mathscr{C})_0 &= \ob\mathscr{C} \\
-    (N\mathscr{C})_1 &= \mor \mathscr{C} \\
-                     &\vdots \\
-    (N\mathscr{C})_n &= \{\text{strings of $n$-composable morphisms}\}.
-\end{align*}
-We have degeneracy maps $s_j : (N\mathscr{C})_n \to (N\mathscr{C})_{n+1}$ inserting an identity at the $j$th slot,and we get face maps $d_i : (N\mathscr{C})_n \to (N\mathscr{C})_{n-1}$ which, for $0\leq i\leq n-1$, composes the $i$ and $i+1$st morphism, and $d_n$ omits the last maps, respectively.
-\end{definition}
-
-\begin{obs} If we have a group $G$, it is a category with one object, and composition is given by the group multiplication. Its nerve has $(NG)_n = G^n$, whose face maps $d_i : G \to G^{n-1}$ are given by multiplication at slot $i$, for $0<i<n$, and for $d_0$ and $d_n$ forget the $0$th and $n$th entry, respectively. The degeneracy maps $s_i$ insert the identity $e$ at slot $i$.\todo{We should be consistent in $d_i$, $s_j$, etc. I think this is a common thing in the literature to use different indexing notation.}
-
-\end{obs}
-
-% Lecture 17: March 28th
-
-
-\begin{example} If $X$ is a right $G$-space, and $Y$ is a left $G$-space, we define the simplicial set $B_\dot (X,G,Y)$ with
-\[
-    B_n(X,G,Y) := X \times G^n \times Y,
-\]
-and face and degeneracy maps
-\begin{align*}
-    d_i(x,g_0,\ldots,g_{n-1},y) &= \begin{cases} (x,g_1,\ldots,g_i\cdot g_{i+1},\ldots, g_{n-1},y) & 0<i<n \\
-    (x\cdot g_0, g_1,\ldots,g_{n-1},y) & i=0 \\
-    (x,g_0,\ldots,g_{n-2}, g_{n-1}\cdot y) & i=n,\end{cases} \\
-    s_i(x,g_0,\ldots,g_{n-1},y) &= (x,g_0,\ldots,g_{i-1},e,g_i,\ldots,g_{n-1},y).
-\end{align*}
-The previous example $BG$ is just $B(\ast, G, \ast)$.
-\end{example}
-
-\subsection{Geometric realization}
-\begin{definition} Let $X_\dot$ be a simplicial set. Then its \textit{geometric realization}\index[ind]{geometric realization} is given by
-\begin{align*}
-    |X_\dot| := \coprod_{n\ge 0} X_n \times \Delta^n \Big/\sim,
-\end{align*}
-where the equivalence relation is given by
-\begin{align*}
-    (x, \delta_i u) &\sim (d_i x, u) \quad \quad x\in X_n,\ u\in \Delta^{n-1},\\
-    (y,\sigma_i v) &\sim (s_i y, v) \quad \quad y\in X_{n-1},\ v\in \Delta^n,
-\end{align*}
-and whose topology is the quotient topology.
-\end{definition}
-
-\textbf{Intuition} Out of this simplicial set $X_\dot$, we woudl like to build a topological space which records the combinatorial data of the simplicial set in a topological way. More specifically, we will build a CW complex whose 0-cells are precisely $X_0$, and whose higher cells are non-degenerate simplices, that is, our $n$-cells should not arise as the degeneracy of some lower-dimensional information.
-
-
-\begin{definition} An $n$-simplex is called \textit{nondegenerate}\index[ind]{simplex!nondegenerate} if it cannot be written as $s_i y$ for any $y\in X_{n-1}$ for any $i$.
-\end{definition}
-
-\begin{note} We have that $|-|: \sSet \to \Top$ is a functor.
-\end{note}
-
-\begin{example} The space $|\Sing(X)|$ is huge, and comes equipped with a map
-    \begin{align*}
-        \gamma : |\Sing(X)| &\to X \\
-       \left[ \Delta^n \xto{f} X,\ u\in \Delta^n \right] &\mapsto f(u).
-    \end{align*}
-\end{example}
-
- \todo{cite Milnor's original paper}
-
-\begin{theorem}[{\cite{Milnor}, \cite[16.2]{May}}] This morphism $\gamma$ is a weak equivalence. Moreover, $|\Sing(X)|$ is a CW complex with one $n$-cell for each nondegenerate $n$-simplex of $X$.
-\end{theorem}
-
-\begin{note} The map $\gamma$ is a natural transformation $|\Sing(-)| \Rightarrow \id_{\Top}$.
-\end{note}
-
-
-\begin{proposition} If $z$ is a degenerate simplex, that is, $z = s_i x$ for some $x_i$ and some (possibly nondegenerate) $x$, then there is a unique nondegenerate simplex $y$ such that
-\begin{align*}
-    z = s_{i_1} \cdots s_{i_k} = y,
-\end{align*}
-for some $s_{i_1} \ldots s_{i_k}$.
-\end{proposition}
-
-\begin{theorem} The functors $|-|$ and $\Sing(-)$ are adjoints. That is, for $X\in \sSet$ and $Y\in \Top$, there is a natural isomorphism
-\begin{align*}
-    \Hom_\Top (|X|,Y) \cong \Hom_\sSet (X, \Sing(Y)).
-\end{align*}
-\end{theorem}
-
-\begin{proof}[Proof idea] We define a map
-\begin{align*}
-    \phi : \Hom_\sSet (X, \Sing(Y)) \to \Hom_\Top (|X|, Y),
-\end{align*}
-by taking a morphism of simplicial sets $X\xto{f} \Sing(Y)$ .... \todo{finish this proof}
-
-\end{proof}
-
-
-\begin{examples} $\ $
-\begin{enumerate}
-    \item the \textit{classifying space}\index[ind]{classifying space} of a small category $\mathscr{C}$, denoted $B\mathscr{C}$, is defined by
-    \begin{align*}
-        B\mathscr{C} := |N \mathscr{C}|.
-    \end{align*}
-
-    \item we have that $B(X,G,Y):= |B_\dot (X,G,Y)|$.
-
-    \item the space $BG$ is a particular example of both of the above examples;
-        \begin{itemize}
-            \item $G$ is a category with one object
-            \item $G = B(\ast, G,\ast)$.
-        \end{itemize}
-\end{enumerate}
-\end{examples}
-
-\begin{example} The classifying space of the single object category, that is, the trivial group $\{e\}$, is the topological space with a single point.
-\end{example}
-
-
-\begin{exercise} We have that $B(\Z\big/2) \cong \RP^\infty$.
-\end{exercise}
-
-\begin{exercise} If we have a category $\dot \to \dot$, its classifying space is the unit interval $I=[0,1]$.
-\end{exercise}
-
-\begin{definition} We define the space $EG$ to be the geometric realization of the simplicial set $E_\dot G$, defined by
-\begin{align*}
-    E_n G := G^{n+1},
-\end{align*}
-with face and maps defined by
-\begin{align*}
-    d_i(g_1,\ldots,g_{n+1}) &= \begin{cases} (g_2,\ldots,g_{n+1}) & i=0 \\ (g_1,\ldots,g_{i-1}, g_i\cdot g_{i+1},\ldots,g_{n+1}) & 1\leq i\leq n, \end{cases} \\
-    s_j(g_1,\ldots,g_{n+1}) &= (g_1,\ldots,g_{i-1},e, g_i,\ldots,g_{n+1}), \quad 0\leq i\leq n.
-\end{align*}
-\end{definition}
-
-We note that this simplicial set is just $B(\ast, G, G)$. We obtain a map of simplicial sets
-\begin{align*}
-    p_n : E_n G \to B_n G,
-\end{align*}
-given by projection on the first $n$ coordinates. This commutes with face and degeneracy maps (check). Therefore by functoriality, we get a continuous map
-\begin{align*}
-    p : EG \to BG.
-\end{align*}
-
-Let $G$ act on $E_n G$ on the right:
-\[
-    (g_1,\ldots,g_{n+1})\cdot g:= (g_1,\ldots,g_n, g_{n+1}\cdot g),
-\]
-then $E_\dot G$ is a simplicial $G$-set, and the $G$-action commutes with the face and degeneracy maps, so $EG$ is a $G$-space. We note also that modding by this action, we obtain $E_n G/G = B_n G$. We claim that this quotient passes to the geometric relation (since colimits commute), thus $BG = EG/G$.
-
-\begin{theorem}[{\cite[16]{May}}] We have that $p: EG \to BG$ is a bundle with fiber $G$. Moreover, every principal $G$-bundle is a pullback of the form
-\[
-    \begin{tikzcd}
-        E\rar\dar\pb & EG\dar["p" right] \\
-    X\rar & BG.
-    \end{tikzcd}
-\]
-That is, $EG\to BG$ is the \textit{universal principal $G$-bundle}.
-\end{theorem}
-
-\begin{exercise} We have that $EG\simeq \ast$ is contractible. Thus by the long exact sequence, we see that
-\begin{align*}
-    \pi_{q+1}(BG) \cong \pi_q(G).
-\end{align*}
-This holds for any topological group. In particular, for $G$ discrete, we have that
-\begin{align*}
-    \pi_1(BG) &\cong \pi_0(G) = G,\\
-    \pi_n(BG) &\cong 0,
-\end{align*}
-for any $n \neq 1$. Thus $BG = K(G,1)$.
-\end{exercise}
-
-\begin{theorem}[Milnor] We have that $|-|: \sSet \to \Top$ preserves products, that is,
-\begin{align*}
-    |X_\dot \times Y_\dot| \cong |X_\dot| \times |Y_\dot|.
-\end{align*}
-\end{theorem}
-
-As a corollary, we see that $B(G\times H) \cong BG \times BH$. That is, the functor $B:\Top\Grp \to \Top$ preserves products. When $G$ is abelian, the multiplication map $\mu: G\times G \to G$ is abelian, thus $BG$ becomes a topological group.\footnote{Since $B: \Top\Grp \to \Top$ preserves products and the terminal object, it sends group objects to group objects, that is, topological abelian groups to topological groups.}
-
-Thus for $G$ abelian, we may iterate this construction to define $B^n G := B(B^{n-1} G)$. Moreover for $G$ discrete and abelian, we see that
-\begin{align*}
-    \pi_q(B^n G) = \pi_{q-n}(G) =  \begin{cases} G & q=n \\ 0 & \text{otherwise}. \end{cases}
-\end{align*}
-
-Therefore $K(G,n) = B^n G$.
-
-
-
-
-
+We have seen that this assignment satisfies all the axioms of a cohomology theory except the suspension axiom. 
+
+We can now reformulate \autoref{q:cohom-thy} a little more precisely.
+\begin{question}\label{q:cohom-thy2} For what sequences of spaces $\{P_n\}$ are the functors $[-,P_n]_\ast$  a generalized cohomology theory?\end{question}
+
+
+TO BE CONTINUED...
+
+%In order to build a cohomology theory from $[-,P_n]_\ast$, we will need to check when the suspension axiom holds. We will also need to verify that $[X,P_n]_\ast$ is a group, rather than just a set. Recall that we have a natural isomorphism
+%\begin{align*}
+%	[\Sigma X, Y]_\ast \cong [X, \Omega Y]_\ast.
+%\end{align*}
+%
+%\begin{definition} An \textit{$H$-space (Hopf space)}\index[ind]{$H$-space} is a topological space $X$ equipped with a ``multiplication map''
+%\begin{align*}
+%	\mu: X\times X \to X,
+%\end{align*}
+%and a two sided identity $e\in X$. Alternatively, we might ask for $\mu(-,e)$ and $\mu(e,-)$ to be homotopic to the identity $\id_X$. This operation is called \textit{homotopy associative} if the diagram commutes up to homotopy:
+%\[
+%	\begin{tikzcd}
+%	X\times X\times X \rar["\mu\times \id" above]\dar["\id\times\mu" left] & X\times X\dar["\mu" right] \\
+%	X\times X \rar["\mu" below] & X.
+%	\end{tikzcd}
+%\]
+%The operation is called \textit{homotopy commutative} if the diagram commutes up to homotopy
+%\[
+%	\begin{tikzcd}
+%	X\times X\rar["\mu"]\dar["\text{swap}" left] & X \\
+%	X\times X.\ar[ur,"\mu" below right] &
+%	\end{tikzcd}
+%\]
+%\end{definition}
+%
+%\begin{proposition} The set $[X,Z]_\ast$ has the structure of an abelian monoid if $Z$ is a homotopy associative and commutative $H$-space. This set is furthermore an abelian group if $Z$ is \textit{grouplike}\index[ind]{grouplike space}, that is if the multiplication $\mu$ on $Z$ induces a group structure on $\pi_0(Z)$. We may impose the stronger condition that we have inverses up to homotopy; that is, we have an ``inversion'' map $\chi : Z\to Z$ such that the diagram commutes up to homotopy:
+%\[
+%	\begin{tikzcd}
+%	Z\times Z\rar["\id\times\chi"] & Z\times Z\ar[d,"\mu" right]\\
+%	Z\ar[u,"\Delta" left]\rar["\const_{e}" below] & Z.
+%	\end{tikzcd}
+%\]
+%\end{proposition}
+%
+%\begin{exercise} For any space $Y$, we have that $\Omega Y$ is a grouplike homotopy associative $H$-space, and $\Omega^2 Y$ is a grouplike homotopy associative and commutative $H$-space.
+%\end{exercise}
+%
+%Returning to Question \ref{q:cohom-thy}, we see that it suffices to pick $P_n$ to be $\Omega^2$ of some other space for each $n$, and we also need that $\til{E}^n(X) = \til{E}^{n+1}(\Sigma X)$, that is,
+%\begin{align*}
+%	[X,P_n]_\ast &\cong [\Sigma X, P_{n+1}]_\ast \cong [X,\Omega P_{n+1}]_\ast.
+%\end{align*}
+%From this we see it suffices to define $\{P_n\}$ by letting the adjoint maps to the structure maps $P_n \xto{\sim} \Omega P_{n+1}$ be weak equivalences.
+%
+%\begin{definition} A (pre)spectrum $\{P_n\}$ is called an \textit{$\Omega$-(pre)spectrum}\index[ind]{$\Omega$-spectrum} if the adjoints of the structure maps are weak equivalences.
+%\end{definition}
+%
+%\begin{remark} We have shown that for every $\Omega$-prespectrum $P$, the functor
+%\begin{align*}
+%	h_n : \CW_\ast &\to \Ab \\
+%	X &\mapsto [X,P_n]_\ast
+%\end{align*}
+%defines a generalized cohomology theory.
+%\end{remark}
+%
+%\begin{question} Is every generalized cohomology theory of this form?
+%\end{question}
+%
+%Yes! By Brown representability.
+%
+%\begin{warn} The homotopy category of spectra and the category of generalized cohomology theories are not equivalent. We can have a non-nullhomotopic map of spectra which induces the zero map on corresponding cohomology theories, see \cite{mo-hyperphantoms}.
+%\end{warn}
+%
+%% TODO hyperphantoms \href{https://mathoverflow.net/questions/117684/are-spectra-really-the-same-as-cohomology-theories}{Overflow post}
+%
+%\begin{note} Not all (pre)spectra are $\Omega$-spectra. For example, suspension (pre)spectra are not $\Omega$-spectra (in particular $\S$ is not an $\Omega$-spectrum).
+%
+%But for any (pre)spectrum $P_\bullet$, we may replace $P_n$ by $\colim_k \Omega^k P_{n+k}$, which is an $\Omega$-(pre)spectrum. We define the cohomology theory
+%\begin{align*}
+%	h^n(X):= \left[X, \colim_k \Omega^k P_{n+k}\right]_\ast.
+%\end{align*}
+%\end{note}
+%
+%\begin{example} Bott periodicity, in complex $K$-theory, is the result that $\BU \simeq \Omega^2 \BU$. Thus we define an $\Omega$-(pre)spectrum ${\bf \BU} = \{\BU, \Omega \BU, \BU, \Omega \BU,\ldots\}$, which yields a cohomology theory, called complex topological $K$-theory.
+%\end{example}
+%
+%% Lecture 16: March 26th
+%\textbf{Plan}: For an abelian group $\pi$, we want to define spaces $K(\pi,n)$ such that
+%\[
+%    \pi_q(K(\pi,n)) = \begin{cases} \pi & q=n \\ 0 & \text{otherwise}. \end{cases}
+%\]
+%
+%Let's start with $K(\pi,1)$, which works for all $\pi$ (not necessarily abelian). This is also called the \textit{bar construction}.
+%
+%\textbf{Idea for the bar construction} We define $BG$ to be the configuration space of $n+1$ points in the unit interval $I$, over all natural numbers $n$ such that
+%\begin{align*}
+%    0\leq g_0 \leq g_1 \leq \cdots \leq g_n \leq 1.
+%\end{align*}
+%We subject this configuration space to the following relations:
+%\begin{itemize}
+%    \item if $g_0 = 0$, then we define an equivalence
+%\begin{align*}
+%    (0=g_0, g_1,\ldots,g_n) \sim (g_1,\ldots, g_n).
+%\end{align*}
+%
+%    \item if $g_n = 1$, we similarly have
+%\begin{align*}
+%    (g_0,\ldots,g_n=1) \sim (g_0,\ldots,g_{n-1}).
+%\end{align*}
+%
+%    \item if $g_i = e$ is the identity element of $G$, then we say that
+%        \begin{align*}
+%            (g_0,\ldots,g_{i-1},e,g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-1},g_{i+1},\ldots,g_n).
+%        \end{align*}
+%
+%    \item finally, we require that
+%    \begin{align*}
+%    (g_0,\ldots,g_{i-1},g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-2}, g_{i-1}\cdot g_i, g_{i+1},\ldots, g_n).
+%    \end{align*}
+%\end{itemize}
+%
+%
+%
+%\ifx
+%We want configurations of points in $I$, labeled by elements in $G$, such that
+%    \begin{itemize}
+%        \item when points collide, labels combine using multiplication in $G$
+%        \item points can slide off to infinity.
+%    \end{itemize}
+%\end{customenvironment}
+%
+%That is, subdivisions of the unit interval, where $t_i$ denotes some small length, $g_i \in G$ is a group element, and we have that $\sum_i t_i = 1$:
+%\begin{center}
+%\begin{tabular}{|c|c|c|c|c|}
+%    $t_0$ & $t_1$ & $t_2$ & $\cdots$ & $t_n$ \\
+%    \hline
+%    $g_0$ & $g_1$ & $g_2$ & $\cdots$ & $g_n$ \\
+%\end{tabular}
+%\end{center}
+%This is subject to the following identifications:
+%\begin{center}
+%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+%    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $0$ & $t_i$ & $\cdots$ & $t_{n-1}$ \\
+%    \hline
+%    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_i$ & $g_{i+1}$ & $\cdots$ & $g_n$
+%\end{tabular} $\ \sim\ $
+%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+%    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i$ & $\cdots$ & $t_{n-1}$ \\
+%    \hline
+%    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_i g_{i+1}$ & $\cdots$ & $g_n$
+%\end{tabular},
+%\end{center}
+%and
+%\begin{center}
+%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+%    $0$ & $t_0$ & $t_1$ & $\cdots$ & $t_{n-1}$ \\
+%    \hline
+%    $g_0$ & $g_1$ & $g_2$ & $\cdots$ & $g_n$
+%\end{tabular} $\ \sim\ $
+%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+%    $t_0$ & $t_1$ & $t_2$ & $\cdots$ & $t_{n-1}$ \\
+%    \hline
+%    $g_1$ & $g_2$ & $g_3$ & $\cdots$ & $g_n$
+%\end{tabular},
+%\end{center}
+%and similarly if 0 is at the end, and finally that we are allowed to concatenate lengths by multiplication by the identity in the group:
+%\begin{center}
+%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+%    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i$ & $t_{i+1}$ & $\cdots$ & $t_{n}$ \\
+%    \hline
+%    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $e$ & $g_{i+1}$ & $\cdots$ & $g_n$
+%\end{tabular} $\ \sim\ $
+%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+%    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i + t_{i+1}$ & $\cdots$ & $t_{n}$ \\
+%    \hline
+%    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_{i+1}$ & $\cdots$ & $g_n$
+%\end{tabular}
+%\end{center}
+%
+%
+%
+%Observe that $BG = \coprod_{n=0}^\infty G^n \times \Delta^n / \sim$. %TODO clean this up
+%\fi
+%
+%
+%Let $\DDelta$ denote the category whose objects are finite nonempty totally ordered sets $[n] = \{0<1< \cdots < n\}$, and morphisms are order preserving functions.
+%
+%\begin{definition} A \textit{simplicial set}\index[ind]{simplicial set} is a contravariant functor $\DDelta \to \Set$, that is, a functor $\DDelta^\op \to \Set$. A morphism of simplicial sets is a natural transformation of these functors.This gives us a category, denoted $\sSet$.
+%\end{definition}
+%
+%\begin{remark} We may define a simplicial object in any category $\mathscr{C}$ as a functor
+%    \[
+%        \DDelta^\op \to \mathscr{C}.
+%    \]
+%\end{remark}
+%
+%\begin{note} The category $\DDelta$ has a generating set of morphisms. For all $n\ge 0$,
+%\begin{itemize}
+%    \item there exist $n+1$ injections $d^i : [n-1] \to [n]$ for $0\leq i\leq n$, which ``skips'' $i$, that is,
+%        \[
+%            d^i(k) = \begin{cases} k & k<i \\ k+1 & k\geq i, \end{cases}
+%        \]
+%        called the \textit{coface maps}. %TODO check
+%\end{itemize}
+%There exist $n+1$ surjections $s^j : [n+1] \to [n]$ for $0\leq j\leq n$, which ``repeat'' $j$, that is,
+%
+%\[
+%    s^j(k) = \begin{cases} k & k\leq j \\ k-1 & k>j \end{cases}
+%\]
+%\end{note}
+%
+%\begin{remark} These satisfy
+%    \begin{align*}
+%        d^j d^i &= d^i d^{j-1} \quad\text{for } i<j \\
+%        s^j s^i &= s^i s^{j+1} \quad\text{for }  i\leq j \\
+%        s^j d^i &= \begin{cases} \id & \text{for } i=j,\ i=j+1 \\ d^i s^{j+1} &\text{for } i<j \\ d^{i-1} s^j &\text{for } i>j+1. \end{cases}
+%    \end{align*}
+%\end{remark}
+%Moreover, every morphism in $\DDelta$ can be written as a composite of $s^i$'s and $d^j$'s.
+%
+%For $X\in \sSet$, we obtain a set $X_n$ for all $n\geq 0$, and we have maps $d_i := X(d^i) : X_n \to X_{n-1}$ for $0\leq i\leq n$, called \textit{face maps}, and we have maps $s_j = X(s^j):X_n \to X_{n+1}$ for $0\leq j\leq n$, called \textit{degeneracy maps}, which satisfy relations dual to those above.
+%
+%\begin{definition} A simplicial set $X_\dot$ may be defined alternatively as a collection of sets $X_0,X_1,\ldots$ together with functions $d_i: X_n \to X_{n-1}$ and $s^j: X_n \to X_{n+1}$ satisfying the relations:
+%\begin{align*}
+%    d_i d_j &= d_{j-1} d_i \quad \text{for } i<j \\
+%    s_i s_j &= s_{j+1} s_i \quad \text{for } i\leq j \\
+%    d_i s_j &= \begin{cases} \id & \text{for } i=j,\ i=j+1 \\ s_{j-1}d_i & \text{for } i<j \\ s_j d_{i-1} & \text{for } i>j+1. \end{cases}
+%\end{align*}
+%\end{definition}
+%
+%A map of simplicial sets $f_\dot : X_\dot \to Y_\dot$ is a collection of functions $f_n : X_n \to Y_n$ that commute with the face and degeneracy maps.
+%
+% For a nice introduction to simplicial sets, see \cite{friedman4221elementary} or \cite{riehl-sset}. A more in-depth treatment of simplicial homotopy theory is given in \cite{goerss-jardine}.
+%
+%
+%\begin{example} The singular complex of a space $X$. We first define the topological $n$-simplex as
+%    \[
+%        \Delta^n := \{(t_0, \ldots, t_n) \in \R^{n+1} \ : 0\leq t_i\leq 1,\ \sum_{i=0}^n t_i = 1\}.
+%    \]
+%
+%    Note that we have canonical maps for $0\leq i\leq n$
+%    \begin{align*}
+%        \sigma_j : \Delta^{n} &\to \Delta^{n+1} \\
+%        (t_0,\ldots,t_n) &\mapsto (t_0,\ldots,t_{i-1},0,t_i,\ldots,t_n).
+%    \end{align*}
+%    Which we may think about as viewing an $(n-1)$-simplex as a degenerate $n$-simplex, and we have another map for $0\leq i\leq n$
+%    \begin{align*}
+%        \delta_i : \Delta^{n} &\to \Delta^{n-1} \\
+%        (t_0,\ldots,t_{n}) &\mapsto (t_0,\ldots,t_{i-1}, t_i + t_{i+1},\ldots,t_{n}),
+%    \end{align*}
+%    which we think of as projecting onto the $(n-1)$-simplex orthogonal to the $i$th face.
+%\end{example}
+%
+%\begin{definition} Let $X$ be a topological space. Then $\Sing(X)$ is the simplicial set with $n$-simplices $\Sing(X)_n = \Top(\Delta^n, X)$ to be the set of continuous maps $\Delta^n \xto{f} X$. This comes with face and degeneracy maps given by
+%\begin{align*}
+%    d_i : \Top(\Delta^{n}, X) &\to \Top(\Delta^{n-1}, X) \\
+%    (\Delta^{n} \xto{f} X) &\mapsto (\Delta^{n-1} \xto{\sigma_i} \Delta^{n} \xto{f} X),
+%\end{align*}
+%and
+%\begin{align*}
+%    s_j : \Top(\Delta^{n}, X) &\to \Top(\Delta^{n+1}, X) \\
+%    (\Delta^{n} \xto{f} X) &\mapsto (\Delta^{n+1} \xto{\delta_j} \Delta^{n} \xto{f} X).
+%\end{align*}
+%\end{definition}
+%
+%\begin{remark} This functor is used to define singular homology:
+%\begin{align*}
+%    H_n(-,\Z) : \Top \xto{\Sing(-)} \sSet \xto{F} \sAb \to \Ch_\Z,
+%\end{align*}
+%where $F$ takes a free abelian group on each $X_n$, and we have that $\delta:= \sum (-1)^i d_i$ in $\Ch_\Z$.
+%\end{remark}
+%
+%\begin{definition} Let $\mathscr{C}$ be a small category. The \textit{nerve of $\mathscr{C}$}\index[ind]{nerve of a category}, denoted $N\mathscr{C}$ is the simplicial set with
+%\begin{align*}
+%    (N\mathscr{C})_0 &= \ob\mathscr{C} \\
+%    (N\mathscr{C})_1 &= \mor \mathscr{C} \\
+%                     &\vdots \\
+%    (N\mathscr{C})_n &= \{\text{strings of $n$-composable morphisms}\}.
+%\end{align*}
+%We have degeneracy maps $s_j : (N\mathscr{C})_n \to (N\mathscr{C})_{n+1}$ inserting an identity at the $j$th slot,and we get face maps $d_i : (N\mathscr{C})_n \to (N\mathscr{C})_{n-1}$ which, for $0\leq i\leq n-1$, composes the $i$ and $i+1$st morphism, and $d_n$ omits the last maps, respectively.
+%\end{definition}
+%
+%\begin{obs} If we have a group $G$, it is a category with one object, and composition is given by the group multiplication. Its nerve has $(NG)_n = G^n$, whose face maps $d_i : G \to G^{n-1}$ are given by multiplication at slot $i$, for $0<i<n$, and for $d_0$ and $d_n$ forget the $0$th and $n$th entry, respectively. The degeneracy maps $s_i$ insert the identity $e$ at slot $i$.\todo{We should be consistent in $d_i$, $s_j$, etc. I think this is a common thing in the literature to use different indexing notation.}
+%
+%\end{obs}
+%
+%% Lecture 17: March 28th
+%
+%
+%\begin{example} If $X$ is a right $G$-space, and $Y$ is a left $G$-space, we define the simplicial set $B_\dot (X,G,Y)$ with
+%\[
+%    B_n(X,G,Y) := X \times G^n \times Y,
+%\]
+%and face and degeneracy maps
+%\begin{align*}
+%    d_i(x,g_0,\ldots,g_{n-1},y) &= \begin{cases} (x,g_1,\ldots,g_i\cdot g_{i+1},\ldots, g_{n-1},y) & 0<i<n \\
+%    (x\cdot g_0, g_1,\ldots,g_{n-1},y) & i=0 \\
+%    (x,g_0,\ldots,g_{n-2}, g_{n-1}\cdot y) & i=n,\end{cases} \\
+%    s_i(x,g_0,\ldots,g_{n-1},y) &= (x,g_0,\ldots,g_{i-1},e,g_i,\ldots,g_{n-1},y).
+%\end{align*}
+%The previous example $BG$ is just $B(\ast, G, \ast)$.
+%\end{example}
+%
+%\subsection{Geometric realization}
+%\begin{definition} Let $X_\dot$ be a simplicial set. Then its \textit{geometric realization}\index[ind]{geometric realization} is given by
+%\begin{align*}
+%    |X_\dot| := \coprod_{n\ge 0} X_n \times \Delta^n \Big/\sim,
+%\end{align*}
+%where the equivalence relation is given by
+%\begin{align*}
+%    (x, \delta_i u) &\sim (d_i x, u) \quad \quad x\in X_n,\ u\in \Delta^{n-1},\\
+%    (y,\sigma_i v) &\sim (s_i y, v) \quad \quad y\in X_{n-1},\ v\in \Delta^n,
+%\end{align*}
+%and whose topology is the quotient topology.
+%\end{definition}
+%
+%\textbf{Intuition} Out of this simplicial set $X_\dot$, we woudl like to build a topological space which records the combinatorial data of the simplicial set in a topological way. More specifically, we will build a CW complex whose 0-cells are precisely $X_0$, and whose higher cells are non-degenerate simplices, that is, our $n$-cells should not arise as the degeneracy of some lower-dimensional information.
+%
+%
+%\begin{definition} An $n$-simplex is called \textit{nondegenerate}\index[ind]{simplex!nondegenerate} if it cannot be written as $s_i y$ for any $y\in X_{n-1}$ for any $i$.
+%\end{definition}
+%
+%\begin{note} We have that $|-|: \sSet \to \Top$ is a functor.
+%\end{note}
+%
+%\begin{example} The space $|\Sing(X)|$ is huge, and comes equipped with a map
+%    \begin{align*}
+%        \gamma : |\Sing(X)| &\to X \\
+%       \left[ \Delta^n \xto{f} X,\ u\in \Delta^n \right] &\mapsto f(u).
+%    \end{align*}
+%\end{example}
+%
+% \todo{cite Milnor's original paper}
+%
+%\begin{theorem}[{\cite{Milnor}, \cite[16.2]{May}}] This morphism $\gamma$ is a weak equivalence. Moreover, $|\Sing(X)|$ is a CW complex with one $n$-cell for each nondegenerate $n$-simplex of $X$.
+%\end{theorem}
+%
+%\begin{note} The map $\gamma$ is a natural transformation $|\Sing(-)| \Rightarrow \id_{\Top}$.
+%\end{note}
+%
+%
+%\begin{proposition} If $z$ is a degenerate simplex, that is, $z = s_i x$ for some $x_i$ and some (possibly nondegenerate) $x$, then there is a unique nondegenerate simplex $y$ such that
+%\begin{align*}
+%    z = s_{i_1} \cdots s_{i_k} = y,
+%\end{align*}
+%for some $s_{i_1} \ldots s_{i_k}$.
+%\end{proposition}
+%
+%\begin{theorem} The functors $|-|$ and $\Sing(-)$ are adjoints. That is, for $X\in \sSet$ and $Y\in \Top$, there is a natural isomorphism
+%\begin{align*}
+%    \Hom_\Top (|X|,Y) \cong \Hom_\sSet (X, \Sing(Y)).
+%\end{align*}
+%\end{theorem}
+%
+%\begin{proof}[Proof idea] We define a map
+%\begin{align*}
+%    \phi : \Hom_\sSet (X, \Sing(Y)) \to \Hom_\Top (|X|, Y),
+%\end{align*}
+%by taking a morphism of simplicial sets $X\xto{f} \Sing(Y)$ .... \todo{finish this proof}
+%
+%\end{proof}
+%
+%
+%\begin{examples} $\ $
+%\begin{enumerate}
+%    \item the \textit{classifying space}\index[ind]{classifying space} of a small category $\mathscr{C}$, denoted $B\mathscr{C}$, is defined by
+%    \begin{align*}
+%        B\mathscr{C} := |N \mathscr{C}|.
+%    \end{align*}
+%
+%    \item we have that $B(X,G,Y):= |B_\dot (X,G,Y)|$.
+%
+%    \item the space $BG$ is a particular example of both of the above examples;
+%        \begin{itemize}
+%            \item $G$ is a category with one object
+%            \item $G = B(\ast, G,\ast)$.
+%        \end{itemize}
+%\end{enumerate}
+%\end{examples}
+%
+%\begin{example} The classifying space of the single object category, that is, the trivial group $\{e\}$, is the topological space with a single point.
+%\end{example}
+%
+%
+%\begin{exercise} We have that $B(\Z\big/2) \cong \RP^\infty$.
+%\end{exercise}
+%
+%\begin{exercise} If we have a category $\dot \to \dot$, its classifying space is the unit interval $I=[0,1]$.
+%\end{exercise}
+%
+%\begin{definition} We define the space $EG$ to be the geometric realization of the simplicial set $E_\dot G$, defined by
+%\begin{align*}
+%    E_n G := G^{n+1},
+%\end{align*}
+%with face and maps defined by
+%\begin{align*}
+%    d_i(g_1,\ldots,g_{n+1}) &= \begin{cases} (g_2,\ldots,g_{n+1}) & i=0 \\ (g_1,\ldots,g_{i-1}, g_i\cdot g_{i+1},\ldots,g_{n+1}) & 1\leq i\leq n, \end{cases} \\
+%    s_j(g_1,\ldots,g_{n+1}) &= (g_1,\ldots,g_{i-1},e, g_i,\ldots,g_{n+1}), \quad 0\leq i\leq n.
+%\end{align*}
+%\end{definition}
+%
+%We note that this simplicial set is just $B(\ast, G, G)$. We obtain a map of simplicial sets
+%\begin{align*}
+%    p_n : E_n G \to B_n G,
+%\end{align*}
+%given by projection on the first $n$ coordinates. This commutes with face and degeneracy maps (check). Therefore by functoriality, we get a continuous map
+%\begin{align*}
+%    p : EG \to BG.
+%\end{align*}
+%
+%Let $G$ act on $E_n G$ on the right:
+%\[
+%    (g_1,\ldots,g_{n+1})\cdot g:= (g_1,\ldots,g_n, g_{n+1}\cdot g),
+%\]
+%then $E_\dot G$ is a simplicial $G$-set, and the $G$-action commutes with the face and degeneracy maps, so $EG$ is a $G$-space. We note also that modding by this action, we obtain $E_n G/G = B_n G$. We claim that this quotient passes to the geometric relation (since colimits commute), thus $BG = EG/G$.
+%
+%\begin{theorem}[{\cite[16]{May}}] We have that $p: EG \to BG$ is a bundle with fiber $G$. Moreover, every principal $G$-bundle is a pullback of the form
+%\[
+%    \begin{tikzcd}
+%        E\rar\dar\pb & EG\dar["p" right] \\
+%    X\rar & BG.
+%    \end{tikzcd}
+%\]
+%That is, $EG\to BG$ is the \textit{universal principal $G$-bundle}.
+%\end{theorem}
+%
+%\begin{exercise} We have that $EG\simeq \ast$ is contractible. Thus by the long exact sequence, we see that
+%\begin{align*}
+%    \pi_{q+1}(BG) \cong \pi_q(G).
+%\end{align*}
+%This holds for any topological group. In particular, for $G$ discrete, we have that
+%\begin{align*}
+%    \pi_1(BG) &\cong \pi_0(G) = G,\\
+%    \pi_n(BG) &\cong 0,
+%\end{align*}
+%for any $n \neq 1$. Thus $BG = K(G,1)$.
+%\end{exercise}
+%
+%\begin{theorem}[Milnor] We have that $|-|: \sSet \to \Top$ preserves products, that is,
+%\begin{align*}
+%    |X_\dot \times Y_\dot| \cong |X_\dot| \times |Y_\dot|.
+%\end{align*}
+%\end{theorem}
+%
+%As a corollary, we see that $B(G\times H) \cong BG \times BH$. That is, the functor $B:\Top\Grp \to \Top$ preserves products. When $G$ is abelian, the multiplication map $\mu: G\times G \to G$ is abelian, thus $BG$ becomes a topological group.\footnote{Since $B: \Top\Grp \to \Top$ preserves products and the terminal object, it sends group objects to group objects, that is, topological abelian groups to topological groups.}
+%
+%Thus for $G$ abelian, we may iterate this construction to define $B^n G := B(B^{n-1} G)$. Moreover for $G$ discrete and abelian, we see that
+%\begin{align*}
+%    \pi_q(B^n G) = \pi_{q-n}(G) =  \begin{cases} G & q=n \\ 0 & \text{otherwise}. \end{cases}
+%\end{align*}
+%
+%Therefore $K(G,n) = B^n G$.
+%
+%
+%
+%
+%
 
 
 \newpage
 \listoftodos
 \newpage
-\end{comment}
+
 
 
 

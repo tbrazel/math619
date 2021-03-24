@@ -21,6 +21,8 @@
   \item cofiber sequence, \hyperpage{53}
   \item cofibration, \hyperpage{35}
     \subitem based, \hyperpage{41}
+  \item cohomology theory
+    \subitem reduced, \hyperpage{75}
   \item colimit, \hyperpage{15}
   \item compactly generated, \hyperpage{13}
   \item cone, \hyperpage{23}
@@ -69,6 +71,7 @@
   \item homotopy fiber, \hyperpage{48}
   \item homotopy lifting property (HLP), \hyperpage{42}
   \item homotopy pushout, \hyperpage{63}
+  \item Hurewicz homomorphism, \hyperpage{74}
 
   \indexspace
 

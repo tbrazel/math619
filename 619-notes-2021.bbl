@@ -23,6 +23,18 @@ Martin Frankland,
   \emph{\href{http://uregina.ca/~franklam/Math527/Math527_0204.pdf}{Additional
   notes on CGWH spaces}}, 2013.
 
+\bibitem[Fri]{friedman4221elementary}
+G~Friedman, \emph{An elementary illustrated introduction to simplicial sets.
+  2008}, arXiv preprint arXiv:0809.4221.
+
+\bibitem[GJ12]{goerss-jardine}
+P.G. Goerss and J.F. Jardine, \emph{Simplicial homotopy theory}, Progress in
+  Mathematics, Birkh{\"a}user Basel, 2012.
+
+\bibitem[Goo]{mo-hyperphantoms}
+T.~Goodwillie, \emph{\href{https://mathoverflow.net/q/117768}{Are spectra
+  really the same as cohomology theories?}}, MathOverflow.
+
 \bibitem[GS]{WOMP}
 B.~Guillou and H.~Skiadas,
   \emph{\href{https://faculty.math.illinois.edu/~bertg/WOMP-CategoryTheory.pdf}{WOMP
@@ -96,11 +108,14 @@ James~R. Munkres,
   Prentice Hall, Inc., Upper Saddle River, NJ, 2000, Second edition.
   \MR{3728284}
 
-\bibitem[Rie]{Riehl-hocolims}
+\bibitem[Riea]{Riehl-hocolims}
 E~Riehl, \emph{Homotopy (limits and) colimits}.
 
+\bibitem[Rieb]{riehl-sset}
+E.~Riehl, \emph{A leisurely introduction to simplicial sets}.
+
 \bibitem[Rie16]{Riehl-context}
-E.~Riehl, \emph{\href{https://math.jhu.edu/~eriehl/context.pdf}{Category Theory
+\bysame, \emph{\href{https://math.jhu.edu/~eriehl/context.pdf}{Category Theory
   in Context}}, Aurora: Dover Modern Math Originals, Dover Publications, 2016.
 
 \bibitem[Ste67]{Steenrod-convenient-cat}
