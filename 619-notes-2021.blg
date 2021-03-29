@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: 619-notes-2021.aux
+Case mismatch error between cite keys May and may
+---line 465 of file 619-notes-2021.aux
+ : \citation{May
+ :              }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Hatcher and hatcher
+---line 571 of file 619-notes-2021.aux
+ : \citation{Hatcher
+ :                  }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys May and may
+---line 572 of file 619-notes-2021.aux
+ : \citation{May
+ :              }
+I'm skipping whatever remains of this command
+The style file: amsalpha.bst
+Database file #1: 619.bib
+Warning--I didn't find a database entry for "Milnor"
+Warning--missing year in friedman4221elementary
+Warning--missing pages in friedman4221elementary
+You've used 29 entries,
+            2624 wiz_defined-function locations,
+            703 strings with 8295 characters,
+and the built_in function-call counts, 8147 in all, are:
+= -- 665
+> -- 281
+< -- 24
++ -- 85
+- -- 77
+* -- 510
+:= -- 1248
+add.period$ -- 29
+call.type$ -- 29
+change.case$ -- 151
+chr.to.int$ -- 26
+cite$ -- 31
+duplicate$ -- 438
+empty$ -- 786
+format.name$ -- 130
+if$ -- 1683
+int.to.chr$ -- 4
+int.to.str$ -- 0
+missing$ -- 48
+newline$ -- 97
+num.names$ -- 83
+pop$ -- 309
+preamble$ -- 1
+purify$ -- 180
+quote$ -- 0
+skip$ -- 312
+stack$ -- 0
+substring$ -- 252
+swap$ -- 36
+text.length$ -- 24
+text.prefix$ -- 24
+top$ -- 0
+type$ -- 200
+warning$ -- 2
+while$ -- 63
+width$ -- 34
+write$ -- 285
+(There were 3 error messages)

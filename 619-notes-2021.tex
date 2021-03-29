@@ -3542,127 +3542,137 @@ We can now reformulate \autoref{q:cohom-thy} a little more precisely.
 \begin{question}\label{q:cohom-thy2} For what sequences of spaces $\{P_n\}$ are the functors $[-,P_n]_\ast$  a generalized cohomology theory?\end{question}
 
 
-TO BE CONTINUED...
 
-%In order to build a cohomology theory from $[-,P_n]_\ast$, we will need to check when the suspension axiom holds. We will also need to verify that $[X,P_n]_\ast$ is a group, rather than just a set. Recall that we have a natural isomorphism
-%\begin{align*}
-%	[\Sigma X, Y]_\ast \cong [X, \Omega Y]_\ast.
-%\end{align*}
+In order to build a cohomology theory from $[-,P_n]_\ast$, we will need to check when the suspension axiom holds. We will also need to verify that $[X,P_n]_\ast$ is a group, rather than just a set. Recall that we have a natural isomorphism
+\begin{align*}
+	[\Sigma X, Y]_\ast \cong [X, \Omega Y]_\ast.
+\end{align*}
+
+\begin{definition} An \textit{$H$-space (Hopf space)}\index[ind]{$H$-space} is a topological space $X$ equipped with a ``multiplication map''
+\begin{align*}
+	\mu: X\times X \to X,
+\end{align*}
+and a two sided identity $e\in X$. Alternatively, we might ask for $\mu(-,e)$ and $\mu(e,-)$ to be homotopic to the identity $\id_X$. This operation is called \textit{homotopy associative} if the diagram commutes up to homotopy:
+\[
+	\begin{tikzcd}
+	X\times X\times X \rar["\mu\times \id" above]\dar["\id\times\mu" left] & X\times X\dar["\mu" right] \\
+	X\times X \rar["\mu" below] & X.
+	\end{tikzcd}
+\]
+The operation is called \textit{homotopy commutative} if the diagram commutes up to homotopy
+\[
+	\begin{tikzcd}
+	X\times X\rar["\mu"]\dar["\text{swap}" left] & X \\
+	X\times X.\ar[ur,"\mu" below right] &
+	\end{tikzcd}
+\]
+\end{definition}
+
+\begin{proposition} The set $[X,Z]_\ast$ has the structure of an abelian monoid if $Z$ is a homotopy associative and commutative $H$-space. This set is furthermore an abelian group if $Z$ is \textit{grouplike}\index[ind]{grouplike space}, that is if the multiplication $\mu$ on $Z$ induces a group structure on $\pi_0(Z)$. 
+
+We may impose the stronger condition that we have inverses up to homotopy; that is, we have an ``inversion'' map $\chi : Z\to Z$ such that the diagram commutes up to homotopy:
+\[
+	\begin{tikzcd}
+	Z\times Z\rar["\id\times\chi"] & Z\times Z\ar[d,"\mu" right]\\
+	Z\ar[u,"\Delta" left]\rar["\const_{e}" below] & Z.
+	\end{tikzcd}
+\]
+\end{proposition}
+
+\begin{exercise} For any space $Y$, we have that $\Omega Y$ is a grouplike homotopy associative $H$-space, and $\Omega^2 Y$ is a grouplike homotopy associative and commutative $H$-space.
+\end{exercise}
+
+Returning to  \autoref{q:cohom-thy2}, we see that it suffices to pick $P_n$ to be $\Omega^2$ of some other space for each $n$, and we also need that $\til{E}^n(X) = \til{E}^{n+1}(\Sigma X)$, that is,
+\begin{align*}
+	[X,P_n]_\ast &\cong [\Sigma X, P_{n+1}]_\ast \cong [X,\Omega P_{n+1}]_\ast.
+\end{align*}
+From this we see it suffices to define the desired sequence by taking a prespectrum $\{P_n\}$ for which the adjoint maps to the structure maps $P_n \xto{\sim} \Omega P_{n+1}$ be weak equivalences.
+
+\begin{definition} A (pre)spectrum $\{P_n\}$ is called an \textit{$\Omega$-(pre)spectrum}\index[ind]{$\Omega$-spectrum} if the adjoints of the structure maps are weak equivalences.
+\end{definition}
+
+\begin{remark} We have shown that for every $\Omega$-prespectrum $P$, the functor
+\begin{align*}
+	h_n : \CW_\ast &\to \Ab \\
+	X &\mapsto [X,P_n]_\ast
+\end{align*}
+defines a generalized cohomology theory.
+\end{remark}
+
+\begin{question} Is every generalized cohomology theory of this form?
+\end{question}
+
+Yes! By Brown representability.
+
+\begin{warn} The homotopy category of spectra and the category of generalized cohomology theories are not equivalent. We can have a non-nullhomotopic map of spectra which induces the zero map on corresponding cohomology theories, see \cite{mo-hyperphantoms}.
+\end{warn}
+
+% TODO hyperphantoms \href{https://mathoverflow.net/questions/117684/are-spectra-really-the-same-as-cohomology-theories}{Overflow post}
+
+\begin{note} Not all (pre)spectra are $\Omega$-spectra. For example, suspension (pre)spectra are not $\Omega$-spectra (in particular $\S$ is not an $\Omega$-spectrum).
+
+But for any (pre)spectrum $P$, we may replace $P_n$ by $\colim_k \Omega^k P_{n+k}$, which is an $\Omega$-(pre)spectrum. We define the cohomology theory
+\begin{align*}
+	h^n(X):= \left[X, \colim_k \Omega^k P_{n+k}\right]_\ast.
+\end{align*}
+\end{note}
+
+In the next section, we will see two examples of $\Omega$-spectra, the Eilenberg MacLane spectrum and the complex $K$-theory spectrum. In order to construct these, we need the notion of classifying space of a group.
+
+\section{Eilenberg MacLane spaces}
+
+For an abelian group $G$, the goal is to define Eilenberg MacLane spaces $K(G,n)$ such that
+\[
+    \pi_q(K(G,n)) = \begin{cases} G & q=n \\ 0 & \text{otherwise}. \end{cases}
+\]
+
+
 %
-%\begin{definition} An \textit{$H$-space (Hopf space)}\index[ind]{$H$-space} is a topological space $X$ equipped with a ``multiplication map''
-%\begin{align*}
-%	\mu: X\times X \to X,
-%\end{align*}
-%and a two sided identity $e\in X$. Alternatively, we might ask for $\mu(-,e)$ and $\mu(e,-)$ to be homotopic to the identity $\id_X$. This operation is called \textit{homotopy associative} if the diagram commutes up to homotopy:
-%\[
-%	\begin{tikzcd}
-%	X\times X\times X \rar["\mu\times \id" above]\dar["\id\times\mu" left] & X\times X\dar["\mu" right] \\
-%	X\times X \rar["\mu" below] & X.
-%	\end{tikzcd}
-%\]
-%The operation is called \textit{homotopy commutative} if the diagram commutes up to homotopy
-%\[
-%	\begin{tikzcd}
-%	X\times X\rar["\mu"]\dar["\text{swap}" left] & X \\
-%	X\times X.\ar[ur,"\mu" below right] &
-%	\end{tikzcd}
-%\]
-%\end{definition}
+%\subsection{The bar construction $BG$ }
+%Let's start with $K(G,1)$, which works for all $G$ (not necessarily abelian). This is also called the \textit{bar construction}, which can also be denoted by $BG$.
 %
-%\begin{proposition} The set $[X,Z]_\ast$ has the structure of an abelian monoid if $Z$ is a homotopy associative and commutative $H$-space. This set is furthermore an abelian group if $Z$ is \textit{grouplike}\index[ind]{grouplike space}, that is if the multiplication $\mu$ on $Z$ induces a group structure on $\pi_0(Z)$. We may impose the stronger condition that we have inverses up to homotopy; that is, we have an ``inversion'' map $\chi : Z\to Z$ such that the diagram commutes up to homotopy:
-%\[
-%	\begin{tikzcd}
-%	Z\times Z\rar["\id\times\chi"] & Z\times Z\ar[d,"\mu" right]\\
-%	Z\ar[u,"\Delta" left]\rar["\const_{e}" below] & Z.
-%	\end{tikzcd}
-%\]
-%\end{proposition}
-%
-%\begin{exercise} For any space $Y$, we have that $\Omega Y$ is a grouplike homotopy associative $H$-space, and $\Omega^2 Y$ is a grouplike homotopy associative and commutative $H$-space.
-%\end{exercise}
-%
-%Returning to Question \ref{q:cohom-thy}, we see that it suffices to pick $P_n$ to be $\Omega^2$ of some other space for each $n$, and we also need that $\til{E}^n(X) = \til{E}^{n+1}(\Sigma X)$, that is,
-%\begin{align*}
-%	[X,P_n]_\ast &\cong [\Sigma X, P_{n+1}]_\ast \cong [X,\Omega P_{n+1}]_\ast.
-%\end{align*}
-%From this we see it suffices to define $\{P_n\}$ by letting the adjoint maps to the structure maps $P_n \xto{\sim} \Omega P_{n+1}$ be weak equivalences.
-%
-%\begin{definition} A (pre)spectrum $\{P_n\}$ is called an \textit{$\Omega$-(pre)spectrum}\index[ind]{$\Omega$-spectrum} if the adjoints of the structure maps are weak equivalences.
-%\end{definition}
-%
-%\begin{remark} We have shown that for every $\Omega$-prespectrum $P$, the functor
-%\begin{align*}
-%	h_n : \CW_\ast &\to \Ab \\
-%	X &\mapsto [X,P_n]_\ast
-%\end{align*}
-%defines a generalized cohomology theory.
-%\end{remark}
-%
-%\begin{question} Is every generalized cohomology theory of this form?
-%\end{question}
-%
-%Yes! By Brown representability.
-%
-%\begin{warn} The homotopy category of spectra and the category of generalized cohomology theories are not equivalent. We can have a non-nullhomotopic map of spectra which induces the zero map on corresponding cohomology theories, see \cite{mo-hyperphantoms}.
-%\end{warn}
-%
-%% TODO hyperphantoms \href{https://mathoverflow.net/questions/117684/are-spectra-really-the-same-as-cohomology-theories}{Overflow post}
-%
-%\begin{note} Not all (pre)spectra are $\Omega$-spectra. For example, suspension (pre)spectra are not $\Omega$-spectra (in particular $\S$ is not an $\Omega$-spectrum).
-%
-%But for any (pre)spectrum $P_\bullet$, we may replace $P_n$ by $\colim_k \Omega^k P_{n+k}$, which is an $\Omega$-(pre)spectrum. We define the cohomology theory
-%\begin{align*}
-%	h^n(X):= \left[X, \colim_k \Omega^k P_{n+k}\right]_\ast.
-%\end{align*}
-%\end{note}
-%
-%\begin{example} Bott periodicity, in complex $K$-theory, is the result that $\BU \simeq \Omega^2 \BU$. Thus we define an $\Omega$-(pre)spectrum ${\bf \BU} = \{\BU, \Omega \BU, \BU, \Omega \BU,\ldots\}$, which yields a cohomology theory, called complex topological $K$-theory.
-%\end{example}
-%
-%% Lecture 16: March 26th
-%\textbf{Plan}: For an abelian group $\pi$, we want to define spaces $K(\pi,n)$ such that
-%\[
-%    \pi_q(K(\pi,n)) = \begin{cases} \pi & q=n \\ 0 & \text{otherwise}. \end{cases}
-%\]
-%
-%Let's start with $K(\pi,1)$, which works for all $\pi$ (not necessarily abelian). This is also called the \textit{bar construction}.
-%
-%\textbf{Idea for the bar construction} We define $BG$ to be the configuration space of $n+1$ points in the unit interval $I$, over all natural numbers $n$ such that
-%\begin{align*}
-%    0\leq g_0 \leq g_1 \leq \cdots \leq g_n \leq 1.
-%\end{align*}
-%We subject this configuration space to the following relations:
-%\begin{itemize}
-%    \item if $g_0 = 0$, then we define an equivalence
-%\begin{align*}
-%    (0=g_0, g_1,\ldots,g_n) \sim (g_1,\ldots, g_n).
-%\end{align*}
-%
-%    \item if $g_n = 1$, we similarly have
-%\begin{align*}
-%    (g_0,\ldots,g_n=1) \sim (g_0,\ldots,g_{n-1}).
-%\end{align*}
-%
-%    \item if $g_i = e$ is the identity element of $G$, then we say that
-%        \begin{align*}
-%            (g_0,\ldots,g_{i-1},e,g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-1},g_{i+1},\ldots,g_n).
-%        \end{align*}
-%
-%    \item finally, we require that
-%    \begin{align*}
-%    (g_0,\ldots,g_{i-1},g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-2}, g_{i-1}\cdot g_i, g_{i+1},\ldots, g_n).
-%    \end{align*}
-%\end{itemize}
-%
-%
-%
-%\ifx
-%We want configurations of points in $I$, labeled by elements in $G$, such that
+%\textbf{Idea for the bar construction} The idea for the definition of $BG$ is to take configurations of points in $I$, labeled by elements in $G$, such that
 %    \begin{itemize}
 %        \item when points collide, labels combine using multiplication in $G$
 %        \item points can slide off to infinity.
-%    \end{itemize}
-%\end{customenvironment}
+%    \end{itemize} 
+%    
+%%    We define $BG$ to be the configuration space of $n+1$ points in the unit interval $I$, over all natural numbers $n$ such that
+%%\begin{align*}
+%%    0\leq g_0 \leq g_1 \leq \cdots \leq g_n \leq 1.
+%%\end{align*}
+%%We subject this configuration space to the following relations:
+%%\begin{itemize}
+%%    \item if $g_0 = 0$, then we define an equivalence
+%%\begin{align*}
+%%    (0=g_0, g_1,\ldots,g_n) \sim (g_1,\ldots, g_n).
+%%\end{align*}
+%%
+%%    \item if $g_n = 1$, we similarly have
+%%\begin{align*}
+%%    (g_0,\ldots,g_n=1) \sim (g_0,\ldots,g_{n-1}).
+%%\end{align*}
+%%
+%%    \item if $g_i = e$ is the identity element of $G$, then we say that
+%%        \begin{align*}
+%%            (g_0,\ldots,g_{i-1},e,g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-1},g_{i+1},\ldots,g_n).
+%%        \end{align*}
+%%
+%%    \item finally, we require that
+%%    \begin{align*}
+%%    (g_0,\ldots,g_{i-1},g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-2}, g_{i-1}\cdot g_i, g_{i+1},\ldots, g_n).
+%%    \end{align*}
+%%\end{itemize}
+%%
+%%
+%%
+%%
+%%We want configurations of points in $I$, labeled by elements in $G$, such that
+%%    \begin{itemize}
+%%        \item when points collide, labels combine using multiplication in $G$
+%%        \item points can slide off to infinity.
+%%    \end{itemize}
+%
 %
 %That is, subdivisions of the unit interval, where $t_i$ denotes some small length, $g_i \in G$ is a group element, and we have that $\sum_i t_i = 1$:
 %\begin{center}
@@ -3714,13 +3724,18 @@ TO BE CONTINUED...
 %
 %
 %
-%Observe that $BG = \coprod_{n=0}^\infty G^n \times \Delta^n / \sim$. %TODO clean this up
-%\fi
+%Observe that $BG = \coprod_{n=0}^\infty G^n \times \Delta^n / \sim$. It turns out this is precisely the geometric realization of a simplicial set. We go on to defining these concepts next.
+
+%\begin{example}  Bott periodicity, in complex $K$-theory, is the result that $\BU \simeq \Omega^2 \BU$. Thus we define an $\Omega$-(pre)spectrum ${\bf \BU} = \{\BU, \Omega \BU, \BU, \Omega \BU,\ldots\}$, which yields a cohomology theory, called complex topological $K$-theory.
+%\end{example}
+
+
+%%TODO clean this up 
 %
-%
+%\subsection{Simplicial sets}
 %Let $\DDelta$ denote the category whose objects are finite nonempty totally ordered sets $[n] = \{0<1< \cdots < n\}$, and morphisms are order preserving functions.
 %
-%\begin{definition} A \textit{simplicial set}\index[ind]{simplicial set} is a contravariant functor $\DDelta \to \Set$, that is, a functor $\DDelta^\op \to \Set$. A morphism of simplicial sets is a natural transformation of these functors.This gives us a category, denoted $\sSet$.
+%\begin{definition} A \textit{simplicial set}\index[ind]{simplicial set} is a contravariant functor $\DDelta \to \Set$, that is, a functor $\DDelta^\op \to \Set$. A morphism of simplicial sets is a natural transformation of these functors. This gives us a category, denoted $\sSet$.
 %\end{definition}
 %
 %\begin{remark} We may define a simplicial object in any category $\mathscr{C}$ as a functor
@@ -3867,7 +3882,7 @@ TO BE CONTINUED...
 %
 % \todo{cite Milnor's original paper}
 %
-%\begin{theorem}[{\cite{Milnor}, \cite[16.2]{May}}] This morphism $\gamma$ is a weak equivalence. Moreover, $|\Sing(X)|$ is a CW complex with one $n$-cell for each nondegenerate $n$-simplex of $X$.
+%\begin{theorem}[{\cite{Milnor}, \cite[16.2]{may}}] This morphism $\gamma$ is a weak equivalence. Moreover, $|\Sing(X)|$ is a CW complex with one $n$-cell for each nondegenerate $n$-simplex of $X$.
 %\end{theorem}
 %
 %\begin{note} The map $\gamma$ is a natural transformation $|\Sing(-)| \Rightarrow \id_{\Top}$.
@@ -3917,10 +3932,10 @@ TO BE CONTINUED...
 %\end{example}
 %
 %
-%\begin{exercise} We have that $B(\Z\big/2) \cong \RP^\infty$.
+%\begin{exercise} Show that $B(\Z\big/2) \cong \RP^\infty$.
 %\end{exercise}
 %
-%\begin{exercise} If we have a category $\dot \to \dot$, its classifying space is the unit interval $I=[0,1]$.
+%\begin{exercise} Show that for the category $\dot \to \dot$, its classifying space is the unit interval $I=[0,1]$.
 %\end{exercise}
 %
 %\begin{definition} We define the space $EG$ to be the geometric realization of the simplicial set $E_\dot G$, defined by
