@@ -1,30 +1,30 @@
 \begin{theindex}
 
-  \item $H$-space, \hyperpage{76}
-  \item $\Omega$-spectrum, \hyperpage{77}
-  \item $k$-closed, \hyperpage{13}
+  \item $H$-space, \hyperpage{75}
+  \item $\Omega$-spectrum, \hyperpage{76}
+  \item $k$-closed, \hyperpage{12}
   \item $n$-connected
-    \subitem map, \hyperpage{56}
-    \subitem pair, \hyperpage{57}
-    \subitem space, \hyperpage{56}
+    \subitem map, \hyperpage{55}
+    \subitem pair, \hyperpage{56}
+    \subitem space, \hyperpage{55}
 
   \indexspace
 
-  \item Blakers-Massey, \hyperpage{67}
+  \item Blakers-Massey, \hyperpage{66}
 
   \indexspace
 
   \item category
     \subitem (co)complete, \hyperpage{19}
-    \subitem opposite, \hyperpage{8}
-  \item cellular approximation, \hyperpage{57}
-  \item coequalizer, \hyperpage{17}
-  \item cofiber, \hyperpage{38}
-  \item cofiber sequence, \hyperpage{53}
+    \subitem opposite, \hyperpage{7}
+  \item cellular approximation, \hyperpage{56}
+  \item coequalizer, \hyperpage{16}
+  \item cofiber, \hyperpage{37}
+  \item cofiber sequence, \hyperpage{52}
   \item cofibration, \hyperpage{35}
-    \subitem based, \hyperpage{41}
+    \subitem based, \hyperpage{40}
   \item cohomology theory
-    \subitem reduced, \hyperpage{75}
+    \subitem reduced, \hyperpage{74}
   \item colimit, \hyperpage{15}
   \item compactly generated, \hyperpage{13}
   \item cone, \hyperpage{23}
@@ -33,91 +33,93 @@
 
   \indexspace
 
-  \item double mapping cylinder, \hyperpage{63}
+  \item double mapping cylinder, \hyperpage{62}
 
   \indexspace
 
-  \item Eckmann-Hilton argument, \hyperpage{26}
-  \item Eilenberg-Maclane space, \hyperpage{55}
-  \item equalizer, \hyperpage{17}
+  \item Eckmann-Hilton argument, \hyperpage{25}
+  \item Eilenberg-Maclane space, \hyperpage{54}
+  \item equalizer, \hyperpage{16}
 
   \indexspace
 
-  \item fiber, \hyperpage{42}
-  \item fiber sequence, \hyperpage{50}
+  \item fiber, \hyperpage{41}
+  \item fiber sequence, \hyperpage{49}
   \item fibration
-    \subitem based, \hyperpage{46}
-    \subitem Hurewicz, \hyperpage{42}
-    \subitem Serre, \hyperpage{43}
-  \item Freudenthal suspension., \hyperpage{67}
+    \subitem based, \hyperpage{45}
+    \subitem Hurewicz, \hyperpage{41}
+    \subitem Serre, \hyperpage{42}
+  \item Freudenthal suspension., \hyperpage{66}
   \item functor
-    \subitem forgetful, \hyperpage{8}
-    \subitem free, \hyperpage{8}
+    \subitem forgetful, \hyperpage{7}
+    \subitem free, \hyperpage{7}
 
   \indexspace
 
-  \item gluing lemma, \hyperpage{63}
-  \item grouplike space, \hyperpage{77}
+  \item gluing lemma, \hyperpage{62}
+  \item grouplike space, \hyperpage{76}
 
   \indexspace
 
   \item homology theory
-    \subitem reduced, \hyperpage{69}
-    \subitem unreduced, \hyperpage{68}
+    \subitem reduced, \hyperpage{68}
+    \subitem unreduced, \hyperpage{67}
   \item homotopy, \hyperpage{22}
-    \subitem based, \hyperpage{24}
+    \subitem based, \hyperpage{23}
   \item homotopy category
-    \subitem of $\Top$, \hyperpage{24}
-  \item homotopy cofiber, \hyperpage{52}
-  \item homotopy excision, \hyperpage{67}
-  \item homotopy extension property, \hyperpage{35}
-  \item homotopy fiber, \hyperpage{48}
-  \item homotopy lifting property (HLP), \hyperpage{42}
-  \item homotopy pushout, \hyperpage{63}
-  \item Hurewicz homomorphism, \hyperpage{74}
+    \subitem of $\Top$, \hyperpage{23}
+  \item homotopy cofiber, \hyperpage{51}
+  \item homotopy excision, \hyperpage{66}
+  \item homotopy extension property, \hyperpage{34}
+  \item homotopy fiber, \hyperpage{47}
+  \item homotopy lifting property (HLP), \hyperpage{41}
+  \item homotopy pushout, \hyperpage{62}
+  \item Hurewicz homomorphism, \hyperpage{73}
 
   \indexspace
 
-  \item iterated cofiber sequence, \hyperpage{54}
+  \item iterated cofiber sequence, \hyperpage{53}
 
   \indexspace
 
-  \item limit, \hyperpage{16}
-  \item loop space, \hyperpage{48}
+  \item limit, \hyperpage{15}
+  \item loop space, \hyperpage{47}
 
   \indexspace
 
-  \item mapping cone, \hyperpage{52}
-  \item mapping cylinder, \hyperpage{36}
-    \subitem reduced, \hyperpage{51}
+  \item mapping cone, \hyperpage{51}
+  \item mapping cylinder, \hyperpage{35}
+    \subitem reduced, \hyperpage{50}
 
   \indexspace
 
-  \item natural transformation, \hyperpage{9}
-  \item neighborhood deformation retraction, \hyperpage{40}
-  \item non-degenerately based, \hyperpage{41}
+  \item natural transformation, \hyperpage{8}
+  \item neighborhood deformation retraction, \hyperpage{39}
+  \item nerve of a category, \hyperpage{80}
+  \item non-degenerately based, \hyperpage{40}
 
   \indexspace
 
-  \item path space, \hyperpage{47}
+  \item path space, \hyperpage{46}
   \item product, \hyperpage{16}
   \item pullback, \hyperpage{17}
   \item pushout, \hyperpage{17}
 
   \indexspace
 
-  \item reduced cone, \hyperpage{52}
-  \item reduced cylinder, \hyperpage{51}
-  \item relative homotopy group, \hyperpage{49}
+  \item reduced cone, \hyperpage{51}
+  \item reduced cylinder, \hyperpage{50}
+  \item relative homotopy group, \hyperpage{48}
 
   \indexspace
 
-  \item stable homotopy group, \hyperpage{68}
+  \item simplicial set, \hyperpage{78}
+  \item stable homotopy group, \hyperpage{67}
   \item stable homotopy groups
-    \subitem of spheres, \hyperpage{72}
-  \item suspension spectrum, \hyperpage{72}
-  \item symmetric monoidal category, \hyperpage{22}
-    \subitem closed, \hyperpage{22}
+    \subitem of spheres, \hyperpage{71}
+  \item suspension spectrum, \hyperpage{71}
+  \item symmetric monoidal category, \hyperpage{21}
+    \subitem closed, \hyperpage{21}
 
   \indexspace
 
@@ -125,12 +127,12 @@
 
   \indexspace
 
-  \item weak Hausdorff, \hyperpage{14}
+  \item weak Hausdorff, \hyperpage{13}
   \item weak homotopy equivalence, \hyperpage{30}
-  \item weak topology, \hyperpage{19}
-  \item weakly equivalent spaces, \hyperpage{56}
-  \item well-based, \hyperpage{41}
-  \item whiskering, \hyperpage{41}
-  \item Whitehead's theorem, \hyperpage{57}
+  \item weak topology, \hyperpage{18}
+  \item weakly equivalent spaces, \hyperpage{55}
+  \item well-based, \hyperpage{40}
+  \item whiskering, \hyperpage{40}
+  \item Whitehead's theorem, \hyperpage{56}
 
 \end{theindex}

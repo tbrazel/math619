@@ -3103,7 +3103,7 @@ is $(2n+1)$-connected. Thus $\pi_j(X) \to \pi_j(\Omega \Sigma X) \cong \pi_{j+1}
 This colimit stabilizes by Freudenthal suspension.
 \end{definition}
 
-\subsection{Generalized homology and cohomology theories}
+\subsection{Generalized homology theories}
 
 Call $\Top^2$ the category of pairs of spaces $(X,A)$ with $A\subseteq X$ and morphisms given by maps of pairs.
 
@@ -3627,230 +3627,235 @@ For an abelian group $G$, the goal is to define Eilenberg MacLane spaces $K(G,n)
 \]
 
 
+
+\subsection{The bar construction $BG$}
+Let's start with $K(G,1)$, which works for all $G$ (not necessarily abelian). This is also called the \textit{bar construction}, which can also be denoted by $BG$.
+
+\textbf{Idea for the bar construction} The idea for the definition of $BG$ is to take configurations of points in $I$, labeled by elements in $G$, such that
+    \begin{itemize}
+        \item when points collide, labels combine using multiplication in $G$
+        \item points can slide off to infinity.
+    \end{itemize} 
+    
+%    We define $BG$ to be the configuration space of $n+1$ points in the unit interval $I$, over all natural numbers $n$ such that
+%\begin{align*}
+%    0\leq g_0 \leq g_1 \leq \cdots \leq g_n \leq 1.
+%\end{align*}
+%We subject this configuration space to the following relations:
+%\begin{itemize}
+%    \item if $g_0 = 0$, then we define an equivalence
+%\begin{align*}
+%    (0=g_0, g_1,\ldots,g_n) \sim (g_1,\ldots, g_n).
+%\end{align*}
 %
-%\subsection{The bar construction $BG$ }
-%Let's start with $K(G,1)$, which works for all $G$ (not necessarily abelian). This is also called the \textit{bar construction}, which can also be denoted by $BG$.
+%    \item if $g_n = 1$, we similarly have
+%\begin{align*}
+%    (g_0,\ldots,g_n=1) \sim (g_0,\ldots,g_{n-1}).
+%\end{align*}
 %
-%\textbf{Idea for the bar construction} The idea for the definition of $BG$ is to take configurations of points in $I$, labeled by elements in $G$, such that
+%    \item if $g_i = e$ is the identity element of $G$, then we say that
+%        \begin{align*}
+%            (g_0,\ldots,g_{i-1},e,g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-1},g_{i+1},\ldots,g_n).
+%        \end{align*}
+%
+%    \item finally, we require that
+%    \begin{align*}
+%    (g_0,\ldots,g_{i-1},g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-2}, g_{i-1}\cdot g_i, g_{i+1},\ldots, g_n).
+%    \end{align*}
+%\end{itemize}
+%
+%
+%
+%
+%We want configurations of points in $I$, labeled by elements in $G$, such that
 %    \begin{itemize}
 %        \item when points collide, labels combine using multiplication in $G$
 %        \item points can slide off to infinity.
-%    \end{itemize} 
-%    
-%%    We define $BG$ to be the configuration space of $n+1$ points in the unit interval $I$, over all natural numbers $n$ such that
-%%\begin{align*}
-%%    0\leq g_0 \leq g_1 \leq \cdots \leq g_n \leq 1.
-%%\end{align*}
-%%We subject this configuration space to the following relations:
-%%\begin{itemize}
-%%    \item if $g_0 = 0$, then we define an equivalence
-%%\begin{align*}
-%%    (0=g_0, g_1,\ldots,g_n) \sim (g_1,\ldots, g_n).
-%%\end{align*}
-%%
-%%    \item if $g_n = 1$, we similarly have
-%%\begin{align*}
-%%    (g_0,\ldots,g_n=1) \sim (g_0,\ldots,g_{n-1}).
-%%\end{align*}
-%%
-%%    \item if $g_i = e$ is the identity element of $G$, then we say that
-%%        \begin{align*}
-%%            (g_0,\ldots,g_{i-1},e,g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-1},g_{i+1},\ldots,g_n).
-%%        \end{align*}
-%%
-%%    \item finally, we require that
-%%    \begin{align*}
-%%    (g_0,\ldots,g_{i-1},g_i,\ldots,g_n) \sim (g_0,\ldots,g_{i-2}, g_{i-1}\cdot g_i, g_{i+1},\ldots, g_n).
-%%    \end{align*}
-%%\end{itemize}
-%%
-%%
-%%
-%%
-%%We want configurations of points in $I$, labeled by elements in $G$, such that
-%%    \begin{itemize}
-%%        \item when points collide, labels combine using multiplication in $G$
-%%        \item points can slide off to infinity.
-%%    \end{itemize}
-%
-%
-%That is, subdivisions of the unit interval, where $t_i$ denotes some small length, $g_i \in G$ is a group element, and we have that $\sum_i t_i = 1$:
-%\begin{center}
-%\begin{tabular}{|c|c|c|c|c|}
-%    $t_0$ & $t_1$ & $t_2$ & $\cdots$ & $t_n$ \\
-%    \hline
-%    $g_0$ & $g_1$ & $g_2$ & $\cdots$ & $g_n$ \\
-%\end{tabular}
-%\end{center}
-%This is subject to the following identifications:
-%\begin{center}
-%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-%    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $0$ & $t_i$ & $\cdots$ & $t_{n-1}$ \\
-%    \hline
-%    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_i$ & $g_{i+1}$ & $\cdots$ & $g_n$
-%\end{tabular} $\ \sim\ $
-%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-%    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i$ & $\cdots$ & $t_{n-1}$ \\
-%    \hline
-%    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_i g_{i+1}$ & $\cdots$ & $g_n$
-%\end{tabular},
-%\end{center}
-%and
-%\begin{center}
-%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-%    $0$ & $t_0$ & $t_1$ & $\cdots$ & $t_{n-1}$ \\
-%    \hline
-%    $g_0$ & $g_1$ & $g_2$ & $\cdots$ & $g_n$
-%\end{tabular} $\ \sim\ $
-%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-%    $t_0$ & $t_1$ & $t_2$ & $\cdots$ & $t_{n-1}$ \\
-%    \hline
-%    $g_1$ & $g_2$ & $g_3$ & $\cdots$ & $g_n$
-%\end{tabular},
-%\end{center}
-%and similarly if 0 is at the end, and finally that we are allowed to concatenate lengths by multiplication by the identity in the group:
-%\begin{center}
-%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-%    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i$ & $t_{i+1}$ & $\cdots$ & $t_{n}$ \\
-%    \hline
-%    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $e$ & $g_{i+1}$ & $\cdots$ & $g_n$
-%\end{tabular} $\ \sim\ $
-%\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-%    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i + t_{i+1}$ & $\cdots$ & $t_{n}$ \\
-%    \hline
-%    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_{i+1}$ & $\cdots$ & $g_n$
-%\end{tabular}
-%\end{center}
-%
-%
-%
-%Observe that $BG = \coprod_{n=0}^\infty G^n \times \Delta^n / \sim$. It turns out this is precisely the geometric realization of a simplicial set. We go on to defining these concepts next.
-
-%\begin{example}  Bott periodicity, in complex $K$-theory, is the result that $\BU \simeq \Omega^2 \BU$. Thus we define an $\Omega$-(pre)spectrum ${\bf \BU} = \{\BU, \Omega \BU, \BU, \Omega \BU,\ldots\}$, which yields a cohomology theory, called complex topological $K$-theory.
-%\end{example}
+%    \end{itemize}
 
 
-%%TODO clean this up 
-%
-%\subsection{Simplicial sets}
-%Let $\DDelta$ denote the category whose objects are finite nonempty totally ordered sets $[n] = \{0<1< \cdots < n\}$, and morphisms are order preserving functions.
-%
-%\begin{definition} A \textit{simplicial set}\index[ind]{simplicial set} is a contravariant functor $\DDelta \to \Set$, that is, a functor $\DDelta^\op \to \Set$. A morphism of simplicial sets is a natural transformation of these functors. This gives us a category, denoted $\sSet$.
-%\end{definition}
-%
-%\begin{remark} We may define a simplicial object in any category $\mathscr{C}$ as a functor
-%    \[
-%        \DDelta^\op \to \mathscr{C}.
-%    \]
-%\end{remark}
-%
-%\begin{note} The category $\DDelta$ has a generating set of morphisms. For all $n\ge 0$,
-%\begin{itemize}
-%    \item there exist $n+1$ injections $d^i : [n-1] \to [n]$ for $0\leq i\leq n$, which ``skips'' $i$, that is,
-%        \[
-%            d^i(k) = \begin{cases} k & k<i \\ k+1 & k\geq i, \end{cases}
-%        \]
-%        called the \textit{coface maps}. %TODO check
-%\end{itemize}
-%There exist $n+1$ surjections $s^j : [n+1] \to [n]$ for $0\leq j\leq n$, which ``repeat'' $j$, that is,
-%
-%\[
-%    s^j(k) = \begin{cases} k & k\leq j \\ k-1 & k>j \end{cases}
-%\]
-%\end{note}
-%
-%\begin{remark} These satisfy
-%    \begin{align*}
-%        d^j d^i &= d^i d^{j-1} \quad\text{for } i<j \\
-%        s^j s^i &= s^i s^{j+1} \quad\text{for }  i\leq j \\
-%        s^j d^i &= \begin{cases} \id & \text{for } i=j,\ i=j+1 \\ d^i s^{j+1} &\text{for } i<j \\ d^{i-1} s^j &\text{for } i>j+1. \end{cases}
-%    \end{align*}
-%\end{remark}
-%Moreover, every morphism in $\DDelta$ can be written as a composite of $s^i$'s and $d^j$'s.
-%
-%For $X\in \sSet$, we obtain a set $X_n$ for all $n\geq 0$, and we have maps $d_i := X(d^i) : X_n \to X_{n-1}$ for $0\leq i\leq n$, called \textit{face maps}, and we have maps $s_j = X(s^j):X_n \to X_{n+1}$ for $0\leq j\leq n$, called \textit{degeneracy maps}, which satisfy relations dual to those above.
-%
-%\begin{definition} A simplicial set $X_\dot$ may be defined alternatively as a collection of sets $X_0,X_1,\ldots$ together with functions $d_i: X_n \to X_{n-1}$ and $s^j: X_n \to X_{n+1}$ satisfying the relations:
-%\begin{align*}
-%    d_i d_j &= d_{j-1} d_i \quad \text{for } i<j \\
-%    s_i s_j &= s_{j+1} s_i \quad \text{for } i\leq j \\
-%    d_i s_j &= \begin{cases} \id & \text{for } i=j,\ i=j+1 \\ s_{j-1}d_i & \text{for } i<j \\ s_j d_{i-1} & \text{for } i>j+1. \end{cases}
-%\end{align*}
-%\end{definition}
-%
-%A map of simplicial sets $f_\dot : X_\dot \to Y_\dot$ is a collection of functions $f_n : X_n \to Y_n$ that commute with the face and degeneracy maps.
-%
-% For a nice introduction to simplicial sets, see \cite{friedman4221elementary} or \cite{riehl-sset}. A more in-depth treatment of simplicial homotopy theory is given in \cite{goerss-jardine}.
-%
-%
-%\begin{example} The singular complex of a space $X$. We first define the topological $n$-simplex as
-%    \[
-%        \Delta^n := \{(t_0, \ldots, t_n) \in \R^{n+1} \ : 0\leq t_i\leq 1,\ \sum_{i=0}^n t_i = 1\}.
-%    \]
-%
-%    Note that we have canonical maps for $0\leq i\leq n$
-%    \begin{align*}
-%        \sigma_j : \Delta^{n} &\to \Delta^{n+1} \\
-%        (t_0,\ldots,t_n) &\mapsto (t_0,\ldots,t_{i-1},0,t_i,\ldots,t_n).
-%    \end{align*}
-%    Which we may think about as viewing an $(n-1)$-simplex as a degenerate $n$-simplex, and we have another map for $0\leq i\leq n$
-%    \begin{align*}
-%        \delta_i : \Delta^{n} &\to \Delta^{n-1} \\
-%        (t_0,\ldots,t_{n}) &\mapsto (t_0,\ldots,t_{i-1}, t_i + t_{i+1},\ldots,t_{n}),
-%    \end{align*}
-%    which we think of as projecting onto the $(n-1)$-simplex orthogonal to the $i$th face.
-%\end{example}
-%
-%\begin{definition} Let $X$ be a topological space. Then $\Sing(X)$ is the simplicial set with $n$-simplices $\Sing(X)_n = \Top(\Delta^n, X)$ to be the set of continuous maps $\Delta^n \xto{f} X$. This comes with face and degeneracy maps given by
-%\begin{align*}
-%    d_i : \Top(\Delta^{n}, X) &\to \Top(\Delta^{n-1}, X) \\
-%    (\Delta^{n} \xto{f} X) &\mapsto (\Delta^{n-1} \xto{\sigma_i} \Delta^{n} \xto{f} X),
-%\end{align*}
-%and
-%\begin{align*}
-%    s_j : \Top(\Delta^{n}, X) &\to \Top(\Delta^{n+1}, X) \\
-%    (\Delta^{n} \xto{f} X) &\mapsto (\Delta^{n+1} \xto{\delta_j} \Delta^{n} \xto{f} X).
-%\end{align*}
-%\end{definition}
-%
-%\begin{remark} This functor is used to define singular homology:
-%\begin{align*}
-%    H_n(-,\Z) : \Top \xto{\Sing(-)} \sSet \xto{F} \sAb \to \Ch_\Z,
-%\end{align*}
-%where $F$ takes a free abelian group on each $X_n$, and we have that $\delta:= \sum (-1)^i d_i$ in $\Ch_\Z$.
-%\end{remark}
-%
-%\begin{definition} Let $\mathscr{C}$ be a small category. The \textit{nerve of $\mathscr{C}$}\index[ind]{nerve of a category}, denoted $N\mathscr{C}$ is the simplicial set with
-%\begin{align*}
-%    (N\mathscr{C})_0 &= \ob\mathscr{C} \\
-%    (N\mathscr{C})_1 &= \mor \mathscr{C} \\
-%                     &\vdots \\
-%    (N\mathscr{C})_n &= \{\text{strings of $n$-composable morphisms}\}.
-%\end{align*}
-%We have degeneracy maps $s_j : (N\mathscr{C})_n \to (N\mathscr{C})_{n+1}$ inserting an identity at the $j$th slot,and we get face maps $d_i : (N\mathscr{C})_n \to (N\mathscr{C})_{n-1}$ which, for $0\leq i\leq n-1$, composes the $i$ and $i+1$st morphism, and $d_n$ omits the last maps, respectively.
-%\end{definition}
-%
-%\begin{obs} If we have a group $G$, it is a category with one object, and composition is given by the group multiplication. Its nerve has $(NG)_n = G^n$, whose face maps $d_i : G \to G^{n-1}$ are given by multiplication at slot $i$, for $0<i<n$, and for $d_0$ and $d_n$ forget the $0$th and $n$th entry, respectively. The degeneracy maps $s_i$ insert the identity $e$ at slot $i$.\todo{We should be consistent in $d_i$, $s_j$, etc. I think this is a common thing in the literature to use different indexing notation.}
-%
-%\end{obs}
-%
-%% Lecture 17: March 28th
-%
-%
-%\begin{example} If $X$ is a right $G$-space, and $Y$ is a left $G$-space, we define the simplicial set $B_\dot (X,G,Y)$ with
-%\[
-%    B_n(X,G,Y) := X \times G^n \times Y,
-%\]
-%and face and degeneracy maps
-%\begin{align*}
-%    d_i(x,g_0,\ldots,g_{n-1},y) &= \begin{cases} (x,g_1,\ldots,g_i\cdot g_{i+1},\ldots, g_{n-1},y) & 0<i<n \\
-%    (x\cdot g_0, g_1,\ldots,g_{n-1},y) & i=0 \\
-%    (x,g_0,\ldots,g_{n-2}, g_{n-1}\cdot y) & i=n,\end{cases} \\
-%    s_i(x,g_0,\ldots,g_{n-1},y) &= (x,g_0,\ldots,g_{i-1},e,g_i,\ldots,g_{n-1},y).
-%\end{align*}
-%The previous example $BG$ is just $B(\ast, G, \ast)$.
-%\end{example}
-%
+More precisely, the points are configurations of points in $I$, labelled by elements of $G$. Each configuration of $n$ points subdivides the unit interval into $n+1$ segments, so each such configuration determines lengths $t_0, t_1, \dots, t_n$, where $\sum_i t_i = 1$. 
+
+\todo{All these tables are wrong, I had made a mistake. There should be only $n$ not $n+1$ points in a configuration of $n$ points inside $I$. They should be labels on the points, not the intervals. Need to fix and draw new pictures.}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+    $t_0$ & $t_1$ & $t_2$ & $\cdots$ & $t_n$ \\
+    \hline
+    $g_0$ & $g_1$ & $g_2$ & $\cdots$ & $g_n$ \\
+\end{tabular}
+\end{center}
+
+We note that in a configuration of $n$ points labelled by elements of $G$, the points are priori allowed to be on the boundary, or more than a point can be in the same slot in $I$. In other words, for a configuration of $n$ points, the $t_i$ are a priori allowed to be 0. Now we make a bunch of identifications:
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $0$ & $t_i$ & $\cdots$ & $t_{n-1}$ \\
+    \hline
+    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_i$ & $g_{i+1}$ & $\cdots$ & $g_n$
+\end{tabular} $\ \sim\ $
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i$ & $\cdots$ & $t_{n-1}$ \\
+    \hline
+    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_i g_{i+1}$ & $\cdots$ & $g_n$
+\end{tabular},
+\end{center}
+and
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    $0$ & $t_0$ & $t_1$ & $\cdots$ & $t_{n-1}$ \\
+    \hline
+    $g_0$ & $g_1$ & $g_2$ & $\cdots$ & $g_n$
+\end{tabular} $\ \sim\ $
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    $t_0$ & $t_1$ & $t_2$ & $\cdots$ & $t_{n-1}$ \\
+    \hline
+    $g_1$ & $g_2$ & $g_3$ & $\cdots$ & $g_n$
+\end{tabular},
+\end{center}
+and similarly if 0 is at the end, and finally that we are allowed to concatenate lengths by multiplication by the identity in the group:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i$ & $t_{i+1}$ & $\cdots$ & $t_{n}$ \\
+    \hline
+    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $e$ & $g_{i+1}$ & $\cdots$ & $g_n$
+\end{tabular} $\ \sim\ $
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    $t_0$ & $t_1$ & $\cdots$ & $t_{i-1}$ & $t_i + t_{i+1}$ & $\cdots$ & $t_{n}$ \\
+    \hline
+    $g_0$ & $g_1$ & $\cdots$ & $g_{i-1}$ & $g_{i+1}$ & $\cdots$ & $g_n$
+\end{tabular}
+\end{center}
+
+
+
+Observe that $BG = \coprod_{n=0}^\infty G^n \times \Delta^n / \sim$. It turns out this is precisely the geometric realization of a simplicial set. We go on to defining these concepts in the next section.
+
+
+
+%TODO clean this up 
+
+\subsection{Simplicial sets}
+Let $\DDelta$ denote the category whose objects are finite nonempty totally ordered sets $[n] = \{0<1< \cdots < n\}$, and morphisms are order preserving functions.
+
+\begin{definition} A \textit{simplicial set}\index[ind]{simplicial set} is a contravariant functor $\DDelta \to \Set$, that is, a functor $\DDelta^\op \to \Set$. A morphism of simplicial sets is a natural transformation of these functors. This gives us a category, denoted $\sSet$.
+\end{definition}
+
+\begin{remark} We may define a simplicial object in any category $\mathscr{C}$ as a functor
+    \[
+        \DDelta^\op \to \mathscr{C}.
+    \]
+\end{remark}
+
+\begin{note} The category $\DDelta$ has a generating set of morphisms. For all $n\ge 0$,
+\begin{itemize}
+    \item there exist $n+1$ injections $d^i : [n-1] \to [n]$ for $0\leq i\leq n$, which ``skips'' $i$, that is,
+        \[
+            d^i(k) = \begin{cases} k & k<i \\ k+1 & k\geq i, \end{cases}
+        \]
+        called the \textit{coface maps}. %TODO check
+\end{itemize}
+There exist $n+1$ surjections $s^j : [n+1] \to [n]$ for $0\leq j\leq n$, which ``repeat'' $j$, that is,
+
+\[
+    s^j(k) = \begin{cases} k & k\leq j \\ k-1 & k>j \end{cases}
+\]
+\end{note}
+
+\begin{remark} These satisfy
+    \begin{align*}
+        d^j d^i &= d^i d^{j-1} \quad\text{for } i<j \\
+        s^j s^i &= s^i s^{j+1} \quad\text{for }  i\leq j \\
+        s^j d^i &= \begin{cases} \id & \text{for } i=j,\ i=j+1 \\ d^i s^{j+1} &\text{for } i<j \\ d^{i-1} s^j &\text{for } i>j+1. \end{cases}
+    \end{align*}
+\end{remark}
+Moreover, every morphism in $\DDelta$ can be written as a composite of $s^i$'s and $d^j$'s.
+
+For $X\in \sSet$, we obtain a set $X_n$ for all $n\geq 0$, and we have maps $d_i := X(d^i) : X_n \to X_{n-1}$ for $0\leq i\leq n$, called \textit{face maps}, and we have maps $s_j = X(s^j):X_n \to X_{n+1}$ for $0\leq j\leq n$, called \textit{degeneracy maps}, which satisfy relations dual to those above.
+
+\begin{definition} A simplicial set $X_\dot$ may be defined alternatively as a collection of sets $X_0,X_1,\ldots$ together with functions $d_i: X_n \to X_{n-1}$ and $s^j: X_n \to X_{n+1}$ satisfying the relations:
+\begin{align*}
+    d_i d_j &= d_{j-1} d_i \quad \text{for } i<j \\
+    s_i s_j &= s_{j+1} s_i \quad \text{for } i\leq j \\
+    d_i s_j &= \begin{cases} \id & \text{for } i=j,\ i=j+1 \\ s_{j-1}d_i & \text{for } i<j \\ s_j d_{i-1} & \text{for } i>j+1. \end{cases}
+\end{align*}
+\end{definition}
+
+A map of simplicial sets $f_\dot : X_\dot \to Y_\dot$ is a collection of functions $f_n : X_n \to Y_n$ that commute with the face and degeneracy maps.
+
+ For a nice introduction to simplicial sets, see \cite{friedman4221elementary} or \cite{riehl-sset}. A more in-depth treatment of simplicial homotopy theory is given in \cite{goerss-jardine}.
+
+
+\begin{example} The singular complex of a space $X$. We first define the topological $n$-simplex as
+    \[
+        \Delta^n := \{(t_0, \ldots, t_n) \in \R^{n+1} \ : 0\leq t_i\leq 1,\ \sum_{i=0}^n t_i = 1\}.
+    \]
+
+    Note that we have canonical maps for $0\leq i\leq n$
+    \begin{align*}
+        \delta_i : \Delta^{n-1} &\to \Delta^{n} \\
+        (t_0,\ldots,t_{n-1}) &\mapsto (t_0,\ldots,t_{i-1},0,t_i,\ldots,t_{n-1}).
+    \end{align*}
+    We may think about  this as viewing an $(n-1)$-simplex as a degenerate $n$-simplex. We have another map for $0\leq i\leq n$
+    \begin{align*}
+        \sigma_i : \Delta^{n+1} &\to \Delta^{n} \\
+        (t_0,\ldots,t_{n+1}) &\mapsto (t_0,\ldots,t_{i-1}, t_i + t_{i+1},\ldots,t_{n+1}),
+    \end{align*}
+    which we think of as projecting onto the $(n-1)$-simplex orthogonal to the $i$th face.
+\end{example}
+
+\begin{definition} Let $X$ be a topological space. Then $\Sing(X)$ is the simplicial set with $n$-simplices $\Sing(X)_n = \Top(\Delta^n, X)$ to be the set of continuous maps $\Delta^n \xto{f} X$. This comes with face and degeneracy maps given by
+\begin{align*}
+    d_i : \Top(\Delta^{n}, X) &\to \Top(\Delta^{n-1}, X) \\
+    (\Delta^{n} \xto{f} X) &\mapsto (\Delta^{n-1} \xto{\delta_i} \Delta^{n} \xto{f} X),
+\end{align*}
+and
+\begin{align*}
+    s_j : \Top(\Delta^{n}, X) &\to \Top(\Delta^{n+1}, X) \\
+    (\Delta^{n} \xto{f} X) &\mapsto (\Delta^{n+1} \xto{\sigma_j} \Delta^{n} \xto{f} X).
+\end{align*}
+\end{definition}
+
+\begin{remark} This functor is used to define singular homology:
+\begin{align*}
+    H_n(-,\Z) : \Top \xto{\Sing(-)} \sSet \xto{F} \sAb \to \Ch_\Z,
+\end{align*}
+where $F$ takes a free abelian group on each $X_n$, and we have that $\delta:= \sum (-1)^i d_i$ in $\Ch_\Z$.
+\end{remark}
+
+\begin{definition} Let $\mathscr{C}$ be a small category. The \textit{nerve of $\mathscr{C}$}\index[ind]{nerve of a category}, denoted $N\mathscr{C}$ is the simplicial set with
+\begin{align*}
+    (N\mathscr{C})_0 &= \ob\mathscr{C} \\
+    (N\mathscr{C})_1 &= \mor \mathscr{C} \\
+                     &\vdots \\
+    (N\mathscr{C})_n &= \{\text{strings of $n$-composable morphisms}\}.
+\end{align*}
+We have degeneracy maps $s_j : (N\mathscr{C})_n \to (N\mathscr{C})_{n+1}$ inserting an identity at the $j$th slot,and we get face maps $d_i : (N\mathscr{C})_n \to (N\mathscr{C})_{n-1}$ which, for $0< i n$, composes the $i$ and $i+1$st morphism, and $d_0$ and $d_n$ omit the first and last map, respectively.
+\end{definition}
+
+\begin{obs} If we have a group $G$, it is a category with one object, and composition is given by the group multiplication. Its nerve has $(NG)_n = G^n$, whose face maps $d_i : G^n \to G^{n-1}$ are given by multiplication at slot $i$, for $0<i<n$, and for $d_0$ and $d_n$ forget the $0$th and $n$th entry, respectively. The degeneracy maps $s_i$ insert the identity $e$ at slot $i$.\todo{We should be consistent in $d_i$, $s_j$, etc. I think this is a common thing in the literature to use different indexing notation.}
+
+\end{obs}
+
+
+
+% Lecture 17: March 28th
+
+
+\begin{example} If $X$ is a right $G$-space, and $Y$ is a left $G$-space, we define the simplicial set $B_\dot (X,G,Y)$ with
+\[
+    B_n(X,G,Y) := X \times G^n \times Y,
+\]
+and face and degeneracy maps
+\begin{align*}
+    d_i(x,g_0,\ldots,g_{n-1},y) &= \begin{cases} (x,g_1,\ldots,g_i\cdot g_{i+1},\ldots, g_{n-1},y) & 0<i<n \\
+    (x\cdot g_0, g_1,\ldots,g_{n-1},y) & i=0 \\
+    (x,g_0,\ldots,g_{n-2}, g_{n-1}\cdot y) & i=n,\end{cases} \\
+    s_i(x,g_0,\ldots,g_{n-1},y) &= (x,g_0,\ldots,g_{i-1},e,g_i,\ldots,g_{n-1},y).
+\end{align*}
+The previous example $BG$ is just $B(\ast, G, \ast)$.
+\end{example}
+
 %\subsection{Geometric realization}
 %\begin{definition} Let $X_\dot$ be a simplicial set. Then its \textit{geometric realization}\index[ind]{geometric realization} is given by
 %\begin{align*}
@@ -3864,7 +3869,7 @@ For an abelian group $G$, the goal is to define Eilenberg MacLane spaces $K(G,n)
 %and whose topology is the quotient topology.
 %\end{definition}
 %
-%\textbf{Intuition} Out of this simplicial set $X_\dot$, we woudl like to build a topological space which records the combinatorial data of the simplicial set in a topological way. More specifically, we will build a CW complex whose 0-cells are precisely $X_0$, and whose higher cells are non-degenerate simplices, that is, our $n$-cells should not arise as the degeneracy of some lower-dimensional information.
+%\textbf{Intuition} Out of this simplicial set $X_\dot$, we would like to build a topological space which records the combinatorial data of the simplicial set in a topological way. More specifically, we will build a CW complex whose 0-cells are precisely $X_0$, and whose higher cells are non-degenerate simplices, that is, our $n$-cells should not arise as the degeneracy of some lower-dimensional information.
 %
 %
 %\begin{definition} An $n$-simplex is called \textit{nondegenerate}\index[ind]{simplex!nondegenerate} if it cannot be written as $s_i y$ for any $y\in X_{n-1}$ for any $i$.
@@ -3911,7 +3916,7 @@ For an abelian group $G$, the goal is to define Eilenberg MacLane spaces $K(G,n)
 %\end{proof}
 %
 %
-%\begin{examples} $\ $
+%\begin{examples}
 %\begin{enumerate}
 %    \item the \textit{classifying space}\index[ind]{classifying space} of a small category $\mathscr{C}$, denoted $B\mathscr{C}$, is defined by
 %    \begin{align*}
@@ -3938,6 +3943,15 @@ For an abelian group $G$, the goal is to define Eilenberg MacLane spaces $K(G,n)
 %\begin{exercise} Show that for the category $\dot \to \dot$, its classifying space is the unit interval $I=[0,1]$.
 %\end{exercise}
 %
+%\begin{remark}
+%We can define simplicial objects in any category, and in particular we can define simplicial spaces and their geometric realization in the same way. Note that if $G$ is a topological group, $BG$ is the geometric realization of a simplicial space $B_\bullet G$, defined in the same way, except now $G$ is a space and not a set throughout the construction. \end{remark}
+%
+%\begin{example} Let $U$ be the infinite unitary group, as a topological group.  Bott periodicity, in complex $K$-theory, is the result that $\BU \simeq \Omega^2 \BU$. Thus we define an $\Omega$-(pre)spectrum ${\bf \BU} = \{\BU, \Omega \BU, \BU, \Omega \BU,\ldots\}$, which yields a cohomology theory, called complex topological $K$-theory.
+%\end{example}
+%
+%
+%
+%\subsection{Universal principal $G$-bundles}
 %\begin{definition} We define the space $EG$ to be the geometric realization of the simplicial set $E_\dot G$, defined by
 %\begin{align*}
 %    E_n G := G^{n+1},
@@ -3964,7 +3978,7 @@ For an abelian group $G$, the goal is to define Eilenberg MacLane spaces $K(G,n)
 %\]
 %then $E_\dot G$ is a simplicial $G$-set, and the $G$-action commutes with the face and degeneracy maps, so $EG$ is a $G$-space. We note also that modding by this action, we obtain $E_n G/G = B_n G$. We claim that this quotient passes to the geometric relation (since colimits commute), thus $BG = EG/G$.
 %
-%\begin{theorem}[{\cite[16]{May}}] We have that $p: EG \to BG$ is a bundle with fiber $G$. Moreover, every principal $G$-bundle is a pullback of the form
+%\begin{theorem}[{\cite[16]{may}}] We have that $p: EG \to BG$ is a bundle with fiber $G$. Moreover, every principal $G$-bundle is a pullback of the form
 %\[
 %    \begin{tikzcd}
 %        E\rar\dar\pb & EG\dar["p" right] \\
@@ -4002,18 +4016,16 @@ For an abelian group $G$, the goal is to define Eilenberg MacLane spaces $K(G,n)
 %Therefore $K(G,n) = B^n G$.
 %
 %
+%\begin{remark}
+%The collection of spaces $\{K(G, n)\}$ forms an $\Omega$-spectrum, which represents ordinary homology and cohomology with $G$-coefficients.
+%\end{remark}
 %
 %
 %
-
-
+%
+%\newpage
+%\listoftodos
 \newpage
-\listoftodos
-\newpage
-
-
-
-
 
 
 
