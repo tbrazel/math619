@@ -39,7 +39,7 @@
 
 
 \title{Math 619 Notes}
-\author{Thomas Brazelton and Mona Merling}
+\author{Thomas Brazelton and Mona Merling\\ with illustrations by Maxine Calle}
 \date{Spring 2021 --- Last modified \today}
 
 
@@ -3856,57 +3856,59 @@ and face and degeneracy maps
 The previous example $BG$ is just $B(\ast, G, \ast)$.
 \end{example}
 
-%\subsection{Geometric realization}
-%\begin{definition} Let $X_\dot$ be a simplicial set. Then its \textit{geometric realization}\index[ind]{geometric realization} is given by
-%\begin{align*}
-%    |X_\dot| := \coprod_{n\ge 0} X_n \times \Delta^n \Big/\sim,
-%\end{align*}
-%where the equivalence relation is given by
-%\begin{align*}
-%    (x, \delta_i u) &\sim (d_i x, u) \quad \quad x\in X_n,\ u\in \Delta^{n-1},\\
-%    (y,\sigma_i v) &\sim (s_i y, v) \quad \quad y\in X_{n-1},\ v\in \Delta^n,
-%\end{align*}
-%and whose topology is the quotient topology.
-%\end{definition}
-%
-%\textbf{Intuition} Out of this simplicial set $X_\dot$, we would like to build a topological space which records the combinatorial data of the simplicial set in a topological way. More specifically, we will build a CW complex whose 0-cells are precisely $X_0$, and whose higher cells are non-degenerate simplices, that is, our $n$-cells should not arise as the degeneracy of some lower-dimensional information.
-%
-%
-%\begin{definition} An $n$-simplex is called \textit{nondegenerate}\index[ind]{simplex!nondegenerate} if it cannot be written as $s_i y$ for any $y\in X_{n-1}$ for any $i$.
-%\end{definition}
-%
-%\begin{note} We have that $|-|: \sSet \to \Top$ is a functor.
-%\end{note}
-%
-%\begin{example} The space $|\Sing(X)|$ is huge, and comes equipped with a map
-%    \begin{align*}
-%        \gamma : |\Sing(X)| &\to X \\
-%       \left[ \Delta^n \xto{f} X,\ u\in \Delta^n \right] &\mapsto f(u).
-%    \end{align*}
-%\end{example}
-%
+\subsection{Geometric realization}
+\begin{definition} Let $X_\dot$ be a simplicial set. Then its \textit{geometric realization}\index[ind]{geometric realization} is given by
+\begin{align*}
+    |X_\dot| := \coprod_{n\ge 0} X_n \times \Delta^n \Big/\sim,
+\end{align*}
+where the equivalence relation is given by
+\begin{align*}
+    (x, \delta_i u) &\sim (d_i x, u) \quad \quad x\in X_n,\ u\in \Delta^{n-1},\\
+    (y,\sigma_i v) &\sim (s_i y, v) \quad \quad y\in X_{n-1},\ v\in \Delta^n,
+\end{align*}
+and whose topology is the quotient topology.
+\end{definition}
+
+\textbf{Intuition} Out of this simplicial set $X_\dot$, we would like to build a topological space which records the combinatorial data of the simplicial set in a topological way. More specifically, we will build a CW complex whose 0-cells are precisely $X_0$, and whose higher cells are non-degenerate simplices, that is, our $n$-cells should not arise as the degeneracy of some lower-dimensional information.
+
+
+\begin{definition} An $n$-simplex is called \textit{nondegenerate}\index[ind]{simplex!nondegenerate} if it cannot be written as $s_i y$ for any $y\in X_{n-1}$ for any $i$.
+\end{definition}
+
+\begin{note} We have that $|-|: \sSet \to \Top$ is a functor.
+\end{note}
+
+\begin{example} The space $|\Sing(X)|$ is huge, and comes equipped with a map
+    \begin{align*}
+        \gamma : |\Sing(X)| &\to X \\
+       \left[ \Delta^n \xto{f} X,\ u\in \Delta^n \right] &\mapsto f(u).
+    \end{align*}
+\end{example}
+
 % \todo{cite Milnor's original paper}
-%
-%\begin{theorem}[{\cite{Milnor}, \cite[16.2]{may}}] This morphism $\gamma$ is a weak equivalence. Moreover, $|\Sing(X)|$ is a CW complex with one $n$-cell for each nondegenerate $n$-simplex of $X$.
-%\end{theorem}
-%
-%\begin{note} The map $\gamma$ is a natural transformation $|\Sing(-)| \Rightarrow \id_{\Top}$.
-%\end{note}
-%
-%
-%\begin{proposition} If $z$ is a degenerate simplex, that is, $z = s_i x$ for some $x_i$ and some (possibly nondegenerate) $x$, then there is a unique nondegenerate simplex $y$ such that
-%\begin{align*}
-%    z = s_{i_1} \cdots s_{i_k} = y,
-%\end{align*}
-%for some $s_{i_1} \ldots s_{i_k}$.
-%\end{proposition}
-%
-%\begin{theorem} The functors $|-|$ and $\Sing(-)$ are adjoints. That is, for $X\in \sSet$ and $Y\in \Top$, there is a natural isomorphism
-%\begin{align*}
-%    \Hom_\Top (|X|,Y) \cong \Hom_\sSet (X, \Sing(Y)).
-%\end{align*}
-%\end{theorem}
-%
+
+\begin{theorem}[{\cite[16.2]{may}}] This morphism $\gamma$ is a weak equivalence. Moreover, $|\Sing(X)|$ is a CW complex with one $n$-cell for each nondegenerate $n$-simplex of $X$.
+\end{theorem}
+
+\begin{note} The map $\gamma$ is a natural transformation $|\Sing(-)| \Rightarrow \id_{\Top}$.
+\end{note}
+
+
+\begin{proposition} If $z$ is a degenerate simplex, that is, $z = s_i x$ for some $x_i$ and some (possibly nondegenerate) $x$, then there is a unique nondegenerate simplex $y$ such that
+\begin{align*}
+    z = s_{i_1} \cdots s_{i_k} = y,
+\end{align*}
+for some $s_{i_1} \ldots s_{i_k}$.
+\end{proposition}
+
+\begin{theorem} The functors $|-|$ and $\Sing(-)$ are adjoints. That is, for $X\in \sSet$ and $Y\in \Top$, there is a natural isomorphism
+\begin{align*}
+    \Hom_\Top (|X|,Y) \cong \Hom_\sSet (X, \Sing(Y)).
+\end{align*}
+\end{theorem}
+
+For a sketch of the proof, see \cite[Theorem 4.10]{friedman4221elementary}.
+
 %\begin{proof}[Proof idea] We define a map
 %\begin{align*}
 %    \phi : \Hom_\sSet (X, \Sing(Y)) \to \Hom_\Top (|X|, Y),
@@ -3914,117 +3916,124 @@ The previous example $BG$ is just $B(\ast, G, \ast)$.
 %by taking a morphism of simplicial sets $X\xto{f} \Sing(Y)$ .... \todo{finish this proof}
 %
 %\end{proof}
-%
-%
-%\begin{examples}
-%\begin{enumerate}
-%    \item the \textit{classifying space}\index[ind]{classifying space} of a small category $\mathscr{C}$, denoted $B\mathscr{C}$, is defined by
-%    \begin{align*}
-%        B\mathscr{C} := |N \mathscr{C}|.
-%    \end{align*}
-%
-%    \item we have that $B(X,G,Y):= |B_\dot (X,G,Y)|$.
-%
-%    \item the space $BG$ is a particular example of both of the above examples;
-%        \begin{itemize}
-%            \item $G$ is a category with one object
-%            \item $G = B(\ast, G,\ast)$.
-%        \end{itemize}
-%\end{enumerate}
-%\end{examples}
-%
-%\begin{example} The classifying space of the single object category, that is, the trivial group $\{e\}$, is the topological space with a single point.
-%\end{example}
-%
-%
-%\begin{exercise} Show that $B(\Z\big/2) \cong \RP^\infty$.
-%\end{exercise}
-%
-%\begin{exercise} Show that for the category $\dot \to \dot$, its classifying space is the unit interval $I=[0,1]$.
-%\end{exercise}
-%
-%\begin{remark}
-%We can define simplicial objects in any category, and in particular we can define simplicial spaces and their geometric realization in the same way. Note that if $G$ is a topological group, $BG$ is the geometric realization of a simplicial space $B_\bullet G$, defined in the same way, except now $G$ is a space and not a set throughout the construction. \end{remark}
-%
-%\begin{example} Let $U$ be the infinite unitary group, as a topological group.  Bott periodicity, in complex $K$-theory, is the result that $\BU \simeq \Omega^2 \BU$. Thus we define an $\Omega$-(pre)spectrum ${\bf \BU} = \{\BU, \Omega \BU, \BU, \Omega \BU,\ldots\}$, which yields a cohomology theory, called complex topological $K$-theory.
-%\end{example}
-%
-%
-%
-%\subsection{Universal principal $G$-bundles}
-%\begin{definition} We define the space $EG$ to be the geometric realization of the simplicial set $E_\dot G$, defined by
-%\begin{align*}
-%    E_n G := G^{n+1},
-%\end{align*}
-%with face and maps defined by
-%\begin{align*}
-%    d_i(g_1,\ldots,g_{n+1}) &= \begin{cases} (g_2,\ldots,g_{n+1}) & i=0 \\ (g_1,\ldots,g_{i-1}, g_i\cdot g_{i+1},\ldots,g_{n+1}) & 1\leq i\leq n, \end{cases} \\
-%    s_j(g_1,\ldots,g_{n+1}) &= (g_1,\ldots,g_{i-1},e, g_i,\ldots,g_{n+1}), \quad 0\leq i\leq n.
-%\end{align*}
-%\end{definition}
-%
-%We note that this simplicial set is just $B(\ast, G, G)$. We obtain a map of simplicial sets
-%\begin{align*}
-%    p_n : E_n G \to B_n G,
-%\end{align*}
-%given by projection on the first $n$ coordinates. This commutes with face and degeneracy maps (check). Therefore by functoriality, we get a continuous map
-%\begin{align*}
-%    p : EG \to BG.
-%\end{align*}
-%
-%Let $G$ act on $E_n G$ on the right:
-%\[
-%    (g_1,\ldots,g_{n+1})\cdot g:= (g_1,\ldots,g_n, g_{n+1}\cdot g),
-%\]
-%then $E_\dot G$ is a simplicial $G$-set, and the $G$-action commutes with the face and degeneracy maps, so $EG$ is a $G$-space. We note also that modding by this action, we obtain $E_n G/G = B_n G$. We claim that this quotient passes to the geometric relation (since colimits commute), thus $BG = EG/G$.
-%
-%\begin{theorem}[{\cite[16]{may}}] We have that $p: EG \to BG$ is a bundle with fiber $G$. Moreover, every principal $G$-bundle is a pullback of the form
-%\[
-%    \begin{tikzcd}
-%        E\rar\dar\pb & EG\dar["p" right] \\
-%    X\rar & BG.
-%    \end{tikzcd}
-%\]
-%That is, $EG\to BG$ is the \textit{universal principal $G$-bundle}.
-%\end{theorem}
-%
-%\begin{exercise} We have that $EG\simeq \ast$ is contractible. Thus by the long exact sequence, we see that
-%\begin{align*}
-%    \pi_{q+1}(BG) \cong \pi_q(G).
-%\end{align*}
-%This holds for any topological group. In particular, for $G$ discrete, we have that
-%\begin{align*}
-%    \pi_1(BG) &\cong \pi_0(G) = G,\\
-%    \pi_n(BG) &\cong 0,
-%\end{align*}
-%for any $n \neq 1$. Thus $BG = K(G,1)$.
-%\end{exercise}
-%
-%\begin{theorem}[Milnor] We have that $|-|: \sSet \to \Top$ preserves products, that is,
-%\begin{align*}
-%    |X_\dot \times Y_\dot| \cong |X_\dot| \times |Y_\dot|.
-%\end{align*}
-%\end{theorem}
-%
-%As a corollary, we see that $B(G\times H) \cong BG \times BH$. That is, the functor $B:\Top\Grp \to \Top$ preserves products. When $G$ is abelian, the multiplication map $\mu: G\times G \to G$ is abelian, thus $BG$ becomes a topological group.\footnote{Since $B: \Top\Grp \to \Top$ preserves products and the terminal object, it sends group objects to group objects, that is, topological abelian groups to topological groups.}
-%
-%Thus for $G$ abelian, we may iterate this construction to define $B^n G := B(B^{n-1} G)$. Moreover for $G$ discrete and abelian, we see that
-%\begin{align*}
-%    \pi_q(B^n G) = \pi_{q-n}(G) =  \begin{cases} G & q=n \\ 0 & \text{otherwise}. \end{cases}
-%\end{align*}
-%
-%Therefore $K(G,n) = B^n G$.
-%
-%
-%\begin{remark}
-%The collection of spaces $\{K(G, n)\}$ forms an $\Omega$-spectrum, which represents ordinary homology and cohomology with $G$-coefficients.
-%\end{remark}
-%
-%
-%
-%
-%\newpage
-%\listoftodos
+
+
+\begin{examples}
+\begin{enumerate}
+    \item the \textit{classifying space}\index[ind]{classifying space} of a small category $\mathscr{C}$, denoted $B\mathscr{C}$, is defined by
+    \begin{align*}
+        B\mathscr{C} := |N \mathscr{C}|.
+    \end{align*}
+
+    \item we have that $B(X,G,Y):= |B_\dot (X,G,Y)|$.
+
+    \item the space $BG$ is a particular example of both of the above examples;
+        \begin{itemize}
+            \item $G$ is a category with one object
+            \item $G = B(\ast, G,\ast)$.
+        \end{itemize}
+\end{enumerate}
+\end{examples}
+
+\begin{example} The classifying space of the single object category, that is, the trivial group $\{e\}$, is the topological space with a single point.
+\end{example}
+
+
+\begin{exercise} Show that $B(\Z\big/2) \cong \RP^\infty$.
+\end{exercise}
+
+\begin{exercise} Show that for the category $\dot \to \dot$, its classifying space is the unit interval $I=[0,1]$.
+\end{exercise}
+
+\begin{remark}
+We can define simplicial objects in any category, and in particular we can define simplicial spaces and their geometric realization in the same way. Note that if $G$ is a topological group, $BG$ is the geometric realization of a simplicial space $B_\bullet G$, defined in the same way, except now $G$ is a space and not a set throughout the construction. \end{remark}
+
+\begin{example} Let $U$ be the infinite unitary group, as a topological group.  Bott periodicity, in complex $K$-theory, is the result that $\BU \simeq \Omega^2 \BU$. Thus we define an $\Omega$-(pre)spectrum ${\bf \BU} = \{\BU, \Omega \BU, \BU, \Omega \BU,\ldots\}$, which yields a cohomology theory, called complex topological $K$-theory.
+\end{example}
+
+
+
+\subsection{Universal principal $G$-bundles}
+\begin{definition} We define the space $EG$ to be the geometric realization of the simplicial set $E_\dot G$, defined by
+\begin{align*}
+    E_n G := G^{n+1},
+\end{align*}
+with face and maps defined by
+\begin{align*}
+    d_i(g_1,\ldots,g_{n+1}) &= \begin{cases} (g_2,\ldots,g_{n+1}) & i=0 \\ (g_1,\ldots,g_{i-1}, g_i\cdot g_{i+1},\ldots,g_{n+1}) & 1\leq i\leq n, \end{cases} \\
+    s_j(g_1,\ldots,g_{n+1}) &= (g_1,\ldots,g_{i-1},e, g_i,\ldots,g_{n+1}), \quad 0\leq i\leq n.
+\end{align*}
+\end{definition}
+
+We note that this simplicial set is just $B(\ast, G, G)$. We obtain a map of simplicial sets
+\begin{align*}
+    p_n : E_n G \to B_n G,
+\end{align*}
+given by projection on the first $n$ coordinates. This commutes with face and degeneracy maps (check). Therefore by functoriality, we get a continuous map
+\begin{align*}
+    p : EG \to BG.
+\end{align*}
+
+Let $G$ act on $E_n G$ on the right:
+\[
+    (g_1,\ldots,g_{n+1})\cdot g:= (g_1,\ldots,g_n, g_{n+1}\cdot g),
+\]
+then $E_\dot G$ is a simplicial $G$-set, and the $G$-action commutes with the face and degeneracy maps, so $EG$ is a $G$-space. We note also that modding by this action, we obtain $E_n G/G = B_n G$. We claim that this quotient passes to the geometric relation (since colimits commute), thus $BG = EG/G$.
+
+\begin{theorem}[{\cite[16]{may}}] We have that $p: EG \to BG$ is a bundle with fiber $G$. Moreover, every principal $G$-bundle is a pullback of the form
+\[
+    \begin{tikzcd}
+        E\rar\dar\pb & EG\dar["p" right] \\
+    X\rar & BG.
+    \end{tikzcd}
+\]
+That is, $EG\to BG$ is the \textit{universal principal $G$-bundle}.
+\end{theorem}
+
+\begin{exercise} Show that $EG\simeq \ast$ is contractible. 
+\end{exercise}
+Thus by the long exact sequence, we see that
+\begin{align*}
+    \pi_{q+1}(BG) \cong \pi_q(G).
+\end{align*}
+This holds for any topological group. In particular, for $G$ discrete, we have that
+\begin{align*}
+    \pi_1(BG) &\cong \pi_0(G) = G,\\
+    \pi_n(BG) &\cong 0,
+\end{align*}
+for any $n \neq 1$. Thus $BG = K(G,1)$.
+
+
+
+\begin{theorem}[Milnor] We have that $|-|: \sSet \to \Top$ preserves products, that is,
+\begin{align*}
+    |X_\dot \times Y_\dot| \cong |X_\dot| \times |Y_\dot|.
+\end{align*}
+\end{theorem}
+
+As a corollary, we see that $B(G\times H) \cong BG \times BH$. That is, the functor $B:\Top\Grp \to \Top$ preserves products. When $G$ is abelian, the multiplication map $\mu: G\times G \to G$ is abelian, thus $BG$ becomes a topological group.\footnote{Since $B: \Top\Grp \to \Top$ preserves products and the terminal object, it sends group objects to group objects, that is, topological abelian groups to topological groups.}
+
+Thus for $G$ abelian, we may iterate this construction to define $B^n G := B(B^{n-1} G)$. Moreover for $G$ discrete and abelian, we see that
+\begin{align*}
+    \pi_q(B^n G) = \pi_{q-n}(G) =  \begin{cases} G & q=n \\ 0 & \text{otherwise}. \end{cases}
+\end{align*}
+
+Therefore $K(G,n) = B^n G$.
+
+
+\textbf{Big upshot.}
+The collection of spaces $\{K(G, n)\}$ forms an $\Omega$-spectrum, which represents ordinary homology and cohomology with $G$-coefficients. Precisely, we have natural isomorphisms
+$$\tilde{H}_q(X; G) \cong \colim_n \pi_{q+n}(X\wedge K(G, n)),$$
+$$\tilde{H}^q(X; G)\cong [X, K(G,n)]_\ast.$$ 
+
+This is discussed in \cite[Chapter 22]{may}. The idea of the proofs is to simply notice that the axioms for reduced homology and cohomology (which we have already checked in general) are satisfied for the expressions on the right hand side, including also the dimension axiom. Thus these are indeed isomorphic to ordinary homology and cohomology by the uniqueness of homology and cohomology theories that satisfy the dimension axiom.
+
+
+
+
+
+\newpage
+\listoftodos
 \newpage
 
 

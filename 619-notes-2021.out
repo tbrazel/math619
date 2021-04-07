@@ -47,17 +47,19 @@
 \BOOKMARK [1][-]{section.8}{Eilenberg MacLane spaces}{}% 47
 \BOOKMARK [2][-]{subsection.8.1}{The bar construction BG}{section.8}% 48
 \BOOKMARK [2][-]{subsection.8.2}{Simplicial sets}{section.8}% 49
-\BOOKMARK [1][-]{appendix.A}{More category theory: properties of morphisms}{}% 50
-\BOOKMARK [2][-]{subsection.A.1}{Stability and closure definitions}{appendix.A}% 51
-\BOOKMARK [2][-]{subsection.A.2}{Monomorphisms and epimorphisms}{appendix.A}% 52
-\BOOKMARK [2][-]{subsection.A.3}{Properties of morphisms can induce properties of objects}{appendix.A}% 53
-\BOOKMARK [2][-]{subsection.A.4}{Preservation properties under limits and colimits}{appendix.A}% 54
-\BOOKMARK [2][-]{subsection.A.5}{Colimits and limits as functors}{appendix.A}% 55
-\BOOKMARK [2][-]{subsection.A.6}{Filtered limits and colimits}{appendix.A}% 56
-\BOOKMARK [1][-]{appendix.B}{Unsorted subsections on category theory}{}% 57
-\BOOKMARK [2][-]{subsection.B.1}{Conventions}{appendix.B}% 58
-\BOOKMARK [2][-]{subsection.B.2}{Laws for pullbacks and pushouts}{appendix.B}% 59
-\BOOKMARK [1][-]{appendix.C}{Homotopy colimits}{}% 60
-\BOOKMARK [2][-]{subsection.C.1}{Intro to homotopy colimits}{appendix.C}% 61
-\BOOKMARK [2][-]{subsection.C.2}{Homotopy Invariance}{appendix.C}% 62
-\BOOKMARK [2][-]{subsection.C.3}{Homotopy colimits coinciding with colimits}{appendix.C}% 63
+\BOOKMARK [2][-]{subsection.8.3}{Geometric realization}{section.8}% 50
+\BOOKMARK [2][-]{subsection.8.4}{Universal principal G-bundles}{section.8}% 51
+\BOOKMARK [1][-]{appendix.A}{More category theory: properties of morphisms}{}% 52
+\BOOKMARK [2][-]{subsection.A.1}{Stability and closure definitions}{appendix.A}% 53
+\BOOKMARK [2][-]{subsection.A.2}{Monomorphisms and epimorphisms}{appendix.A}% 54
+\BOOKMARK [2][-]{subsection.A.3}{Properties of morphisms can induce properties of objects}{appendix.A}% 55
+\BOOKMARK [2][-]{subsection.A.4}{Preservation properties under limits and colimits}{appendix.A}% 56
+\BOOKMARK [2][-]{subsection.A.5}{Colimits and limits as functors}{appendix.A}% 57
+\BOOKMARK [2][-]{subsection.A.6}{Filtered limits and colimits}{appendix.A}% 58
+\BOOKMARK [1][-]{appendix.B}{Unsorted subsections on category theory}{}% 59
+\BOOKMARK [2][-]{subsection.B.1}{Conventions}{appendix.B}% 60
+\BOOKMARK [2][-]{subsection.B.2}{Laws for pullbacks and pushouts}{appendix.B}% 61
+\BOOKMARK [1][-]{appendix.C}{Homotopy colimits}{}% 62
+\BOOKMARK [2][-]{subsection.C.1}{Intro to homotopy colimits}{appendix.C}% 63
+\BOOKMARK [2][-]{subsection.C.2}{Homotopy Invariance}{appendix.C}% 64
+\BOOKMARK [2][-]{subsection.C.3}{Homotopy colimits coinciding with colimits}{appendix.C}% 65

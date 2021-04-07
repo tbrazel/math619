@@ -23,9 +23,10 @@ Martin Frankland,
   \emph{\href{http://uregina.ca/~franklam/Math527/Math527_0204.pdf}{Additional
   notes on CGWH spaces}}, 2013.
 
-\bibitem[Fri]{friedman4221elementary}
-G~Friedman, \emph{An elementary illustrated introduction to simplicial sets.
-  2008}, arXiv preprint arXiv:0809.4221.
+\bibitem[Fri08]{friedman4221elementary}
+G~Friedman, \emph{\href{https://arxiv.org/pdf/0809.4221.pdf}{An elementary
+  illustrated introduction to simplicial sets.}}, arXiv preprint
+  arXiv:0809.4221 (2008).
 
 \bibitem[GJ12]{goerss-jardine}
 P.G. Goerss and J.F. Jardine, \emph{Simplicial homotopy theory}, Progress in
