@@ -1,7 +1,5 @@
-\contentsline {todo}{Thomas: is this an okay convention though? I feel like in general, $\mathscr {D}^{\mathscr {C}}$ denotes $\mathscr {D}$-valued presheaves on $\mathscr {C}$, so functors $\mathscr {C}^\text {op}\to \mathscr {D}$}{9}{section*.2}%
-\contentsline {todo}{citation sneeded}{19}{section*.3}%
-\contentsline {todo}{Restructure the following proof}{59}{section*.4}%
-\contentsline {todo}{Finish proof with better pics from Maxine}{70}{section*.5}%
-\contentsline {todo}{All these tables are wrong, I had made a mistake. There should be only $n$ not $n+1$ points in a configuration of $n$ points inside $I$. They should be labels on the points, not the intervals. Need to fix and draw new pictures.}{78}{section*.6}%
-\contentsline {todo}{We should be consistent in $d_i$, $s_j$, etc. I think this is a common thing in the literature to use different indexing notation.}{81}{section*.7}%
-\contentsline {todo}{add more}{91}{section*.9}%
+\contentsline {todo}{citation sneeded}{19}{section*.2}%
+\contentsline {todo}{Finish proof with better pics from Maxine}{70}{section*.3}%
+\contentsline {todo}{All these tables are wrong, I had made a mistake. There should be only $n$ not $n+1$ points in a configuration of $n$ points inside $I$. They should be labels on the points, not the intervals. Need to fix and draw new pictures.}{78}{section*.4}%
+\contentsline {todo}{We should be consistent in $d_i$, $s_j$, etc. I think this is a common thing in the literature to use different indexing notation.}{81}{section*.5}%
+\contentsline {todo}{add more}{91}{section*.7}%

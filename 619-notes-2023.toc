@@ -42,17 +42,24 @@
 \contentsline {section}{\numberline {7}Stable homotopy theory}{66}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Excision}{66}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Generalized homology theories}{68}{subsection.7.2}%
-\contentsline {section}{\numberline {A}More category theory: properties of morphisms}{70}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{70}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{72}{subsection.A.2}%
-\contentsline {subsection}{\numberline {A.3}Properties of morphisms can induce properties of objects}{74}{subsection.A.3}%
-\contentsline {subsection}{\numberline {A.4}Preservation properties under limits and colimits}{75}{subsection.A.4}%
-\contentsline {subsection}{\numberline {A.5}Colimits and limits as functors}{77}{subsection.A.5}%
-\contentsline {subsection}{\numberline {A.6}Filtered limits and colimits}{78}{subsection.A.6}%
-\contentsline {section}{\numberline {B}Unsorted subsections on category theory}{79}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Conventions}{79}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Laws for pullbacks and pushouts}{81}{subsection.B.2}%
-\contentsline {section}{\numberline {C}Homotopy colimits}{82}{appendix.C}%
-\contentsline {subsection}{\numberline {C.1}Intro to homotopy colimits}{82}{subsection.C.1}%
-\contentsline {subsection}{\numberline {C.2}Homotopy Invariance}{84}{subsection.C.2}%
-\contentsline {subsection}{\numberline {C.3}Homotopy colimits coinciding with colimits}{85}{subsection.C.3}%
+\contentsline {subsection}{\numberline {7.3}Spectra}{72}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Generalized cohomology theories}{75}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Eilenberg MacLane spaces}{78}{section.8}%
+\contentsline {subsection}{\numberline {8.1}The bar construction $BG$}{78}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Simplicial sets}{79}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Geometric realization}{82}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Universal principal $G$-bundles}{83}{subsection.8.4}%
+\contentsline {section}{\numberline {A}More category theory: properties of morphisms}{87}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{87}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{89}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Properties of morphisms can induce properties of objects}{91}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Preservation properties under limits and colimits}{92}{subsection.A.4}%
+\contentsline {subsection}{\numberline {A.5}Colimits and limits as functors}{94}{subsection.A.5}%
+\contentsline {subsection}{\numberline {A.6}Filtered limits and colimits}{95}{subsection.A.6}%
+\contentsline {section}{\numberline {B}Unsorted subsections on category theory}{96}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Conventions}{96}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Laws for pullbacks and pushouts}{98}{subsection.B.2}%
+\contentsline {section}{\numberline {C}Homotopy colimits}{99}{appendix.C}%
+\contentsline {subsection}{\numberline {C.1}Intro to homotopy colimits}{99}{subsection.C.1}%
+\contentsline {subsection}{\numberline {C.2}Homotopy Invariance}{101}{subsection.C.2}%
+\contentsline {subsection}{\numberline {C.3}Homotopy colimits coinciding with colimits}{102}{subsection.C.3}%
