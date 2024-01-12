@@ -1,46 +1,57 @@
 This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 619-notes-2023.aux
+Case mismatch error between cite keys Hatcher and hatcher
+---line 403 of file 619-notes-2023.aux
+ : \citation{Hatcher
+ :                  }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys May and may
+---line 404 of file 619-notes-2023.aux
+ : \citation{May
+ :              }
+I'm skipping whatever remains of this command
 The style file: amsalpha.bst
 Database file #1: 619.bib
-You've used 18 entries,
+You've used 24 entries,
             2624 wiz_defined-function locations,
-            652 strings with 7062 characters,
-and the built_in function-call counts, 5114 in all, are:
-= -- 416
-> -- 169
-< -- 16
-+ -- 48
-- -- 46
-* -- 327
-:= -- 798
-add.period$ -- 18
-call.type$ -- 18
-change.case$ -- 93
-chr.to.int$ -- 18
-cite$ -- 18
-duplicate$ -- 274
-empty$ -- 493
-format.name$ -- 80
-if$ -- 1050
+            682 strings with 7768 characters,
+and the built_in function-call counts, 6823 in all, are:
+= -- 557
+> -- 239
+< -- 20
++ -- 69
+- -- 66
+* -- 427
+:= -- 1060
+add.period$ -- 24
+call.type$ -- 24
+change.case$ -- 125
+chr.to.int$ -- 24
+cite$ -- 24
+duplicate$ -- 363
+empty$ -- 655
+format.name$ -- 110
+if$ -- 1406
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 32
-newline$ -- 64
-num.names$ -- 53
-pop$ -- 182
+missing$ -- 40
+newline$ -- 82
+num.names$ -- 71
+pop$ -- 251
 preamble$ -- 1
-purify$ -- 111
+purify$ -- 149
 quote$ -- 0
-skip$ -- 193
+skip$ -- 262
 stack$ -- 0
-substring$ -- 172
-swap$ -- 22
-text.length$ -- 16
-text.prefix$ -- 16
+substring$ -- 215
+swap$ -- 29
+text.length$ -- 20
+text.prefix$ -- 20
 top$ -- 0
-type$ -- 120
+type$ -- 164
 warning$ -- 0
-while$ -- 41
-width$ -- 23
-write$ -- 185
+while$ -- 55
+width$ -- 29
+write$ -- 241
+(There were 2 error messages)

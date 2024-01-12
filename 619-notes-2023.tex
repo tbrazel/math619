@@ -701,49 +701,7 @@ Prove \autoref{prop:limits-unique-up-to-iso}.
 \end{exercise}
 
 
-\begin{comment} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 Before moving on to many examples, we state a proposition whose usefulness is hard to overestimate. It says that left adjoints preserve colimits and right adjoints preserve limits.
 
@@ -759,7 +717,7 @@ Prove \autoref{thm:LAPC}.
 
 \begin{definition} Let $I = \dot \ \  \dot$ be the discrete category with two objects and no nontrivial morphisms. Then the limit over $I$ is called the \textit{product}, and the colimit over $I$ is called the \textit{coproduct}.\index[ind]{product}\index[ind]{coproduct} Explicitly, where 0 and 1 denote the two objects in $I$, we have that
 \begin{align*}
-	\lim_I F = F(0) \Pi  F(1) \\
+	\lim_I F = F(0) \times  F(1) \\
 	\colim_I F = F(0) \amalg F(1).
 \end{align*}
 \end{definition}
@@ -774,11 +732,11 @@ Prove \autoref{thm:LAPC}.
 	 & X &
 	\end{tikzcd}
 \]
-commutes. This is exactly the coproduct of sets that we are familiar with. Dually, the limit $A\prod B$ satisfies the dual property that, for any $X$ equipped with maps $X\to A$ and $X\to B$, there is a unique map such that
+commutes. This is exactly the coproduct of sets that we are familiar with. Dually, the limit $A\times B$ satisfies the dual property that, for any $X$ equipped with maps $X\to A$ and $X\to B$, there is a unique map such that
 \[
 	\begin{tikzcd}
 	& X\ar[ddr,bend left=10]\ar[ddl,bend right=10]\dar[dashed] & \\
-	& A \prod B\ar[dl]\ar[dr] & \\
+	& A \times B\ar[dl]\ar[dr] & \\
 	 A & & B. \\
 	\end{tikzcd}
 \]
@@ -831,18 +789,19 @@ Thus the product in $\Set$ is just the cartesian product.
 	is given by $X\amalg_Z Y = (X\amalg Y)\Big/(i_1 f(z) \sim i_2 g(z))$.
 
 	If $X,Y\subseteq S$ are both subsets of some larger set with $X\cap Y = Z$, then the pushout is $X\cup Y$.
-	\item In $\Top$ the pushout is a gluing construction
-	\[
-		\begin{tikzcd}
-		Z\dar[hook]\rar["f"] & Y\dar \\
-		X\rar & X\cup_Z Y\po,
-		\end{tikzcd}
-	\]
-	where $Z\to X$ is some nice map like a closed inclusion, then we have that
-	\begin{align*}
-		X\cup_f Y = X\cup_f Y = X\amalg Y \Big/ f(z) \sim z.
-	\end{align*}
-
+	\item In $\Top$ the formula for the pushout is the same as in $\Set$, and the pushout becomes a gluing construction. 
+%	For example, 
+%	\[
+%		\begin{tikzcd}
+%		Z\dar[hook]\rar["f"] & Y\dar \\
+%		X\rar & X\cup_Z Y\po,
+%		\end{tikzcd}
+%	\]
+%	where $Z\to X$ is some nice map like a closed inclusion, then we have that
+%	\begin{align*}
+%		X\cup_f Y = X\cup_f Y = X\amalg Y \Big/ f(z) \sim z.
+%	\end{align*}
+%
 	For example, given the boundary inclusion $S^1 \to D^2$, we have that
 	\[
 		\begin{tikzcd}
@@ -905,7 +864,7 @@ with the \textit{weak topology}, meaning that $A\subseteq X$ is closed if and on
 \begin{proposition} CW complexes are in $\CGWH$.
 \end{proposition}
 
-\begin{note} The product of CW complexes $X\times Y$ gets a cell structure with $n$-cells of $X\times Y$ corresponding to a $p$-cell of $X$ and a $q$-cell of $Y$ where $p+q=n$. The idea behind this is that
+\begin{note} The product of CW complexes $X\times Y$ gets a cell structure with $n$-cells corresponding to a $p$-cell of $X$ and a $q$-cell of $Y$ where $p+q=n$. The idea behind this is that
 \[
     D^{p+q} \cong I^{p+q} \cong I^p \times I^q \cong D^p \times D^q.
 \]
@@ -1090,6 +1049,8 @@ such that $h(x,0) = f(x)$, and $h(x,1) = g(x)$ for all $x\in X$. We write $f\sim
 so a homotopy $f\simeq g$ corresponds to a path between $f$ and $g$ in the mapping space $\Map(X,Y)$.
 \end{proof}
 
+
+
 \begin{definition} We say that two spaces are \textit{homotopy equivalent} if there exist maps $f: X \to Y$ and $g : Y \to X$ such that $f\circ g\simeq \id_Y$ and $g\circ f \simeq \id_X$.
 \end{definition}
 
@@ -1230,18 +1191,21 @@ For $n=1$, we think of $S^1$ as $I^1 \Big/ \partial I^1$. Then we recall the \te
 We may verify that this is a group. So $\pi_1$ is a functor to $\Grp$.
 
 
+
+
+
 For $n\geq 2$, we note that $S^n \cong S^1 \smashprod \cdots \smashprod S^1$ is $n$ copies of the 1-sphere smashed together.
 
 
 
-	\begin{exercise} $(X\vee Y)\smashprod Z \cong (X\smashprod Z)\vee (Y\smashprod Z)$.
-	\end{exercise}
+	\begin{prop} $(X\vee Y)\smashprod Z \cong (X\smashprod Z)\vee (Y\smashprod Z)$.
+	\end{prop}
 	\begin{proof} Left adjoints preserve colimits, and note that $-\smashprod Z \colon\Top_\ast \to \Top_\ast$ is a left adjoint.
 	\end{proof}
 
 	Thus we can define $n$ different pinch maps:
 	\begin{align*}
-		p_1 &\colon S^n \cong S^1 \smashprod S^{\smashprod (n-1)} \xto {p\smashprod \id} (S^1 \vee S^1)\smashprod S^{n-1} = S^n \vee S^n \\
+		p_1 &\colon S^n \cong S^1 \smashprod S^{\smashprod (n-1)} \xto {p\smashprod \id} (S^1 \vee S^1)\smashprod S^{n-1} \cong S^n \vee S^n \\
 		&\vdots \\
 		p_k &\colon S^n \cong S^{k-1}\smashprod S^1 \smashprod S^{n-k} \xto{\id\smashprod p \smashprod \id} S^{k-1}\smashprod (S^1 \vee S^1)\smashprod S^{n-k} \cong S^n \vee S^n \\
 		&\vdots
@@ -1410,8 +1374,9 @@ We also get (by reparametrizing) that $(\gamma \eta)\cdot f \simeq \gamma\cdot (
 \begin{align*}
 	\gamma\cdot- : \pi_n(X,x) \xto{\cong} \pi_n(X,x)
 \end{align*}
-is not the identity. Thus we note that $\pi_n(X,x)$ is defined only up to isomorphism without a choice of basepoint. However if $\pi_1(X,x)$ is trivial, then $\pi_n(X)$ is well-defined without a choice of basepoint.
+is not necessarily the identity. Thus we note that $\pi_n(X,x)$ is defined only up to isomorphism without a choice of basepoint. However if $\pi_1(X,x)$ is trivial, then $\pi_n(X)$ is well-defined without a choice of basepoint.
 \end{note}
+
 
 \subsection{Weak homotopy equivalence}
 
@@ -1422,7 +1387,7 @@ is not the identity. Thus we note that $\pi_n(X,x)$ is defined only up to isomor
 are group isomorphisms for $n\geq 1$ and a bijection for $n=0$.
 \end{definition}
 
-\begin{note} If $X$ and $Y$ are path-connected, it is sufficient to require that $f_\ast : \pi_n(X,x) \to \pi_n(Y,f(x))$ is an isomorphism for all $n\geq 1$ and for all $x\in X$.
+\begin{note} If $X$ and $Y$ are path-connected, it is sufficient to require that $f_\ast \colon \pi_n(X,x) \to \pi_n(Y,f(x))$ is an isomorphism for all $n\geq 1$ and for all $x\in X$.
 \end{note}
 
 \begin{proposition}\label{htpyequivisweak} A homotopy equivalence $f: X\to Y$ is a weak homotopy equivalence.
@@ -1777,12 +1742,12 @@ We may check this is well-defined and continuous, and $h(-,0) = j\circ r$, $h(-,
 Consider the diagram
 \[
 	\begin{tikzcd}
-	X\rar[equal]\dar["i_1" left] & X\dar["i_1" left]\ar[dd, bend left=60, "i" right] \\
+	X\rar[equal]\dar["i_0" left] & X\dar["i_0" left]\ar[dd, bend left=60, "i" right] \\
 	X\amalg X\dar\rar["\id_X \amalg f" below] & X\amalg Y\dar["{(i,j)}" left] \\
 	X\times I\rar & Mf\po
 	\end{tikzcd}
 \]
-By Proposition \ref{prop:cof-times-space}, $X\amalg X = X\times \del I \cofto X\times I$ is a cofibration, and the bottom diagram is a pushout, so $(i,j)$ is a cofibration. Precomposing with $i_1$, which is also a cofibration, we obtain that $i$ is a cofibration.
+By Proposition \ref{prop:cof-times-space}, $X\amalg X = X\times \del I \cofto X\times I$ is a cofibration, and the bottom diagram is a pushout, so $(i,j)$ is a cofibration. Precomposing with $i_0$, which is also a cofibration, we obtain that $i$ is a cofibration.
 \end{proof}
 
 \subsection{Criterion for a map to be a cofibration}
@@ -1914,13 +1879,17 @@ This is not homotopy invariant. For example, the map $S^1\subseteq \R^2 \xto{f} 
 By adjunction, this corresponds to a lift
 \[
 	\begin{tikzcd}
-	E^I\ar[rr,"p_0"]\ar[dd,"p^I" left] & & E\ar[dd,"p" right] \\
+	E^I\ar[rr,"\ev_0"]\ar[dd,"p^I" left] & & E\ar[dd,"p" right] \\
 	 & X \ar[ur,"f"]\ar[ul,dashed,"\til{h}"]\ar[dl,"h"] \\
-	 B^I \ar[rr,"p_0" below] & & B.
+	 B^I \ar[rr,"\ev_0" below] & & B.
 	 \end{tikzcd}
 \]
 In this case, we say $p$ satisfies the \textit{homotopy lifting property (HLP)}\index[ind]{homotopy lifting property (HLP)}
 \end{definition}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%
 
 \begin{examples} Here are some easy examples of fibrations:
 \vspace{-10pt}
@@ -1954,7 +1923,7 @@ Again, like for cofibrations, we have a ``universal diagram'' to check.
 	\begin{tikzcd}
 	X\ar[dr,dashed]\ar[ddr,bend right=10,"h" below left]\ar[drr,bend left=10,"f" above right] &  & \\
 	 & E\times_B B^I\rar\dar\pb & E\dar["p" right] \\
-	 & B^I\rar["p_0" below] & B.
+	 & B^I\rar["\ev_0" below] & B.
 	\end{tikzcd}
 \]
 We denote this space as $N_p := E\times_B B^I$, or $P_p$. That is,
@@ -1964,27 +1933,27 @@ We denote this space as $N_p := E\times_B B^I$, or $P_p$. That is,
 This consists of all paths in $B$ stemming from points in the image of $E$. Redrawing our test diagram, we have
 \[
 	\begin{tikzcd}
-	E^I \ar[drrr,bend left=10,"p_0"]\ar[dddr,bend right=10,"p^I" left]\ar[dr,"k"] & & & \\
+	E^I \ar[drrr,bend left=10,"\ev_0"]\ar[dddr,bend right=10,"p^I" left]\ar[dr,"k"] & & & \\
 	& N_p\ar[dd]\ar[rr] & & E\ar[dd,"p" right] \\
 	& & X \ar[ur,"f"]\ar[ul,dashed]\ar[dl,"h"]\ar[uull,dashed,bend left=20] & \\
-	 & B^I \ar[rr,"p_0" below] & & B,
+	 & B^I \ar[rr,"\ev_0" below] & & B,
 	 \end{tikzcd}
 \]
-so we note that we are looking for a section $s: N_p \to E^I$ so that we may define the lift $\til{h}:=k\circ s$.
+so we note that we are looking for a section $s\colon N_p \to E^I$ so that we may define the lift $\til{h}:=k\circ s$.
 \end{note}
 
-\begin{definition} Let $k: E^I \to N_p$ with coordinates $E^I\xto{p_0} E$ and $E^I\xto{p^I} B^I$. A map $s: N_p \to E^I$ with $k\circ s = \id$ is called a \textit{path lifting function}. Then $p_0 \circ s(e,\beta)(0)=e$ and $p^I\circ s(e,\beta) = \beta$.
+\begin{definition} Let $k\colon E^I \to N_p$ with coordinates $E^I\xto{\ev_0} E$ and $E^I\xto{p^I} B^I$. A map $s: N_p \to E^I$ with $k\circ s = \id$ is called a \textit{path lifting function}. Then $p_0 \circ s(e,\beta)(0)=e$ and $p^I\circ s(e,\beta) = \beta$.
 \end{definition}
 
-\begin{proposition} The map $p: E \to B$ is a fibration if and only if the natural map $k: E^I \to N_p$ has a section (that is, there is a path lifting function).
+\begin{proposition} The map $p\colon E \to B$ is a fibration if and only if the natural map $k: E^I \to N_p$ has a section (that is, there is a path lifting function).
 \end{proposition}
 
-\begin{remark} If $p: E\to B$ is a covering space, then $p$ is a fibration with a unique path lifting function.
+\begin{remark} If $p\colon E\to B$ is a covering space, then $p$ is a fibration with a unique path lifting function.
 \end{remark}
 
 \begin{example} Assume $(X,x_0)$ is well based. Then
 \begin{align*}
-	\ev_{x_0} : \Map(X,Y) &\to Y \\
+	\ev_{x_0} \colon \Map(X,Y) &\to Y \\
 	f &\mapsto f(x_0)
 \end{align*}
 is a fibration.
@@ -2127,7 +2096,7 @@ This is worked out in detail in  \cite[VII, Section 4]{may}.
 \begin{align*}
 	\pi_n(X) \xto{s_\ast} \pi_n(E) \xto{p_\ast} \pi_n(X)
 \end{align*}
-is trivial, which will indicate that the connecting homomorphism $\delta$ is trivial.
+is the identity, which will indicate that the connecting homomorphism $\delta$ is trivial.
 \end{note}
 
 
@@ -2402,6 +2371,7 @@ is a homotopy equivalence since $X$ and $Y$ are well-based. This justifies the u
 \begin{example} We have that $M \id_X = X\smashprod I_+$.
 \end{example}
 
+
 Recall for any $X\xto{f} Y$ we showed that it factors through the mapping cylinder as
 \[
 	\begin{tikzcd}
@@ -2573,10 +2543,10 @@ In some sense we are interchanging endpoints of the cone $Ci$. %\blue{TODO: figu
 	\begin{align*}
 		\til{H}_k(X) \cong \til{H}_{k+1} (\Sigma X)
 	\end{align*}
-    for all $k$, and $\til{H}_k(X,A) \cong \til{H}_k (Ci)$. This gives the long exact sequence of the ``good pair'' $(Mi,A)$ \cite[Theorem~2.13]{hatcher}. This coincides up to sign with the sequence obtained by applying $\til{H}_n$ to the Puppe sequence of spaces.
+    for all $k$, and $\til{H}_k(X,A) \cong \til{H}_k (Ci)$. This gives the long exact sequence of the ``good pair'' $(Mi,A)$ \cite[Theorem~2.13]{hatcher}. This coincides up to sign with the sequence obtained by applying $\til{H}_n$ to the iterated cofiber sequence of spaces.
 	\end{proof}
 
-	 We may also get the long exact sequence in cohomology via the Puppe sequence as follows:
+	 We may also get the long exact sequence in cohomology via the iterated cofiber sequence as follows:
 
 	\begin{proposition} For a pointed map $A\xto{i} X$ between well-pointed spaces, then there exists a long exact sequence in $\til{H}^n(-; \pi)$, where $\pi\in\Ab$ is an abelian group of coefficients:
 	\begin{align*}
@@ -2588,7 +2558,7 @@ In some sense we are interchanging endpoints of the cone $Ci$. %\blue{TODO: figu
 	\begin{align*}
 		\pi_i K(\pi,n) = \begin{cases} \pi & i=n \\ 0 & \text{otherwise}. \\ \end{cases}
 	\end{align*}
-	Moreover, $\til{H}^n(X,\pi) \cong [X,K(\pi,n)]_\ast$, that is, reduced cohomology is represented by Eilenberg-Maclane spaces. Then applying $[-,K(\pi,n)]_\ast$ to the Puppe sequence of spaces, one obtains
+	Moreover, $\til{H}^n(X,\pi) \cong [X,K(\pi,n)]_\ast$, that is, reduced cohomology is represented by Eilenberg-Maclane spaces. Then applying $[-,K(\pi,n)]_\ast$ to the iterated cofiber sequence of spaces, one obtains
 	\begin{align*}
 		\cdots \to [\Sigma X,K(\pi,n)]_\ast\to [\Sigma A, K(\pi,n)]_\ast \to [Cf,K(\pi,n)]_\ast] \to [X,K(\pi,n)]_\ast \to [A,K(\pi,n)]_\ast
 	\end{align*}
@@ -2651,7 +2621,7 @@ for all $a\in A$ and for $1\leq k\leq n$.
 \end{enumerate}
 \end{exercise}
 
-\begin{theorem}[Whitehead's theorem]\label{thm:Whitehead}\index[ind]{Whitehead's theorem} If $X$ is a CW complex and $Y\xto{e} Z$ is an $n$-equivalence, then $e_\ast : [X,Y] \to [X,Z]$ is bijective if $\dim X < n$ and surjective if $\dim X = n$.
+\begin{theorem}[Whitehead's theorem]\label{thm:Whitehead}\index[ind]{Whitehead's theorem} If $X$ is a CW complex and $Y\xto{e} Z$ is an $n$-equivalence, then $e_\ast : [X,Y] \to [X,Z]$ is bijective if $\dim X < n$ and surjective if $\dim X = n$ (where $n$ could be $\infty$).
 \end{theorem}
 
 \begin{corollary}[Whitehead's theorem] A weak equivalence between CW complexes is a homotopy equivalence.
@@ -2660,7 +2630,7 @@ for all $a\in A$ and for $1\leq k\leq n$.
 \begin{align*}
 	e_\ast : [Y,Y] \to [Y,Z]
 \end{align*}
-is bijective, and since $e\circ f\circ e$ and $\id_Y$ are both mapped to the class of $e$, we get that $f\circ e \simeq \id$.
+is bijective, and since $e\circ f\circ e$ and $\id_Y$ are both mapped to the class of $e$, we get that $f\circ e \simeq \id_Y$.
 \end{proof}
 
 \subsection{Cellular approximation theorem}
@@ -2688,7 +2658,7 @@ We state the cellular approximation theorem for pairs of CW complexes, where tak
 
 	\item We have that $(S^n)_1 \xto{\id} (S^n)_2$ is not cellular, but $(S^n)_2 \xto{\id} (S^n)_1$ is cellular.
 
-	\item We note that the CW structure on $(S^n)_1$ gives a CW structure on $\RP^n$ by quotienting antipodally (however $(S^n)_2$ does not). Moreover, we have from the induced CW structure that the inclusions
+	\item We note that the CW structure on $(S^n)_1$ is compatible with the $C_2$ antipodal action in the sense that it sends $k$-cells to $k$-cells, whereas the CW structure on $(S_n)_2$ is not compatible with the action. Note that the CW structure on $(S^n)_1$  gives the usual CW structure on $\RP^n$ by quotienting antipodally. Moreover, we have from the induced CW structure that the inclusions
 	\begin{align*}
 		\RP^0 \hookto \RP^1 \hookto \cdots
 	\end{align*}
@@ -2730,7 +2700,7 @@ commutes up to homotopy (where the homotopy is given by $h$).
 \end{proof}
 
 
-\todo{Restructure the following proof}
+%\todo{Restructure the following proof}
 \textit{Proof sketch of Theorem \ref{thm:cellular-approximation}}: We induct on the dimension of the skeleton. For the base case, we see that any point in $Y$ is connected by a path to a point in $Y^{(0)}$. So $\left. f \right|_{X{(0)}}$ is homotopic to a map landing in $Y^{(0)}$. For the inductive step, assume we have a homotopy
 \begin{align*}
 	h_n \colon X^{(n)} \times I &\to Y \\
@@ -3200,6 +3170,52 @@ We consider the following axiom which might or might not hold:
 	E_q (X,A)= E_q^\CW (\Gamma X, \Gamma A).
 \end{align*}
 \end{remark}
+
+
+\begin{comment} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
+
 
 
 
@@ -4086,11 +4102,12 @@ This is discussed in \cite[Chapter 22]{may}. The idea of the proofs is to simply
 
 
 
+\end{comment}
 
 
 
 %%%%%%%
-
+\newpage
 \appendix
 \input{appendix.tex}
 
@@ -4100,7 +4117,6 @@ This is discussed in \cite[Chapter 22]{may}. The idea of the proofs is to simply
 %%%%%%%%%%
 
 
-\end{comment}
 
 
 

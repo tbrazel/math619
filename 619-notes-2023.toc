@@ -1,9 +1,58 @@
-\contentsline {section}{\numberline {0}A preview of unstable vs stable homotopy theory}{2}{section.0}%
-\contentsline {subsection}{\numberline {0.1}From spaces to spectra}{2}{subsection.0.1}%
-\contentsline {subsection}{\numberline {0.2}Why should we care about spectra?}{5}{subsection.0.2}%
-\contentsline {subsection}{\numberline {0.3}Some references}{6}{subsection.0.3}%
-\contentsline {section}{\numberline {1}The category of spaces}{6}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Category theory review}{6}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Adjoint pairs of functors}{9}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}A convenient category of spaces}{12}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Limits and colimits in categories}{14}{subsection.1.4}%
+\contentsline {section}{\numberline {0}A preview of unstable vs stable homotopy theory}{3}{section.0}%
+\contentsline {subsection}{\numberline {0.1}From spaces to spectra}{3}{subsection.0.1}%
+\contentsline {subsection}{\numberline {0.2}Why should we care about spectra?}{6}{subsection.0.2}%
+\contentsline {subsection}{\numberline {0.3}Some references}{7}{subsection.0.3}%
+\contentsline {section}{\numberline {1}The category of spaces}{7}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Category theory review}{7}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Adjoint pairs of functors}{10}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}A convenient category of spaces}{13}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Limits and colimits in categories}{15}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Existence of limits and colimits in $\texttt {Top}$}{19}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}The category of based topological spaces}{21}{subsection.1.6}%
+\contentsline {section}{\numberline {2}Higher homotopy groups}{23}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Homotopies}{23}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}The homotopy category of spaces}{24}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Higher homotopy groups}{25}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Dependence of $\pi _k$ on the basepoint}{28}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Weak homotopy equivalence}{31}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Cofibrations and fibrations}{34}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Cofibrations}{35}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Replacing maps by cofibrations}{39}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Criterion for a map to be a cofibration}{40}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Based cofibrations}{40}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Fibrations}{42}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Path lifting functions}{43}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Long exact sequence for fibrations}{46}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Path-loop fibration.}{47}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Replacing a map by a fibration}{48}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Long exact sequence in relative homotopy groups}{49}{subsection.3.10}%
+\contentsline {section}{\numberline {4}Fiber and cofiber sequences of spaces}{49}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Iterated fiber sequences}{50}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Cofiber sequences}{51}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Iterated cofiber sequences}{54}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Long exact sequences in homology and cohomology}{55}{subsection.4.4}%
+\contentsline {section}{\numberline {5}CW approximation, cellular approximation, and the Whitehead theorem}{56}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Whitehead's theorem}{56}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Cellular approximation theorem}{57}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Main ingredient in the proofs: HELP diagram}{58}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}CW approximation}{60}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Homotopy pushouts and homotopy pullbacks}{62}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Homotopy pushouts}{62}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Homotopy pullbacks}{65}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Stable homotopy theory}{66}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Excision}{66}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Generalized homology theories}{68}{subsection.7.2}%
+\contentsline {section}{\numberline {A}More category theory: properties of morphisms}{70}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Stability and closure definitions}{70}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Monomorphisms and epimorphisms}{72}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Properties of morphisms can induce properties of objects}{74}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Preservation properties under limits and colimits}{75}{subsection.A.4}%
+\contentsline {subsection}{\numberline {A.5}Colimits and limits as functors}{77}{subsection.A.5}%
+\contentsline {subsection}{\numberline {A.6}Filtered limits and colimits}{78}{subsection.A.6}%
+\contentsline {section}{\numberline {B}Unsorted subsections on category theory}{79}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Conventions}{79}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Laws for pullbacks and pushouts}{81}{subsection.B.2}%
+\contentsline {section}{\numberline {C}Homotopy colimits}{82}{appendix.C}%
+\contentsline {subsection}{\numberline {C.1}Intro to homotopy colimits}{82}{subsection.C.1}%
+\contentsline {subsection}{\numberline {C.2}Homotopy Invariance}{84}{subsection.C.2}%
+\contentsline {subsection}{\numberline {C.3}Homotopy colimits coinciding with colimits}{85}{subsection.C.3}%

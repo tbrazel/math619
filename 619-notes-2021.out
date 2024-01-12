@@ -1,65 +1,65 @@
-\BOOKMARK [1][-]{section.0}{A preview of unstable vs stable homotopy theory}{}% 1
-\BOOKMARK [2][-]{subsection.0.1}{From spaces to spectra}{section.0}% 2
-\BOOKMARK [2][-]{subsection.0.2}{Why should we care about spectra?}{section.0}% 3
-\BOOKMARK [2][-]{subsection.0.3}{Some references}{section.0}% 4
-\BOOKMARK [1][-]{section.1}{The category of spaces}{}% 5
-\BOOKMARK [2][-]{subsection.1.1}{Category theory review}{section.1}% 6
-\BOOKMARK [2][-]{subsection.1.2}{Adjoint pairs of functors}{section.1}% 7
-\BOOKMARK [2][-]{subsection.1.3}{A convenient category of spaces}{section.1}% 8
-\BOOKMARK [2][-]{subsection.1.4}{Limits and colimits in categories}{section.1}% 9
-\BOOKMARK [2][-]{subsection.1.5}{Existence of limits and colimits in Top}{section.1}% 10
-\BOOKMARK [2][-]{subsection.1.6}{The category of based topological spaces}{section.1}% 11
-\BOOKMARK [1][-]{section.2}{Higher homotopy groups}{}% 12
-\BOOKMARK [2][-]{subsection.2.1}{Homotopies}{section.2}% 13
-\BOOKMARK [2][-]{subsection.2.2}{The homotopy category of spaces}{section.2}% 14
-\BOOKMARK [2][-]{subsection.2.3}{Higher homotopy groups}{section.2}% 15
-\BOOKMARK [2][-]{subsection.2.4}{Dependence of pik on the basepoint}{section.2}% 16
-\BOOKMARK [2][-]{subsection.2.5}{Weak homotopy equivalence}{section.2}% 17
-\BOOKMARK [1][-]{section.3}{Cofibrations and fibrations}{}% 18
-\BOOKMARK [2][-]{subsection.3.1}{Cofibrations}{section.3}% 19
-\BOOKMARK [2][-]{subsection.3.2}{Replacing maps by cofibrations}{section.3}% 20
-\BOOKMARK [2][-]{subsection.3.3}{Criterion for a map to be a cofibration}{section.3}% 21
-\BOOKMARK [2][-]{subsection.3.4}{Based cofibrations}{section.3}% 22
-\BOOKMARK [2][-]{subsection.3.5}{Fibrations}{section.3}% 23
-\BOOKMARK [2][-]{subsection.3.6}{Path lifting functions}{section.3}% 24
-\BOOKMARK [2][-]{subsection.3.7}{Long exact sequence for fibrations}{section.3}% 25
-\BOOKMARK [2][-]{subsection.3.8}{Path-loop fibration.}{section.3}% 26
-\BOOKMARK [2][-]{subsection.3.9}{Replacing a map by a fibration}{section.3}% 27
-\BOOKMARK [2][-]{subsection.3.10}{Long exact sequence in relative homotopy groups}{section.3}% 28
-\BOOKMARK [1][-]{section.4}{Fiber and cofiber sequences of spaces}{}% 29
-\BOOKMARK [2][-]{subsection.4.1}{Iterated fiber sequences}{section.4}% 30
-\BOOKMARK [2][-]{subsection.4.2}{Cofiber sequences}{section.4}% 31
-\BOOKMARK [2][-]{subsection.4.3}{Iterated cofiber sequences}{section.4}% 32
-\BOOKMARK [2][-]{subsection.4.4}{Long exact sequences in homology and cohomology}{section.4}% 33
-\BOOKMARK [1][-]{section.5}{CW approximation, cellular approximation, and the Whitehead theorem}{}% 34
-\BOOKMARK [2][-]{subsection.5.1}{Whitehead's theorem}{section.5}% 35
-\BOOKMARK [2][-]{subsection.5.2}{Cellular approximation theorem}{section.5}% 36
-\BOOKMARK [2][-]{subsection.5.3}{Main ingredient in the proofs: HELP diagram}{section.5}% 37
-\BOOKMARK [2][-]{subsection.5.4}{CW approximation}{section.5}% 38
-\BOOKMARK [1][-]{section.6}{Homotopy pushouts and homotopy pullbacks}{}% 39
-\BOOKMARK [2][-]{subsection.6.1}{Homotopy pushouts}{section.6}% 40
-\BOOKMARK [2][-]{subsection.6.2}{Homotopy pullbacks}{section.6}% 41
-\BOOKMARK [1][-]{section.7}{Stable homotopy theory}{}% 42
-\BOOKMARK [2][-]{subsection.7.1}{Excision}{section.7}% 43
-\BOOKMARK [2][-]{subsection.7.2}{Generalized homology theories}{section.7}% 44
-\BOOKMARK [2][-]{subsection.7.3}{Spectra}{section.7}% 45
-\BOOKMARK [2][-]{subsection.7.4}{Generalized cohomology theories}{section.7}% 46
-\BOOKMARK [1][-]{section.8}{Eilenberg MacLane spaces}{}% 47
-\BOOKMARK [2][-]{subsection.8.1}{The bar construction BG}{section.8}% 48
-\BOOKMARK [2][-]{subsection.8.2}{Simplicial sets}{section.8}% 49
-\BOOKMARK [2][-]{subsection.8.3}{Geometric realization}{section.8}% 50
-\BOOKMARK [2][-]{subsection.8.4}{Universal principal G-bundles}{section.8}% 51
-\BOOKMARK [1][-]{appendix.A}{More category theory: properties of morphisms}{}% 52
-\BOOKMARK [2][-]{subsection.A.1}{Stability and closure definitions}{appendix.A}% 53
-\BOOKMARK [2][-]{subsection.A.2}{Monomorphisms and epimorphisms}{appendix.A}% 54
-\BOOKMARK [2][-]{subsection.A.3}{Properties of morphisms can induce properties of objects}{appendix.A}% 55
-\BOOKMARK [2][-]{subsection.A.4}{Preservation properties under limits and colimits}{appendix.A}% 56
-\BOOKMARK [2][-]{subsection.A.5}{Colimits and limits as functors}{appendix.A}% 57
-\BOOKMARK [2][-]{subsection.A.6}{Filtered limits and colimits}{appendix.A}% 58
-\BOOKMARK [1][-]{appendix.B}{Unsorted subsections on category theory}{}% 59
-\BOOKMARK [2][-]{subsection.B.1}{Conventions}{appendix.B}% 60
-\BOOKMARK [2][-]{subsection.B.2}{Laws for pullbacks and pushouts}{appendix.B}% 61
-\BOOKMARK [1][-]{appendix.C}{Homotopy colimits}{}% 62
-\BOOKMARK [2][-]{subsection.C.1}{Intro to homotopy colimits}{appendix.C}% 63
-\BOOKMARK [2][-]{subsection.C.2}{Homotopy Invariance}{appendix.C}% 64
-\BOOKMARK [2][-]{subsection.C.3}{Homotopy colimits coinciding with colimits}{appendix.C}% 65
+\BOOKMARK [1][-]{section.0}{\376\377\000A\000\040\000p\000r\000e\000v\000i\000e\000w\000\040\000o\000f\000\040\000u\000n\000s\000t\000a\000b\000l\000e\000\040\000v\000s\000\040\000s\000t\000a\000b\000l\000e\000\040\000h\000o\000m\000o\000t\000o\000p\000y\000\040\000t\000h\000e\000o\000r\000y}{}% 1
+\BOOKMARK [2][-]{subsection.0.1}{\376\377\000F\000r\000o\000m\000\040\000s\000p\000a\000c\000e\000s\000\040\000t\000o\000\040\000s\000p\000e\000c\000t\000r\000a}{section.0}% 2
+\BOOKMARK [2][-]{subsection.0.2}{\376\377\000W\000h\000y\000\040\000s\000h\000o\000u\000l\000d\000\040\000w\000e\000\040\000c\000a\000r\000e\000\040\000a\000b\000o\000u\000t\000\040\000s\000p\000e\000c\000t\000r\000a\000?}{section.0}% 3
+\BOOKMARK [2][-]{subsection.0.3}{\376\377\000S\000o\000m\000e\000\040\000r\000e\000f\000e\000r\000e\000n\000c\000e\000s}{section.0}% 4
+\BOOKMARK [1][-]{section.1}{\376\377\000T\000h\000e\000\040\000c\000a\000t\000e\000g\000o\000r\000y\000\040\000o\000f\000\040\000s\000p\000a\000c\000e\000s}{}% 5
+\BOOKMARK [2][-]{subsection.1.1}{\376\377\000C\000a\000t\000e\000g\000o\000r\000y\000\040\000t\000h\000e\000o\000r\000y\000\040\000r\000e\000v\000i\000e\000w}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.2}{\376\377\000A\000d\000j\000o\000i\000n\000t\000\040\000p\000a\000i\000r\000s\000\040\000o\000f\000\040\000f\000u\000n\000c\000t\000o\000r\000s}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.3}{\376\377\000A\000\040\000c\000o\000n\000v\000e\000n\000i\000e\000n\000t\000\040\000c\000a\000t\000e\000g\000o\000r\000y\000\040\000o\000f\000\040\000s\000p\000a\000c\000e\000s}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.4}{\376\377\000L\000i\000m\000i\000t\000s\000\040\000a\000n\000d\000\040\000c\000o\000l\000i\000m\000i\000t\000s\000\040\000i\000n\000\040\000c\000a\000t\000e\000g\000o\000r\000i\000e\000s}{section.1}% 9
+\BOOKMARK [2][-]{subsection.1.5}{\376\377\000E\000x\000i\000s\000t\000e\000n\000c\000e\000\040\000o\000f\000\040\000l\000i\000m\000i\000t\000s\000\040\000a\000n\000d\000\040\000c\000o\000l\000i\000m\000i\000t\000s\000\040\000i\000n\000\040\000T\000o\000p}{section.1}% 10
+\BOOKMARK [2][-]{subsection.1.6}{\376\377\000T\000h\000e\000\040\000c\000a\000t\000e\000g\000o\000r\000y\000\040\000o\000f\000\040\000b\000a\000s\000e\000d\000\040\000t\000o\000p\000o\000l\000o\000g\000i\000c\000a\000l\000\040\000s\000p\000a\000c\000e\000s}{section.1}% 11
+\BOOKMARK [1][-]{section.2}{\376\377\000H\000i\000g\000h\000e\000r\000\040\000h\000o\000m\000o\000t\000o\000p\000y\000\040\000g\000r\000o\000u\000p\000s}{}% 12
+\BOOKMARK [2][-]{subsection.2.1}{\376\377\000H\000o\000m\000o\000t\000o\000p\000i\000e\000s}{section.2}% 13
+\BOOKMARK [2][-]{subsection.2.2}{\376\377\000T\000h\000e\000\040\000h\000o\000m\000o\000t\000o\000p\000y\000\040\000c\000a\000t\000e\000g\000o\000r\000y\000\040\000o\000f\000\040\000s\000p\000a\000c\000e\000s}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.3}{\376\377\000H\000i\000g\000h\000e\000r\000\040\000h\000o\000m\000o\000t\000o\000p\000y\000\040\000g\000r\000o\000u\000p\000s}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.4}{\376\377\000D\000e\000p\000e\000n\000d\000e\000n\000c\000e\000\040\000o\000f\000\040\000p\000i\000k\000\040\000o\000n\000\040\000t\000h\000e\000\040\000b\000a\000s\000e\000p\000o\000i\000n\000t}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.5}{\376\377\000W\000e\000a\000k\000\040\000h\000o\000m\000o\000t\000o\000p\000y\000\040\000e\000q\000u\000i\000v\000a\000l\000e\000n\000c\000e}{section.2}% 17
+\BOOKMARK [1][-]{section.3}{\376\377\000C\000o\000f\000i\000b\000r\000a\000t\000i\000o\000n\000s\000\040\000a\000n\000d\000\040\000f\000i\000b\000r\000a\000t\000i\000o\000n\000s}{}% 18
+\BOOKMARK [2][-]{subsection.3.1}{\376\377\000C\000o\000f\000i\000b\000r\000a\000t\000i\000o\000n\000s}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.2}{\376\377\000R\000e\000p\000l\000a\000c\000i\000n\000g\000\040\000m\000a\000p\000s\000\040\000b\000y\000\040\000c\000o\000f\000i\000b\000r\000a\000t\000i\000o\000n\000s}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.3}{\376\377\000C\000r\000i\000t\000e\000r\000i\000o\000n\000\040\000f\000o\000r\000\040\000a\000\040\000m\000a\000p\000\040\000t\000o\000\040\000b\000e\000\040\000a\000\040\000c\000o\000f\000i\000b\000r\000a\000t\000i\000o\000n}{section.3}% 21
+\BOOKMARK [2][-]{subsection.3.4}{\376\377\000B\000a\000s\000e\000d\000\040\000c\000o\000f\000i\000b\000r\000a\000t\000i\000o\000n\000s}{section.3}% 22
+\BOOKMARK [2][-]{subsection.3.5}{\376\377\000F\000i\000b\000r\000a\000t\000i\000o\000n\000s}{section.3}% 23
+\BOOKMARK [2][-]{subsection.3.6}{\376\377\000P\000a\000t\000h\000\040\000l\000i\000f\000t\000i\000n\000g\000\040\000f\000u\000n\000c\000t\000i\000o\000n\000s}{section.3}% 24
+\BOOKMARK [2][-]{subsection.3.7}{\376\377\000L\000o\000n\000g\000\040\000e\000x\000a\000c\000t\000\040\000s\000e\000q\000u\000e\000n\000c\000e\000\040\000f\000o\000r\000\040\000f\000i\000b\000r\000a\000t\000i\000o\000n\000s}{section.3}% 25
+\BOOKMARK [2][-]{subsection.3.8}{\376\377\000P\000a\000t\000h\000-\000l\000o\000o\000p\000\040\000f\000i\000b\000r\000a\000t\000i\000o\000n\000.}{section.3}% 26
+\BOOKMARK [2][-]{subsection.3.9}{\376\377\000R\000e\000p\000l\000a\000c\000i\000n\000g\000\040\000a\000\040\000m\000a\000p\000\040\000b\000y\000\040\000a\000\040\000f\000i\000b\000r\000a\000t\000i\000o\000n}{section.3}% 27
+\BOOKMARK [2][-]{subsection.3.10}{\376\377\000L\000o\000n\000g\000\040\000e\000x\000a\000c\000t\000\040\000s\000e\000q\000u\000e\000n\000c\000e\000\040\000i\000n\000\040\000r\000e\000l\000a\000t\000i\000v\000e\000\040\000h\000o\000m\000o\000t\000o\000p\000y\000\040\000g\000r\000o\000u\000p\000s}{section.3}% 28
+\BOOKMARK [1][-]{section.4}{\376\377\000F\000i\000b\000e\000r\000\040\000a\000n\000d\000\040\000c\000o\000f\000i\000b\000e\000r\000\040\000s\000e\000q\000u\000e\000n\000c\000e\000s\000\040\000o\000f\000\040\000s\000p\000a\000c\000e\000s}{}% 29
+\BOOKMARK [2][-]{subsection.4.1}{\376\377\000I\000t\000e\000r\000a\000t\000e\000d\000\040\000f\000i\000b\000e\000r\000\040\000s\000e\000q\000u\000e\000n\000c\000e\000s}{section.4}% 30
+\BOOKMARK [2][-]{subsection.4.2}{\376\377\000C\000o\000f\000i\000b\000e\000r\000\040\000s\000e\000q\000u\000e\000n\000c\000e\000s}{section.4}% 31
+\BOOKMARK [2][-]{subsection.4.3}{\376\377\000I\000t\000e\000r\000a\000t\000e\000d\000\040\000c\000o\000f\000i\000b\000e\000r\000\040\000s\000e\000q\000u\000e\000n\000c\000e\000s}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.4}{\376\377\000L\000o\000n\000g\000\040\000e\000x\000a\000c\000t\000\040\000s\000e\000q\000u\000e\000n\000c\000e\000s\000\040\000i\000n\000\040\000h\000o\000m\000o\000l\000o\000g\000y\000\040\000a\000n\000d\000\040\000c\000o\000h\000o\000m\000o\000l\000o\000g\000y}{section.4}% 33
+\BOOKMARK [1][-]{section.5}{\376\377\000C\000W\000\040\000a\000p\000p\000r\000o\000x\000i\000m\000a\000t\000i\000o\000n\000,\000\040\000c\000e\000l\000l\000u\000l\000a\000r\000\040\000a\000p\000p\000r\000o\000x\000i\000m\000a\000t\000i\000o\000n\000,\000\040\000a\000n\000d\000\040\000t\000h\000e\000\040\000W\000h\000i\000t\000e\000h\000e\000a\000d\000\040\000t\000h\000e\000o\000r\000e\000m}{}% 34
+\BOOKMARK [2][-]{subsection.5.1}{\376\377\000W\000h\000i\000t\000e\000h\000e\000a\000d\000'\000s\000\040\000t\000h\000e\000o\000r\000e\000m}{section.5}% 35
+\BOOKMARK [2][-]{subsection.5.2}{\376\377\000C\000e\000l\000l\000u\000l\000a\000r\000\040\000a\000p\000p\000r\000o\000x\000i\000m\000a\000t\000i\000o\000n\000\040\000t\000h\000e\000o\000r\000e\000m}{section.5}% 36
+\BOOKMARK [2][-]{subsection.5.3}{\376\377\000M\000a\000i\000n\000\040\000i\000n\000g\000r\000e\000d\000i\000e\000n\000t\000\040\000i\000n\000\040\000t\000h\000e\000\040\000p\000r\000o\000o\000f\000s\000:\000\040\000H\000E\000L\000P\000\040\000d\000i\000a\000g\000r\000a\000m}{section.5}% 37
+\BOOKMARK [2][-]{subsection.5.4}{\376\377\000C\000W\000\040\000a\000p\000p\000r\000o\000x\000i\000m\000a\000t\000i\000o\000n}{section.5}% 38
+\BOOKMARK [1][-]{section.6}{\376\377\000H\000o\000m\000o\000t\000o\000p\000y\000\040\000p\000u\000s\000h\000o\000u\000t\000s\000\040\000a\000n\000d\000\040\000h\000o\000m\000o\000t\000o\000p\000y\000\040\000p\000u\000l\000l\000b\000a\000c\000k\000s}{}% 39
+\BOOKMARK [2][-]{subsection.6.1}{\376\377\000H\000o\000m\000o\000t\000o\000p\000y\000\040\000p\000u\000s\000h\000o\000u\000t\000s}{section.6}% 40
+\BOOKMARK [2][-]{subsection.6.2}{\376\377\000H\000o\000m\000o\000t\000o\000p\000y\000\040\000p\000u\000l\000l\000b\000a\000c\000k\000s}{section.6}% 41
+\BOOKMARK [1][-]{section.7}{\376\377\000S\000t\000a\000b\000l\000e\000\040\000h\000o\000m\000o\000t\000o\000p\000y\000\040\000t\000h\000e\000o\000r\000y}{}% 42
+\BOOKMARK [2][-]{subsection.7.1}{\376\377\000E\000x\000c\000i\000s\000i\000o\000n}{section.7}% 43
+\BOOKMARK [2][-]{subsection.7.2}{\376\377\000G\000e\000n\000e\000r\000a\000l\000i\000z\000e\000d\000\040\000h\000o\000m\000o\000l\000o\000g\000y\000\040\000t\000h\000e\000o\000r\000i\000e\000s}{section.7}% 44
+\BOOKMARK [2][-]{subsection.7.3}{\376\377\000S\000p\000e\000c\000t\000r\000a}{section.7}% 45
+\BOOKMARK [2][-]{subsection.7.4}{\376\377\000G\000e\000n\000e\000r\000a\000l\000i\000z\000e\000d\000\040\000c\000o\000h\000o\000m\000o\000l\000o\000g\000y\000\040\000t\000h\000e\000o\000r\000i\000e\000s}{section.7}% 46
+\BOOKMARK [1][-]{section.8}{\376\377\000E\000i\000l\000e\000n\000b\000e\000r\000g\000\040\000M\000a\000c\000L\000a\000n\000e\000\040\000s\000p\000a\000c\000e\000s}{}% 47
+\BOOKMARK [2][-]{subsection.8.1}{\376\377\000T\000h\000e\000\040\000b\000a\000r\000\040\000c\000o\000n\000s\000t\000r\000u\000c\000t\000i\000o\000n\000\040\000B\000G}{section.8}% 48
+\BOOKMARK [2][-]{subsection.8.2}{\376\377\000S\000i\000m\000p\000l\000i\000c\000i\000a\000l\000\040\000s\000e\000t\000s}{section.8}% 49
+\BOOKMARK [2][-]{subsection.8.3}{\376\377\000G\000e\000o\000m\000e\000t\000r\000i\000c\000\040\000r\000e\000a\000l\000i\000z\000a\000t\000i\000o\000n}{section.8}% 50
+\BOOKMARK [2][-]{subsection.8.4}{\376\377\000U\000n\000i\000v\000e\000r\000s\000a\000l\000\040\000p\000r\000i\000n\000c\000i\000p\000a\000l\000\040\000G\000-\000b\000u\000n\000d\000l\000e\000s}{section.8}% 51
+\BOOKMARK [1][-]{appendix.A}{\376\377\000M\000o\000r\000e\000\040\000c\000a\000t\000e\000g\000o\000r\000y\000\040\000t\000h\000e\000o\000r\000y\000:\000\040\000p\000r\000o\000p\000e\000r\000t\000i\000e\000s\000\040\000o\000f\000\040\000m\000o\000r\000p\000h\000i\000s\000m\000s}{}% 52
+\BOOKMARK [2][-]{subsection.A.1}{\376\377\000S\000t\000a\000b\000i\000l\000i\000t\000y\000\040\000a\000n\000d\000\040\000c\000l\000o\000s\000u\000r\000e\000\040\000d\000e\000f\000i\000n\000i\000t\000i\000o\000n\000s}{appendix.A}% 53
+\BOOKMARK [2][-]{subsection.A.2}{\376\377\000M\000o\000n\000o\000m\000o\000r\000p\000h\000i\000s\000m\000s\000\040\000a\000n\000d\000\040\000e\000p\000i\000m\000o\000r\000p\000h\000i\000s\000m\000s}{appendix.A}% 54
+\BOOKMARK [2][-]{subsection.A.3}{\376\377\000P\000r\000o\000p\000e\000r\000t\000i\000e\000s\000\040\000o\000f\000\040\000m\000o\000r\000p\000h\000i\000s\000m\000s\000\040\000c\000a\000n\000\040\000i\000n\000d\000u\000c\000e\000\040\000p\000r\000o\000p\000e\000r\000t\000i\000e\000s\000\040\000o\000f\000\040\000o\000b\000j\000e\000c\000t\000s}{appendix.A}% 55
+\BOOKMARK [2][-]{subsection.A.4}{\376\377\000P\000r\000e\000s\000e\000r\000v\000a\000t\000i\000o\000n\000\040\000p\000r\000o\000p\000e\000r\000t\000i\000e\000s\000\040\000u\000n\000d\000e\000r\000\040\000l\000i\000m\000i\000t\000s\000\040\000a\000n\000d\000\040\000c\000o\000l\000i\000m\000i\000t\000s}{appendix.A}% 56
+\BOOKMARK [2][-]{subsection.A.5}{\376\377\000C\000o\000l\000i\000m\000i\000t\000s\000\040\000a\000n\000d\000\040\000l\000i\000m\000i\000t\000s\000\040\000a\000s\000\040\000f\000u\000n\000c\000t\000o\000r\000s}{appendix.A}% 57
+\BOOKMARK [2][-]{subsection.A.6}{\376\377\000F\000i\000l\000t\000e\000r\000e\000d\000\040\000l\000i\000m\000i\000t\000s\000\040\000a\000n\000d\000\040\000c\000o\000l\000i\000m\000i\000t\000s}{appendix.A}% 58
+\BOOKMARK [1][-]{appendix.B}{\376\377\000U\000n\000s\000o\000r\000t\000e\000d\000\040\000s\000u\000b\000s\000e\000c\000t\000i\000o\000n\000s\000\040\000o\000n\000\040\000c\000a\000t\000e\000g\000o\000r\000y\000\040\000t\000h\000e\000o\000r\000y}{}% 59
+\BOOKMARK [2][-]{subsection.B.1}{\376\377\000C\000o\000n\000v\000e\000n\000t\000i\000o\000n\000s}{appendix.B}% 60
+\BOOKMARK [2][-]{subsection.B.2}{\376\377\000L\000a\000w\000s\000\040\000f\000o\000r\000\040\000p\000u\000l\000l\000b\000a\000c\000k\000s\000\040\000a\000n\000d\000\040\000p\000u\000s\000h\000o\000u\000t\000s}{appendix.B}% 61
+\BOOKMARK [1][-]{appendix.C}{\376\377\000H\000o\000m\000o\000t\000o\000p\000y\000\040\000c\000o\000l\000i\000m\000i\000t\000s}{}% 62
+\BOOKMARK [2][-]{subsection.C.1}{\376\377\000I\000n\000t\000r\000o\000\040\000t\000o\000\040\000h\000o\000m\000o\000t\000o\000p\000y\000\040\000c\000o\000l\000i\000m\000i\000t\000s}{appendix.C}% 63
+\BOOKMARK [2][-]{subsection.C.2}{\376\377\000H\000o\000m\000o\000t\000o\000p\000y\000\040\000I\000n\000v\000a\000r\000i\000a\000n\000c\000e}{appendix.C}% 64
+\BOOKMARK [2][-]{subsection.C.3}{\376\377\000H\000o\000m\000o\000t\000o\000p\000y\000\040\000c\000o\000l\000i\000m\000i\000t\000s\000\040\000c\000o\000i\000n\000c\000i\000d\000i\000n\000g\000\040\000w\000i\000t\000h\000\040\000c\000o\000l\000i\000m\000i\000t\000s}{appendix.C}% 65

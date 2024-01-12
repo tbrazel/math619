@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.28)  21 JAN 2023 17:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.28)  18 MAR 2023 17:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1136,40 +1136,40 @@ LaTeX Info: Redefining \nameref on input line 62.
 
 Package hyperref Info: Option `pageanchor' set `false' on input line 64.
 Package hyperref Info: Option `pageanchor' set `true' on input line 68.
-(./619-notes-2023.toc)
+(./619-notes-2023.toc [1
+
+
+
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write8
 \openout8 = `619-notes-2023.toc'.
 
- [1
-
-
-
-
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+ [2]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 108.
-<pics/s1_smash_s1.png, id=87, 1787.67876pt x 384.43625pt>
+<pics/s1_smash_s1.png, id=307, 1787.67876pt x 384.43625pt>
 File: pics/s1_smash_s1.png Graphic file (type png)
 <use pics/s1_smash_s1.png>
 Package pdftex.def Info: pics/s1_smash_s1.png  used on input line 111.
 (pdftex.def)             Requested size: 430.00462pt x 92.4719pt.
- [2 <./pics/s1_smash_s1.png>]
+ [3 <./pics/s1_smash_s1.png>]
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
 nput line 136.
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
 t line 145.
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
  line 201.
- [3]
+ [4]
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
 ut line 234.
- [4]
-<pics/cobordism.png, id=145, 122.68828pt x 135.54893pt>
+ [5]
+<pics/cobordism.png, id=361, 122.68828pt x 135.54893pt>
 File: pics/cobordism.png Graphic file (type png)
 <use pics/cobordism.png>
 Package pdftex.def Info: pics/cobordism.png  used on input line 288.
 (pdftex.def)             Requested size: 122.68797pt x 135.54858pt.
- [5 <./pics/cobordism.png>] [6]
+ [6 <./pics/cobordism.png>] [7]
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 338
 .
  (/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
@@ -1179,84 +1179,276 @@ Underfull \hbox (badness 10000) in paragraph at lines 339--340
 []|\OT1/cmr/m/n/10 single non-identity mor-phism
  []
 
-[7]
+[8]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
 line 426.
- [8] <xymatrix 2x2 194> [9]
+ [9] <xymatrix 2x2 194> [10]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
 input line 461.
- [10]
+ [11]
 Package hyperref Info: bookmark level for unknown examples defaults to 0 on inp
 ut line 524.
- [11] [12]
+ [12] [13]
 Package hyperref Info: bookmark level for unknown upshot defaults to 0 on input
  line 601.
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input l
 ine 611.
- [13]
-<pics/limits.png, id=335, 1566.85374pt x 1380.15625pt>
+ [14]
+<pics/limits.png, id=550, 1566.85374pt x 1380.15625pt>
 File: pics/limits.png Graphic file (type png)
 <use pics/limits.png>
 Package pdftex.def Info: pics/limits.png  used on input line 668.
 (pdftex.def)             Requested size: 156.69455pt x 138.02371pt.
- [14 <./pics/limits.png>]
-Excluding 'comment' comment. (./619-notes-2023.bbl [15]) [16]
+ [15 <./pics/limits.png>]
+[16] [17] [18]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 879.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 888.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 888.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 888.
+
+[19
+\pgfsyspdfmark {pgfid20}{11623038}{19786200}
+\pgfsyspdfmark {pgfid23}{37054042}{19685946}
+\pgfsyspdfmark {pgfid24}{39167578}{19574574}
+] [20]
+Package hyperref Info: bookmark level for unknown notation defaults to 0 on inp
+ut line 962.
+ [21] [22] [23] [24]
+Package hyperref Info: bookmark level for unknown warn defaults to 0 on input l
+ine 1165.
+ [25]
+Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
+ine 1201.
+ [26]
+<pics/eckmann-hilton.png, id=733, 1627.07875pt x 1216.545pt>
+File: pics/eckmann-hilton.png Graphic file (type png)
+<use pics/eckmann-hilton.png>
+Package pdftex.def Info: pics/eckmann-hilton.png  used on input line 1243.
+(pdftex.def)             Requested size: 211.52766pt x 158.1564pt.
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
+put line 1250.
+ [27 <./pics/eckmann-hilton.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1287.
+
+[28]
+<pics/cubefig.png, id=756, 767.86874pt x 552.0625pt>
+File: pics/cubefig.png Graphic file (type png)
+<use pics/cubefig.png>
+Package pdftex.def Info: pics/cubefig.png  used on input line 1311.
+(pdftex.def)             Requested size: 176.6061pt x 126.9717pt.
+
+Overfull \hbox (1.62138pt too wide) in paragraph at lines 1326--1327
+[]\OT1/cmr/m/n/10 For $\OML/cmm/m/it/10 z$ \OT1/cmr/m/n/10 ly-ing on one of the
+ the ra-dial seg-ments, let $(\OML/cmm/m/it/10 ^^M \OMS/cmsy/m/n/10 ^^A \OML/cm
+m/m/it/10 f\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 ) = \OML/cmm/m/i
+t/10 ^^M\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 )$, where we have re
+parametrized
+ []
+
+[29 <./pics/cubefig.png>]
+<pics/homotopybasept.png, id=766, 1951.29pt x 784.9325pt>
+File: pics/homotopybasept.png Graphic file (type png)
+<use pics/homotopybasept.png>
+Package pdftex.def Info: pics/homotopybasept.png  used on input line 1347.
+(pdftex.def)             Requested size: 390.25108pt x 156.98372pt.
+ [30 <./pics/homotopybasept.png>] [31]
+<pics/gammat.png, id=795, 1549.79pt x 738.76pt>
+File: pics/gammat.png Graphic file (type png)
+<use pics/gammat.png>
+Package pdftex.def Info: pics/gammat.png  used on input line 1431.
+(pdftex.def)             Requested size: 232.45847pt x 110.8092pt.
+<pics/homotopy.png, id=797, 1567.8575pt x 1256.695pt>
+File: pics/homotopy.png Graphic file (type png)
+<use pics/homotopy.png>
+Package pdftex.def Info: pics/homotopy.png  used on input line 1440.
+(pdftex.def)             Requested size: 235.16847pt x 188.49611pt.
+ [32 <./pics/gammat.png> <./pics/homotopy.png>]
+<pics/topologist_sin.png, id=807, 635.37375pt x 459.7175pt>
+File: pics/topologist_sin.png Graphic file (type png)
+<use pics/topologist_sin.png>
+Package pdftex.def Info: pics/topologist_sin.png  used on input line 1455.
+(pdftex.def)             Requested size: 127.0725pt x 91.94186pt.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+471.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1471.
+
+<pics/pseudocircle.png, id=809, 1285.80376pt x 677.53125pt>
+File: pics/pseudocircle.png Graphic file (type png)
+<use pics/pseudocircle.png>
+Package pdftex.def Info: pics/pseudocircle.png  used on input line 1474.
+(pdftex.def)             Requested size: 231.4347pt x 121.95036pt.
+ [33 <./pics/topologist_sin.png> <./pics/pseudocircle.png>]
+<pics/cof.png, id=823, 1845.89626pt x 1340.00626pt>
+File: pics/cof.png Graphic file (type png)
+<use pics/cof.png>
+Package pdftex.def Info: pics/cof.png  used on input line 1531.
+(pdftex.def)             Requested size: 239.97493pt x 174.20692pt.
+ [34] [35 <./pics/cof.png>] [36]
+[37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51]
+[52] [53] [54] [55]
+Overfull \hbox (8.45465pt too wide) in paragraph at lines 2586--2586
+[]\OT1/cmr/bx/n/14.4 CW ap-prox-i-ma-tion, cel-lu-lar ap-prox-i-ma-tion, and th
+e White-
+ []
+
+[56] [57] [58] [59] [60] [61] [62]
+
+LaTeX Warning: Citation `Cary-gluing' on page 63 undefined on input line 2890.
+
+
+LaTeX Warning: Citation `Cary-no-pushout' on page 63 undefined on input line 28
+93.
+
+[63] [64] [65]
+
+LaTeX Warning: Reference `thm:homology-excision-1' on page 66 undefined on inpu
+t line 3040.
+
+
+LaTeX Warning: Reference `thm:homology-excision-2' on page 66 undefined on inpu
+t line 3040.
+
+Package hyperref Info: bookmark level for unknown counterexample defaults to 0 
+on input line 3045.
+[66]
+
+LaTeX Warning: Reference `rmk:excisive-triad-approximation' on page 67 undefine
+d on input line 3071.
+
+[67] [68] Excluding 'comment' comment. [69] (./appendix.tex
+Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
+ut line 8.
+ [70] [71] [72]
+[73] [74
+\pgfsyspdfmark {pgfid118}{29358298}{32296255}
+\pgfsyspdfmark {pgfid121}{37054042}{32196001}
+\pgfsyspdfmark {pgfid122}{39167578}{32084629}
+]
+Package hyperref Info: bookmark level for unknown terminology defaults to 0 on 
+input line 233.
+ [75]
+
+LaTeX Warning: Reference `prop:LAPC' on page 76 undefined on input line 311.
+
+[76] [77] [78] [79] [80] [81]
+
+LaTeX Warning: Citation `Hatcher' on page 82 undefined on input line 549.
+
+
+LaTeX Warning: Citation `May' on page 82 undefined on input line 549.
+
+<pics/whisker-gluing.png, id=1505, 1003.75pt x 749.80125pt>
+File: pics/whisker-gluing.png Graphic file (type png)
+<use pics/whisker-gluing.png>
+Package pdftex.def Info: pics/whisker-gluing.png  used on input line 564.
+(pdftex.def)             Requested size: 1003.74756pt x 749.79942pt.
+[82]
+<pics/whisker.png, id=1516, 1003.75pt x 752.8125pt>
+File: pics/whisker.png Graphic file (type png)
+<use pics/whisker.png>
+Package pdftex.def Info: pics/whisker.png  used on input line 575.
+(pdftex.def)             Requested size: 1003.74756pt x 752.81065pt.
+<pics/cone.png, id=1517, 1003.75pt x 748.7975pt>
+File: pics/cone.png Graphic file (type png)
+<use pics/cone.png>
+Package pdftex.def Info: pics/cone.png  used on input line 584.
+(pdftex.def)             Requested size: 1003.74756pt x 748.79567pt.
+ [83 <./pics/whisker-gluing.png> <./pics/whisker.png>] [84 <./pics/cone.png>] [
+85]) (./619-notes-2023.bbl [86]) [87]
 runsystem(makeindex ind.idx)...executed safely (allowed).
 
- (./ind.ind
-[17
+ (./ind.ind [88
 
 
+])
+(./619-notes-2023.aux)
 
-]) (./619-notes-2023.aux)
-Package rerunfilecheck Info: File `619-notes-2023.out' has not changed.
-(rerunfilecheck)             Checksum: 702849FD58A3C6017982AAE7BEA4389C;1831.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `619-notes-2023.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `619-notes-2023.out':
+(rerunfilecheck)             Before: B13759EAAA091F45A5DCD5E31DF777D1;10984
+(rerunfilecheck)             After:  9C9B9E368DC4C98E194C4CB9A08332E4;12145.
  ) 
 Here is how much of TeX's memory you used:
- 29385 strings out of 478994
- 544401 string characters out of 5858184
- 886225 words of memory out of 5000000
- 46062 multiletter control sequences out of 15000+600000
- 424285 words of font info for 113 fonts, out of 8000000 for 9000
+ 36259 strings out of 478994
+ 711148 string characters out of 5858184
+ 1000006 words of memory out of 5000000
+ 52205 multiletter control sequences out of 15000+600000
+ 427160 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 120i,20n,121p,3225b,1118s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 120i,23n,121p,3225b,1307s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/mmerling/Library/texlive/2021/texmf-var/fonts/pk/ljfour/public/bbm/b
 bm10.600pk>{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-supe
 r-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 bx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
-10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.
-pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
-b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
-exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/20
-21/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2021/texmf-d
-ist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/tex
-mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2021/texm
-f-dist/fonts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2021/texmf-dist/fo
-nts/type1/public/rsfs/rsfs7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
-/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
-ublic/xypic/xycmat10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
-/xypic/xycmbt10.pfb>
-Output written on 619-notes-2023.pdf (17 pages, 2035194 bytes).
+x12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
+.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cm
+ex7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra
+/cmex8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mitt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
+.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
+fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
+l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2021/texmf-dist/font
+s/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/rsfs/rsfs5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
+public/rsfs/rsfs7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm
+-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypi
+c/xycmat10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xypic/xyc
+mbt10.pfb>
+Output written on 619-notes-2023.pdf (88 pages, 7686698 bytes).
 PDF statistics:
- 535 PDF objects out of 1000 (max. 8388607)
- 457 compressed objects within 5 object streams
- 166 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2016 PDF objects out of 2073 (max. 8388607)
+ 1820 compressed objects within 19 object streams
+ 877 named destinations out of 1000 (max. 500000)
+ 587 words of extra memory for PDF output out of 10000 (max. 10000000)
 
