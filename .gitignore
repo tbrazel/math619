@@ -1,0 +1,28 @@
+# Ignore aux files created by compiling
+*.synctex.gz
+*.log
+*.aux
+*.toc
+*.out
+*.bbl
+*.blg
+*.bcf
+*.brf
+*.run.xml
+*.fdb_latexmk
+*.fls
+*.synctex(busy)
+*.synctex.gz(busy)
+*.lof
+*.lot
+*.glo
+*.glsdefs
+*.ist
+*.acn
+*.acr
+*.alg
+*.glg
+*.gls
+
+# (Mac users) Ignores any instances of .DS_Store created by Finder in any subdirectories
+.DS_Store
